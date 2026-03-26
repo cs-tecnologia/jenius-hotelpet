@@ -1,2 +1,0 @@
-SELECT count(formpag001_id) FROM "{{JSutils.currentSchema()}}".hotformpag001
-WHERE formpag001_deleted <> true and formpag001_desc ILIKE '%{{TableImutipo.searchText}}%';

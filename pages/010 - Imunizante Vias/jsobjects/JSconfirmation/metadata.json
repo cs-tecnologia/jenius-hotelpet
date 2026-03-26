@@ -1,0 +1,16 @@
+{
+  "gitSyncId": "69b814afccdcda4eb595c07f_e7f620fd-7056-4e24-a1eb-f82225586071",
+  "id": "010 - Imunizante Vias_JSconfirmation",
+  "unpublishedCollection": {
+    "name": "JSconfirmation",
+    "pageId": "010 - Imunizante Vias",
+    "pluginId": "js-plugin",
+    "pluginType": "JS",
+    "variables": [
+      {
+        "name": "modalconfig",
+        "value": "{\n  action: \"Delete\",\n  message: \"\",\n  row: {},\n  icon: \"plus\",\n  color: \"blue\"\n}"
+      }
+    ]
+  }
+}

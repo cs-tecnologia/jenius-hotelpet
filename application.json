@@ -66,7 +66,15 @@
       "isDefault": false
     },
     {
-      "id": "009 - Imunizante Tipo",
+      "id": "009 - Imunizante Formas",
+      "isDefault": false
+    },
+    {
+      "id": "010 - Imunizante Vias",
+      "isDefault": false
+    },
+    {
+      "id": "011 - Imunizante",
       "isDefault": false
     }
   ],

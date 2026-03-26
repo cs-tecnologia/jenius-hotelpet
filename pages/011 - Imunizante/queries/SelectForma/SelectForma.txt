@@ -1,0 +1,4 @@
+SELECT *
+FROM "{{JSutils.currentSchema()}}".hotimun004
+WHERE imun004_deleted <> true
+ORDER BY imun004_desc, imun004_id;

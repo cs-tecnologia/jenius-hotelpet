@@ -1,0 +1,5 @@
+UPDATE "{{JSutils.currentSchema()}}".hotimun005 SET
+		"imun005_desc" = '{{JSconfirmation.modalconfig.row.imun005_desc}}',
+		"imun005_last_modification" = now(),
+    "imun005_modified_by" = {{ appsmith.user.id || 1 }}
+WHERE "imun005_id" = {{JSconfirmation.modalconfig.row.imun005_id}};

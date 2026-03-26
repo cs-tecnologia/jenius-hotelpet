@@ -1,0 +1,12 @@
+SELECT * FROM "{{JSutils.currentSchema()}}".hotimun001
+WHERE imun001_deleted <> true and imun001_desc ILIKE '%{{TableImunizante.searchText}}%'
+ORDER BY
+{{
+  ({
+    imun001_desc: 'imun001_desc',
+    imun001_id: 'imun001_id'
+  }[TableImunizante.sortOrder.column]) || 'imun001_desc'
+}}
+{{ TableImunizante.sortOrder.order === 'DESC' ? 'DESC' : 'ASC' }}
+LIMIT {{TableImunizante.pageSize}}
+OFFSET {{(TableImunizante.pageNo - 1) * TableImunizante.pageSize}};

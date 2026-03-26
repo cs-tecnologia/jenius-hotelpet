@@ -1,0 +1,12 @@
+INSERT INTO "{{JSutils.currentSchema()}}".hotimun004 (
+	"imun004_desc", 
+	"imun004_creation_date", 
+	"imun004_created_by", 
+	"imun004_last_modification", 
+	"imun004_modified_by")
+VALUES (
+	'{{JSconfirmation.modalconfig.row.imun004_desc?.trim().toUpperCase()}}', 
+		now(),
+    {{ appsmith.user.id || 1 }},
+		now(),
+    {{ appsmith.user.id || 1 }});	

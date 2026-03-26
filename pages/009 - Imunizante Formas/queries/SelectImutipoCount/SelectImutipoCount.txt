@@ -1,0 +1,2 @@
+SELECT count(imun004_id) FROM "{{JSutils.currentSchema()}}".hotimun004
+WHERE imun004_deleted <> true and imun004_desc ILIKE '%{{TableImutipo.searchText}}%';
