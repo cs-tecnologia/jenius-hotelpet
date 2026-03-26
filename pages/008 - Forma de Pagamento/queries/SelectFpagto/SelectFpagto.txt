@@ -1,0 +1,12 @@
+SELECT * FROM "{{JSutils.currentSchema()}}".hotformpag001
+WHERE formpag001_deleted <> true and formpag001_desc ILIKE '%{{TablePagamento.searchText}}%'
+ORDER BY
+{{
+  ({
+    formpag001_desc: 'formpag001_desc',
+    formpag001_id: 'formpag001_id'
+  }[TablePagamento.sortOrder.column]) || 'formpag001_desc'
+}}
+{{ TablePagamento.sortOrder.order === 'DESC' ? 'DESC' : 'ASC' }}
+LIMIT {{TablePagamento.pageSize}}
+OFFSET {{(TablePagamento.pageNo - 1) * TablePagamento.pageSize}};

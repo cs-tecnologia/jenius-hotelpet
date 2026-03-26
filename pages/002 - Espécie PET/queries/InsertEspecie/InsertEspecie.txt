@@ -1,0 +1,12 @@
+INSERT INTO "{{JSutils.currentSchema()}}".hotani001 (
+	"ani001_animal", 
+	"ani001_creation_date", 
+	"ani001_created_by", 
+	"ani001_last_modification", 
+	"ani001_modified_by")
+VALUES (
+	'{{JSconfirmation.modalconfig.row.ani001_animal?.trim().toUpperCase()}}', 
+		now(),
+    {{ appsmith.user.id || 1 }},
+		now(),
+    {{ appsmith.user.id || 1 }});	

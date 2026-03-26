@@ -1,0 +1,28 @@
+{
+  "gitSyncId": "69b814afccdcda4eb595c07f_6ab798cc-dfc8-41a5-bb62-5dda57686f96",
+  "id": "004 - Centro de Custo_JSutils",
+  "unpublishedCollection": {
+    "name": "JSutils",
+    "pageId": "004 - Centro de Custo",
+    "pluginId": "js-plugin",
+    "pluginType": "JS",
+    "variables": [
+      {
+        "name": "timeoutId",
+        "value": "null"
+      },
+      {
+        "name": "intervalId",
+        "value": "null"
+      },
+      {
+        "name": "tempoRestante",
+        "value": "3600"
+      },
+      {
+        "name": "tempoPadrao",
+        "value": "3600"
+      }
+    ]
+  }
+}

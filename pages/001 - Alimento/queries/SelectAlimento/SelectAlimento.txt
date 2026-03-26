@@ -1,0 +1,12 @@
+SELECT * FROM "{{JSutils.currentSchema()}}".hotali001
+WHERE ali001_deleted <> true and ali001_desc ILIKE '%{{TableAlimentos.searchText}}%'
+ORDER BY
+{{
+  ({
+    ali001_desc: 'ali001_desc',
+    ali001_id: 'ali001_id'
+  }[TableAlimentos.sortOrder.column]) || 'ali001_desc'
+}}
+{{ TableAlimentos.sortOrder.order === 'DESC' ? 'DESC' : 'ASC' }}
+LIMIT {{TableAlimentos.pageSize}}
+OFFSET {{(TableAlimentos.pageNo - 1) * TableAlimentos.pageSize}};

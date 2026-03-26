@@ -1,0 +1,16 @@
+{
+  "gitSyncId": "69b814afccdcda4eb595c07f_dcc8b4a5-8ff3-415d-93eb-86463c1714f8",
+  "id": "002 - Espécie PET_JSconfirmation",
+  "unpublishedCollection": {
+    "name": "JSconfirmation",
+    "pageId": "002 - Espécie PET",
+    "pluginId": "js-plugin",
+    "pluginType": "JS",
+    "variables": [
+      {
+        "name": "modalconfig",
+        "value": "{\n  action: \"Delete\",\n  message: \"\",\n  row: {},\n  icon: \"plus\",\n  color: \"blue\"\n}"
+      }
+    ]
+  }
+}

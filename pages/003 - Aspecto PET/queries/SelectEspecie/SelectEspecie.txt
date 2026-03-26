@@ -1,0 +1,3 @@
+SELECT * FROM "{{JSutils.currentSchema()}}".hotani001
+WHERE ani001_deleted <> true 
+ORDER BY ani001_animal, ani001_id;

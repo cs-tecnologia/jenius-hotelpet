@@ -1,0 +1,6 @@
+UPDATE "{{JSutils.currentSchema()}}".hotcon001 SET
+		"con001_desc" = '{{JSconfirmation.modalconfig.row.con001_desc}}',
+		"con001_deleted" = TRUE,
+		"con001_deleted_date" = now(),
+    "con001_deleted_by" = {{ appsmith.user.id || 1 }}
+WHERE "con001_id" = {{JSconfirmation.modalconfig.row.con001_id}};

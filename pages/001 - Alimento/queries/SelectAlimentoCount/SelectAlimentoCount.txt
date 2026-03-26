@@ -1,0 +1,2 @@
+SELECT count(ali001_id) FROM "{{JSutils.currentSchema()}}".hotali001
+WHERE ali001_deleted <> true and ali001_desc ILIKE '%{{TableAlimentos.searchText}}%';

@@ -1,0 +1,6 @@
+UPDATE "{{JSutils.currentSchema()}}".hotaspecto001 SET
+		"aspecto001_descricao" = '{{JSconfirmation.modalconfig.row.aspecto001_descricao}}',
+		"aspecto001_tipoanimal" = '{{JSconfirmation.modalconfig.row.aspecto001_tipoanimal}}',
+		"aspecto001_last_modification" = now(),
+    "aspecto001_modified_by" = {{ appsmith.user.id || 1 }}
+WHERE "aspecto001_id" = {{JSconfirmation.modalconfig.row.aspecto001_id}};

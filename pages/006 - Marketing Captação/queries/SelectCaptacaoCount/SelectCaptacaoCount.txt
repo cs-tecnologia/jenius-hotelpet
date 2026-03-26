@@ -1,0 +1,2 @@
+SELECT count(con001_id) FROM "{{JSutils.currentSchema()}}".hotcon001
+WHERE con001_deleted <> true and con001_desc ILIKE '%{{TableCaptacao.searchText}}%';

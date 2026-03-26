@@ -1,0 +1,12 @@
+SELECT * FROM "{{JSutils.currentSchema()}}".hotcor001
+WHERE cor001_deleted <> true and cor001_desc ILIKE '%{{TableCores.searchText}}%'
+ORDER BY
+{{
+  ({
+    cor001_desc: 'cor001_desc',
+    cor001_id: 'cor001_id'
+  }[TableCores.sortOrder.column]) || 'cor001_desc'
+}}
+{{ TableCores.sortOrder.order === 'DESC' ? 'DESC' : 'ASC' }}
+LIMIT {{TableCores.pageSize}}
+OFFSET {{(TableCores.pageNo - 1) * TableCores.pageSize}};

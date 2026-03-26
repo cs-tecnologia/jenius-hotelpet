@@ -1,0 +1,2 @@
+SELECT count(ani001_id) FROM "{{JSutils.currentSchema()}}".hotani001
+WHERE ani001_deleted <> true and ani001_animal ILIKE '%{{TableEspecie.searchText}}%';

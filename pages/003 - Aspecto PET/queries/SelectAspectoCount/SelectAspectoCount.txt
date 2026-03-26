@@ -1,0 +1,2 @@
+SELECT count(aspecto001_id) FROM "{{JSutils.currentSchema()}}".hotaspecto001
+WHERE aspecto001_deleted <> true and aspecto001_descricao ILIKE '%{{TableAspectos.searchText}}%';

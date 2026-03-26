@@ -1,0 +1,5 @@
+UPDATE "{{JSutils.currentSchema()}}".hotformpag001 SET
+		"formpag001_desc" = '{{JSconfirmation.modalconfig.row.formpag001_desc}}',
+		"formpag001_last_modification" = now(),
+    "formpag001_modified_by" = {{ appsmith.user.id || 1 }}
+WHERE "formpag001_id" = {{JSconfirmation.modalconfig.row.formpag001_id}};

@@ -1,0 +1,63 @@
+{
+  "animateLoading": true,
+  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+  "bottomRow": 29,
+  "boxShadow": "none",
+  "buttonColor": "#ef4444",
+  "buttonVariant": "PRIMARY",
+  "disabledWhenInvalid": false,
+  "dynamicBindingPathList": [
+    {
+      "key": "borderRadius"
+    },
+    {
+      "key": "isDisabled"
+    }
+  ],
+  "dynamicPropertyPathList": [
+    {
+      "key": "onClick"
+    },
+    {
+      "key": "isDisabled"
+    }
+  ],
+  "dynamicTriggerPathList": [
+    {
+      "key": "onClick"
+    }
+  ],
+  "iconAlign": "left",
+  "iconName": "trash",
+  "isDefaultClickDisabled": true,
+  "isDisabled": "{{ \nappsmith.store.modalContexto?.acaoTipo === \"ADICIONAR\" || \n JSvalidateButton.temAlteracao() \n}}",
+  "isLoading": false,
+  "isVisible": true,
+  "key": "mfa917wnro",
+  "leftColumn": 45,
+  "minWidth": 120,
+  "mobileBottomRow": 9,
+  "mobileLeftColumn": 1,
+  "mobileRightColumn": 17,
+  "mobileTopRow": 5,
+  "needsErrorInfo": false,
+  "onClick": "{{\n  (() => {\n// 1. Sinaliza atividade para o sistema de segurança (reseta os 15 min)\n JSutils.resetInactivityTimer() // Para o Deletar, pegamos os dados reais da tabela (Source of Truth)\n    const formData = \n     TableCaptacao.selectedRow;\n// Verificamos se existe um registro selecionado antes de abrir o modal\n    if (!formData.con001_id) {\n      return showAlert(\"Selecione um registro na tabela para excluir.\", \"warning\");\n    }\n    return JSconfirmation.showModal({\n      action: \"Delete\",\n      message: \"Deseja realmente EXCLUIR o registro ?\",\n      icon: \"trash\",\n      color: \"red\",\n      row: formData\n    });\n  })()\n}}",
+  "originalBottomRow": 48,
+  "originalTopRow": 44,
+  "parentColumnSpace": 7.1826171875,
+  "parentId": "bta2kewsl8",
+  "parentRowSpace": 10,
+  "placement": "CENTER",
+  "recaptchaType": "V3",
+  "renderMode": "CANVAS",
+  "resetFormOnClick": false,
+  "responsiveBehavior": "hug",
+  "rightColumn": 64,
+  "text": "DELETAR",
+  "tooltip": "CONFIRMA DELETAR",
+  "topRow": 25,
+  "type": "BUTTON_WIDGET",
+  "version": 1,
+  "widgetId": "u9nyxmbm75",
+  "widgetName": "ButtonDeletar"
+}

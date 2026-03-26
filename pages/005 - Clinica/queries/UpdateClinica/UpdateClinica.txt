@@ -1,0 +1,16 @@
+UPDATE "{{JSutils.currentSchema()}}".hotclinica001 SET
+  clinica001_nome = '{{ JSconfirmation.modalconfig.row.clinica001_nome.trim().toUpperCase() }}',
+  clinica001_endereco = '{{ JSconfirmation.modalconfig.row.clinica001_endereco.trim().toUpperCase() }}',
+  clinica001_bairro = '{{ JSconfirmation.modalconfig.row.clinica001_bairro.trim().toUpperCase() }}',
+  clinica001_numero = '{{ JSconfirmation.modalconfig.row.clinica001_numero.trim().toUpperCase() }}',
+  clinica001_complemento = '{{ JSconfirmation.modalconfig.row.clinica001_complemento.trim().toUpperCase() }}',
+  clinica001_cidade = '{{ JSconfirmation.modalconfig.row.clinica001_cidade.trim().toUpperCase() }}',
+  clinica001_email = '{{ JSconfirmation.modalconfig.row.clinica001_email.trim().toLowerCase() }}',
+  clinica001_telefone = '{{ JSconfirmation.modalconfig.row.clinica001_telefone.trim().toUpperCase().replace(/\D/g, "") }}',
+  clinica001_celular = '{{ JSconfirmation.modalconfig.row.clinica001_celular.trim().toUpperCase().replace(/\D/g, "") }}',
+  clinica001_uf = '{{ SelectUF.selectedOptionValue.trim().toUpperCase() }}',
+  clinica001_contato = '{{ JSconfirmation.modalconfig.row.clinica001_contato.trim().toUpperCase() }}',
+  clinica001_cep = '{{ JSconfirmation.modalconfig.row.clinica001_cep.trim().toUpperCase().replace(/\D/g, "") }}',
+  clinica001_last_modification = now(),
+  clinica001_modified_by = {{ appsmith.user.id || 1 }}
+WHERE clinica001_id = {{ JSconfirmation.modalconfig.row.clinica001_id }};

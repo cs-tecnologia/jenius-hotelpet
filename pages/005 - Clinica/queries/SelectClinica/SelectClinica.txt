@@ -1,0 +1,12 @@
+SELECT * FROM "{{JSutils.currentSchema()}}".hotclinica001
+WHERE clinica001_deleted <> true and clinica001_nome ILIKE '%{{TableClinica.searchText}}%'
+ORDER BY
+{{
+  ({
+    clinica001_nome: 'clinica001_nome',
+    clinica001_id: 'clinica001_id'
+  }[TableClinica.sortOrder.column]) || 'clinica001_nome'
+}}
+{{ TableClinica.sortOrder.order === 'DESC' ? 'DESC' : 'ASC' }}
+LIMIT {{TableClinica.pageSize}}
+OFFSET {{(TableClinica.pageNo - 1) * TableClinica.pageSize}};

@@ -1,0 +1,12 @@
+INSERT INTO "{{JSutils.currentSchema()}}".hotccusto001 (
+	"ccusto001_desc", 
+	"ccusto001_creation_date", 
+	"ccusto001_created_by", 
+	"ccusto001_last_modification", 
+	"ccusto001_modified_by")
+VALUES (
+	'{{JSconfirmation.modalconfig.row.ccusto001_desc?.trim().toUpperCase()}}', 
+		now(),
+    {{ appsmith.user.id || 1 }},
+		now(),
+    {{ appsmith.user.id || 1 }});	

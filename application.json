@@ -1,0 +1,96 @@
+{
+  "appIsExample": false,
+  "appLayout": {
+    "type": "DESKTOP"
+  },
+  "applicationDetail": {
+    "appPositioning": {
+      "type": "FIXED"
+    },
+    "navigationSetting": {
+      "colorStyle": "light",
+      "logoAssetId": "",
+      "logoConfiguration": "logoAndApplicationTitle",
+      "navStyle": "inline",
+      "orientation": "top",
+      "position": "static",
+      "showNavbar": true,
+      "showSignIn": true
+    },
+    "themeSetting": {
+      "appMaxWidth": "LARGE",
+      "density": 1.0,
+      "sizing": 1.0
+    }
+  },
+  "applicationVersion": 2,
+  "collapseInvisibleWidgets": true,
+  "color": "#D9E7FF",
+  "evaluationVersion": 2,
+  "icon": "cat",
+  "pages": [
+    {
+      "id": "home",
+      "isDefault": true
+    },
+    {
+      "id": "001 - Alimento",
+      "isDefault": false
+    },
+    {
+      "id": "002 - Espécie PET",
+      "isDefault": false
+    },
+    {
+      "id": "003 - Aspecto PET",
+      "isDefault": false
+    },
+    {
+      "id": "004 - Centro de Custo",
+      "isDefault": false
+    },
+    {
+      "id": "005 - Clinica",
+      "isDefault": false
+    },
+    {
+      "id": "006 - Marketing Captação",
+      "isDefault": false
+    },
+    {
+      "id": "007 - Cor",
+      "isDefault": false
+    },
+    {
+      "id": "008 - Forma de Pagamento",
+      "isDefault": false
+    },
+    {
+      "id": "009 - Imunizante Tipo",
+      "isDefault": false
+    }
+  ],
+  "unpublishedAppLayout": {
+    "type": "DESKTOP"
+  },
+  "unpublishedApplicationDetail": {
+    "appPositioning": {
+      "type": "FIXED"
+    },
+    "navigationSetting": {
+      "colorStyle": "light",
+      "logoAssetId": "",
+      "logoConfiguration": "logoAndApplicationTitle",
+      "navStyle": "inline",
+      "orientation": "top",
+      "position": "static",
+      "showNavbar": true,
+      "showSignIn": true
+    },
+    "themeSetting": {
+      "appMaxWidth": "LARGE",
+      "density": 1.0,
+      "sizing": 1.0
+    }
+  }
+}

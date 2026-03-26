@@ -1,0 +1,2 @@
+SELECT count(cor001_id) FROM "{{JSutils.currentSchema()}}".hotcor001
+WHERE cor001_deleted <> true and cor001_desc ILIKE '%{{TableCores.searchText}}%';

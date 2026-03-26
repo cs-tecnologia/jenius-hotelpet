@@ -1,0 +1,28 @@
+{
+  "gitSyncId": "69b814afccdcda4eb595c07f_a9214f3c-bd4d-44f6-b817-03322616c324",
+  "id": "008 - Forma de Pagamento_JSutils",
+  "unpublishedCollection": {
+    "name": "JSutils",
+    "pageId": "008 - Forma de Pagamento",
+    "pluginId": "js-plugin",
+    "pluginType": "JS",
+    "variables": [
+      {
+        "name": "timeoutId",
+        "value": "null"
+      },
+      {
+        "name": "intervalId",
+        "value": "null"
+      },
+      {
+        "name": "tempoRestante",
+        "value": "3600"
+      },
+      {
+        "name": "tempoPadrao",
+        "value": "3600"
+      }
+    ]
+  }
+}

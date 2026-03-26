@@ -1,0 +1,14 @@
+INSERT INTO "{{JSutils.currentSchema()}}".hotaspecto001 (
+	"aspecto001_descricao", 
+	"aspecto001_tipoanimal", 
+	"aspecto001_creation_date", 
+	"aspecto001_created_by", 
+	"aspecto001_last_modification", 
+	"aspecto001_modified_by")
+VALUES (
+		'{{JSconfirmation.modalconfig.row.aspecto001_descricao?.trim().toUpperCase()}}', 
+		'{{JSconfirmation.modalconfig.row.aspecto001_tipoanimal}}', 
+		now(),
+    {{ appsmith.user.id || 1 }},
+		now(),
+    {{ appsmith.user.id || 1 }});	

@@ -1,0 +1,12 @@
+SELECT * FROM "{{JSutils.currentSchema()}}".hotccusto001
+WHERE ccusto001_deleted <> true and ccusto001_desc ILIKE '%{{TableCCusto.searchText}}%'
+ORDER BY
+{{
+  ({
+    ccusto001_desc: 'ccusto001_desc',
+    ccusto001_id: 'ccusto001_id'
+  }[TableCCusto.sortOrder.column]) || 'ccusto001_desc'
+}}
+{{ TableCCusto.sortOrder.order === 'DESC' ? 'DESC' : 'ASC' }}
+LIMIT {{TableCCusto.pageSize}}
+OFFSET {{(TableCCusto.pageNo - 1) * TableCCusto.pageSize}};

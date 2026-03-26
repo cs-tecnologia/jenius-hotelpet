@@ -1,0 +1,12 @@
+INSERT INTO "{{JSutils.currentSchema()}}".hotali001 (
+	"ali001_desc", 
+	"ali001_creation_date", 
+	"ali001_created_by", 
+	"ali001_last_modification", 
+	"ali001_modified_by")
+VALUES (
+	'{{JSconfirmation.modalconfig.row.ali001_desc?.trim().toUpperCase()}}', 
+		now(),
+    {{ appsmith.user.id || 1 }},
+		now(),
+    {{ appsmith.user.id || 1 }});	

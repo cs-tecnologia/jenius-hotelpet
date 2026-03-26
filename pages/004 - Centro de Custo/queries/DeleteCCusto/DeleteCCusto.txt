@@ -1,0 +1,6 @@
+UPDATE "{{JSutils.currentSchema()}}".hotccusto001 SET
+		"ccusto001_desc" = '{{JSconfirmation.modalconfig.row.ccusto001_desc}}',
+		"ccusto001_deleted" = TRUE,
+		"ccusto001_deleted_date" = now(),
+    "ccusto001_deleted_by" = {{ appsmith.user.id || 1 }}
+WHERE "ccusto001_id" = {{JSconfirmation.modalconfig.row.ccusto001_id}};

@@ -1,0 +1,6 @@
+UPDATE "{{JSutils.currentSchema()}}".hotformpag001 SET
+		"formpag001_desc" = '{{JSconfirmation.modalconfig.row.formpag001_desc}}',
+		"formpag001_deleted" = TRUE,
+		"formpag001_deleted_date" = now(),
+    "formpag001_deleted_by" = {{ appsmith.user.id || 1 }}
+WHERE "formpag001_id" = {{JSconfirmation.modalconfig.row.formpag001__id}};

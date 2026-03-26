@@ -1,0 +1,19 @@
+SELECT 
+    asp.*, 
+    ani.ani001_animal 
+FROM "{{JSutils.currentSchema()}}".hotaspecto001 AS asp
+INNER JOIN "{{JSutils.currentSchema()}}".hotani001 AS ani 
+    ON asp.aspecto001_tipoanimal = ani.ani001_id 
+WHERE asp.aspecto001_deleted <> true 
+    AND asp.aspecto001_descricao ILIKE '%{{TableAspectos.searchText}}%'
+ORDER BY
+{{
+  ({
+    aspecto001_descricao: 'asp.aspecto001_descricao',
+    aspecto001_id: 'asp.aspecto001_id',
+    aspecto001_tipoanimal: 'asp.aspecto001_tipoanimal'
+  }[TableAspectos.sortOrder.column]) || 'asp.aspecto001_descricao'
+}}
+{{ TableAspectos.sortOrder.order === 'DESC' ? 'DESC' : 'ASC' }}
+LIMIT {{TableAspectos.pageSize}}
+OFFSET {{(TableAspectos.pageNo - 1) * TableAspectos.pageSize}};

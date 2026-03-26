@@ -1,0 +1,5 @@
+UPDATE "{{JSutils.currentSchema()}}".hotani001 SET
+		"ani001_animal" = '{{JSconfirmation.modalconfig.row.ani001_animal}}',
+		"ani001_last_modification" = now(),
+    "ani001_modified_by" = {{ appsmith.user.id || 1 }}
+WHERE "ani001_id" = {{JSconfirmation.modalconfig.row.ani001_id}};

@@ -1,0 +1,2 @@
+SELECT count(ccusto001_id) FROM "{{JSutils.currentSchema()}}".hotccusto001
+WHERE ccusto001_deleted <> true and ccusto001_desc ILIKE '%{{TableCCusto.searchText}}%';

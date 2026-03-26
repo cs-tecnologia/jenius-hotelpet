@@ -1,0 +1,12 @@
+SELECT * FROM "{{JSutils.currentSchema()}}".hotcon001
+WHERE con001_deleted <> true and con001_desc ILIKE '%{{TableCaptacao.searchText}}%'
+ORDER BY
+{{
+  ({
+    con001_desc: 'con001_desc',
+    con001_id: 'con001_id'
+  }[TableCaptacao.sortOrder.column]) || 'con001_desc'
+}}
+{{ TableCaptacao.sortOrder.order === 'DESC' ? 'DESC' : 'ASC' }}
+LIMIT {{TableCaptacao.pageSize}}
+OFFSET {{(TableCaptacao.pageNo - 1) * TableCaptacao.pageSize}};

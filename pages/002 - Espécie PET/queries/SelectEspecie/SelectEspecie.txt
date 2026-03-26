@@ -1,0 +1,12 @@
+SELECT * FROM "{{JSutils.currentSchema()}}".hotani001
+WHERE ani001_deleted <> true and ani001_animal ILIKE '%{{TableEspecie.searchText}}%'
+ORDER BY
+{{
+  ({
+    ani001_animal: 'ani001_animal',
+    ani001_id: 'ani001_id'
+  }[TableEspecie.sortOrder.column]) || 'ani001_animal'
+}}
+{{ TableEspecie.sortOrder.order === 'DESC' ? 'DESC' : 'ASC' }}
+LIMIT {{TableEspecie.pageSize}}
+OFFSET {{(TableEspecie.pageNo - 1) * TableEspecie.pageSize}};
