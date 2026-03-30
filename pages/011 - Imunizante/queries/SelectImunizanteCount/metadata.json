@@ -5,7 +5,7 @@
   "pluginType": "DB",
   "unpublishedAction": {
     "actionConfiguration": {
-      "body": "SELECT count(clinica001_id) FROM \"{{JSutils.currentSchema()}}\".hotclinica001\nWHERE clinica001_deleted <> true and clinica001_nome ILIKE '%{{TableImunizante.searchText}}%';\n",
+      "body": "SELECT count(imun001_id) FROM \"{{JSutils.currentSchema()}}\".hotimun001\nWHERE imun001_deleted <> true and imun001_desc ILIKE '%{{TableImunizante.searchText}}%';\n",
       "encodeParamsToggle": true,
       "paginationType": "NONE",
       "pluginSpecifiedTemplates": [

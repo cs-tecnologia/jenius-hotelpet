@@ -66,7 +66,7 @@
       "isDefault": false
     },
     {
-      "id": "009 - Imunizante Formas",
+      "id": "009 - Imunizante Forma",
       "isDefault": false
     },
     {
@@ -75,6 +75,22 @@
     },
     {
       "id": "011 - Imunizante",
+      "isDefault": false
+    },
+    {
+      "id": "012 - Pelagem",
+      "isDefault": false
+    },
+    {
+      "id": "013 - Porte",
+      "isDefault": false
+    },
+    {
+      "id": "014 - Raça",
+      "isDefault": false
+    },
+    {
+      "id": "015 - Produtos e Serviços",
       "isDefault": false
     }
   ],

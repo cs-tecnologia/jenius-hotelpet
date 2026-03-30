@@ -1,0 +1,12 @@
+INSERT INTO "{{JSutils.currentSchema()}}".hotporte001 (
+	"porte001_desc", 
+	"porte001_creation_date", 
+	"porte001_created_by", 
+	"porte001_last_modification", 
+	"porte001_modified_by")
+VALUES (
+	'{{JSconfirmation.modalconfig.row.porte001_desc?.trim().toUpperCase()}}', 
+		now(),
+    {{ appsmith.user.id || 1 }},
+		now(),
+    {{ appsmith.user.id || 1 }});	

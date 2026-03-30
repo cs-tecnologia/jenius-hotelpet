@@ -1,0 +1,12 @@
+SELECT * FROM "{{JSutils.currentSchema()}}".hotpel001
+WHERE pel001_deleted <> true and pel001_desc ILIKE '%{{TablePelagem.searchText}}%'
+ORDER BY
+{{
+  ({
+    pel001_desc: 'pel001_desc',
+    pel001_id: 'pel001_id'
+  }[TablePelagem.sortOrder.column]) || 'pel001_desc'
+}}
+{{ TablePelagem.sortOrder.order === 'DESC' ? 'DESC' : 'ASC' }}
+LIMIT {{TablePelagem.pageSize}}
+OFFSET {{(TablePelagem.pageNo - 1) * TablePelagem.pageSize}};

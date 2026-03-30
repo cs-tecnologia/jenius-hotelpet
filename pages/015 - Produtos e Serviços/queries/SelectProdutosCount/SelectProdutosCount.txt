@@ -1,0 +1,2 @@
+SELECT count(serv001_id) FROM "{{JSutils.currentSchema()}}".hotserv001
+WHERE serv001_deleted <> true and serv001_desc ILIKE '%{{TableProdutos.searchText}}%';

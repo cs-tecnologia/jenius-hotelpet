@@ -1,0 +1,28 @@
+{
+  "gitSyncId": "69b814afccdcda4eb595c07f_ccfaa2e9-df4b-4170-b52a-e131b770ffbf",
+  "id": "014 - Raça_JSutils",
+  "unpublishedCollection": {
+    "name": "JSutils",
+    "pageId": "014 - Raça",
+    "pluginId": "js-plugin",
+    "pluginType": "JS",
+    "variables": [
+      {
+        "name": "timeoutId",
+        "value": "null"
+      },
+      {
+        "name": "intervalId",
+        "value": "null"
+      },
+      {
+        "name": "tempoRestante",
+        "value": "3600"
+      },
+      {
+        "name": "tempoPadrao",
+        "value": "3600"
+      }
+    ]
+  }
+}

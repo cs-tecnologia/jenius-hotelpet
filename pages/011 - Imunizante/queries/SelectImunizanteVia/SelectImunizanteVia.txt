@@ -1,1 +1,0 @@
-SELECT * FROM 100000."cal_compromissos" LIMIT 10;

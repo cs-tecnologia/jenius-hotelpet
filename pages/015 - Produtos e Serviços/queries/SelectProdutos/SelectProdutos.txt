@@ -1,0 +1,12 @@
+SELECT * FROM "{{JSutils.currentSchema()}}".hotserv001
+WHERE serv001_deleted <> true and serv001_desc ILIKE '%{{TableProdutos.searchText}}%'
+ORDER BY
+{{
+  ({
+    serv001_desc: 'serv001_desc',
+    serv001_id: 'serv001_id'
+  }[TableProdutos.sortOrder.column]) || 'serv001_desc'
+}}
+{{ TableProdutos.sortOrder.order === 'DESC' ? 'DESC' : 'ASC' }}
+LIMIT {{TableProdutos.pageSize}}
+OFFSET {{(TableProdutos.pageNo - 1) * TableProdutos.pageSize}};

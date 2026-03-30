@@ -1,0 +1,71 @@
+{
+  "animateLoading": true,
+  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+  "bottomRow": 29,
+  "bottomRowBeforeCollapse": 29,
+  "boxShadow": "none",
+  "buttonColor": "{{appsmith.theme.colors.primaryColor}}",
+  "buttonVariant": "PRIMARY",
+  "disabledWhenInvalid": false,
+  "dynamicBindingPathList": [
+    {
+      "key": "buttonColor"
+    },
+    {
+      "key": "borderRadius"
+    },
+    {
+      "key": "text"
+    },
+    {
+      "key": "isDisabled"
+    }
+  ],
+  "dynamicPropertyPathList": [
+    {
+      "key": "onClick"
+    },
+    {
+      "key": "isDisabled"
+    }
+  ],
+  "dynamicTriggerPathList": [
+    {
+      "key": "onClick"
+    }
+  ],
+  "iconAlign": "left",
+  "iconName": "floppy-disk",
+  "isDefaultClickDisabled": true,
+  "isDisabled": "{{ !JSvalidateButton.podeSalvar() }}",
+  "isLoading": false,
+  "isVisible": true,
+  "key": "mfa917wnro",
+  "leftColumn": 23,
+  "minWidth": 120,
+  "mobileBottomRow": 9,
+  "mobileLeftColumn": 1,
+  "mobileRightColumn": 17,
+  "mobileTopRow": 5,
+  "needsErrorInfo": false,
+  "onClick": "{{\n  (() => {\n// 1. Sinaliza atividade para o sistema de segurança (reseta os 15 min)\n JSutils.resetInactivityTimer();\t\t\n// 2 - Definimos os dados que vêm dos inputs do seu formulário/container\n\t\tconst formData = {\n      pel001_id: InputID.text, \n      pel001_desc: InputDescricao.text?.trim().toUpperCase()\n    };\n\t\t\n    if (appsmith.store.modalContexto?.acaoTipo === \"ADICIONAR\") {\n      return JSconfirmation.showModal({\n        action: \"Insert\",\n        message: \"Deseja salvar este novo registro?\",\n        icon: \"plus\",\n        color: \"green\",\n\t\t\t\trow: formData\n      });\n    } else {\n      return JSconfirmation.showModal({\n        action: \"Update\",\n        message: \"Deseja salvar as alterações deste registro?\",\n        icon: \"edit\",\n        color: \"orange\",\n\t\t    row: formData\n      });\n    }\n  })()\n}}",
+  "originalBottomRow": 29,
+  "originalTopRow": 25,
+  "parentColumnSpace": 7.1826171875,
+  "parentId": "bta2kewsl8",
+  "parentRowSpace": 10,
+  "placement": "CENTER",
+  "recaptchaType": "V3",
+  "renderMode": "CANVAS",
+  "resetFormOnClick": false,
+  "responsiveBehavior": "hug",
+  "rightColumn": 42,
+  "text": "{{appsmith.store.modalContexto?.acaoBotao}}",
+  "tooltip": "CONFIRMAR",
+  "topRow": 25,
+  "topRowBeforeCollapse": 25,
+  "type": "BUTTON_WIDGET",
+  "version": 1,
+  "widgetId": "9mepoe3yor",
+  "widgetName": "ButtonSalvar"
+}

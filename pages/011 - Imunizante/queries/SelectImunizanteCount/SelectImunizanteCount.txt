@@ -1,2 +1,2 @@
-SELECT count(clinica001_id) FROM "{{JSutils.currentSchema()}}".hotclinica001
-WHERE clinica001_deleted <> true and clinica001_nome ILIKE '%{{TableImunizante.searchText}}%';
+SELECT count(imun001_id) FROM "{{JSutils.currentSchema()}}".hotimun001
+WHERE imun001_deleted <> true and imun001_desc ILIKE '%{{TableImunizante.searchText}}%';

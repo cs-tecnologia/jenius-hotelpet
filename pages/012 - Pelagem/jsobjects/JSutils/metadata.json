@@ -1,0 +1,28 @@
+{
+  "gitSyncId": "69b814afccdcda4eb595c07f_dd46143e-250f-4da3-b592-43f03c5d1efa",
+  "id": "012 - Pelagem_JSutils",
+  "unpublishedCollection": {
+    "name": "JSutils",
+    "pageId": "012 - Pelagem",
+    "pluginId": "js-plugin",
+    "pluginType": "JS",
+    "variables": [
+      {
+        "name": "timeoutId",
+        "value": "null"
+      },
+      {
+        "name": "intervalId",
+        "value": "null"
+      },
+      {
+        "name": "tempoRestante",
+        "value": "3600"
+      },
+      {
+        "name": "tempoPadrao",
+        "value": "3600"
+      }
+    ]
+  }
+}

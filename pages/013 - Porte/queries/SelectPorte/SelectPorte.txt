@@ -1,0 +1,12 @@
+SELECT * FROM "{{JSutils.currentSchema()}}".hotporte001
+WHERE porte001_deleted <> true and porte001_desc ILIKE '%{{TablePorte.searchText}}%'
+ORDER BY
+{{
+  ({
+    porte001_desc: 'porte001_desc',
+    porte001_id: 'porte001_id'
+  }[TablePorte.sortOrder.column]) || 'porte001_desc'
+}}
+{{ TablePorte.sortOrder.order === 'DESC' ? 'DESC' : 'ASC' }}
+LIMIT {{TablePorte.pageSize}}
+OFFSET {{(TablePorte.pageNo - 1) * TablePorte.pageSize}};

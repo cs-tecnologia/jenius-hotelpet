@@ -50,21 +50,11 @@ async resetInactivityTimer() {
 		// Se quiser testar sem ser expulso, coloque // na frente das linhas abaixo
 		await clearStore();
 		resetWidget("InputNome", true); // Descomente se esses widgets existirem nesta página
-    resetWidget("InputID", true); // Reset o ID também, se necessário
-		resetWidget("InputCEP", true);
-		resetWidget("InputEndereco", true);
-		resetWidget("InputNumero", true);
-		resetWidget("InputComplemento", true);
-		resetWidget("InputBairro", true);
-		resetWidget("InputCidade", true);
-		resetWidget("SelectUF", true);
-		resetWidget("InputContato", true);
-		resetWidget("InputEmail", true);					
-		resetWidget("InputTelefone", true);					
-		resetWidget("InputCelular", true);				
-		resetWidget("InputContato", true);			
+		resetWidget("InputPrazo", true);
+    resetWidget("Select1Especie", true); // Reset o ID também, se necessário
+		resetWidget("Select2Forma", true);
+		resetWidget("Select3Via", true);		
 		resetWidget("TableImunizante", true);
-		resetWidget("ApiViaCep", true);
 		
 		showAlert("Sessão encerrada por inatividade.", "warning");
 		navigateTo("home"); 
@@ -72,22 +62,7 @@ async resetInactivityTimer() {
 
 	async limparESair() {
 		await clearStore(); 
-		resetWidget("InputNome", true); // Descomente se esses widgets existirem nesta página
-    resetWidget("InputID", true); // Reset o ID também, se necessário
-		resetWidget("InputCEP", true);
-		resetWidget("InputEndereco", true);
-		resetWidget("InputNumero", true);
-		resetWidget("InputComplemento", true);
-		resetWidget("InputBairro", true);
-		resetWidget("InputCidade", true);
-		resetWidget("SelectUF", true);
-		resetWidget("InputContato", true);
-		resetWidget("InputEmail", true);					
-		resetWidget("InputTelefone", true);					
-		resetWidget("InputCelular", true);				
-		resetWidget("InputContato", true);		
-		resetWidget("TableAlimentos", true);
-		resetWidget("ApiViaCep", true);
+
 		
 		showAlert("Sessão encerrada com segurança.", "info");
 		navigateTo("home");

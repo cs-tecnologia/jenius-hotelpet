@@ -5,7 +5,7 @@
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
   "bottomRow": 12,
   "boxShadow": "none",
-  "defaultText": "{{  appsmith.store.modalContexto?.acaoTipo === \"ADICIONAR\" ? \"\" : TableImunizante.selectedRow.clinica001_id  || \"\"\n}}",
+  "defaultText": "{{  appsmith.store.modalContexto?.acaoTipo === \"ADICIONAR\" ? \"\" : TableImunizante.selectedRow.imun001_id  || \"\"\n}}",
   "dynamicBindingPathList": [
     {
       "key": "accentColor"

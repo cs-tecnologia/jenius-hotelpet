@@ -5,7 +5,7 @@
   "pluginType": "DB",
   "unpublishedAction": {
     "actionConfiguration": {
-      "body": "UPDATE \"{{JSutils.currentSchema()}}\".hotclinica001 SET\n\t\t\"clinica001_deleted\" = TRUE,\n\t\t\"clinica001_deleted_date\" = now(),\n    \"clinica001_deleted_by\" = {{ appsmith.user.id || 1 }}\nWHERE \"clinica001_id\" = {{JSconfirmation.modalconfig.row.clinica001_id}};",
+      "body": "UPDATE \"{{JSutils.currentSchema()}}\".hotimun001 SET\n\t\t\"imun001_deleted\" = TRUE,\n\t\t\"imun001_deleted_date\" = now(),\n    \"imun001_deleted_by\" = {{ appsmith.user.id || 1 }}\nWHERE \"imun001_id\" = {{JSconfirmation.modalconfig.row.imun001_id}};",
       "encodeParamsToggle": true,
       "paginationType": "NONE",
       "pluginSpecifiedTemplates": [

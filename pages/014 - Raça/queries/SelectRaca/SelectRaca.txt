@@ -1,0 +1,19 @@
+SELECT 
+    asp.*, 
+    ani.ani001_animal 
+FROM "{{JSutils.currentSchema()}}".hotraca001 AS asp
+LEFT JOIN "{{JSutils.currentSchema()}}".hotani001 AS ani 
+    ON asp.raca001_tipoanimal = ani.ani001_id 
+WHERE asp.raca001_deleted <> true 
+    AND asp.raca001_desc ILIKE '%{{TableRaca.searchText}}%'
+ORDER BY
+{{
+  ({
+    raca001_desc: 'asp.raca001_desc',
+    raca001_id: 'asp.raca001_id',
+    raca001_tipoanimal: 'asp.raca001_tipoanimal'
+  }[TableRaca.sortOrder.column]) || 'asp.raca001_desc'
+}}
+{{ TableRaca.sortOrder.order === 'DESC' ? 'DESC' : 'ASC' }}
+LIMIT {{TableRaca.pageSize}}
+OFFSET {{(TableRaca.pageNo - 1) * TableRaca.pageSize}};

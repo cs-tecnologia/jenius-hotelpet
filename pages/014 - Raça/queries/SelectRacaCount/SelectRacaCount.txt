@@ -1,0 +1,2 @@
+SELECT count(raca001_id) FROM "{{JSutils.currentSchema()}}".hotraca001
+WHERE raca001_deleted <> true and raca001_desc ILIKE '%{{TableRaca.searchText}}%';

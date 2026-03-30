@@ -1,0 +1,2 @@
+SELECT count(pel001_id) FROM "{{JSutils.currentSchema()}}".hotpel001
+WHERE pel001_deleted <> true and pel001_desc ILIKE '%{{TablePelagem.searchText}}%';

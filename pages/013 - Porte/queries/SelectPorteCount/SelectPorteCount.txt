@@ -1,0 +1,2 @@
+SELECT count(porte001_id) FROM "{{JSutils.currentSchema()}}".hotporte001
+WHERE porte001_deleted <> true and porte001_desc ILIKE '%{{TablePorte.searchText}}%';

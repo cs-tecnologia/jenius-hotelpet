@@ -1,0 +1,5 @@
+UPDATE "{{JSutils.currentSchema()}}".hotporte001 SET
+		"porte001_desc" = '{{JSconfirmation.modalconfig.row.porte001_desc}}',
+		"porte001_last_modification" = now(),
+    "porte001_modified_by" = {{ appsmith.user.id || 1 }}
+WHERE "porte001_id" = {{JSconfirmation.modalconfig.row.porte001_id}};

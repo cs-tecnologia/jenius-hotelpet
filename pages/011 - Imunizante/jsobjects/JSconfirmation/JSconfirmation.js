@@ -44,20 +44,10 @@ async executeAction() {
                 // Agora, como o acaoTipo é EDITAR, o Default Value do Input 
                 // vai carregar automaticamente o que estiver selecionado na tabela.
 								resetWidget("InputNome", true); // Descomente se esses widgets existirem nesta página
-								resetWidget("InputID", true); // Reset o ID também, se necessário
-								resetWidget("InputCEP", true);
-								resetWidget("InputEndereco", true);
-								resetWidget("InputNumero", true);
-								resetWidget("InputComplemento", true);
-								resetWidget("InputBairro", true);
-								resetWidget("InputCidade", true);
-								resetWidget("SelectUF", true);
-								resetWidget("InputContato", true);
-								resetWidget("InputEmail", true);					
-								resetWidget("InputTelefone", true);					
-								resetWidget("InputCelular", true);				
-								resetWidget("InputContato", true);		
-								resetWidget("ApiViaCep", true);
+								resetWidget("InputPrazo", true);
+								resetWidget("Select1Especie", true); // Reset o ID também, se necessário
+								resetWidget("Select2Forma", true);
+								resetWidget("Select3Via", true);
             })
             .catch((err) => showAlert("Erro: " + err.message, "error"));
     }
@@ -76,20 +66,10 @@ async cancelarOperacao() {
 
     // 3. Resetamos os widgets para limparem o que o usuário digitou
 								resetWidget("InputNome", true); // Descomente se esses widgets existirem nesta página
-								resetWidget("InputID", true); // Reset o ID também, se necessário
-								resetWidget("InputCEP", true);
-								resetWidget("InputEndereco", true);
-								resetWidget("InputNumero", true);
-								resetWidget("InputComplemento", true);
-								resetWidget("InputBairro", true);
-								resetWidget("InputCidade", true);
-								resetWidget("SelectUF", true);
-								resetWidget("InputContato", true);
-								resetWidget("InputEmail", true);					
-								resetWidget("InputTelefone", true);					
-								resetWidget("InputCelular", true);				
-								resetWidget("InputContato", true);
-								resetWidget("ApiViaCep", true);
+								resetWidget("InputPrazo", true);
+								resetWidget("Select1Especie", true); // Reset o ID também, se necessário
+								resetWidget("Select2Forma", true);
+								resetWidget("Select3Via", true);
 
     showAlert("Alterações descartadas.", "info");
 	},

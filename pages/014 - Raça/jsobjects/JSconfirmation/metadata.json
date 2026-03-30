@@ -1,0 +1,16 @@
+{
+  "gitSyncId": "69b814afccdcda4eb595c07f_aa78af6b-d201-46b6-904e-986a5506bf45",
+  "id": "014 - Raça_JSconfirmation",
+  "unpublishedCollection": {
+    "name": "JSconfirmation",
+    "pageId": "014 - Raça",
+    "pluginId": "js-plugin",
+    "pluginType": "JS",
+    "variables": [
+      {
+        "name": "modalconfig",
+        "value": "{\n  action: \"Delete\",\n  message: \"\",\n  row: {},\n  icon: \"plus\",\n  color: \"blue\"\n}"
+      }
+    ]
+  }
+}

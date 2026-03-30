@@ -1,0 +1,28 @@
+{
+  "gitSyncId": "69b814afccdcda4eb595c07f_43f3af48-a03d-486d-95e5-8d2f200e01a4",
+  "id": "013 - Porte_JSutils",
+  "unpublishedCollection": {
+    "name": "JSutils",
+    "pageId": "013 - Porte",
+    "pluginId": "js-plugin",
+    "pluginType": "JS",
+    "variables": [
+      {
+        "name": "timeoutId",
+        "value": "null"
+      },
+      {
+        "name": "intervalId",
+        "value": "null"
+      },
+      {
+        "name": "tempoRestante",
+        "value": "3600"
+      },
+      {
+        "name": "tempoPadrao",
+        "value": "3600"
+      }
+    ]
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "gitSyncId": "69b814afccdcda4eb595c07f_08bf7b27-8989-464d-9449-695f1f23dbce",
+  "id": "012 - Pelagem_JSconfirmation",
+  "unpublishedCollection": {
+    "name": "JSconfirmation",
+    "pageId": "012 - Pelagem",
+    "pluginId": "js-plugin",
+    "pluginType": "JS",
+    "variables": [
+      {
+        "name": "modalconfig",
+        "value": "{\n  action: \"Delete\",\n  message: \"\",\n  row: {},\n  icon: \"plus\",\n  color: \"blue\"\n}"
+      }
+    ]
+  }
+}

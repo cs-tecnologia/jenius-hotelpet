@@ -1,0 +1,28 @@
+{
+  "gitSyncId": "69b814afccdcda4eb595c07f_d0abaa94-2325-4eb5-858f-d3c66bc99330",
+  "id": "015 - Produtos e Serviços_JSutils",
+  "unpublishedCollection": {
+    "name": "JSutils",
+    "pageId": "015 - Produtos e Serviços",
+    "pluginId": "js-plugin",
+    "pluginType": "JS",
+    "variables": [
+      {
+        "name": "timeoutId",
+        "value": "null"
+      },
+      {
+        "name": "intervalId",
+        "value": "null"
+      },
+      {
+        "name": "tempoRestante",
+        "value": "3600"
+      },
+      {
+        "name": "tempoPadrao",
+        "value": "3600"
+      }
+    ]
+  }
+}

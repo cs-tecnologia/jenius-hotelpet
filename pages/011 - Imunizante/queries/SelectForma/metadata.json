@@ -29,7 +29,7 @@
     ],
     "name": "SelectForma",
     "pageId": "011 - Imunizante",
-    "runBehaviour": "MANUAL",
+    "runBehaviour": "AUTOMATIC",
     "userSetOnLoad": false
   }
 }

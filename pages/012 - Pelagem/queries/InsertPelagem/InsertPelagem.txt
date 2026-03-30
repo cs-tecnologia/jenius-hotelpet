@@ -1,0 +1,12 @@
+INSERT INTO "{{JSutils.currentSchema()}}".hotpel001 (
+	"pel001_desc", 
+	"pel001_creation_date", 
+	"pel001_created_by", 
+	"pel001_last_modification", 
+	"pel001_modified_by")
+VALUES (
+	'{{JSconfirmation.modalconfig.row.pel001_desc?.trim().toUpperCase()}}', 
+		now(),
+    {{ appsmith.user.id || 1 }},
+		now(),
+    {{ appsmith.user.id || 1 }});	

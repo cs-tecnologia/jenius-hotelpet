@@ -1,0 +1,3 @@
+SELECT * FROM "{{JSutils.currentSchema()}}".hotunidade001
+WHERE unid001_deleted <> true 
+ORDER BY unid001_sigla, unid001_id;
