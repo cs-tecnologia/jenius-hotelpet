@@ -1,7 +1,7 @@
 {
   "animateLoading": true,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 37,
+  "bottomRow": 47,
   "boxShadow": "none",
   "buttonColor": "{{ JSvalidateButton.podeCancelar() ? '#E11D48' : '#94A3B8' }}",
   "buttonVariant": "SECONDARY",
@@ -61,7 +61,7 @@
   "rightColumn": 19,
   "text": "CANCELAR",
   "tooltip": "Cancelar Edição",
-  "topRow": 33,
+  "topRow": 43,
   "type": "BUTTON_WIDGET",
   "version": 1,
   "widgetId": "bhn6jmlziy",

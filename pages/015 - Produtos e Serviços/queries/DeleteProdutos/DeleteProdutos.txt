@@ -1,5 +1,5 @@
-UPDATE "{{JSutils.currentSchema()}}".hotraca001 SET
-		"raca001_deleted" = TRUE,
-		"raca001_deleted_date" = now(),
-		"raca001_deleted_by" = {{ appsmith.user.id || 1 }}
-WHERE "raca001_id" = {{JSconfirmation.modalconfig.row.raca001_id}};
+UPDATE "{{JSutils.currentSchema()}}".hotserv001 SET
+		"serv001_deleted" = TRUE,
+		"serv001_deleted_date" = now(),
+		"serv001_deleted_by" = {{ appsmith.user.id || 1 }}
+WHERE "serv001_id" = {{JSconfirmation.modalconfig.row.serv001_id}};

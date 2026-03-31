@@ -5,7 +5,7 @@
   "pluginType": "DB",
   "unpublishedAction": {
     "actionConfiguration": {
-      "body": "UPDATE \"{{JSutils.currentSchema()}}\".hotraca001 SET\n\t\t\"raca001_desc\" = '{{JSconfirmation.modalconfig.row.raca001_desc}}',\n\t\t\"raca001_tipoanimal\" = '{{JSconfirmation.modalconfig.row.raca001_tipoanimal}}',\n\t\t\"raca001_last_modification\" = now(),\n    \"raca001_modified_by\" = {{ appsmith.user.id || 1 }}\nWHERE \"raca001_id\" = {{JSconfirmation.modalconfig.row.raca001_id}};",
+      "body": "UPDATE \"{{JSutils.currentSchema()}}\".hotserv001 SET\n\t\t\"serv001_desc\" = '{{JSconfirmation.modalconfig.row.serv001_desc}}',\n\t\t\"serv001_valor_custo\" = NUMBER('{{JSconfirmation.modalconfig.row.serv001_valor_custo}}'),\t\n\t\t\"serv001_valor_venda\" = NUMBER('{{JSconfirmation.modalconfig.row.serv001_valor_venda}}'),\n\t\t\"serv001_estoque_atual\" = NUMBER('{{JSconfirmation.modalconfig.row.serv001_estoque_atual}}'),\n\t\t\"serv001_tipo\" = '{{JSconfirmation.modalconfig.row.serv001_tipo}}',\n\t\t\"serv001_controla_estoque\" = '{{JSconfirmation.modalconfig.row.serv001_controla_estoque}}',\n\t\t\"serv001_unid001_id\" = '{{JSconfirmation.modalconfig.row.serv001_unid001_id}}',\n\t\t\"serv001_last_modification\" = now(),\n    \"serv001_modified_by\" = {{ appsmith.user.id || 1 }}\nWHERE \"serv001_id\" = {{JSconfirmation.modalconfig.row.serv001_id}};",
       "encodeParamsToggle": true,
       "paginationType": "NONE",
       "pluginSpecifiedTemplates": [

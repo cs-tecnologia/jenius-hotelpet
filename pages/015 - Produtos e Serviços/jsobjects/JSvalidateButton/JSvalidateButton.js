@@ -5,21 +5,33 @@ podeSalvar: () => {
     
     // Valores Atuais (Inputs/Selects)
     const descAtual = InputDescricao.text || "";
-    const tipoanimalAtual = Select1Especie.selectedOptionValue;
+	  const custoAtual = InputCusto.text || "";
+		const vendaAtual = InputValor.text || "";
+		const estoqueAtual = InputEstoqueAtual.text || "";
+		const tipoAtual = Select1Tipo.selectedOptionValue;
+		const controlaAtual = Select1Controla.selectedOptionValue;
+		const unidadeAtual = Select1Unidade.selectedOptionValue;	
+
     
     // Valores Originais (Tabela)
-    const descOriginal = TableProdutos.selectedRow.raca001_desc || "";
-    const tipoanimalOriginal = TableProdutos.selectedRow.raca001_tipoanimal || "";
-    
+    const descOriginal = TableProdutos.selectedRow.serv001_desc || "";
+    const custoOriginal = TableProdutos.selectedRow.serv001_valor_custo || "";
+    const vendaOriginal = TableProdutos.selectedRow.serv001_valor_venda || "";
+    const estoqueOriginal = TableProdutos.selectedRow.serv001_estoque_atual || "";
+    const tipoOriginal = TableProdutos.selectedRow.serv001_tipo || "";
+    const controlaOriginal = TableProdutos.selectedRow.serv001_controla_estoque || "";
+    const unidadeOriginal = TableProdutos.selectedRow.serv001_unid001_id || "";
+	
+	
     // 1. Validação de preenchimento obrigatório
-    const camposPreenchidos = descAtual.trim().length > 0 && tipoanimalAtual !== undefined;
+    const camposPreenchidos = descAtual.trim().length > 0 && tipoAtual !== undefined && controlaAtual !== undefined && unidadeAtual !== undefined;
 
     if (action === "ADICIONAR") {
         // Na adição, basta que os campos obrigatórios estejam preenchidos
         return camposPreenchidos;
     } else {
         // Na edição, precisa estar preenchido E algo deve ter mudado
-        const houveMudanca = (descAtual !== descOriginal) || (tipoanimalAtual !== tipoanimalOriginal);
+        const houveMudanca = (descAtual !== descOriginal) || (custoAtual !== custoOriginal) || (vendaAtual !== vendaOriginal) || (estoqueAtual !== estoqueOriginal) || (tipoAtual !== tipoOriginal) || (controlaAtual !== controlaOriginal) || (unidadeAtual !== unidadeOriginal);
         return camposPreenchidos && houveMudanca;
     }
 },
@@ -36,7 +48,11 @@ podeSalvar: () => {
 		// 2. Resetamos o widget. Agora ele vai ler o Default Value novo (da linha selecionada)
     resetWidget("InputDescricao", true);
     resetWidget("InputID", true);
- 		resetWidget("Select1Especie", true);
+    resetWidget("InputCusto", true);
+		resetWidget("InputID", true);
+ 		resetWidget("Select1Tipo", true);
+ 		resetWidget("Select1Controla", true);
+ 		resetWidget("Select1Unidade", true);
 
 		// 3. Reiniciamos o cronômetro de inatividade (pois o usuário interagiu com o botão)
 		JSutils.resetInactivityTimer();
@@ -56,15 +72,25 @@ temAlteracao: () => {
     const contexto = appsmith.store.modalContexto?.acaoTipo;
     
     // Dados dos Inputs/Selects (O que o usuário está fazendo agora)
-    const descAtual = (InputDescricao.text || "").trim().toUpperCase();
-    const tipoAnimalAtual = Select1Especie.selectedOptionValue;
+	  const descAtual = (InputDescricao.text || "").trim().toUpperCase();
+	  const custoAtual = InputCusto.text || "";
+		const vendaAtual = InputValor.text || "";
+		const estoqueAtual = InputEstoqueAtual.text || "";
+		const tipoAtual = Select1Tipo.selectedOptionValue;
+		const controlaAtual = Select1Controla.selectedOptionValue;
+		const unidadeAtual = Select1Unidade.selectedOptionValue;	
     
     // Dados da Tabela (O que estava salvo originalmente)
-    const descOriginal = (TableProdutos.selectedRow?.raca001_desc || "").trim().toUpperCase();
-    const tipoAnimalOriginal = TableProdutos.selectedRow?.raca001_tipoanimal;
+	  const descOriginal = (TableProdutos.selectedRow?.raca001_desc || "").trim().toUpperCase();
+    const custoOriginal = TableProdutos.selectedRow.serv001_valor_custo || "";
+    const vendaOriginal = TableProdutos.selectedRow.serv001_valor_venda || "";
+    const estoqueOriginal = TableProdutos.selectedRow.serv001_estoque_atual || "";
+    const tipoOriginal = TableProdutos.selectedRow.serv001_tipo || "";
+    const controlaOriginal = TableProdutos.selectedRow.serv001_controla_estoque || "";
+    const unidadeOriginal = TableProdutos.selectedRow.serv001_unid001_id || "";
 
     // 1. Validação de preenchimento obrigatório (Regra básica para os dois modos)
-    const camposValidos = descAtual.length > 0 && tipoAnimalAtual !== undefined && tipoAnimalAtual !== null;
+    const camposValidos = descAtual.length > 0 && (descAtual !== undefined && descAtual !== null) && (tipoAtual !== undefined && tipoAtual !== null) && (controlaAtual !== undefined && controlaAtual !== null) && (unidadeAtual !== undefined && unidadeAtual !== null);
 
     if (contexto === "ADICIONAR") {
         // No modo Adicionar, basta que os campos obrigatórios estejam preenchidos

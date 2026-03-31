@@ -4,7 +4,7 @@
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
   "bottomRow": 18,
   "boxShadow": "none",
-  "defaultOptionValue": "{{ ((options, serverSideFiltering) => (   appsmith.store.modalContexto?.acaoTipo === \"ADICIONAR\" ? \"\" : TableProdutos.selectedRow.serv001_unid001_id\n))(Select1Unidade.options, Select1Unidade.serverSideFiltering) }}",
+  "defaultOptionValue": "{{ ((options, serverSideFiltering) => (   appsmith.store.modalContexto?.acaoTipo === \"ADICIONAR\" ? \"\" : TableProdutos.selectedRow.serv001_unid001_id ? \"\"\n))(Select1Unidade.options, Select1Unidade.serverSideFiltering) }}",
   "dynamicBindingPathList": [
     {
       "key": "accentColor"
@@ -14,6 +14,9 @@
     },
     {
       "key": "defaultOptionValue"
+    },
+    {
+      "key": "sourceData"
     }
   ],
   "dynamicHeight": "FIXED",
@@ -26,7 +29,7 @@
   "isDisabled": false,
   "isFilterable": true,
   "isLoading": false,
-  "isRequired": false,
+  "isRequired": true,
   "isVisible": true,
   "key": "3x8hw6xtqw",
   "labelAlignment": "left",
@@ -34,7 +37,7 @@
   "labelText": "Unidade Medida",
   "labelTextSize": "0.875rem",
   "labelWidth": 5,
-  "leftColumn": 0,
+  "leftColumn": 20,
   "maxDynamicHeight": 9000,
   "minDynamicHeight": 4,
   "minWidth": 450,
@@ -43,17 +46,17 @@
   "mobileRightColumn": 20,
   "mobileTopRow": 11,
   "needsErrorInfo": false,
-  "optionLabel": "name",
-  "optionValue": "code",
+  "optionLabel": "label",
+  "optionValue": "value",
   "parentColumnSpace": 7.1826171875,
   "parentId": "bta2kewsl8",
   "parentRowSpace": 10,
   "placeholderText": "Select option",
   "renderMode": "CANVAS",
   "responsiveBehavior": "fill",
-  "rightColumn": 20,
+  "rightColumn": 64,
   "serverSideFiltering": false,
-  "sourceData": "[\n  { \"name\": \"Produto\", \"code\": \"P\" },\n  { \"name\": \"Serviço\", \"code\": \"S\" }\n]",
+  "sourceData": "{{ \n  SelectUnidade.data.map(item => {\n    return {\n      label: item.unid001_sigla + \" - \" + item.unid001_desc,\n      value: item.unid001_id\n    }\n  }) \n}}",
   "topRow": 11,
   "type": "SELECT_WIDGET",
   "version": 1,

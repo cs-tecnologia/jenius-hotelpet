@@ -1,6 +1,11 @@
-UPDATE "{{JSutils.currentSchema()}}".hotraca001 SET
-		"raca001_desc" = '{{JSconfirmation.modalconfig.row.raca001_desc}}',
-		"raca001_tipoanimal" = '{{JSconfirmation.modalconfig.row.raca001_tipoanimal}}',
-		"raca001_last_modification" = now(),
-    "raca001_modified_by" = {{ appsmith.user.id || 1 }}
-WHERE "raca001_id" = {{JSconfirmation.modalconfig.row.raca001_id}};
+UPDATE "{{JSutils.currentSchema()}}".hotserv001 SET
+		"serv001_desc" = '{{JSconfirmation.modalconfig.row.serv001_desc}}',
+		"serv001_valor_custo" = NUMBER('{{JSconfirmation.modalconfig.row.serv001_valor_custo}}'),	
+		"serv001_valor_venda" = NUMBER('{{JSconfirmation.modalconfig.row.serv001_valor_venda}}'),
+		"serv001_estoque_atual" = NUMBER('{{JSconfirmation.modalconfig.row.serv001_estoque_atual}}'),
+		"serv001_tipo" = '{{JSconfirmation.modalconfig.row.serv001_tipo}}',
+		"serv001_controla_estoque" = '{{JSconfirmation.modalconfig.row.serv001_controla_estoque}}',
+		"serv001_unid001_id" = '{{JSconfirmation.modalconfig.row.serv001_unid001_id}}',
+		"serv001_last_modification" = now(),
+    "serv001_modified_by" = {{ appsmith.user.id || 1 }}
+WHERE "serv001_id" = {{JSconfirmation.modalconfig.row.serv001_id}};

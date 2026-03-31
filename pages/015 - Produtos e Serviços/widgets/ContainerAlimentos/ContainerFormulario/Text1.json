@@ -1,7 +1,7 @@
 {
   "animateLoading": true,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 57,
+  "bottomRow": 53,
   "dynamicBindingPathList": [
     {
       "key": "truncateButtonColor"
@@ -41,8 +41,8 @@
   "mobileRightColumn": 64,
   "mobileTopRow": 6,
   "needsErrorInfo": false,
-  "originalBottomRow": 57,
-  "originalTopRow": 53,
+  "originalBottomRow": 53,
+  "originalTopRow": 49,
   "overflow": "NONE",
   "parentColumnSpace": 19.1875,
   "parentId": "fyme5h4y48",
@@ -55,7 +55,7 @@
   "text": "Sessão expira em: {{ JSutils.formatarTempo() }}",
   "textAlign": "CENTER",
   "textColor": "{{ JSutils.tempoRestante < 60 ? '#E11D48' : '#64748B' }}",
-  "topRow": 53,
+  "topRow": 49,
   "truncateButtonColor": "{{appsmith.theme.colors.primaryColor}}",
   "type": "TEXT_WIDGET",
   "version": 1,

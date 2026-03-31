@@ -5,7 +5,7 @@
   "pluginType": "DB",
   "unpublishedAction": {
     "actionConfiguration": {
-      "body": "SELECT * FROM \"{{JSutils.currentSchema()}}\".hotserv001\nWHERE serv001_deleted <> true and serv001_desc ILIKE '%{{TableProdutos.searchText}}%'\nORDER BY\n{{\n  ({\n    serv001_desc: 'serv001_desc',\n    serv001_id: 'serv001_id'\n  }[TableProdutos.sortOrder.column]) || 'serv001_desc'\n}}\n{{ TableProdutos.sortOrder.order === 'DESC' ? 'DESC' : 'ASC' }}\nLIMIT {{TableProdutos.pageSize}}\nOFFSET {{(TableProdutos.pageNo - 1) * TableProdutos.pageSize}};\n",
+      "body": "SELECT * FROM \"{{JSutils.currentSchema()}}\".hotserv001\nWHERE serv001_deleted <> true and serv001_desc ILIKE '%{{TableProdutos.searchText}}%'\nORDER BY\n{{\n  ({\n    serv001_desc: 'serv001_desc',\n    serv001_id: 'serv001_id'\n  }[TableProdutos.sortOrder.column]) || 'serv001_desc'\n}}\n{{ TableProdutos.sortOrder.order === 'DESC' ? 'DESC' : 'ASC' }}\nLIMIT {{TableProdutos.pageSize}}\nOFFSET {{(TableProdutos.pageNo - 1) * TableProdutos.pageSize}};",
       "encodeParamsToggle": true,
       "paginationType": "NONE",
       "pluginSpecifiedTemplates": [

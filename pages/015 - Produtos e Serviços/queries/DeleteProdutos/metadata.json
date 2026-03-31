@@ -5,7 +5,7 @@
   "pluginType": "DB",
   "unpublishedAction": {
     "actionConfiguration": {
-      "body": "UPDATE \"{{JSutils.currentSchema()}}\".hotraca001 SET\n\t\t\"raca001_deleted\" = TRUE,\n\t\t\"raca001_deleted_date\" = now(),\n\t\t\"raca001_deleted_by\" = {{ appsmith.user.id || 1 }}\nWHERE \"raca001_id\" = {{JSconfirmation.modalconfig.row.raca001_id}};",
+      "body": "UPDATE \"{{JSutils.currentSchema()}}\".hotserv001 SET\n\t\t\"serv001_deleted\" = TRUE,\n\t\t\"serv001_deleted_date\" = now(),\n\t\t\"serv001_deleted_by\" = {{ appsmith.user.id || 1 }}\nWHERE \"serv001_id\" = {{JSconfirmation.modalconfig.row.serv001_id}};",
       "encodeParamsToggle": true,
       "paginationType": "NONE",
       "pluginSpecifiedTemplates": [

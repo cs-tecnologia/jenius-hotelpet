@@ -1,13 +1,23 @@
-INSERT INTO "{{JSutils.currentSchema()}}".hotraca001 (
-	"raca001_desc", 
-	"raca001_tipoanimal", 
-	"raca001_creation_date", 
-	"raca001_created_by", 
-	"raca001_last_modification", 
-	"raca001_modified_by")
+INSERT INTO "{{JSutils.currentSchema()}}".hotserv001 (
+	"serv001_desc", 
+	"serv001_valor_custo", 
+	"serv001_valor_venda", 
+	"serv001_estoque_atual",
+	"serv001_tipo",
+	"serv001_controla_estoque",
+	"serv001_unid001_id",
+	"serv001_creation_date", 
+	"serv001_created_by", 
+	"serv001_last_modification", 
+	"serv001_modified_by")
 VALUES (
-		'{{JSconfirmation.modalconfig.row.raca001_desc?.trim().toUpperCase()}}', 
-		'{{JSconfirmation.modalconfig.row.raca001_tipoanimal}}', 
+		'{{JSconfirmation.modalconfig.row.serv001_desc?.trim().toUpperCase()}}', 
+		NUMBER('{{JSconfirmation.modalconfig.row.serv001_valor_custo}}'), 
+		NUMBER('{{JSconfirmation.modalconfig.row.serv001_valor_venda}}'), 
+		NUMBER('{{JSconfirmation.modalconfig.row.serv001_estoque_atual}}'),
+		'{{JSconfirmation.modalconfig.row.serv001_tipo}}', 
+		'{{JSconfirmation.modalconfig.row.serv001_controla_estoque}}', 
+		'{{JSconfirmation.modalconfig.row.serv001_unid001_id}}', 
 		now(),
     {{ appsmith.user.id || 1 }},
 		now(),

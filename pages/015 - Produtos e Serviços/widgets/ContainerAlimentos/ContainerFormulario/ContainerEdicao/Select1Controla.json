@@ -2,9 +2,9 @@
   "accentColor": "{{appsmith.theme.colors.primaryColor}}",
   "animateLoading": true,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 18,
+  "bottomRow": 25,
   "boxShadow": "none",
-  "defaultOptionValue": "{{ ((options, serverSideFiltering) => (  \n  appsmith.store.modalContexto?.acaoTipo === \"ADICIONAR\" \n  ? \"false\" \n  : String(TableProdutos.selectedRow.serv001_controla_estoque ?? \"false\")\n))(Select1Copy.options, Select1Copy.serverSideFiltering) }}",
+  "defaultOptionValue": "{{ ((options, serverSideFiltering) => (  \n  appsmith.store.modalContexto?.acaoTipo === \"ADICIONAR\" \n  ? \"false\" \n  : String(TableProdutos.selectedRow.serv001_controla_estoque ?? \"false\")\n))(Select1Controla.options, Select1Controla.serverSideFiltering) }}",
   "dynamicBindingPathList": [
     {
       "key": "accentColor"
@@ -26,15 +26,15 @@
   "isDisabled": false,
   "isFilterable": true,
   "isLoading": false,
-  "isRequired": false,
+  "isRequired": true,
   "isVisible": true,
   "key": "3x8hw6xtqw",
   "labelAlignment": "left",
   "labelPosition": "Top",
-  "labelText": "Controla Estoque?",
+  "labelText": "Ctrl Estoque?",
   "labelTextSize": "0.875rem",
   "labelWidth": 5,
-  "leftColumn": 21,
+  "leftColumn": 0,
   "maxDynamicHeight": 9000,
   "minDynamicHeight": 4,
   "minWidth": 450,
@@ -51,12 +51,12 @@
   "placeholderText": "Select option",
   "renderMode": "CANVAS",
   "responsiveBehavior": "fill",
-  "rightColumn": 41,
+  "rightColumn": 20,
   "serverSideFiltering": false,
   "sourceData": "[\n  { \"name\": \"SIM\", \"code\": \"true\" },\n  { \"name\": \"NÃO\", \"code\": \"false\" }\n]",
-  "topRow": 11,
+  "topRow": 18,
   "type": "SELECT_WIDGET",
   "version": 1,
   "widgetId": "k650bo7fg3",
-  "widgetName": "Select1Copy"
+  "widgetName": "Select1Controla"
 }
