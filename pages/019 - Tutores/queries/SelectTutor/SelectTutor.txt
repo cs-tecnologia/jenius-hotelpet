@@ -1,0 +1,12 @@
+SELECT * FROM "{{JSutils.currentSchema()}}".hotprop001
+WHERE prop001_deleted <> true and prop001_nome ILIKE '%{{TableTutor.searchText}}%'
+ORDER BY
+{{
+  ({
+    prop001_nome: 'prop001_nome',
+    prop001_id: 'prop001_id'
+  }[TableTutor.sortOrder.column]) || 'prop001_nome'
+}}
+{{ TableTutor.sortOrder.order === 'DESC' ? 'DESC' : 'ASC' }}
+LIMIT {{TableTutor.pageSize}}
+OFFSET {{(TableTutor.pageNo - 1) * TableTutor.pageSize}};

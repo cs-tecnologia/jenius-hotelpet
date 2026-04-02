@@ -1,0 +1,28 @@
+{
+  "gitSyncId": "69b814afccdcda4eb595c07f_53ae167f-afaa-48f7-8235-8cb5e72901ef",
+  "id": "019 - Tutores_JSutils",
+  "unpublishedCollection": {
+    "name": "JSutils",
+    "pageId": "019 - Tutores",
+    "pluginId": "js-plugin",
+    "pluginType": "JS",
+    "variables": [
+      {
+        "name": "timeoutId",
+        "value": "null"
+      },
+      {
+        "name": "intervalId",
+        "value": "null"
+      },
+      {
+        "name": "tempoRestante",
+        "value": "3600"
+      },
+      {
+        "name": "tempoPadrao",
+        "value": "3600"
+      }
+    ]
+  }
+}

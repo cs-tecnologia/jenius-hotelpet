@@ -1,0 +1,2 @@
+SELECT count(prop001_id) FROM "{{JSutils.currentSchema()}}".hotprop001
+WHERE prop001_deleted <> true and prop001_nome ILIKE '%{{TableTutor.searchText}}%';

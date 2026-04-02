@@ -1,0 +1,5 @@
+UPDATE "{{JSutils.currentSchema()}}".hotprop001 SET
+		"prop001_deleted" = TRUE,
+		"prop001_deleted_date" = now(),
+    "prop001_deleted_by" = {{ appsmith.user.id || 1 }}
+WHERE "prop001_id" = {{JSconfirmation.modalconfig.row.prop001_id}};
