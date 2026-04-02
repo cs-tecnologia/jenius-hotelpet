@@ -1,0 +1,12 @@
+SELECT * FROM "{{JSutils.currentSchema()}}".hottemp001
+WHERE temp001_deleted <> true and temp001_desc ILIKE '%{{TableTemperamento.searchText}}%'
+ORDER BY
+{{
+  ({
+    temp001_desc: 'temp001_desc',
+    temp001_id: 'temp001_id'
+  }[TableTemperamento.sortOrder.column]) || 'temp001_desc'
+}}
+{{ TableTemperamento.sortOrder.order === 'DESC' ? 'DESC' : 'ASC' }}
+LIMIT {{TableTemperamento.pageSize}}
+OFFSET {{(TableTemperamento.pageNo - 1) * TableTemperamento.pageSize}};

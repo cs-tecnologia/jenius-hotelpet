@@ -92,6 +92,18 @@
     {
       "id": "015 - Produtos e Serviços",
       "isDefault": false
+    },
+    {
+      "id": "016 - Acomodações Categoria",
+      "isDefault": false
+    },
+    {
+      "id": "017 - Acomodações",
+      "isDefault": false
+    },
+    {
+      "id": "018 - Temperamento",
+      "isDefault": false
     }
   ],
   "unpublishedAppLayout": {

@@ -43,9 +43,14 @@ async executeAction() {
                 // 4. Resetamos os widgets. 
                 // Agora, como o acaoTipo é EDITAR, o Default Value do Input 
                 // vai carregar automaticamente o que estiver selecionado na tabela.
-   							resetWidget("InputDescricao", true);
-    						resetWidget("InputID", true);
- 								resetWidget("Select1Especie", true);
+								resetWidget("InputDescricao", true);
+								resetWidget("InputID", true);
+								resetWidget("CurrencyInput1Custo", true);
+								resetWidget("CurrencyInput1Valor", true);
+								resetWidget("InputEstoqueAtual", true);
+								resetWidget("Select1Tipo", true);
+								resetWidget("Switch1Controla", true);
+								resetWidget("Select1Unidade", true);
             })
             .catch((err) => showAlert("Erro: " + err.message, "error"));
     }
@@ -63,9 +68,14 @@ async cancelarOperacao() {
     });
 
     // 3. Resetamos os widgets para limparem o que o usuário digitou
-    resetWidget("InputDescricao", true);
-    resetWidget("InputID", true);
- 		resetWidget("Select1Especie", true);
+		resetWidget("InputDescricao", true);
+		resetWidget("InputID", true);
+		resetWidget("CurrencyInput1Custo", true);
+		resetWidget("CurrencyInput1Valor", true);
+		resetWidget("InputEstoqueAtual", true);
+		resetWidget("Select1Tipo", true);
+ 		resetWidget("Switch1Controla", true);
+ 		resetWidget("Select1Unidade", true);
 	
     showAlert("Alterações descartadas.", "info");
 	},

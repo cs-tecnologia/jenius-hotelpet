@@ -1,0 +1,62 @@
+{
+  "accentColor": "{{appsmith.theme.colors.primaryColor}}",
+  "allowCurrencyChange": true,
+  "animateLoading": true,
+  "autoFocus": false,
+  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+  "bottomRow": 29,
+  "boxShadow": "none",
+  "decimals": 2,
+  "defaultCurrencyCode": "BRL",
+  "defaultText": "{{\nappsmith.store.modalContexto?.acaoTipo === \"ADICIONAR\" \n    ? (\n        Number(\n          SelectCategoria.data.find(\n            item => item.acomo002_id === Select1Categoria.selectedOptionValue\n          )?.acomo002_valor_base\n        ) || 0\n      ).toFixed(2)\n    : (Number(TableAcomodacao.selectedRow.acomo001_valor_base) || 0).toFixed(2)\n}}",
+  "dynamicBindingPathList": [
+    {
+      "key": "accentColor"
+    },
+    {
+      "key": "borderRadius"
+    },
+    {
+      "key": "defaultText"
+    }
+  ],
+  "dynamicHeight": "AUTO_HEIGHT",
+  "dynamicTriggerPathList": [],
+  "iconAlign": "left",
+  "isDisabled": false,
+  "isLoading": false,
+  "isRequired": true,
+  "isVisible": true,
+  "key": "c1uk3hkiza",
+  "label": "Valor Base desta acomodação",
+  "labelAlignment": "left",
+  "labelPosition": "Top",
+  "labelStyle": "",
+  "labelTextSize": "0.875rem",
+  "labelWidth": 5,
+  "leftColumn": 0,
+  "maxDynamicHeight": 9000,
+  "minDynamicHeight": 4,
+  "minWidth": 450,
+  "mobileBottomRow": 40,
+  "mobileLeftColumn": 0,
+  "mobileRightColumn": 20,
+  "mobileTopRow": 33,
+  "needsErrorInfo": false,
+  "originalBottomRow": 29,
+  "originalTopRow": 22,
+  "parentColumnSpace": 7.1826171875,
+  "parentId": "bta2kewsl8",
+  "parentRowSpace": 10,
+  "renderMode": "CANVAS",
+  "resetOnSubmit": true,
+  "responsiveBehavior": "fill",
+  "rightColumn": 64,
+  "shouldScrollContents": true,
+  "showStepArrows": false,
+  "topRow": 22,
+  "type": "CURRENCY_INPUT_WIDGET",
+  "version": 1,
+  "widgetId": "8cytatm9az",
+  "widgetName": "CurrencyInput1Valor"
+}

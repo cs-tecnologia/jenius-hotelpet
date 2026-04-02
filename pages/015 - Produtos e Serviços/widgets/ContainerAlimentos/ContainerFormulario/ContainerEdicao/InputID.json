@@ -28,7 +28,7 @@
   "key": "ltiectt39c",
   "label": "ID",
   "labelAlignment": "left",
-  "labelPosition": "Auto",
+  "labelPosition": "Top",
   "labelStyle": "BOLD",
   "labelTextSize": "0.875rem",
   "labelWidth": 5,

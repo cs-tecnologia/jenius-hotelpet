@@ -1,0 +1,2 @@
+SELECT count(temp001_id) FROM "{{JSutils.currentSchema()}}".hottemp001
+WHERE temp001_deleted <> true and temp001_desc ILIKE '%{{TableTemperamento.searchText}}%';

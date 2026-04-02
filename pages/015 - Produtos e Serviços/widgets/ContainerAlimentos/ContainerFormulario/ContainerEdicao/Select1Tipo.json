@@ -4,7 +4,7 @@
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
   "bottomRow": 18,
   "boxShadow": "none",
-  "defaultOptionValue": "{{ ((options, serverSideFiltering) => (  \n  appsmith.store.modalContexto?.acaoTipo === \"ADICIONAR\" \n  ? \"false\" \n  : String(TableProdutos.selectedRow.serv001_tipo))(Select1ControlaCopy.options, Select1ControlaCopy.serverSideFiltering) }}",
+  "defaultOptionValue": "{{ ((options, serverSideFiltering) => (  \n  appsmith.store.modalContexto?.acaoTipo === \"ADICIONAR\" \n  ? \"S\" \n  : String(TableProdutos.selectedRow.serv001_tipo)))(Select1Tipo.options, Select1Tipo.serverSideFiltering) }}",
   "dynamicBindingPathList": [
     {
       "key": "accentColor"
@@ -51,7 +51,7 @@
   "placeholderText": "Select option",
   "renderMode": "CANVAS",
   "responsiveBehavior": "fill",
-  "rightColumn": 20,
+  "rightColumn": 19,
   "serverSideFiltering": false,
   "sourceData": "[\n  { \"name\": \"Produto\", \"code\": \"P\" },\n  { \"name\": \"Serviço\", \"code\": \"S\" }\n]",
   "topRow": 11,

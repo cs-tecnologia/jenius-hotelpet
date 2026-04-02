@@ -1,11 +1,19 @@
 UPDATE "{{JSutils.currentSchema()}}".hotserv001 SET
-		"serv001_desc" = '{{JSconfirmation.modalconfig.row.serv001_desc}}',
-		"serv001_valor_custo" = NUMBER('{{JSconfirmation.modalconfig.row.serv001_valor_custo}}'),	
-		"serv001_valor_venda" = NUMBER('{{JSconfirmation.modalconfig.row.serv001_valor_venda}}'),
-		"serv001_estoque_atual" = NUMBER('{{JSconfirmation.modalconfig.row.serv001_estoque_atual}}'),
-		"serv001_tipo" = '{{JSconfirmation.modalconfig.row.serv001_tipo}}',
-		"serv001_controla_estoque" = '{{JSconfirmation.modalconfig.row.serv001_controla_estoque}}',
-		"serv001_unid001_id" = '{{JSconfirmation.modalconfig.row.serv001_unid001_id}}',
-		"serv001_last_modification" = now(),
+    "serv001_desc" = '{{JSconfirmation.modalconfig.row.serv001_desc}}',
+    
+    -- Campos numéricos (removidas as aspas e adicionado cast)
+    "serv001_valor_custo" = {{ JSconfirmation.modalconfig.row.serv001_valor_custo || 0 }}::numeric,	
+    "serv001_valor_venda" = {{ JSconfirmation.modalconfig.row.serv001_valor_venda || 0 }}::numeric,
+    "serv001_estoque_atual" = {{ JSconfirmation.modalconfig.row.serv001_estoque_atual || 0 }}::numeric,
+    
+    "serv001_tipo" = '{{JSconfirmation.modalconfig.row.serv001_tipo}}',
+    
+    -- Campo Booleano (vindo do Switch, sem aspas)
+    "serv001_controla_estoque" = {{ !!JSconfirmation.modalconfig.row.serv001_controla_estoque }}::BOOLEAN,
+    
+    -- ID da Unidade (Geralmente inteiro)
+    "serv001_unid001_id" = {{ JSconfirmation.modalconfig.row.serv001_unid001_id }}::int,
+    
+    "serv001_last_modification" = now(),
     "serv001_modified_by" = {{ appsmith.user.id || 1 }}
-WHERE "serv001_id" = {{JSconfirmation.modalconfig.row.serv001_id}};
+WHERE "serv001_id" = {{ JSconfirmation.modalconfig.row.serv001_id }};

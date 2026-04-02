@@ -1,0 +1,28 @@
+{
+  "gitSyncId": "69b814afccdcda4eb595c07f_7a78e354-80e4-4d1e-90ad-36d4fcc8951e",
+  "id": "016 - Acomodações Categoria_JSutils",
+  "unpublishedCollection": {
+    "name": "JSutils",
+    "pageId": "016 - Acomodações Categoria",
+    "pluginId": "js-plugin",
+    "pluginType": "JS",
+    "variables": [
+      {
+        "name": "timeoutId",
+        "value": "null"
+      },
+      {
+        "name": "intervalId",
+        "value": "null"
+      },
+      {
+        "name": "tempoRestante",
+        "value": "3600"
+      },
+      {
+        "name": "tempoPadrao",
+        "value": "3600"
+      }
+    ]
+  }
+}

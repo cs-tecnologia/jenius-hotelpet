@@ -1,0 +1,5 @@
+UPDATE "{{JSutils.currentSchema()}}".hottemp001 SET
+		"temp001_desc" = '{{JSconfirmation.modalconfig.row.temp001_desc}}',
+		"temp001_last_modification" = now(),
+    "temp001_modified_by" = {{ appsmith.user.id || 1 }}
+WHERE "temp001_id" = {{JSconfirmation.modalconfig.row.temp001_id}};

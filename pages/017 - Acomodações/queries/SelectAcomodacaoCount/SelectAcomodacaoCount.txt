@@ -1,0 +1,2 @@
+SELECT count(acomo001_id) FROM "{{JSutils.currentSchema()}}".hotacomo001
+WHERE acomo001_deleted <> true and acomo001_desc ILIKE '%{{TableAcomodacao.searchText}}%';

@@ -4,7 +4,7 @@
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
   "bottomRow": 18,
   "boxShadow": "none",
-  "defaultOptionValue": "{{ ((options, serverSideFiltering) => (   appsmith.store.modalContexto?.acaoTipo === \"ADICIONAR\" ? \"\" : TableProdutos.selectedRow.serv001_unid001_id ? \"\"\n))(Select1Unidade.options, Select1Unidade.serverSideFiltering) }}",
+  "defaultOptionValue": "{{ ((options, serverSideFiltering) => (  \n  appsmith.store.modalContexto?.acaoTipo === \"ADICIONAR\" \n  ? \"\" \n  : TableProdutos.selectedRow.serv001_unid001_id \n))(Select1Unidade.options, Select1Unidade.serverSideFiltering) }}",
   "dynamicBindingPathList": [
     {
       "key": "accentColor"

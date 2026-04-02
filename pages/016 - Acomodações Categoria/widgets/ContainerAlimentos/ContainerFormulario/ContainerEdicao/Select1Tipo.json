@@ -2,15 +2,18 @@
   "accentColor": "{{appsmith.theme.colors.primaryColor}}",
   "animateLoading": true,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 25,
+  "bottomRow": 18,
   "boxShadow": "none",
-  "defaultOptionValue": "{{ ((options, serverSideFiltering) => (  \n  appsmith.store.modalContexto?.acaoTipo === \"ADICIONAR\" \n  ? \"false\" \n  : String(TableProdutos.selectedRow.serv001_controla_estoque ?? \"false\")\n))(Select1Controla.options, Select1Controla.serverSideFiltering) }}",
+  "defaultOptionValue": "{{ ((options, serverSideFiltering) => (   appsmith.store.modalContexto?.acaoTipo === \"ADICIONAR\" ? \"\" : TableCategoria.selectedRow.acomo002_permite_especie || \"\"\n))(Select1Tipo.options, Select1Tipo.serverSideFiltering) }}",
   "dynamicBindingPathList": [
     {
       "key": "accentColor"
     },
     {
       "key": "borderRadius"
+    },
+    {
+      "key": "sourceData"
     },
     {
       "key": "defaultOptionValue"
@@ -28,35 +31,37 @@
   "isLoading": false,
   "isRequired": true,
   "isVisible": true,
-  "key": "3x8hw6xtqw",
+  "key": "d5z32hnf5n",
   "labelAlignment": "left",
   "labelPosition": "Top",
-  "labelText": "Ctrl Estoque?",
+  "labelText": "Espécie Permitida",
   "labelTextSize": "0.875rem",
   "labelWidth": 5,
   "leftColumn": 0,
   "maxDynamicHeight": 9000,
   "minDynamicHeight": 4,
   "minWidth": 450,
-  "mobileBottomRow": 18,
-  "mobileLeftColumn": 0,
-  "mobileRightColumn": 20,
-  "mobileTopRow": 11,
+  "mobileBottomRow": 32,
+  "mobileLeftColumn": 41,
+  "mobileRightColumn": 61,
+  "mobileTopRow": 25,
   "needsErrorInfo": false,
-  "optionLabel": "name",
-  "optionValue": "code",
-  "parentColumnSpace": 7.1826171875,
+  "optionLabel": "ani001_animal",
+  "optionValue": "ani001_id",
+  "originalBottomRow": 34,
+  "originalTopRow": 27,
+  "parentColumnSpace": 8.3818359375,
   "parentId": "bta2kewsl8",
   "parentRowSpace": 10,
   "placeholderText": "Select option",
   "renderMode": "CANVAS",
   "responsiveBehavior": "fill",
-  "rightColumn": 20,
+  "rightColumn": 64,
   "serverSideFiltering": false,
-  "sourceData": "[\n  { \"name\": \"SIM\", \"code\": \"true\" },\n  { \"name\": \"NÃO\", \"code\": \"false\" }\n]",
-  "topRow": 18,
+  "sourceData": "{{SelectEspecie.data}}",
+  "topRow": 11,
   "type": "SELECT_WIDGET",
   "version": 1,
-  "widgetId": "k650bo7fg3",
-  "widgetName": "Select1Controla"
+  "widgetId": "50ypsg7mxf",
+  "widgetName": "Select1Tipo"
 }

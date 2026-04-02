@@ -1,0 +1,8 @@
+UPDATE "{{JSutils.currentSchema()}}".hotacomo002 SET
+    "acomo002_desc" = '{{JSconfirmation.modalconfig.row.acomo002_desc}}',
+    "acomo002_valor_base" = {{ JSconfirmation.modalconfig.row.acomo002_valor_base || 0 }}::numeric,
+    "acomo002_limite_pets" = {{ JSconfirmation.modalconfig.row.acomo002_limite_pets || 0 }}::int,
+    "acomo002_permite_especie" = {{JSconfirmation.modalconfig.row.acomo002_permite_especie}}::int,
+    "acomo002_last_modification" = now(),
+    "acomo002_modified_by" = {{ appsmith.user.id || 1 }}
+WHERE "acomo002_id" = {{ JSconfirmation.modalconfig.row.acomo002_id }};

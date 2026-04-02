@@ -1,0 +1,18 @@
+INSERT INTO "{{JSutils.currentSchema()}}".hotacomo002 (
+  "acomo002_desc",
+  "acomo002_valor_base",
+  "acomo002_limite_pets",
+  "acomo002_permite_especie",
+	"acomo002_creation_date", 
+	"acomo002_created_by", 
+	"acomo002_last_modification", 
+	"acomo002_modified_by")
+VALUES (
+		'{{JSconfirmation.modalconfig.row.acomo002_desc}}',
+		{{ JSconfirmation.modalconfig.row.acomo002_valor_base || 0 }}::numeric,
+		{{ JSconfirmation.modalconfig.row.acomo002_limite_pets || 0 }}::int,
+		{{JSconfirmation.modalconfig.row.acomo002_permite_especie}}::int,
+		now(),
+    {{ appsmith.user.id || 1 }},
+		now(),
+    {{ appsmith.user.id || 1 }});	

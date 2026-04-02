@@ -1,0 +1,15 @@
+SELECT 
+    aco.*, 
+    cat.acomo002_desc 
+FROM "{{JSutils.currentSchema()}}".hotacomo001 as aco
+LEFT JOIN "{{JSutils.currentSchema()}}".hotacomo002 as cat
+    ON aco.acomo001_acomo002_id = cat.acomo002_id
+WHERE 
+    aco.acomo001_deleted <> true 
+    AND aco.acomo001_desc ILIKE '%{{TableAcomodacao.searchText || ""}}%'
+ORDER BY 
+    {{ 
+        (TableAcomodacao.sortOrder.column || "acomo001_desc") 
+    }} {{ TableAcomodacao.sortOrder.order !== "DESC" ? "ASC" : "DESC" }}
+LIMIT {{TableAcomodacao.pageSize}}
+OFFSET {{(TableAcomodacao.pageNo - 1) * TableAcomodacao.pageSize}};

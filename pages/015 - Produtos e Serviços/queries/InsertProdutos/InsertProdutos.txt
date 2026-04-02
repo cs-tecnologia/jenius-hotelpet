@@ -12,12 +12,12 @@ INSERT INTO "{{JSutils.currentSchema()}}".hotserv001 (
 	"serv001_modified_by")
 VALUES (
 		'{{JSconfirmation.modalconfig.row.serv001_desc?.trim().toUpperCase()}}', 
-		NUMBER('{{JSconfirmation.modalconfig.row.serv001_valor_custo}}'), 
-		NUMBER('{{JSconfirmation.modalconfig.row.serv001_valor_venda}}'), 
-		NUMBER('{{JSconfirmation.modalconfig.row.serv001_estoque_atual}}'),
+		'{{JSconfirmation.modalconfig.row.serv001_valor_custo}}'::numeric, 
+		'{{JSconfirmation.modalconfig.row.serv001_valor_venda}}'::numeric, 
+		'{{JSconfirmation.modalconfig.row.serv001_estoque_atual}}'::numeric,
 		'{{JSconfirmation.modalconfig.row.serv001_tipo}}', 
-		'{{JSconfirmation.modalconfig.row.serv001_controla_estoque}}', 
-		'{{JSconfirmation.modalconfig.row.serv001_unid001_id}}', 
+		'{{JSconfirmation.modalconfig.row.serv001_controla_estoque}}'::BOOLEAN, 
+		'{{JSconfirmation.modalconfig.row.serv001_unid001_id}}'::int, 
 		now(),
     {{ appsmith.user.id || 1 }},
 		now(),

@@ -58,10 +58,15 @@ async resetInactivityTimer() {
 
 	async limparESair() {
 		await clearStore(); 
-    resetWidget("InputDescricao", true);
-    resetWidget("InputID", true);
- 		resetWidget("Select1Especie", true);
-	
+		resetWidget("InputDescricao", true);
+		resetWidget("InputID", true);
+		resetWidget("CurrencyInput1Custo", true);
+		resetWidget("CurrencyInput1Valor", true);
+		resetWidget("InputEstoqueAtual", true);
+		resetWidget("Select1Tipo", true);
+ 		resetWidget("Switch1Controla", true);
+ 		resetWidget("Select1Unidade", true);
+		
 		showAlert("Sessão encerrada com segurança.", "info");
 		navigateTo("home");
 	},

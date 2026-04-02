@@ -1,0 +1,4 @@
+SELECT *
+FROM "{{JSutils.currentSchema()}}".hotacomo002
+WHERE acomo002_deleted <> true
+ORDER BY acomo002_desc, acomo002_id;
