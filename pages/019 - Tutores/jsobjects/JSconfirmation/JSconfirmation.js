@@ -45,6 +45,8 @@ async executeAction() {
                 // vai carregar automaticamente o que estiver selecionado na tabela.
 								resetWidget("InputNome", true); // Descomente se esses widgets existirem nesta página
 								resetWidget("InputID", true); // Reset o ID também, se necessário
+								resetWidget("InputRG", true);
+								resetWidget("InputCPF", true);		
 								resetWidget("InputCEP", true);
 								resetWidget("InputEndereco", true);
 								resetWidget("InputNumero", true);
@@ -52,11 +54,10 @@ async executeAction() {
 								resetWidget("InputBairro", true);
 								resetWidget("InputCidade", true);
 								resetWidget("SelectUF", true);
-								resetWidget("InputContato", true);
 								resetWidget("InputEmail", true);					
-								resetWidget("InputTelefone", true);					
-								resetWidget("InputCelular", true);				
-								resetWidget("InputContato", true);		
+								resetWidget("PhoneInput1Telefone", true);					
+								resetWidget("PhoneInput1Celular", true);				
+								resetWidget("InputObservacao", true);		
 								resetWidget("ApiViaCep", true);
             })
             .catch((err) => showAlert("Erro: " + err.message, "error"));
@@ -75,21 +76,22 @@ async cancelarOperacao() {
     });
 
     // 3. Resetamos os widgets para limparem o que o usuário digitou
-								resetWidget("InputNome", true); // Descomente se esses widgets existirem nesta página
-								resetWidget("InputID", true); // Reset o ID também, se necessário
-								resetWidget("InputCEP", true);
-								resetWidget("InputEndereco", true);
-								resetWidget("InputNumero", true);
-								resetWidget("InputComplemento", true);
-								resetWidget("InputBairro", true);
-								resetWidget("InputCidade", true);
-								resetWidget("SelectUF", true);
-								resetWidget("InputContato", true);
-								resetWidget("InputEmail", true);					
-								resetWidget("InputTelefone", true);					
-								resetWidget("InputCelular", true);				
-								resetWidget("InputContato", true);
-								resetWidget("ApiViaCep", true);
+		resetWidget("InputNome", true); // Descomente se esses widgets existirem nesta página
+    resetWidget("InputID", true); // Reset o ID também, se necessário
+		resetWidget("InputRG", true);
+		resetWidget("InputCPF", true);		
+		resetWidget("InputCEP", true);
+		resetWidget("InputEndereco", true);
+		resetWidget("InputNumero", true);
+		resetWidget("InputComplemento", true);
+		resetWidget("InputBairro", true);
+		resetWidget("InputCidade", true);
+		resetWidget("SelectUF", true);
+		resetWidget("InputEmail", true);					
+		resetWidget("PhoneInput1Telefone", true);					
+		resetWidget("PhoneInput1Celular", true);				
+		resetWidget("InputObservacao", true);		
+		resetWidget("ApiViaCep", true);
 
     showAlert("Alterações descartadas.", "info");
 	},

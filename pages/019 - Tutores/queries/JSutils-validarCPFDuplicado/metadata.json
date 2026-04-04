@@ -1,6 +1,6 @@
 {
-  "gitSyncId": "69b814afccdcda4eb595c07f_50c0fcf5-90b5-49f8-af54-bb9c59d00c13",
-  "id": "019 - Tutores_JSutils.limparESair",
+  "gitSyncId": "69b814afccdcda4eb595c07f_e39c47dd-080f-4e12-ae89-27529095af83",
+  "id": "019 - Tutores_JSutils.validarCPFDuplicado",
   "pluginId": "js-plugin",
   "pluginType": "JS",
   "unpublishedAction": {
@@ -22,8 +22,8 @@
         "key": "body"
       }
     ],
-    "fullyQualifiedName": "JSutils.limparESair",
-    "name": "limparESair",
+    "fullyQualifiedName": "JSutils.validarCPFDuplicado",
+    "name": "validarCPFDuplicado",
     "pageId": "019 - Tutores",
     "runBehaviour": "MANUAL",
     "userSetOnLoad": false

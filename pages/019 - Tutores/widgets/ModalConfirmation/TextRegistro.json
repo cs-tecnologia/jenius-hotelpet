@@ -49,7 +49,7 @@
   "responsiveBehavior": "fill",
   "rightColumn": 57,
   "shouldTruncate": false,
-  "text": "{{JSconfirmation.modalconfig.row.clinica001_nome}}",
+  "text": "{{JSconfirmation.modalconfig.row.prop001_nome}}",
   "textAlign": "LEFT",
   "textColor": "{{JSconfirmation.modalconfig.color}}",
   "topRow": 1,

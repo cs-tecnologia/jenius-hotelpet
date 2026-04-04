@@ -1,0 +1,81 @@
+{
+  "accentColor": "{{appsmith.theme.colors.primaryColor}}",
+  "animateLoading": true,
+  "autoFocus": true,
+  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+  "bottomRow": 11,
+  "boxShadow": "none",
+  "defaultText": "{{ \n  appsmith.store.modalContexto?.acaoTipo === \"ADICIONAR\" \n  ? \"\" \n  : (TableTutor.selectedRow.prop001_cpf || \"\").replace(/\\D/g, \"\").replace(/(\\d{3})(\\d{3})(\\d{3})(\\d{2})/, \"$1.$2.$3-$4\")\n}}",
+  "dynamicBindingPathList": [
+    {
+      "key": "accentColor"
+    },
+    {
+      "key": "borderRadius"
+    },
+    {
+      "key": "defaultText"
+    },
+    {
+      "key": "validation"
+    },
+    {
+      "key": "errorMessage"
+    }
+  ],
+  "dynamicHeight": "FIXED",
+  "dynamicPropertyPathList": [
+    {
+      "key": "onTextChanged"
+    }
+  ],
+  "dynamicTriggerPathList": [
+    {
+      "key": "onTextChanged"
+    }
+  ],
+  "errorMessage": "{{ \n  (() => {\n    const cpf = InputCPF.text.replace(/\\D/g, \"\");\n    if (cpf.length === 11 && SelectCheckCPF.data.length > 0 && SelectCheckCPF.data[0].prop001_id != TableTutor.selectedRow?.prop001_id) {\n      return \"Este CPF já pertence ao tutor: \" + SelectCheckCPF.data[0].prop001_nome;\n    }\n    return \"CPF inválido\";\n  })()\n}}",
+  "iconAlign": "left",
+  "inputType": "TEXT",
+  "isDisabled": false,
+  "isLoading": false,
+  "isRequired": true,
+  "isVisible": true,
+  "key": "ltiectt39c",
+  "label": "CPF",
+  "labelAlignment": "left",
+  "labelPosition": "Top",
+  "labelStyle": "",
+  "labelTextSize": "0.875rem",
+  "labelWidth": 5,
+  "leftColumn": 10,
+  "maxChars": "14",
+  "maxDynamicHeight": 9000,
+  "minDynamicHeight": 4,
+  "minWidth": 450,
+  "mobileBottomRow": 22,
+  "mobileLeftColumn": 0,
+  "mobileRightColumn": 20,
+  "mobileTopRow": 15,
+  "needsErrorInfo": false,
+  "onTextChanged": "{{ JSutils.validarCPFDuplicado() }}",
+  "originalBottomRow": 48,
+  "originalTopRow": 41,
+  "parentColumnSpace": 7.1826171875,
+  "parentId": "m9g5ksd7rk",
+  "parentRowSpace": 10,
+  "regex": "^\\d{3}\\.?\\d{3}\\.?\\d{3}-?\\d{2}$",
+  "renderMode": "CANVAS",
+  "resetOnSubmit": true,
+  "responsiveBehavior": "fill",
+  "rightColumn": 35,
+  "shouldAllowAutofill": false,
+  "showStepArrows": false,
+  "tooltip": "O CPF (Cadastro de Pessoas Físicas) é um registro numérico de 11 dígitos, gerido pela Secretaria da Receita Federal, que identifica contribuintes no Brasil.",
+  "topRow": 4,
+  "type": "INPUT_WIDGET_V2",
+  "validation": "{{\n  (() => {\n    let cpf = InputCPF.text.replace(/\\D/g, \"\");\n    if (cpf.length !== 11 || !!cpf.match(/(\\d)\\1{10}/)) return false;\n    let cpfs = cpf.split(\"\");\n    let v1 = 0, v2 = 0;\n    for (let i = 0; i < 9; i++) {\n      v1 += cpfs[i] * (10 - i);\n      v2 += cpfs[i] * (11 - i);\n    }\n    v1 = (v1 * 10) % 11 % 10;\n    v2 = ((v2 + v1 * 2) * 10) % 11 % 10;\n    return v1 == cpfs[9] && v2 == cpfs[10];\n  })()\n}}",
+  "version": 2,
+  "widgetId": "ef3vnpjqrz",
+  "widgetName": "InputCPF"
+}

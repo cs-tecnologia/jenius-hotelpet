@@ -13,12 +13,14 @@ podeSalvar: () => {
     const cidadeAtual = (InputCidade.text || "").trim();
     const emailAtual = (InputEmail.text || "").trim();
     const ufAtual = SelectUF.selectedOptionValue || "";
-    const obsAtual = (InputContato.text || "").trim();
+    const obsAtual = (InputObservacao.text || "").trim();
     
     // CAMPOS COM MÁSCARA (Limpamos para comparar apenas números)
-    const telefoneAtual = (InputTelefone.text || "").replace(/\D/g, "");
-    const celularAtual = (InputCelular.text || "").replace(/\D/g, "");
-    const cepAtual = (InputCep.text || "").replace(/\D/g, "");
+    const telefoneAtual = (PhoneInput1Telefone.text || "").replace(/\D/g, "");
+    const celularAtual = (PhoneInput1Celular.text || "").replace(/\D/g, "");
+    const cepAtual = (InputCep.text || "").trim().toUpperCase().replace(/\D/g, "");
+    const rgAtual = (InputRG.text || "").trim().toUpperCase();
+    const cpfAtual = (InputCPF.text || "").trim().toUpperCase().replace(/\D/g, "");
 
     // --- Valores Originais (Protegendo contra nulos) ---
     const descOriginal = (row.prop001_nome || "").trim();
@@ -35,6 +37,8 @@ podeSalvar: () => {
     const telefoneOriginal = (row.prop001_telefone || "").toString().replace(/\D/g, "");
     const celularOriginal = (row.prop001_celular || "").toString().replace(/\D/g, "");
     const cepOriginal = (row.prop001_cep || "").toString().replace(/\D/g, "");
+    const rgOriginal = (row.prop001_rg || "").toString();
+    const cpfOriginal = (row.prop001_cpf || "").toString().replace(/\D/g, "");
 
     // 1. Validação de preenchimento obrigatório
     const camposPreenchidos = descAtual.length > 0 && ufAtual !== "" && cepAtual.length === 8;
@@ -55,8 +59,9 @@ podeSalvar: () => {
             celularAtual !== celularOriginal ||
             ufAtual !== ufOriginal ||
             obsAtual !== obsOriginal ||
-            cepAtual !== cepOriginal;
-
+            cepAtual !== cepOriginal ||
+            rgAtual !== rgOriginal ||
+            cpfAtual !== cpfOriginal;
         return camposPreenchidos && houveMudanca;
     }
 },
@@ -73,6 +78,8 @@ podeSalvar: () => {
 		// 2. Resetamos o widget. Agora ele vai ler o Default Value novo (da linha selecionada)
 		resetWidget("InputNome", true); // Descomente se esses widgets existirem nesta página
     resetWidget("InputID", true); // Reset o ID também, se necessário
+		resetWidget("InputRG", true);
+		resetWidget("InputCPF", true);		
 		resetWidget("InputCEP", true);
 		resetWidget("InputEndereco", true);
 		resetWidget("InputNumero", true);
@@ -80,11 +87,10 @@ podeSalvar: () => {
 		resetWidget("InputBairro", true);
 		resetWidget("InputCidade", true);
 		resetWidget("SelectUF", true);
-		resetWidget("InputContato", true);
 		resetWidget("InputEmail", true);					
-		resetWidget("InputTelefone", true);					
-		resetWidget("InputCelular", true);				
-		resetWidget("InputContato", true);		
+		resetWidget("PhoneInput1Telefone", true);					
+		resetWidget("PhoneInput1Celular", true);				
+		resetWidget("InputObservacao", true);		
 		resetWidget("ApiViaCep", true);
 		// 3. Reiniciamos o cronômetro de inatividade (pois o usuário interagiu com o botão)
 		JSutils.resetInactivityTimer();
@@ -121,12 +127,14 @@ temAlteracao: () => {
     const complementoAtual = (InputComplemento.text || "").trim().toUpperCase(); // Faltava )
     const cidadeAtual      = (InputCidade.text || "").trim().toUpperCase();
     const emailAtual       = (InputEmail.text || "").trim().toLowerCase(); // Mudei para Upper para comparar igual
-    const telefoneAtual    = (InputTelefone.text || "").trim().toUpperCase().replace(/\D/g, ""); // Faltava )
-    const celularAtual     = (InputCelular.text || "").trim().toUpperCase().replace(/\D/g, ""); // Faltava )
+    const telefoneAtual    = (PhoneInput1Telefone.text || "").trim().toUpperCase().replace(/\D/g, ""); // Faltava )
+    const celularAtual     = (PhoneInput1Celular.text || "").trim().toUpperCase().replace(/\D/g, ""); // Faltava )
     const ufAtual          = (SelectUF.selectedOptionValue || "").trim().toUpperCase();
     const cepAtual         = (InputCep.text || "").trim().toUpperCase().replace(/\D/g, "");
-    const obsAtual     			= (InputContato.text || "").trim().toUpperCase();
-
+    const obsAtual     		 = (InputObservacao.text || "").trim().toUpperCase();
+    const rgAtual 				 = (InputRG.text || "").trim().toUpperCase();
+    const cpfAtual 				 = (InputCPF.text || "").trim().toUpperCase().replace(/\D/g, "");
+	
     // Dados da Tabela (Original)
     const row = TableTutor.selectedRow;
     const descOriginal        = (row.prop001_nome || "").trim().toUpperCase();
@@ -141,7 +149,9 @@ temAlteracao: () => {
     const ufOriginal          = (row.prop001_uf || "").trim().toUpperCase();            
     const cepOriginal         = (row.prop001_cep || "").trim().toUpperCase().replace(/\D/g, "");        
     const obsOriginal     		= (row.prop001_observacao || "").trim().toUpperCase();        
-
+    const rgOriginal 				 	= (row.prop001_rg || "").toString();
+    const cpfOriginal 			  = (row.prop001_cpf || "").toString().replace(/\D/g, "");
+	
     // Validação de campos obrigatórios (Ex: Nome, Endereço e UF não podem ser vazios)
     const camposObrigatoriosPreenchidos = descAtual.trim().length > 0  && 
 																					endAtual.trim().length > 0  && 
@@ -168,7 +178,9 @@ temAlteracao: () => {
         ufAtual          !== ufOriginal || 
         obsAtual     !== obsOriginal || 
         cepAtual.trim().toUpperCase().replace(/\D/g, "")         !== cepOriginal.trim().toUpperCase().replace(/\D/g, "");
-
+        rgAtual.trim().toUpperCase()        !== rgOriginal.trim().toUpperCase();
+	      cpfAtual.trim().toUpperCase().replace(/\D/g, "")         !== cpfOriginal.trim().toUpperCase().replace(/\D/g, "");
+	
 	// Criamos uma lista de todos os campos para debugar de uma vez
  const camposParaChecar = [
    { nome: "NOME", atual: descAtual, original: descOriginal },

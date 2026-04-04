@@ -22,6 +22,10 @@
       {
         "name": "tempoPadrao",
         "value": "3600"
+      },
+      {
+        "name": "isCheckingCPF",
+        "value": "false"
       }
     ]
   }

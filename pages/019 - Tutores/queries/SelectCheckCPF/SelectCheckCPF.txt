@@ -1,0 +1,4 @@
+SELECT prop001_id, prop001_nome 
+FROM "{{JSutils.currentSchema()}}".hotprop001 
+WHERE prop001_cpf = '{{ InputCPF.text.replace(/\D/g, "") }}'
+LIMIT 1;
