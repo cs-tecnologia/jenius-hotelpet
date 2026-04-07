@@ -5,12 +5,12 @@
   "borderColor": "#E0DEDE",
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
   "borderWidth": 1,
-  "bottomRow": 48,
+  "bottomRow": 106,
   "boxShadow": "{{appsmith.theme.boxShadow.appBoxShadow}}",
   "children": [
     {
       "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-      "bottomRow": 700,
+      "bottomRow": 1020,
       "boxShadow": "{{appsmith.theme.boxShadow.appBoxShadow}}",
       "canExtend": true,
       "detachFromLayout": true,
@@ -56,7 +56,7 @@
     },
     {
       "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-      "bottomRow": 440,
+      "bottomRow": 1020,
       "boxShadow": "{{appsmith.theme.boxShadow.appBoxShadow}}",
       "canExtend": true,
       "detachFromLayout": true,
@@ -101,7 +101,7 @@
       "widgetName": "Canvas12"
     }
   ],
-  "defaultTab": "Info Cadastral",
+  "defaultTab": "{{ appsmith.store.abaAtiva || \"Info Cadastral\" }}",
   "dynamicBindingPathList": [
     {
       "key": "accentColor"
@@ -111,10 +111,28 @@
     },
     {
       "key": "boxShadow"
+    },
+    {
+      "key": "tabsObj.tab2.isVisible"
+    },
+    {
+      "key": "defaultTab"
     }
   ],
   "dynamicHeight": "AUTO_HEIGHT",
-  "dynamicTriggerPathList": [],
+  "dynamicPropertyPathList": [
+    {
+      "key": "tabsObj.tab2.isVisible"
+    },
+    {
+      "key": "onTabSelected"
+    }
+  ],
+  "dynamicTriggerPathList": [
+    {
+      "key": "onTabSelected"
+    }
+  ],
   "flexVerticalAlignment": "stretch",
   "isCanvas": true,
   "isLoading": false,
@@ -129,7 +147,8 @@
   "mobileRightColumn": 17,
   "mobileTopRow": 58,
   "needsErrorInfo": false,
-  "originalBottomRow": 48,
+  "onTabSelected": "{{\n  (async () => {\n    // 1. Define o contexto para ADICIONAR um PET\n    await storeValue('modalContexto', {\n      entidade: 'PET',\n      acaoTipo: \"ADICIONAR\",\n      acaoBotao: \"SALVAR\",\n      tutorNome: TableTutor.selectedRow.prop001_nome \n    });\n\n    // 2. Muda a aba ativa (O widget Tabs1 deve ter {{appsmith.store.abaAtiva}} no Default Tab)\n    await storeValue(\"abaAtiva\", \"Pets\");\n\n    // 3. Limpa os campos da aba de pets\n    resetWidget(\"ContainerPets\", true);\n\n    // 4. Reinicia o timer\n    JSutils.resetInactivityTimer();\n  })() // <-- O erro de identifier muitas vezes é a falta desses parênteses ou chaves\n}}",
+  "originalBottomRow": 106,
   "originalTopRow": 0,
   "parentColumnSpace": 19.1875,
   "parentId": "fyme5h4y48",
@@ -151,7 +170,7 @@
     "tab2": {
       "id": "tab2",
       "index": 1,
-      "isVisible": true,
+      "isVisible": "{{ !!TableTutor.selectedRow.prop001_id}}",
       "label": "Pets",
       "positioning": "vertical",
       "widgetId": "wdz8z7yumd"

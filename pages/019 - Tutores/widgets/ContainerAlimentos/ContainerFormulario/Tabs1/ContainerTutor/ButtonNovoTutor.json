@@ -1,0 +1,58 @@
+{
+  "animateLoading": true,
+  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+  "bottomRow": 5,
+  "boxShadow": "none",
+  "buttonColor": "{{appsmith.theme.colors.primaryColor}}",
+  "buttonVariant": "PRIMARY",
+  "disabledWhenInvalid": false,
+  "dynamicBindingPathList": [
+    {
+      "key": "buttonColor"
+    },
+    {
+      "key": "borderRadius"
+    }
+  ],
+  "dynamicPropertyPathList": [
+    {
+      "key": "onClick"
+    }
+  ],
+  "dynamicTriggerPathList": [
+    {
+      "key": "onClick"
+    }
+  ],
+  "iconAlign": "left",
+  "iconName": "add",
+  "isDefaultClickDisabled": true,
+  "isDisabled": false,
+  "isLoading": false,
+  "isVisible": true,
+  "key": "mfa917wnro",
+  "leftColumn": 27,
+  "minWidth": 120,
+  "mobileBottomRow": 4,
+  "mobileLeftColumn": 44,
+  "mobileRightColumn": 60,
+  "mobileTopRow": 0,
+  "needsErrorInfo": false,
+  "onClick": "{{\n  (async () => {\n    // 1. Define o contexto para ADICIONAR TUTOR\n    await storeValue('modalContexto', {\n      entidade: 'TUTOR',\n      acaoTipo: \"ADICIONAR\",\n      acaoBotao: \"SALVAR\",\n    });\n\n    // 2. Garante que o sistema volte para a aba de Info (Evita erros de referência na aba Pet)\n    await storeValue(\"abaAtiva\", \"Info Cadastral\");\n\n    // 3. Limpa o container de edição\n    resetWidget(\"ContainerEdicao\", true);\t\t\t\n\n    // 4. Reinicia o contador de inatividade\n    JSutils.resetInactivityTimer();\n  })()\n}}",
+  "parentColumnSpace": 4.21875,
+  "parentId": "p093t3v5kz",
+  "parentRowSpace": 10,
+  "placement": "CENTER",
+  "recaptchaType": "V3",
+  "renderMode": "CANVAS",
+  "resetFormOnClick": false,
+  "responsiveBehavior": "hug",
+  "rightColumn": 64,
+  "text": "NOVO TUTOR",
+  "tooltip": "adicionar um novo registro",
+  "topRow": 0,
+  "type": "BUTTON_WIDGET",
+  "version": 1,
+  "widgetId": "u9l5276nhn",
+  "widgetName": "ButtonNovoTutor"
+}

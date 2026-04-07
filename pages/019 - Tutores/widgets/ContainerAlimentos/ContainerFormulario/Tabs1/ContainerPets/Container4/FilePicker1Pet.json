@@ -1,0 +1,60 @@
+{
+  "allowedFileTypes": [
+    "image/*"
+  ],
+  "animateLoading": true,
+  "borderRadius": "0.375rem",
+  "bottomRow": 16,
+  "boxShadow": "0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06)",
+  "buttonColor": "{{appsmith.theme.colors.primaryColor}}",
+  "dynamicBindingPathList": [
+    {
+      "key": "buttonColor"
+    },
+    {
+      "key": "label"
+    }
+  ],
+  "dynamicPropertyPathList": [
+    {
+      "key": "onFilesSelected"
+    }
+  ],
+  "dynamicTriggerPathList": [
+    {
+      "key": "onFilesSelected"
+    }
+  ],
+  "dynamicTyping": true,
+  "fileDataType": "Base64",
+  "files": [],
+  "isDefaultClickDisabled": true,
+  "isDisabled": false,
+  "isLoading": false,
+  "isRequired": false,
+  "isVisible": true,
+  "key": "4norusqfj4",
+  "label": "{{ \nappsmith.store.modalContexto?.acaoTipo === \"ADICIONAR\" \n  ? \"Adicionar Foto\" \n  : \"Trocar Foto\" \n}}",
+  "leftColumn": 0,
+  "maxFileSize": "",
+  "maxNumFiles": 1,
+  "minWidth": 120,
+  "mobileBottomRow": 20,
+  "mobileLeftColumn": 0,
+  "mobileRightColumn": 12,
+  "mobileTopRow": 16,
+  "needsErrorInfo": false,
+  "onFilesSelected": "",
+  "parentColumnSpace": 0.84375,
+  "parentId": "zjniklxkcy",
+  "parentRowSpace": 10,
+  "renderMode": "CANVAS",
+  "responsiveBehavior": "hug",
+  "rightColumn": 64,
+  "selectedFiles": [],
+  "topRow": 12,
+  "type": "FILE_PICKER_WIDGET_V2",
+  "version": 1,
+  "widgetId": "z1s1z5zsbf",
+  "widgetName": "FilePicker1Pet"
+}

@@ -1,0 +1,2 @@
+SELECT * FROM "{{JSutils.currentSchema()}}".hotraca001
+where raca001_deleted <> 'true' order by raca001_desc;

@@ -5,7 +5,7 @@
   "pluginType": "DB",
   "unpublishedAction": {
     "actionConfiguration": {
-      "body": "SELECT * FROM \"{{JSutils.currentSchema()}}\".\"hotani002\";",
+      "body": "SELECT * FROM \"{{JSutils.currentSchema()}}\".\"hotani002\"\nWHERE ani002_deleted <> true and ani002_tutor = {{TableTutor.selectedRow.prop001_id}}\nORDER BY ani002_nome ASC\nLIMIT {{ ListPets.pageSize }}\nOFFSET {{ (ListPets.pageNo - 1) * ListPets.pageSize }};",
       "encodeParamsToggle": true,
       "paginationType": "NONE",
       "pluginSpecifiedTemplates": [

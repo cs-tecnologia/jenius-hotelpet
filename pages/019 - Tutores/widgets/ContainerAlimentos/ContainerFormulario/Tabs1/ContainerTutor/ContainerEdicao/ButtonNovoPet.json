@@ -1,0 +1,60 @@
+{
+  "animateLoading": true,
+  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+  "bottomRow": 56,
+  "boxShadow": "none",
+  "buttonColor": "#eab308",
+  "buttonVariant": "PRIMARY",
+  "disabledWhenInvalid": false,
+  "dynamicBindingPathList": [
+    {
+      "key": "borderRadius"
+    },
+    {
+      "key": "isDisabled"
+    }
+  ],
+  "dynamicPropertyPathList": [
+    {
+      "key": "isDisabled"
+    },
+    {
+      "key": "onClick"
+    }
+  ],
+  "dynamicTriggerPathList": [
+    {
+      "key": "onClick"
+    }
+  ],
+  "iconAlign": "left",
+  "iconName": "small-plus",
+  "isDefaultClickDisabled": true,
+  "isDisabled": "{{ !TableTutor.selectedRow.prop001_id}}",
+  "isLoading": false,
+  "isVisible": true,
+  "key": "m6xosay83a",
+  "leftColumn": 48,
+  "minWidth": 120,
+  "mobileBottomRow": 53,
+  "mobileLeftColumn": 45,
+  "mobileRightColumn": 61,
+  "mobileTopRow": 49,
+  "needsErrorInfo": false,
+  "onClick": "{{\n  (async () => {\n    // 1. Prepara o contexto de ADICIONAR PET\n    await storeValue('modalContexto', {\n      entidade: 'PET',\n      acaoTipo: \"ADICIONAR\",\n      tutorNome: TableTutor.selectedRow.prop001_nome \n    });\n\n    // 2. Muda a aba ativa no store (o widget Tabs1 vai reagir a isso)\n    await storeValue(\"abaAtiva\", \"Pets\");\n\n    // 3. Limpa o container da aba de pets\n    resetWidget(\"ContainerPets\", true);\n  })()\n}}",
+  "parentColumnSpace": 10.4189453125,
+  "parentId": "m9g5ksd7rk",
+  "parentRowSpace": 10,
+  "placement": "CENTER",
+  "recaptchaType": "V3",
+  "renderMode": "CANVAS",
+  "resetFormOnClick": false,
+  "responsiveBehavior": "hug",
+  "rightColumn": 64,
+  "text": "NOVO PET",
+  "topRow": 48,
+  "type": "BUTTON_WIDGET",
+  "version": 1,
+  "widgetId": "rtr4jrfalk",
+  "widgetName": "ButtonNovoPet"
+}

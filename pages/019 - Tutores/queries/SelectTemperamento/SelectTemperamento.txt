@@ -1,0 +1,2 @@
+SELECT * FROM "{{JSutils.currentSchema()}}".hottemp001
+where temp001_deleted <> 'true' order by temp001_desc;

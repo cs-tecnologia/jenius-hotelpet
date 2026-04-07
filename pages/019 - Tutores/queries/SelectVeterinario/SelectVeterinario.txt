@@ -1,0 +1,2 @@
+SELECT * FROM "{{JSutils.currentSchema()}}".hotvet001
+where vet001_deleted <> 'true' order by vet001_nome;

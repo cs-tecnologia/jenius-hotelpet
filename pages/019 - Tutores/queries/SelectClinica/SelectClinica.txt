@@ -1,0 +1,2 @@
+SELECT * FROM "{{JSutils.currentSchema()}}".hotclinica001
+where clinica001_deleted <> 'true' order by clinica001_nome;

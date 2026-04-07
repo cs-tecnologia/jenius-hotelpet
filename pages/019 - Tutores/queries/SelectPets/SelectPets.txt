@@ -1,1 +1,5 @@
-SELECT * FROM "{{JSutils.currentSchema()}}"."hotani002";
+SELECT * FROM "{{JSutils.currentSchema()}}"."hotani002"
+WHERE ani002_deleted <> true and ani002_tutor = {{TableTutor.selectedRow.prop001_id}}
+ORDER BY ani002_nome ASC
+LIMIT {{ ListPets.pageSize }}
+OFFSET {{ (ListPets.pageNo - 1) * ListPets.pageSize }};

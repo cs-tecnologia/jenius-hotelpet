@@ -1,0 +1,2 @@
+SELECT * FROM "{{JSutils.currentSchema()}}".hotporte001
+where porte001_deleted <> 'true' order by porte001_desc;
