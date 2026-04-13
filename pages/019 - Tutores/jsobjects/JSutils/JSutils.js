@@ -60,7 +60,14 @@ export default {
 			"InputNome", "InputID", "InputRG", "InputCPF", "InputCEP", 
 			"InputEndereco", "InputNumero", "InputComplemento", "InputBairro", 
 			"InputCidade", "SelectUF", "InputEmail", "PhoneInput1Telefone", 
-			"PhoneInput1Celular", "InputObservacao"
+			"PhoneInput1Celular", "InputObservacao", "ImagePet", "FilePicker1Pet",
+			"Input1Nome", "DatePicker1Nascimento", "Input2Idade", "Input3Peso",
+			"Input3Registro", "Input3Microchip", "DatePicker1Obito",
+			"Select1Especie", "Select1Raca", "Select1Sexo", "Select1Castrado",
+			"Select1Porte", "Select1Pelagem", "Select1Cor", "Select1Temperamento",
+			"Select1Convivio", "Select1Veterinario", "Select1Clinica",
+			"Input1Canil", "Input1Pedigree", "Input1PedigreeNome",
+			"Input1Observacao", "Input1Cuidados", "Input1Saude", "Input1Tosa"
 		];
 		widgetsParaResetar.forEach(w => resetWidget(w, true));
 	},

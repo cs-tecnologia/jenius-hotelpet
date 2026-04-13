@@ -1,2 +1,2 @@
 SELECT count(ani002_id) FROM "{{JSutils.currentSchema()}}".hotani002
-WHERE ani002_deleted <> true;
+WHERE ani002_deleted <> true and ani002_tutor = {{TableTutor.selectedRow.prop001_id}};

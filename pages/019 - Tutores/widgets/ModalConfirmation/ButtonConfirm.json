@@ -1,5 +1,5 @@
 {
-  "animateLoading": "{{ InsertTutor.isLoading || UpdateTutor.isLoading || DeleteTutor.isLoading }}",
+  "animateLoading": "{{ InsertPet.isLoading || UpdatePet.isLoading || DeletePet.isLoading }}",
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
   "bottomRow": 19,
   "boxShadow": "none",
@@ -40,7 +40,7 @@
   "mobileRightColumn": 63,
   "mobileTopRow": 18,
   "needsErrorInfo": false,
-  "onClick": "{{ JSconfirmation.executeAction() }}",
+  "onClick": "{{JSconfirmationPET.executeAction();}}",
   "originalBottomRow": 21,
   "originalTopRow": 17,
   "parentId": "02ls0xqqoo",

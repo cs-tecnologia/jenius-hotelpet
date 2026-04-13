@@ -1,0 +1,67 @@
+{
+  "accentColor": "{{appsmith.theme.colors.primaryColor}}",
+  "animateLoading": true,
+  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+  "bottomRow": 14,
+  "boxShadow": "none",
+  "defaultOptionValue": "{{ ((options, serverSideFiltering) => (  \n(appsmith.store.modalContexto?.entidade === 'PET' && appsmith.store.modalContexto?.acaoTipo === \"ADICIONAR\") \n  ? \"\" \n  : appsmith.store.petSelecionado?.ani002_vet || \"\"\n))(Select1Veterinario.options, Select1Veterinario.serverSideFiltering) }}",
+  "dynamicBindingPathList": [
+    {
+      "key": "accentColor"
+    },
+    {
+      "key": "borderRadius"
+    },
+    {
+      "key": "defaultOptionValue"
+    },
+    {
+      "key": "sourceData"
+    }
+  ],
+  "dynamicHeight": "FIXED",
+  "dynamicPropertyPathList": [
+    {
+      "key": "sourceData"
+    }
+  ],
+  "dynamicTriggerPathList": [],
+  "isDisabled": false,
+  "isFilterable": true,
+  "isLoading": false,
+  "isRequired": false,
+  "isVisible": true,
+  "key": "xlpozrvwfx",
+  "labelAlignment": "left",
+  "labelPosition": "Top",
+  "labelText": "Veterenário",
+  "labelTextSize": "0.875rem",
+  "labelWidth": 5,
+  "leftColumn": 27,
+  "maxDynamicHeight": 9000,
+  "minDynamicHeight": 4,
+  "minWidth": 450,
+  "mobileBottomRow": 18,
+  "mobileLeftColumn": 13,
+  "mobileRightColumn": 33,
+  "mobileTopRow": 11,
+  "needsErrorInfo": false,
+  "optionLabel": "vet001_nome",
+  "optionValue": "vet001_id",
+  "originalBottomRow": 52,
+  "originalTopRow": 45,
+  "parentColumnSpace": 4.5,
+  "parentId": "y2i9hl008b",
+  "parentRowSpace": 10,
+  "placeholderText": "Select option",
+  "renderMode": "CANVAS",
+  "responsiveBehavior": "fill",
+  "rightColumn": 46,
+  "serverSideFiltering": false,
+  "sourceData": "{{SelectVeterinario.data}}",
+  "topRow": 7,
+  "type": "SELECT_WIDGET",
+  "version": 1,
+  "widgetId": "970qn87uuw",
+  "widgetName": "Select1Veterinario"
+}

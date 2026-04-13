@@ -25,7 +25,7 @@
     }
   ],
   "dynamicTriggerPathList": [],
-  "iconName": "{{JSconfirmation.modalconfig.icon}}",
+  "iconName": "{{JSconfirmationPET.modalconfig?.row?.icon}}",
   "isDisabled": false,
   "isLoading": false,
   "isVisible": true,

@@ -1,0 +1,78 @@
+{
+  "accentColor": "{{appsmith.theme.colors.primaryColor}}",
+  "animateLoading": true,
+  "autoFocus": true,
+  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+  "bottomRow": 25,
+  "boxShadow": "none",
+  "defaultText": "{{ \n  (() => {\n    // 1. Prioridade: Se a API de CEP acabou de rodar, usa o dado dela\n    //if (ApiViaCep.data?.cep) {\n    //  return ApiViaCep.data.cep;\n    //}\n\n    // 2. Se for ADICIONAR e não houve busca na API, começa vazio\n    if (appsmith.store.modalContexto?.entidade === 'TUTOR' && appsmith.store.modalContexto?.acaoTipo === \"ADICIONAR\") {\n      return \"\";\n    }\n\n    // 3. Se for EDIÇÃO, pega o valor da tabela e mascara\n    const cepRaw = TableTutor.selectedRow.prop001_cep || \"\";\n    const numeros = cepRaw.toString().replace(/\\D/g, \"\");\n\n    // Aplica a máscara 00000-000 se houver 8 dígitos\n    if (numeros.length === 8) {\n      return numeros.replace(/^(\\d{5})(\\d{3})$/, \"$1-$2\");\n    }\n\n    return numeros;\n  })()\n}}",
+  "dynamicBindingPathList": [
+    {
+      "key": "accentColor"
+    },
+    {
+      "key": "borderRadius"
+    },
+    {
+      "key": "defaultText"
+    },
+    {
+      "key": "validation"
+    }
+  ],
+  "dynamicHeight": "FIXED",
+  "dynamicPropertyPathList": [
+    {
+      "key": "onTextChanged"
+    }
+  ],
+  "dynamicTriggerPathList": [
+    {
+      "key": "onTextChanged"
+    }
+  ],
+  "errorMessage": "CEP INVÁLIDO",
+  "iconAlign": "left",
+  "inputType": "TEXT",
+  "isDisabled": false,
+  "isLoading": false,
+  "isRequired": true,
+  "isVisible": true,
+  "key": "ltiectt39c",
+  "label": "CEP",
+  "labelAlignment": "left",
+  "labelPosition": "Top",
+  "labelStyle": "",
+  "labelTextSize": "0.875rem",
+  "labelWidth": 5,
+  "leftColumn": 0,
+  "maxChars": "9",
+  "maxDynamicHeight": 9000,
+  "minDynamicHeight": 4,
+  "minWidth": 450,
+  "mobileBottomRow": 22,
+  "mobileLeftColumn": 0,
+  "mobileRightColumn": 20,
+  "mobileTopRow": 15,
+  "needsErrorInfo": false,
+  "onTextChanged": "{{\n  (() => {\n    const apenasNumeros = InputCep.text.replace(/\\D/g, \"\");\n    const cepOriginal = (TableTutor.selectedRow.prop001_cep || \"\").toString().replace(/\\D/g, \"\");\n\n    // SÓ dispara se: \n    // 1. O usuário alterou o valor (isDirty)\n    // 2. O que está no campo é DIFERENTE do que está na tabela (evita disparar ao clicar na linha)\n    // 3. Chegou a 8 dígitos\n    if (InputCep.isDirty && apenasNumeros !== cepOriginal && apenasNumeros.length === 8) {\n      ApiViaCep.run();\n    }\n  })()\n}}",
+  "originalBottomRow": 20,
+  "originalTopRow": 13,
+  "parentColumnSpace": 7.1826171875,
+  "parentId": "smxbvbnn27",
+  "parentRowSpace": 10,
+  "placeholderText": "00000-000",
+  "regex": "^\\d{5}-?\\d{3}$",
+  "renderMode": "CANVAS",
+  "resetOnSubmit": true,
+  "responsiveBehavior": "fill",
+  "rightColumn": 13,
+  "showStepArrows": false,
+  "tooltip": "DIGITE O CEP NESTE FORMATO 99999-999",
+  "topRow": 18,
+  "type": "INPUT_WIDGET_V2",
+  "validation": "{{ InputCep.text.replace(/\\D/g, \"\").length === 8 }}",
+  "version": 2,
+  "widgetId": "7zkuhcgp9b",
+  "widgetName": "InputCep"
+}

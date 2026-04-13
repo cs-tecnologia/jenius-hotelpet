@@ -37,7 +37,7 @@
   "mobileRightColumn": 47,
   "mobileTopRow": 18,
   "needsErrorInfo": false,
-  "onClick": "{{ JSconfirmation.cancelarOperacao() }}",
+  "onClick": "{{ JSconfirmationPET.cancelarOperacao() }}",
   "originalBottomRow": 21,
   "originalTopRow": 17,
   "parentId": "02ls0xqqoo",

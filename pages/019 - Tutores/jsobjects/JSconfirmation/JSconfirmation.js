@@ -1,101 +1,80 @@
 export default {
 	modalconfig: {
-		action: "Delete", // Pode ser "Insert", "Update", "Delete", etc.
+		action: "Delete",
 		message: "",
 		row: {},
 		icon: "plus",
 		color: "blue"
 	},
 
-async executeAction() {
-    const action = this.modalconfig.action;
-    const actionsMap = {
-        "Insert": InsertTutor,
-        "Update": UpdateTutor,
-        "Delete": DeleteTutor
-    };
+	// Lista centralizada de widgets para reset (Formulário do Tutor)
+	widgetsTutor: [
+		"InputNome", "InputID", "InputRG", "InputCPF", "InputCEP", 
+		"InputEndereco", "InputNumero", "InputComplemento", "InputBairro", 
+		"InputCidade", "SelectUF", "InputEmail", "PhoneInput1Telefone", 
+		"PhoneInput1Celular", "InputObservacao"
+	],
 
-    const targetQuery = actionsMap[action];
-
-    if (targetQuery) {
-        return targetQuery.run()
-            .then(async () => {
-                showAlert(`${action} realizado com sucesso!`, "success");
-                
-                // 1. Fecha o modal de confirmação
-                closeModal("ModalConfirmation");
-
-                // 2. SE FOR INCLUSÃO, mudamos o contexto para EDITAR
-                // Isso garante que os campos parem de vir em branco ("") 
-                // e passem a olhar para a TableAlimentos.selectedRow
-                if (action === "Insert") {
-                    await storeValue('modalContexto', {
-                        ...appsmith.store.modalContexto,
-                        acaoTipo: "EDITAR"
-                    });
-                }
-
-                // 3. Atualiza os dados da tabela
-                // O await aqui é crucial para garantir que a tabela tenha os dados novos
-                await SelectTutorCount.run(); 
-                await SelectTutor.run(); 
-                
-                // 4. Resetamos os widgets. 
-                // Agora, como o acaoTipo é EDITAR, o Default Value do Input 
-                // vai carregar automaticamente o que estiver selecionado na tabela.
-								resetWidget("InputNome", true); // Descomente se esses widgets existirem nesta página
-								resetWidget("InputID", true); // Reset o ID também, se necessário
-								resetWidget("InputRG", true);
-								resetWidget("InputCPF", true);		
-								resetWidget("InputCEP", true);
-								resetWidget("InputEndereco", true);
-								resetWidget("InputNumero", true);
-								resetWidget("InputComplemento", true);
-								resetWidget("InputBairro", true);
-								resetWidget("InputCidade", true);
-								resetWidget("SelectUF", true);
-								resetWidget("InputEmail", true);					
-								resetWidget("PhoneInput1Telefone", true);					
-								resetWidget("PhoneInput1Celular", true);				
-								resetWidget("InputObservacao", true);		
-								resetWidget("ApiViaCep", true);
-            })
-            .catch((err) => showAlert("Erro: " + err.message, "error"));
-    }
-},
-
-async cancelarOperacao() {
-    // 1. Fecha o modal de confirmação
-    closeModal("ModalConfirmation");
-
-    // 2. Voltamos o contexto para "EDITAR" para que os inputs 
-    // voltem a mostrar o que está selecionado na tabela
-    await storeValue('modalContexto', {
-        ...appsmith.store.modalContexto,
-        acaoTipo: "EDITAR"
-    });
-
-    // 3. Resetamos os widgets para limparem o que o usuário digitou
-		resetWidget("InputNome", true); // Descomente se esses widgets existirem nesta página
-    resetWidget("InputID", true); // Reset o ID também, se necessário
-		resetWidget("InputRG", true);
-		resetWidget("InputCPF", true);		
-		resetWidget("InputCEP", true);
-		resetWidget("InputEndereco", true);
-		resetWidget("InputNumero", true);
-		resetWidget("InputComplemento", true);
-		resetWidget("InputBairro", true);
-		resetWidget("InputCidade", true);
-		resetWidget("SelectUF", true);
-		resetWidget("InputEmail", true);					
-		resetWidget("PhoneInput1Telefone", true);					
-		resetWidget("PhoneInput1Celular", true);				
-		resetWidget("InputObservacao", true);		
+	// Função auxiliar para resetar todos os campos do Tutor
+	resetAllWidgets: function() {
+		this.widgetsTutor.forEach(w => resetWidget(w, true));
+		// Caso queira resetar a query da API ViaCep também:
 		resetWidget("ApiViaCep", true);
-
-    showAlert("Alterações descartadas.", "info");
 	},
-	
+
+	async executeAction() {
+		const action = this.modalconfig.action;
+		const actionsMap = {
+			"Insert": InsertTutor,
+			"Update": UpdateTutor,
+			"Delete": DeleteTutor
+		};
+
+		const targetQuery = actionsMap[action];
+
+		if (targetQuery) {
+			try {
+				await targetQuery.run();
+				showAlert(`${action} realizado com sucesso!`, "success");
+				
+				closeModal("ModalConfirmation");
+
+				// Se for INCLUSÃO (Insert), mudamos o contexto para EDITAR
+				if (action === "Insert") {
+					await storeValue('modalContexto', {
+						...appsmith.store.modalContexto,
+						acaoTipo: "EDITAR"
+					});
+				}
+
+				// Atualiza os dados da tabela e contadores
+				await SelectTutorCount.run(); 
+				await SelectTutor.run(); 
+				
+				// Limpa/Restaura os widgets
+				this.resetAllWidgets();
+
+			} catch (err) {
+				showAlert("Erro ao processar " + action + ": " + err.message, "error");
+			}
+		}
+	},
+
+	async cancelarOperacao() {
+		closeModal("ModalConfirmation");
+
+		// Garante que o contexto volte para EDITAR
+		await storeValue('modalContexto', {
+			...appsmith.store.modalContexto,
+			acaoTipo: "EDITAR"
+		});
+
+		// Restaura os valores originais da linha selecionada
+		this.resetAllWidgets();
+
+		showAlert("Alterações descartadas.", "info");
+	},
+
 	showModal(config) {
 		this.modalconfig = config;
 		showModal("ModalConfirmation");
