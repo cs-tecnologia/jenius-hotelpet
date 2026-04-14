@@ -3,20 +3,20 @@
   "backgroundColor": "#FFFFFF",
   "borderColor": "#E0DEDE",
   "borderWidth": "1",
-  "bottomRow": 50,
+  "bottomRow": 21,
   "boxShadow": "NONE",
   "children": [
     {
-      "bottomRow": 100,
+      "bottomRow": 210,
       "canExtend": false,
       "containerStyle": "none",
       "detachFromLayout": true,
       "isLoading": false,
       "isVisible": true,
       "leftColumn": 0,
-      "minHeight": 63,
+      "minHeight": 72,
       "parentColumnSpace": 1,
-      "parentId": "vfikiwn9o1",
+      "parentId": "8gv7vn60yp",
       "parentRowSpace": 1,
       "props": {
         "canExtend": false,
@@ -25,12 +25,12 @@
         "detachFromLayout": true
       },
       "renderMode": "CANVAS",
-      "rightColumn": 288,
+      "rightColumn": 54,
       "topRow": 0,
       "type": "CANVAS_WIDGET",
       "version": 1,
-      "widgetId": "ay2m6ki7vj",
-      "widgetName": "Canvas20"
+      "widgetId": "vm7k6eg6sn",
+      "widgetName": "Canvas17"
     }
   ],
   "containerStyle": "card",
@@ -43,7 +43,7 @@
   "isDeprecated": false,
   "isLoading": false,
   "isVisible": true,
-  "key": "1o45kqoyw8",
+  "key": "1b80dupjoz",
   "leftColumn": 0,
   "maxDynamicHeight": 9000,
   "minDynamicHeight": 10,
@@ -56,14 +56,14 @@
     "selectionBGCSSVar": "--on-canvas-ui-widget-selection",
     "selectionColorCSSVar": "--on-canvas-ui-widget-focus"
   },
-  "originalBottomRow": 50,
-  "originalTopRow": 40,
-  "parentColumnSpace": 4.5,
-  "parentId": "594wvh188b",
+  "originalBottomRow": 21,
+  "originalTopRow": 0,
+  "parentColumnSpace": 0.84375,
+  "parentId": "o6izndexib",
   "parentRowSpace": 10,
   "renderMode": "CANVAS",
   "responsiveBehavior": "fill",
-  "rightColumn": 64,
+  "rightColumn": 11,
   "searchTags": [
     "div",
     "parent",
@@ -75,9 +75,9 @@
     "Layout"
   ],
   "thumbnailSVG": "/static/media/thumbnail.6cb355b93146b5347bbb048a568ed446.svg",
-  "topRow": 40,
+  "topRow": 0,
   "type": "CONTAINER_WIDGET",
   "version": 1,
-  "widgetId": "vfikiwn9o1",
-  "widgetName": "Container6"
+  "widgetId": "8gv7vn60yp",
+  "widgetName": "Container4"
 }

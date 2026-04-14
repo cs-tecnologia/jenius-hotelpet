@@ -3,7 +3,7 @@
   "animateLoading": true,
   "autoFocus": true,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 32,
+  "bottomRow": 28,
   "boxShadow": "none",
   "defaultText": "{{ \n  (ApiViaCep.data && InputCep.isDirty) \n    ? ApiViaCep.data.localidade.trim().toUpperCase() \n    : (appsmith.store.modalContexto?.entidade === 'TUTOR' && appsmith.store.modalContexto?.acaoTipo === \"ADICIONAR\" ? \"\" : TableTutor.selectedRow.prop001_cidade || \"\")\n}}",
   "dynamicBindingPathList": [
@@ -52,7 +52,7 @@
   "rightColumn": 54,
   "showStepArrows": false,
   "tooltip": "",
-  "topRow": 25,
+  "topRow": 21,
   "type": "INPUT_WIDGET_V2",
   "version": 2,
   "widgetId": "eo3lxlgzh3",

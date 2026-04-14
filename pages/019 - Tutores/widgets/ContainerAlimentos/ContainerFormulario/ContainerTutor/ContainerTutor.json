@@ -3,11 +3,11 @@
   "backgroundColor": "#FFFFFF",
   "borderColor": "#E0DEDE",
   "borderWidth": "1",
-  "bottomRow": 70,
+  "bottomRow": 69,
   "boxShadow": "NONE",
   "children": [
     {
-      "bottomRow": 700,
+      "bottomRow": 610,
       "canExtend": false,
       "containerStyle": "none",
       "detachFromLayout": true,
@@ -53,7 +53,7 @@
   "isCanvas": true,
   "isDeprecated": false,
   "isLoading": false,
-  "isVisible": "{{ appsmith.store.telaAtiva === \"TUTOR\" || !appsmith.store.telaAtiva }}",
+  "isVisible": "{{ appsmith.store.telaAtiva === \"TUTORES\" || !appsmith.store.telaAtiva }}",
   "key": "vpm6vw4sah",
   "leftColumn": 0,
   "maxDynamicHeight": 9000,
@@ -67,8 +67,8 @@
     "selectionBGCSSVar": "--on-canvas-ui-widget-selection",
     "selectionColorCSSVar": "--on-canvas-ui-widget-focus"
   },
-  "originalBottomRow": 70,
-  "originalTopRow": 0,
+  "originalBottomRow": 69,
+  "originalTopRow": 8,
   "parentColumnSpace": 4.5,
   "parentId": "fyme5h4y48",
   "parentRowSpace": 10,
@@ -86,7 +86,7 @@
     "Layout"
   ],
   "thumbnailSVG": "/static/media/thumbnail.6cb355b93146b5347bbb048a568ed446.svg",
-  "topRow": 0,
+  "topRow": 8,
   "type": "CONTAINER_WIDGET",
   "version": 1,
   "widgetId": "dte1r9w6is",

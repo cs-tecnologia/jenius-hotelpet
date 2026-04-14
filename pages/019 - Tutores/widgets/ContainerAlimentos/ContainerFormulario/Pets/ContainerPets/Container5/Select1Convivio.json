@@ -2,9 +2,9 @@
   "accentColor": "{{appsmith.theme.colors.primaryColor}}",
   "animateLoading": true,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 7,
+  "bottomRow": 42,
   "boxShadow": "none",
-  "defaultOptionValue": "{{ ((options, serverSideFiltering) => (  \n(appsmith.store.modalContexto?.entidade === 'PET' && appsmith.store.modalContexto?.acaoTipo === \"ADICIONAR\") \n  ? \"\" \n  : appsmith.store.petSelecionado?.ani002_pelagem || \"\"\n))(Select1Pelagem.options, Select1Pelagem.serverSideFiltering) }}",
+  "defaultOptionValue": "{{ ((options, serverSideFiltering) => (  \n  (appsmith.store.modalContexto?.acaoTipo === \"ADICIONAR\") \n  ? undefined \n  : (appsmith.store.petSelecionado?.ani002_convivio !== undefined \n     ? Number(appsmith.store.petSelecionado.ani002_convivio) \n     : undefined)\n))(Select1Convivio.options, Select1Convivio.serverSideFiltering) }}",
   "dynamicBindingPathList": [
     {
       "key": "accentColor"
@@ -14,9 +14,6 @@
     },
     {
       "key": "defaultOptionValue"
-    },
-    {
-      "key": "sourceData"
     }
   ],
   "dynamicHeight": "FIXED",
@@ -34,10 +31,10 @@
   "key": "xlpozrvwfx",
   "labelAlignment": "left",
   "labelPosition": "Top",
-  "labelText": "Pelagem",
+  "labelText": "Convívio",
   "labelTextSize": "0.875rem",
   "labelWidth": 5,
-  "leftColumn": 24,
+  "leftColumn": 17,
   "maxDynamicHeight": 9000,
   "minDynamicHeight": 4,
   "minWidth": 450,
@@ -46,22 +43,22 @@
   "mobileRightColumn": 33,
   "mobileTopRow": 11,
   "needsErrorInfo": false,
-  "optionLabel": "pel001_desc",
-  "optionValue": "pel001_id",
-  "originalBottomRow": 44,
-  "originalTopRow": 37,
+  "optionLabel": "name",
+  "optionValue": "code",
+  "originalBottomRow": 42,
+  "originalTopRow": 35,
   "parentColumnSpace": 4.5,
-  "parentId": "y2i9hl008b",
+  "parentId": "o6izndexib",
   "parentRowSpace": 10,
   "placeholderText": "Select option",
   "renderMode": "CANVAS",
   "responsiveBehavior": "fill",
-  "rightColumn": 48,
+  "rightColumn": 27,
   "serverSideFiltering": false,
-  "sourceData": "{{SelectPelagem.data}}",
-  "topRow": 0,
+  "sourceData": "[\n  { \"name\": \"Grupo\", \"code\": 1 },\n  { \"name\": \"Isolado\", \"code\": 2 }\n]",
+  "topRow": 35,
   "type": "SELECT_WIDGET",
   "version": 1,
-  "widgetId": "6359odfaij",
-  "widgetName": "Select1Pelagem"
+  "widgetId": "sp51n0652m",
+  "widgetName": "Select1Convivio"
 }

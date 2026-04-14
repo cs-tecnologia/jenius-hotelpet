@@ -2,7 +2,7 @@
   "accentColor": "{{appsmith.theme.colors.primaryColor}}",
   "animateLoading": true,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 21,
+  "bottomRow": 28,
   "boxShadow": "none",
   "closeOnSelection": true,
   "dateFormat": "DD-MM-YYYY",
@@ -17,12 +17,18 @@
     },
     {
       "key": "defaultDate"
+    },
+    {
+      "key": "labelTextColor"
     }
   ],
   "dynamicHeight": "FIXED",
   "dynamicPropertyPathList": [
     {
       "key": "defaultDate"
+    },
+    {
+      "key": "labelTextColor"
     }
   ],
   "dynamicTriggerPathList": [],
@@ -35,9 +41,10 @@
   "label": "Óbito",
   "labelAlignment": "left",
   "labelPosition": "Top",
+  "labelTextColor": "{{ DatePicker1Obito.selectedDate ? \"#FF0000\" : \"#333333\" }}",
   "labelTextSize": "0.875rem",
   "labelWidth": 5,
-  "leftColumn": 51,
+  "leftColumn": 54,
   "maxDate": "2121-12-31T18:29:00.000Z",
   "maxDynamicHeight": 9000,
   "minDate": "1920-12-31T18:30:00.000Z",
@@ -48,8 +55,8 @@
   "mobileRightColumn": 33,
   "mobileTopRow": 11,
   "needsErrorInfo": false,
-  "originalBottomRow": 21,
-  "originalTopRow": 14,
+  "originalBottomRow": 28,
+  "originalTopRow": 21,
   "parentColumnSpace": 3.5859375,
   "parentId": "o6izndexib",
   "parentRowSpace": 10,
@@ -58,7 +65,7 @@
   "rightColumn": 64,
   "shortcuts": false,
   "timePrecision": "minute",
-  "topRow": 14,
+  "topRow": 21,
   "type": "DATE_PICKER_WIDGET2",
   "version": 2,
   "widgetId": "3xgirtzes0",

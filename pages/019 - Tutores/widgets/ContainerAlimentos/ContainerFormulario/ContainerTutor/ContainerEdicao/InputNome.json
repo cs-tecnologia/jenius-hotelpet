@@ -3,7 +3,7 @@
   "animateLoading": true,
   "autoFocus": true,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 18,
+  "bottomRow": 14,
   "boxShadow": "none",
   "defaultText": "{{ appsmith.store.modalContexto?.entidade === 'TUTOR' && appsmith.store.modalContexto?.acaoTipo === \"ADICIONAR\" ? \"\" : TableTutor.selectedRow.prop001_nome || \"\"\n}}",
   "dynamicBindingPathList": [
@@ -52,7 +52,7 @@
   "rightColumn": 64,
   "showStepArrows": false,
   "tooltip": "",
-  "topRow": 11,
+  "topRow": 7,
   "type": "INPUT_WIDGET_V2",
   "version": 2,
   "widgetId": "ir7dtwmbvs",

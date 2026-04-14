@@ -2,7 +2,7 @@
   "accentColor": "{{appsmith.theme.colors.primaryColor}}",
   "animateLoading": true,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 32,
+  "bottomRow": 28,
   "boxShadow": "none",
   "defaultOptionValue": "{{ ((options, serverSideFiltering) => (  \n  (ApiViaCep.data && InputCep.isDirty) \n    ? ApiViaCep.data.uf.trim().toUpperCase()  \n    : (appsmith.store.modalContexto?.entidade === 'TUTOR' && appsmith.store.modalContexto?.acaoTipo === \"ADICIONAR\" ? \"\" : TableTutor.selectedRow.prop001_uf || \"\")\n))(SelectUF.options, SelectUF.serverSideFiltering) }}",
   "dynamicBindingPathList": [
@@ -59,7 +59,7 @@
   "rightColumn": 64,
   "serverSideFiltering": false,
   "sourceData": "{{SelectUf.data}}",
-  "topRow": 25,
+  "topRow": 21,
   "type": "SELECT_WIDGET",
   "version": 1,
   "widgetId": "wr54vs7rrd",

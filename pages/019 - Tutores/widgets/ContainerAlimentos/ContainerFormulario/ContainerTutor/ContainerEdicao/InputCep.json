@@ -3,7 +3,7 @@
   "animateLoading": true,
   "autoFocus": true,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 25,
+  "bottomRow": 21,
   "boxShadow": "none",
   "defaultText": "{{ \n  (() => {\n    // 1. Prioridade: Se a API de CEP acabou de rodar, usa o dado dela\n    //if (ApiViaCep.data?.cep) {\n    //  return ApiViaCep.data.cep;\n    //}\n\n    // 2. Se for ADICIONAR e não houve busca na API, começa vazio\n    if (appsmith.store.modalContexto?.entidade === 'TUTOR' && appsmith.store.modalContexto?.acaoTipo === \"ADICIONAR\") {\n      return \"\";\n    }\n\n    // 3. Se for EDIÇÃO, pega o valor da tabela e mascara\n    const cepRaw = TableTutor.selectedRow.prop001_cep || \"\";\n    const numeros = cepRaw.toString().replace(/\\D/g, \"\");\n\n    // Aplica a máscara 00000-000 se houver 8 dígitos\n    if (numeros.length === 8) {\n      return numeros.replace(/^(\\d{5})(\\d{3})$/, \"$1-$2\");\n    }\n\n    return numeros;\n  })()\n}}",
   "dynamicBindingPathList": [
@@ -69,7 +69,7 @@
   "rightColumn": 13,
   "showStepArrows": false,
   "tooltip": "DIGITE O CEP NESTE FORMATO 99999-999",
-  "topRow": 18,
+  "topRow": 14,
   "type": "INPUT_WIDGET_V2",
   "validation": "{{ InputCep.text.replace(/\\D/g, \"\").length === 8 }}",
   "version": 2,

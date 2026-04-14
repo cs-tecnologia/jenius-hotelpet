@@ -18,13 +18,43 @@ export default {
 		"Input1Observacao", "Input1Cuidados", "Input1Saude", "Input1Tosa"
 	],
 
+	// Função para navegar do Tutor para os Pets
+	irParaPets: async function(linhaTutor) {
+    // 1. Limpa seleções anteriores
+    await storeValue('petSelecionado', {});
+
+    // 2. Seta o Tutor clicado
+    await storeValue('modalContexto', {
+        ...appsmith.store.modalContexto,
+        tutorID: linhaTutor.prop001_id,
+        tutorNome: linhaTutor.prop001_nome 
+    });
+
+    // 3. Busca os dados
+    const pets = await SelectPets.run();
+
+    // 4. Seleciona o primeiro pet se ele existir
+    if (pets && pets.length > 0) {
+        await storeValue('petSelecionado', pets[0]);
+    }
+
+    // 5. Só agora muda de tela
+    await storeValue("telaAtiva", "PETS");
+},
+
+	cancelarOperacao: function() {
+		// Fecha o modal e limpa a configuração temporária
+		closeModal("ModalConfirmation");
+		this.modalconfig = { action: "Delete" };
+	},
+
 	resetAllWidgets: function() {
 		this.widgetsPet.forEach(w => resetWidget(w, true));
-		storeValue("abaAtiva", "Pets");
+		// Se estiver usando containers, o storeValue abaixo garante a tela correta
+		storeValue("telaAtiva", "PETS");
 	},
 
 	async executeAction() {
-		// Proteção: se por algum motivo for undefined, usamos um fallback
 		const config = this.modalconfig || { action: "Delete" };
 		const action = config.action;
 		
@@ -74,7 +104,6 @@ export default {
 		}
 	},
 
-	// Restante das funções (cancelarOperacao, showModal)...
 	showModal(config) {
 		this.modalconfig = config;
 		return showModal("ModalConfirmation");

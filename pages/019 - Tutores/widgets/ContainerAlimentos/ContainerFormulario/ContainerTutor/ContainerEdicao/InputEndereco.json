@@ -3,7 +3,7 @@
   "animateLoading": true,
   "autoFocus": true,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 25,
+  "bottomRow": 21,
   "boxShadow": "none",
   "defaultText": "{{ \n  (ApiViaCep.data?.logradouro && InputCep.text.replace(/\\D/g,\"\") === ApiViaCep.data.cep.replace(/\\D/g,\"\"))\n    ? ApiViaCep.data.logradouro.toUpperCase() \n    : (appsmith.store.modalContexto?.entidade === 'TUTOR' && appsmith.store.modalContexto?.acaoTipo === \"ADICIONAR\" ? \"\" : TableTutor.selectedRow.prop001_endereco || \"\")\n}}",
   "dynamicBindingPathList": [
@@ -52,7 +52,7 @@
   "rightColumn": 64,
   "showStepArrows": false,
   "tooltip": "",
-  "topRow": 18,
+  "topRow": 14,
   "type": "INPUT_WIDGET_V2",
   "version": 2,
   "widgetId": "5ff1hs5r0s",

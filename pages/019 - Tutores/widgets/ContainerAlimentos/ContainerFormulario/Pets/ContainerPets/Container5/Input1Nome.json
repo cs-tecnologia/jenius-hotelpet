@@ -5,7 +5,7 @@
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
   "bottomRow": 7,
   "boxShadow": "none",
-  "defaultText": "{{ \n(appsmith.store.modalContexto?.entidade === 'PET' && appsmith.store.modalContexto?.acaoTipo === \"ADICIONAR\") \n  ? \"\" \n  : ListPets.selectedItem?.ani002_nome || \"\"\n}}",
+  "defaultText": "{{ \n(appsmith.store.modalContexto?.entidade === 'PET' && appsmith.store.modalContexto?.acaoTipo === \"ADICIONAR\") \n  ? \"\" \n  : appsmith.store.petSelecionado?.ani002_nome || \"\"\n}}",
   "dynamicBindingPathList": [
     {
       "key": "accentColor"
@@ -32,7 +32,7 @@
   "labelStyle": "",
   "labelTextSize": "0.875rem",
   "labelWidth": 5,
-  "leftColumn": 0,
+  "leftColumn": 11,
   "maxDynamicHeight": 9000,
   "minDynamicHeight": 4,
   "minWidth": 450,
@@ -49,7 +49,7 @@
   "renderMode": "CANVAS",
   "resetOnSubmit": true,
   "responsiveBehavior": "fill",
-  "rightColumn": 42,
+  "rightColumn": 48,
   "shouldScrollContents": true,
   "showStepArrows": false,
   "topRow": 0,

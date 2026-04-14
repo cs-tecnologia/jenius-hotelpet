@@ -3,7 +3,7 @@
   "animateLoading": true,
   "autoFocus": true,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 11,
+  "bottomRow": 7,
   "boxShadow": "none",
   "defaultText": "{{ appsmith.store.modalContexto?.entidade === 'TUTOR' && appsmith.store.modalContexto?.acaoTipo === \"ADICIONAR\" ? \"\" : TableTutor.selectedRow.prop001_rg || \"\"\n}}",
   "dynamicBindingPathList": [
@@ -53,7 +53,7 @@
   "shouldAllowAutofill": false,
   "showStepArrows": false,
   "tooltip": "Carteira de Identidade Nacional (CIN) substitui o RG usando o CPF como número único em todo o Brasil.",
-  "topRow": 4,
+  "topRow": 0,
   "type": "INPUT_WIDGET_V2",
   "version": 2,
   "widgetId": "51j0byzpus",
