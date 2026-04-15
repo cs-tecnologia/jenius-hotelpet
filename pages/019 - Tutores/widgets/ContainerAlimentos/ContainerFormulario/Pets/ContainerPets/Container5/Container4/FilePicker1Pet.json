@@ -26,7 +26,7 @@
   "isRequired": false,
   "isVisible": true,
   "key": "myhbjjp9bv",
-  "label": "{{ (appsmith.store.modalContexto?.entidade === 'PET' && appsmith.store.modalContexto?.acaoTipo === \"ADICIONAR\") ? \"Adicionar Foto\" : \"Trocar Foto\" }}",
+  "label": "{{ (appsmith.store.modalContexto?.entidade === 'PET' && appsmith.store.modalContexto?.acaoTipo === \"ADICIONAR\") ? \"Add Foto\" : \"Trocar Foto\" }}",
   "leftColumn": 3,
   "maxFileSize": "1",
   "maxNumFiles": 1,

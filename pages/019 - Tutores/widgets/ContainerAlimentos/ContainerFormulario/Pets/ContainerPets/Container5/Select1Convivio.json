@@ -4,7 +4,7 @@
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
   "bottomRow": 42,
   "boxShadow": "none",
-  "defaultOptionValue": "{{ ((options, serverSideFiltering) => (  \n  (appsmith.store.modalContexto?.acaoTipo === \"ADICIONAR\") \n  ? undefined \n  : (appsmith.store.petSelecionado?.ani002_convivio !== undefined \n     ? Number(appsmith.store.petSelecionado.ani002_convivio) \n     : undefined)\n))(Select1Convivio.options, Select1Convivio.serverSideFiltering) }}",
+  "defaultOptionValue": "{{ ((options, serverSideFiltering) => (  \n  appsmith.store.modalContexto?.acaoTipo === \"ADICIONAR\" \n  ? \"\" \n  : (appsmith.store.petSelecionado?.ani002_convivio \n      ? Number(appsmith.store.petSelecionado.ani002_convivio) \n      : \"\") \n))(Select1Convivio.options, Select1Convivio.serverSideFiltering) }}",
   "dynamicBindingPathList": [
     {
       "key": "accentColor"

@@ -218,7 +218,7 @@
   "needsErrorInfo": false,
   "onPageChange": "{{SelectTutorCount.run().then(() => {\n  SelectTutor.run();\n});}}",
   "onPageSizeChange": "{{SelectTutorCount.run().then(() => {\n  SelectTutor.run();\n});}}",
-  "onRowSelected": "{{\n  (async () => {\n    // 1. Reinicia o timer e define o contexto do Tutor\n    JSutils.resetInactivityTimer();\n    \n    await storeValue('modalContexto', {\n      ...appsmith.store.modalContexto,\n      entidade: 'TUTOR',\n      tutorID: TableTutor.selectedRow.prop001_id,\n      tutorNome: TableTutor.selectedRow.prop001_nome,\n      acaoTipo: \"EDITAR\"\n    });\n\n    }\n\n    // 5. Muda a tela por último\n    await  storeValue(\"telaAtiva\", \"TUTOR\");\n    \n    // 6. Atualiza a lista visualmente\n   \n  })()\n}}",
+  "onRowSelected": "{{\n  (async () => {\n    JSutils.resetInactivityTimer();\n    \n    await storeValue('modalContexto', {\n      ...appsmith.store.modalContexto,\n      entidade: 'TUTOR',\n      tutorID: TableTutor.selectedRow?.prop001_id,\n      tutorNome: TableTutor.selectedRow?.prop001_nome,\n      acaoTipo: \"EDITAR\"\n    });\n\n    await storeValue('abaAtiva', 'Info Cadastral'); \n    await storeValue(\"telaAtiva\", \"TUTORES\");\n  })()\n}}",
   "parentColumnSpace": 4.5,
   "parentId": "xjaspplumo",
   "parentRowSpace": 10,

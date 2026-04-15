@@ -49,7 +49,7 @@
   "responsiveBehavior": "fill",
   "rightColumn": 57,
   "shouldTruncate": false,
-  "text": "{{JSconfirmationPET.modalconfig?.row?.ani002_nome}}",
+  "text": "{{  appsmith.store.modalContexto?.entidade === 'PET' \n  ? (Input1Nome.text)\n  : (InputNome.text)\n}}",
   "textAlign": "LEFT",
   "textColor": "{{JSconfirmation.modalconfig.color}}",
   "topRow": 1,

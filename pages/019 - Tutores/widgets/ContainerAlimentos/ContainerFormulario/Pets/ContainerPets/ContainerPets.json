@@ -57,13 +57,22 @@
     },
     {
       "key": "boxShadow"
+    },
+    {
+      "key": "isVisible"
     }
   ],
   "dynamicHeight": "AUTO_HEIGHT",
+  "dynamicPropertyPathList": [
+    {
+      "key": "isVisible"
+    }
+  ],
+  "dynamicTriggerPathList": [],
   "flexVerticalAlignment": "stretch",
   "isCanvas": true,
   "isLoading": false,
-  "isVisible": true,
+  "isVisible": "{{ \n  !!(\n    (appsmith.store.modalContexto?.entidade === 'PET' && appsmith.store.modalContexto?.acaoTipo === 'ADICIONAR') || \n    ((ListPets.listData?.length || 0) > 0 && !!appsmith.store.petSelecionado?.ani002_id)\n  )\n}}",
   "key": "1b80dupjoz",
   "leftColumn": 16,
   "maxDynamicHeight": 9000,

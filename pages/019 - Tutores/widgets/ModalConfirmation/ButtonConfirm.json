@@ -21,6 +21,9 @@
   "dynamicPropertyPathList": [
     {
       "key": "animateLoading"
+    },
+    {
+      "key": "onClick"
     }
   ],
   "dynamicTriggerPathList": [
@@ -40,7 +43,7 @@
   "mobileRightColumn": 63,
   "mobileTopRow": 18,
   "needsErrorInfo": false,
-  "onClick": "{{JSconfirmationPET.executeAction();}}",
+  "onClick": "{{ \n  appsmith.store.modalContexto?.entidade === 'PET' \n  ? JSconfirmationPET.executeAction() \n  : JSconfirmation.executeAction() \n}}",
   "originalBottomRow": 21,
   "originalTopRow": 17,
   "parentId": "02ls0xqqoo",

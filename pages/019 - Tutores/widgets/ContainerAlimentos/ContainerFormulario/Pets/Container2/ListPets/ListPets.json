@@ -124,7 +124,7 @@
   "mobileRightColumn": 25,
   "mobileTopRow": 0,
   "needsErrorInfo": false,
-  "onItemClick": "{{\n  (() => {\n    // 1. Captura o item IMEDIATAMENTE antes de entrar no async\n    const itemClicado = currentItem; \n\n    (async () => {\n      // 2. Agora usa a variável constante que criamos\n      await storeValue('petSelecionado', itemClicado); \n\n      await storeValue('modalContexto', {\n        ...appsmith.store.modalContexto,\n        entidade: 'PET',\n        acaoTipo: 'EDITAR',\n        acaoBotao: 'ATUALIZAR'\n      });\n    })();\n  })()\n}}",
+  "onItemClick": "{{\n  (async () => {\n    // Usamos o selectedItem da própria lista, não o \"currentItem\" volátil\n    const petApoiado = ListPets.selectedItem;\n\n    await storeValue('petSelecionado', petApoiado);\n    \n    await storeValue('modalContexto', {\n      ...appsmith.store.modalContexto,\n      entidade: 'PET',\n      acaoTipo: 'EDITAR',\n      acaoBotao: 'ATUALIZAR'\n    });\n\n    JSutils.resetInactivityTimer();\n  })()\n}}",
   "onPageChange": "{{SelectPetsCount.run().then(() => {\n  SelectPets.run();\n});}}",
   "originalBottomRow": 61,
   "originalTopRow": 4,

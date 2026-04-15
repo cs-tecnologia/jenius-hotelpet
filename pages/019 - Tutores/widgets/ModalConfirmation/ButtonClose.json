@@ -37,7 +37,7 @@
   "mobileRightColumn": 47,
   "mobileTopRow": 18,
   "needsErrorInfo": false,
-  "onClick": "{{ JSconfirmationPET.cancelarOperacao() }}",
+  "onClick": "{{ \nappsmith.store.modalContexto?.entidade === 'PET' \n  ? JSconfirmationPET.cancelarOperacao() \n  : JSconfirmation.cancelarOperacao()\n}}",
   "originalBottomRow": 21,
   "originalTopRow": 17,
   "parentId": "02ls0xqqoo",
