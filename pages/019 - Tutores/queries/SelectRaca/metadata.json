@@ -5,7 +5,7 @@
   "pluginType": "DB",
   "unpublishedAction": {
     "actionConfiguration": {
-      "body": "SELECT * FROM \"{{JSutils.currentSchema()}}\".hotraca001\nwhere raca001_deleted <> 'true' order by raca001_desc;",
+      "body": "SELECT \n    *\nFROM \"{{JSutils.currentSchema()}}\".hotraca001\nWHERE raca001_deleted <> 'true' \nAND (\n    raca001_tipoanimal = '{{Select1Especie.selectedOptionValue}}' \n    OR raca001_id = 47\n)\nORDER BY \n    (raca001_id = 47) DESC, -- Força o SRD a ser sempre o primeiro da lista\n    raca001_desc ASC;",
       "encodeParamsToggle": true,
       "paginationType": "NONE",
       "pluginSpecifiedTemplates": [

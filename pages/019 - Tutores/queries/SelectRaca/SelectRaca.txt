@@ -1,2 +1,11 @@
-SELECT * FROM "{{JSutils.currentSchema()}}".hotraca001
-where raca001_deleted <> 'true' order by raca001_desc;
+SELECT 
+    *
+FROM "{{JSutils.currentSchema()}}".hotraca001
+WHERE raca001_deleted <> 'true' 
+AND (
+    raca001_tipoanimal = '{{Select1Especie.selectedOptionValue}}' 
+    OR raca001_id = 47
+)
+ORDER BY 
+    (raca001_id = 47) DESC, -- Força o SRD a ser sempre o primeiro da lista
+    raca001_desc ASC;
