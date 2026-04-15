@@ -5,7 +5,7 @@
   "pluginType": "DB",
   "unpublishedAction": {
     "actionConfiguration": {
-      "body": "UPDATE \"{{JSutils.currentSchema()}}\".hotali001 SET\n\t\t\"ali001_desc\" = '{{JSconfirmation.modalconfig.row.ali001_desc}}',\n\t\t\"ali001_last_modification\" = now(),\n    \"ali001_modified_by\" = {{ appsmith.user.id || 1 }}\nWHERE \"ali001_id\" = {{JSconfirmation.modalconfig.row.ali001_id}};",
+      "body": "UPDATE \"{{JSutils.currentSchema()}}\".hotali001 SET\n\t\t\"ali001_desc\" = '{{JSconfirmation.modalconfig.row.ali001_desc}}',\n\t\t\"ali001_imagem\" = '{{JSconfirmation.modalconfig.row.ali001_imagem}}',\t\t\n\t\t\"ali001_last_modification\" = now(),\n    \"ali001_modified_by\" = {{ appsmith.user.id || 1 }}\nWHERE \"ali001_id\" = {{JSconfirmation.modalconfig.row.ali001_id}};",
       "encodeParamsToggle": true,
       "paginationType": "NONE",
       "pluginSpecifiedTemplates": [

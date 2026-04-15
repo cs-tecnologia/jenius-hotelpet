@@ -2,58 +2,70 @@ export default {
 	// 1. Verifica se houve mudanças e se os campos obrigatórios estão preenchidos
 	podeSalvar: () => {
 		const action = appsmith.store.modalContexto?.acaoTipo;
-		const descAtual = InputDescricao.text;
-		const descOriginal = TableAlimentos.selectedRow.ali001_desc || "";
+		
+		// Valores Atuais nos Widgets
+		const descAtual = (InputDescricao.text || "").trim();
+		const imgAtual = Image1Alimento.image || ""; // URL ou Base64 atual da imagem
+		
+		// Valores Originais da Tabela
+		const descOriginal = (TableAlimentos.selectedRow.ali001_desc || "").trim();
+		const imgOriginal = TableAlimentos.selectedRow.ali001_imagem || ""; // Ajuste para o nome da sua coluna de foto
 
-		// Validação básica: Descrição não pode ser vazia
-		const temConteudo = descAtual.trim().length > 0;
+		// Validação obrigatória: Descrição não pode ser vazia
+		const temConteudo = descAtual.length > 0;
 
 		if (action === "ADICIONAR") {
-			return temConteudo; // Habilita se tiver texto
+			// Habilita se tiver texto OU se tiver selecionado uma imagem/logo
+			const temImagemNova = FilePicker1logo.files.length > 0;
+			return temConteudo || temImagemNova; 
 		} else {
-			// Habilita se tiver texto E for diferente do original
-			return temConteudo && descAtual !== descOriginal;
+			// Habilita se for válido E (texto mudou OU imagem mudou)
+			const textoMudou = descAtual !== descOriginal;
+			const imagemMudou = imgAtual !== imgOriginal;
+			
+			return temConteudo && (textoMudou || imagemMudou);
 		}
 	},
 
-// 2. Função para o botão CANCELAR refatorada
+	// 2. Função para o botão CANCELAR refatorada
 	resetForm: async () => {
-		// 1. Mudamos o estado de volta para "Visualizar/Editar" 
-		// Isso faz com que o Default Value do Input aponte para a TableAlimentos.selectedRow
 		await storeValue("modalContexto", { 
 			...appsmith.store.modalContexto, 
 			acaoTipo: "EDITAR" 
 		});
 
-		// 2. Resetamos o widget. Agora ele vai ler o Default Value novo (da linha selecionada)
+		// Resetamos todos os widgets envolvidos
 		resetWidget("InputDescricao", true);
-		resetWidget("InputID", true); // Reset o ID também, se necessário
+		resetWidget("InputID", true);
+		resetWidget("FilePicker1logo", true);
+		resetWidget("Image1Alimento", true);
+		// O Image1Alimento geralmente reseta sozinho ao resetar o FilePicker ou mudar o row selecionado
 
-		// 3. Reiniciamos o cronômetro de inatividade (pois o usuário interagiu com o botão)
 		JSutils.resetInactivityTimer();
-		
-		showAlert("Operação cancelada. Retornando ao registro selecionado.", "info");
+		showAlert("Operação cancelada.", "info");
 	},
 	
-// Nova função para o botão CANCELAR
-    podeCancelar: () => {
-        const action = appsmith.store.modalContexto?.acaoTipo;
-        
-        // Regra: Habilita se for "ADICIONAR" OU se a função podeSalvar for verdadeira (houve edição)
-        return action === "ADICIONAR" || this.podeSalvar();
-    },	
+	// 3. Função para habilitar/desabilitar o botão CANCELAR
+	podeCancelar: () => {
+		const action = appsmith.store.modalContexto?.acaoTipo;
+		// Habilita se estiver no modo ADICIONAR ou se houve qualquer alteração nos campos
+		return action === "ADICIONAR" || this.podeSalvar();
+	},	
 
-// 1. Função que checa se o que está no input é diferente da tabela
+	// 4. Função auxiliar para detectar qualquer alteração (UI/UX)
 	temAlteracao: () => {
 		const contexto = appsmith.store.modalContexto?.acaoTipo;
 		const descAtual = (InputDescricao.text || "").trim().toUpperCase();
 		const descOriginal = (TableAlimentos.selectedRow?.ali001_desc || "").trim().toUpperCase();
+		
+		const imgAtual = Image1Alimento.image || "";
+		const imgOriginal = TableAlimentos.selectedRow?.ali001_imagem || "";
 
 		if (contexto === "ADICIONAR") {
-			return descAtual.length > 0; // Habilita se tiver digitado algo
+			return descAtual.length > 0 || FilePicker1logo.files.length > 0;
 		}
 
-		// No modo edição, habilita se o texto for diferente do que está na tabela
-		return descAtual.length > 0 && descAtual !== descOriginal;
+		// Modo edição: texto mudou ou imagem mudou
+		return (descAtual.length > 0 && descAtual !== descOriginal) || (imgAtual !== imgOriginal);
 	},	
 }

@@ -5,7 +5,7 @@
   "pluginType": "DB",
   "unpublishedAction": {
     "actionConfiguration": {
-      "body": "INSERT INTO \"{{JSutils.currentSchema()}}\".hotali001 (\n\t\"ali001_desc\", \n\t\"ali001_creation_date\", \n\t\"ali001_created_by\", \n\t\"ali001_last_modification\", \n\t\"ali001_modified_by\")\nVALUES (\n\t'{{JSconfirmation.modalconfig.row.ali001_desc?.trim().toUpperCase()}}', \n\t\tnow(),\n    {{ appsmith.user.id || 1 }},\n\t\tnow(),\n    {{ appsmith.user.id || 1 }});\t",
+      "body": "INSERT INTO \"{{JSutils.currentSchema()}}\".hotali001 (\n\t\"ali001_desc\", \n\t\"ali001_imagem\",\n\t\"ali001_creation_date\", \n\t\"ali001_created_by\", \n\t\"ali001_last_modification\", \n\t\"ali001_modified_by\")\nVALUES (\n\t'{{JSconfirmation.modalconfig.row.ali001_desc?.trim().toUpperCase()}}', \n'{{JSconfirmation.modalconfig.row.ali001_imagem}}',\t\t\n\tnow(),\n    {{ appsmith.user.id || 1 }},\n\t\tnow(),\n    {{ appsmith.user.id || 1 }});\t",
       "encodeParamsToggle": true,
       "paginationType": "NONE",
       "pluginSpecifiedTemplates": [

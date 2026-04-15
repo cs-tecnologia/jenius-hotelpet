@@ -58,7 +58,7 @@
   "renderMode": "CANVAS",
   "resetFormOnClick": false,
   "responsiveBehavior": "hug",
-  "rightColumn": 19,
+  "rightColumn": 21,
   "text": "CANCELAR",
   "tooltip": "Cancelar Edição",
   "topRow": 25,
