@@ -1,0 +1,58 @@
+{
+  "animateLoading": true,
+  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+  "bottomRow": 6,
+  "boxShadow": "none",
+  "buttonColor": "{{appsmith.theme.colors.primaryColor}}",
+  "buttonVariant": "PRIMARY",
+  "disabledWhenInvalid": false,
+  "dynamicBindingPathList": [
+    {
+      "key": "buttonColor"
+    },
+    {
+      "key": "borderRadius"
+    }
+  ],
+  "dynamicPropertyPathList": [
+    {
+      "key": "onClick"
+    }
+  ],
+  "dynamicTriggerPathList": [
+    {
+      "key": "onClick"
+    }
+  ],
+  "iconAlign": "left",
+  "iconName": "add",
+  "isDefaultClickDisabled": true,
+  "isDisabled": false,
+  "isLoading": false,
+  "isVisible": true,
+  "key": "mfa917wnro",
+  "leftColumn": 48,
+  "minWidth": 120,
+  "mobileBottomRow": 4,
+  "mobileLeftColumn": 44,
+  "mobileRightColumn": 60,
+  "mobileTopRow": 0,
+  "needsErrorInfo": false,
+  "onClick": "{{\n  (async () => {\n    // 1. Define o contexto para ADICIONAR\n    await storeValue('modalContexto', {\n      acaoTipo: \"ADICIONAR\",\n      acaoBotao: \"SALVAR\",\n    });\n    // 2. Limpa o campo para garantir que está vazio\n\t\tresetWidget(\"InputNome\", true); // Descomente se esses widgets existirem nesta página\n\t\tresetWidget(\"InputID\", true); // Reset o ID também, se necessário\n\t\tresetWidget(\"InputCEP\", true);\n\t\tresetWidget(\"InputEndereco\", true);\n\t\tresetWidget(\"InputNumero\", true);\n\t\tresetWidget(\"InputComplemento\", true);\n\t\tresetWidget(\"InputBairro\", true);\n\t\tresetWidget(\"InputCidade\", true);\n\t\tresetWidget(\"SelectUF\", true);\n\t\tresetWidget(\"InputContato\", true);\n\t\tresetWidget(\"InputEmail\", true);\t\t\t\t\t\n\t\tresetWidget(\"InputTelefone\", true);\t\t\t\t\t\n\t\tresetWidget(\"InputCelula\", true);\t\t\t\n    // 3. Reinicia o contador de inatividade (Sinaliza que o usuário está ativo)\n JSutils.resetInactivityTimer();\n  })()\n}}",
+  "parentColumnSpace": 4.21875,
+  "parentId": "vq55jdnhie",
+  "parentRowSpace": 10,
+  "placement": "CENTER",
+  "recaptchaType": "V3",
+  "renderMode": "CANVAS",
+  "resetFormOnClick": false,
+  "responsiveBehavior": "hug",
+  "rightColumn": 60,
+  "text": "NOVO",
+  "tooltip": "adicionar um novo registro",
+  "topRow": 1,
+  "type": "BUTTON_WIDGET",
+  "version": 1,
+  "widgetId": "5knu1geij6",
+  "widgetName": "ButtonNewPart"
+}

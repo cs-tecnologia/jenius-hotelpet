@@ -1,0 +1,2 @@
+SELECT * FROM "{{JSutils.currentSchema()}}".hotali001
+where ali001_deleted <> 'true' order by ali001_desc;

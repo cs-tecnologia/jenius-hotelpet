@@ -1,0 +1,28 @@
+{
+  "gitSyncId": "69df81de1424f43dde27e012_7ea9ba4b-13bc-4d20-9827-aec45dac0183",
+  "id": "021 - Particularidades_JSutils",
+  "unpublishedCollection": {
+    "name": "JSutils",
+    "pageId": "021 - Particularidades",
+    "pluginId": "js-plugin",
+    "pluginType": "JS",
+    "variables": [
+      {
+        "name": "timeoutId",
+        "value": "null"
+      },
+      {
+        "name": "intervalId",
+        "value": "null"
+      },
+      {
+        "name": "tempoRestante",
+        "value": "3600"
+      },
+      {
+        "name": "tempoPadrao",
+        "value": "3600"
+      }
+    ]
+  }
+}

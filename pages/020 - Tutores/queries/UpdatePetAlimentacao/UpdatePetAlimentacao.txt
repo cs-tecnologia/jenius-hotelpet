@@ -1,0 +1,8 @@
+UPDATE "{{JSutils.currentSchema()}}".hotali002 SET
+  ali002_alimentacao = {{ this.params.ali002_alimentacao }},
+  ali002_opcao = '{{ this.params.ali002_opcao }}',
+  ali002_observacao = '{{ this.params.ali002_observacao }}',
+  ali002_permitido = {{ this.params.ali002_permitido }},
+  ali002_last_modification = NOW(),
+  ali002_modified_by = {{ appsmith.user.id || 1 }}
+WHERE ali002_id = {{ this.params.ali002_id }};

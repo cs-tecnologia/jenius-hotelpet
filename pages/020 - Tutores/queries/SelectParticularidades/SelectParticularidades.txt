@@ -1,0 +1,3 @@
+SELECT * FROM "{{JSutils.currentSchema()}}".hotpar001
+WHERE par001_deleted <> true and par001_desc ILIKE '%{{TableParticularidades.searchText}}%'
+order by par001_desc;

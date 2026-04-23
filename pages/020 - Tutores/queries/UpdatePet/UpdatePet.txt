@@ -1,0 +1,33 @@
+UPDATE "{{JSutils.currentSchema()}}".hotani002 SET 
+	-- Campos Numéricos/ID: SEM aspas simples por fora
+	ani002_tutor = {{ JSconfirmationPET.modalconfig?.row?.ani002_tutor || 'NULL' }},
+	ani002_peso = {{ JSconfirmationPET.modalconfig?.row?.ani002_peso || 'NULL' }},
+	
+	-- Campos de Texto: COM aspas simples
+	ani002_tipo = '{{JSconfirmationPET.modalconfig?.row?.ani002_tipo}}', 					
+	ani002_raca = '{{JSconfirmationPET.modalconfig?.row?.ani002_raca}}', 	 
+	ani002_porte = '{{JSconfirmationPET.modalconfig?.row?.ani002_porte}}',  
+	ani002_pelagem = '{{JSconfirmationPET.modalconfig?.row?.ani002_pelagem}}',  
+	ani002_cor = '{{JSconfirmationPET.modalconfig?.row?.ani002_cor}}', 
+	ani002_temp = '{{JSconfirmationPET.modalconfig?.row?.ani002_temp}}', 
+	ani002_vet = '{{JSconfirmationPET.modalconfig?.row?.ani002_vet}}', 
+	ani002_clinica = '{{JSconfirmationPET.modalconfig?.row?.ani002_clinica}}', 
+	ani002_nome = UPPER(TRIM('{{ JSconfirmationPET.modalconfig?.row?.ani002_nome }}')),
+	ani002_sexo = '{{JSconfirmationPET.modalconfig?.row?.ani002_sexo}}', 	
+	ani002_castrado = '{{JSconfirmationPET.modalconfig?.row?.ani002_castrado}}', 	
+	ani002_convivio = '{{JSconfirmationPET.modalconfig?.row?.ani002_convivio}}', 
+	ani002_canil = '{{JSconfirmationPET.modalconfig?.row?.ani002_canil}}', 	
+	ani002_registro = '{{JSconfirmationPET.modalconfig?.row?.ani002_registro}}', 	
+	ani002_microchip = '{{JSconfirmationPET.modalconfig?.row?.ani002_microchip}}', 	
+	ani002_observacao = '{{JSconfirmationPET.modalconfig?.row?.ani002_observacao}}', 	
+	ani002_imagem = '{{JSconfirmationPET.modalconfig?.row?.ani002_imagem}}', 	
+	
+	-- Datas: Usando lógica para colocar aspas apenas se houver valor
+	ani002_datanasc = {{ JSconfirmationPET.modalconfig?.row?.ani002_datanasc ? "'" + JSconfirmationPET.modalconfig?.row?.ani002_datanasc + "'" : 'NULL' }}, 
+	ani002_data_obito = {{ JSconfirmationPET.modalconfig?.row?.ani002_data_obito ? "'" + JSconfirmationPET.modalconfig?.row?.ani002_data_obito + "'" : 'NULL' }}, 	
+	
+	ani002_nome_registro = '{{JSconfirmationPET.modalconfig?.row?.ani002_nome_registro}}', 	
+	ani002_registro_pedigree = '{{JSconfirmationPET.modalconfig?.row?.ani002_registro_pedigree}}',
+	ani002_last_modification = now(),
+  ani002_modified_by = {{ appsmith.user.id || 1 }}
+WHERE ani002_id = {{ JSconfirmationPET.modalconfig?.row?.ani002_id || 0 }};

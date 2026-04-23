@@ -1,0 +1,12 @@
+INSERT INTO "{{JSutils.currentSchema()}}".hotpar001 (
+	"par001_desc", 
+	"par001_creation_date", 
+	"par001_created_by", 
+	"par001_last_modification", 
+	"par001_modified_by")
+VALUES (
+	'{{JSconfirmation.modalconfig.row.par001_desc?.trim().toUpperCase()}}', 
+		now(),
+    {{ appsmith.user.id || 1 }},
+		now(),
+    {{ appsmith.user.id || 1 }});	

@@ -1,0 +1,2 @@
+SELECT count(par002_id) FROM "{{JSutils.currentSchema()}}".hotpar002
+WHERE par002_deleted <> true;

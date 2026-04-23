@@ -1,0 +1,16 @@
+{
+  "gitSyncId": "69df81de1424f43dde27e012_cdb2f23e-d5ba-49f7-a1a7-fd0351b01719",
+  "id": "021 - Particularidades_JSconfirmation",
+  "unpublishedCollection": {
+    "name": "JSconfirmation",
+    "pageId": "021 - Particularidades",
+    "pluginId": "js-plugin",
+    "pluginType": "JS",
+    "variables": [
+      {
+        "name": "modalconfig",
+        "value": "{\n  action: \"Delete\",\n  message: \"\",\n  row: {},\n  icon: \"plus\",\n  color: \"blue\"\n}"
+      }
+    ]
+  }
+}
