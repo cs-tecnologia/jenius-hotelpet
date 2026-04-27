@@ -29,7 +29,7 @@
     ],
     "name": "SelectPetAlimentacao",
     "pageId": "020 - Tutores",
-    "runBehaviour": "ON_PAGE_LOAD",
+    "runBehaviour": "AUTOMATIC",
     "userSetOnLoad": true
   }
 }

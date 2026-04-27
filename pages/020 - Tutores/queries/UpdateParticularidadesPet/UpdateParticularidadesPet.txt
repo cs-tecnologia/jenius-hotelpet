@@ -1,0 +1,8 @@
+UPDATE "{{JSutils.currentSchema()}}".hotpar002 SET
+  par002_descricao = '{{ this.params.par002_descricao }}',
+  -- Converte o 'S'/'N' do parâmetro para boolean real do Postgres
+  par002_alerta = {{ this.params.par002_alerta === 'S' ? true : false }},
+  par002_last_modification = now(),
+  par002_modified_by = {{ appsmith.user.id || 1 }}
+WHERE 
+  par002_id = {{ Number(this.params.par002_id) }};

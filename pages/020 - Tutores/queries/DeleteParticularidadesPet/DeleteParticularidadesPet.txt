@@ -1,0 +1,6 @@
+UPDATE "{{JSutils.currentSchema()}}".hotpar002 SET
+  par002_deleted = true,
+  par002_last_modification = now(),
+  par002_modified_by = {{ appsmith.user.id || 1 }}
+WHERE 
+  par002_id = {{ Number(this.params.par002_id) }};

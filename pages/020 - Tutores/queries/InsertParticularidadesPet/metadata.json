@@ -1,11 +1,11 @@
 {
-  "gitSyncId": "69df81de1424f43dde27e012_a245bb1a-623c-49dd-9de0-5fd4525d4580",
+  "gitSyncId": "69df81de1424f43dde27e012_49ec4ad3-e607-4b84-935c-b612c3ef78e3",
   "id": "020 - Tutores_InsertParticularidadesPet",
   "pluginId": "postgres-plugin",
   "pluginType": "DB",
   "unpublishedAction": {
     "actionConfiguration": {
-      "body": "INSERT INTO \"{{JSutils.currentSchema()}}\".hotpar002 (\n  par002_par001_id,\n  par002_ani002_id,\n  par002_descricao,\n  par002_alerta,\n  par002_creation_date,\n  par002_created_by,\n  par002_last_modification,\n  par002_modified_by\n) VALUES (\n  {{ Number(this.params.par001_id || 0) }},\n  {{ Number(this.params.ani002_id || 0) }},\n  '',\n  false,\n  now(),\n  {{ appsmith.user.id || 1 }},\n  now(),\n  {{ appsmith.user.id || 1 }}\n)",
+      "body": "INSERT INTO \"{{JSutils.currentSchema()}}\".hotpar002 (\n  par002_par001_id,\n  par002_ani002_id,\n  par002_descricao,\n  par002_alerta,\n  par002_creation_date,\n  par002_created_by,\n  par002_last_modification,\n  par002_modified_by\n) VALUES (\n  {{ Number(this.params.par002_par001_id || 0) }},\n  {{ Number(this.params.par002_ani002_id || 0) }},\n  '{{ this.params.par002_descricao }}', -- Adicionado aspas simples\n  {{ this.params.par002_alerta === 'S' ? true : false }}, -- Removido '!!' e colocado lógica boolean\n  now(),\n  {{ appsmith.user.id || 1 }},\n  now(),\n  {{ appsmith.user.id || 1 }}\n)\nRETURNING par002_id;",
       "encodeParamsToggle": true,
       "paginationType": "NONE",
       "pluginSpecifiedTemplates": [

@@ -8,12 +8,13 @@ INSERT INTO "{{JSutils.currentSchema()}}".hotpar002 (
   par002_last_modification,
   par002_modified_by
 ) VALUES (
-  {{ Number(this.params.par001_id || 0) }},
-  {{ Number(this.params.ani002_id || 0) }},
-  '',
-  false,
+  {{ Number(this.params.par002_par001_id || 0) }},
+  {{ Number(this.params.par002_ani002_id || 0) }},
+  '{{ this.params.par002_descricao }}', -- Adicionado aspas simples
+  {{ this.params.par002_alerta === 'S' ? true : false }}, -- Removido '!!' e colocado lógica boolean
   now(),
   {{ appsmith.user.id || 1 }},
   now(),
   {{ appsmith.user.id || 1 }}
 )
+RETURNING par002_id;

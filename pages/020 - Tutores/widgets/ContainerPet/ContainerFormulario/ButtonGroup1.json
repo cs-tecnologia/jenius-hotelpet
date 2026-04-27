@@ -53,7 +53,7 @@
       "index": 0,
       "isDisabled": "{{ appsmith.store.telaAtiva === \"TUTORES\" }}",
       "isVisible": true,
-      "label": "TUTOR\n{{ appsmith.store.modalContexto?.acaoTipo === \"ADICIONAR\" ? \"\" : \" - \" + TableTutor.selectedRow.prop001_nome.trim() || \"\"\n}}",
+      "label": "TUTOR \n{{ \n  appsmith.store.modalContexto?.acaoTipo === \"ADICIONAR\" \n  ? \"\" \n  : \" \" + (TableTutor.selectedRow?.prop001_nome?.trim() || \"\") \n}}",
       "menuItems": {},
       "onClick": "{{\n  (async () => {\n    // 1. Controle de Inatividade\n    JSutils.resetInactivityTimer();\n    \n    // 2. Define o contexto para TUTOR\n    await storeValue('modalContexto', {\n      ...appsmith.store.modalContexto,\n      entidade: 'TUTOR',\n      // Mantém os dados da linha que já estava selecionada na tabela\n      tutorID: TableTutor.selectedRow?.prop001_id,\n      tutorNome: TableTutor.selectedRow?.prop001_nome,\n      acaoTipo: \"EDITAR\"\n    });\n\n    // 3. Ativa a tela de Tutores\n    await storeValue(\"telaAtiva\", \"TUTORES\");\n  })()\n}}",
       "placement": "CENTER",

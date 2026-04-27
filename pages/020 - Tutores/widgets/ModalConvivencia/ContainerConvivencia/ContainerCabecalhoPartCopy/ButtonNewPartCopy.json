@@ -1,0 +1,58 @@
+{
+  "animateLoading": true,
+  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+  "bottomRow": 6,
+  "boxShadow": "none",
+  "buttonColor": "{{appsmith.theme.colors.primaryColor}}",
+  "buttonVariant": "PRIMARY",
+  "disabledWhenInvalid": false,
+  "dynamicBindingPathList": [
+    {
+      "key": "buttonColor"
+    },
+    {
+      "key": "borderRadius"
+    }
+  ],
+  "dynamicPropertyPathList": [
+    {
+      "key": "onClick"
+    }
+  ],
+  "dynamicTriggerPathList": [
+    {
+      "key": "onClick"
+    }
+  ],
+  "iconAlign": "left",
+  "iconName": "add",
+  "isDefaultClickDisabled": true,
+  "isDisabled": false,
+  "isLoading": false,
+  "isVisible": true,
+  "key": "mfa917wnro",
+  "leftColumn": 48,
+  "minWidth": 120,
+  "mobileBottomRow": 4,
+  "mobileLeftColumn": 44,
+  "mobileRightColumn": 60,
+  "mobileTopRow": 0,
+  "needsErrorInfo": false,
+  "onClick": "{{\n  (async () => {\n    // 1. Define o contexto para ADICIONAR\n    await storeValue('modalContexto', {\n      entidade: \"PART\",      \t\t\t\t\tacaoTipo: \"ADICIONAR\",\n      acaoBotao: \"SALVAR\",\n    });\n    // 2. Limpa o campo para garantir que está vazio\n\t\tresetWidget(\"Select1Particularidade\", true); // Descomente se esses widgets existirem nesta página\n\t\tresetWidget(\"Input1ID\", true); // Reset o ID também, se necessário\n\t\tresetWidget(\"InputDescricao\", true);\n\t\tresetWidget(\"Switch1Atencao\", true);\n    // 3. Reinicia o contador de inatividade (Sinaliza que o usuário está ativo)\n JSutils.resetInactivityTimer();\n  })()\n}}",
+  "parentColumnSpace": 4.21875,
+  "parentId": "2bkfi0qgsl",
+  "parentRowSpace": 10,
+  "placement": "CENTER",
+  "recaptchaType": "V3",
+  "renderMode": "CANVAS",
+  "resetFormOnClick": false,
+  "responsiveBehavior": "hug",
+  "rightColumn": 60,
+  "text": "NOVO",
+  "tooltip": "adicionar um novo registro",
+  "topRow": 1,
+  "type": "BUTTON_WIDGET",
+  "version": 1,
+  "widgetId": "h5t2co4jpd",
+  "widgetName": "ButtonNewPartCopy"
+}

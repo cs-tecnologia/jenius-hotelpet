@@ -67,7 +67,7 @@ export default {
 			"Select1Porte", "Select1Pelagem", "Select1Cor", "Select1Temperamento",
 			"Select1Convivio", "Select1Veterinario", "Select1Clinica",
 			"Input1Canil", "Input1Pedigree", "Input1PedigreeNome",
-			"Input1Observacao", "Input1Cuidados", "Input1Saude", "Input1Tosa"
+			"Input1Observacao"
 		];
 		widgetsParaResetar.forEach(w => resetWidget(w, true));
 	},

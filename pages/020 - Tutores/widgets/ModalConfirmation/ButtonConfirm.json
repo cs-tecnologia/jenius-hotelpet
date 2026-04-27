@@ -1,5 +1,5 @@
 {
-  "animateLoading": "{{ InsertPet.isLoading || UpdatePet.isLoading || DeletePet.isLoading }}",
+  "animateLoading": "{{ \n  appsmith.store.modalContexto?.entidade === \"PART\"\n  ? (InsertParticularidadesPet.isLoading || UpdateParticularidadesPet.isLoading || DeleteParticularidadesPet.isLoading)\n  : (InsertPet.isLoading || UpdatePet.isLoading || DeletePet.isLoading || InsertTutor.isLoading || UpdateTutor.isLoading)\n}}",
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
   "bottomRow": 19,
   "boxShadow": "none",
@@ -43,7 +43,7 @@
   "mobileRightColumn": 63,
   "mobileTopRow": 18,
   "needsErrorInfo": false,
-  "onClick": "{{ \n  appsmith.store.modalContexto?.entidade === 'PET' \n  ? JSconfirmationPET.executeAction() \n  : JSconfirmation.executeAction() \n}}",
+  "onClick": "{{ JS_ModalRouter.executarConfirmacao() }}",
   "originalBottomRow": 21,
   "originalTopRow": 17,
   "parentId": "02ls0xqqoo",

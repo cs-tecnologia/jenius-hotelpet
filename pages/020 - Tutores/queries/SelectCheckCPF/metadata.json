@@ -30,6 +30,6 @@
     "name": "SelectCheckCPF",
     "pageId": "020 - Tutores",
     "runBehaviour": "AUTOMATIC",
-    "userSetOnLoad": false
+    "userSetOnLoad": true
   }
 }

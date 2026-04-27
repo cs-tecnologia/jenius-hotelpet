@@ -1,0 +1,55 @@
+{
+  "accentColor": "#ef4444",
+  "alignWidget": "LEFT",
+  "animateLoading": true,
+  "bottomRow": 26,
+  "boxShadow": "none",
+  "defaultSwitchState": "{{  appsmith.store.modalContexto?.acaoTipo === \"ADICIONAR\" ? false : TableParticularidades.selectedRow.par002_alerta || false\n}}",
+  "dynamicBindingPathList": [
+    {
+      "key": "defaultSwitchState"
+    },
+    {
+      "key": "labelTextColor"
+    }
+  ],
+  "dynamicHeight": "AUTO_HEIGHT",
+  "dynamicPropertyPathList": [
+    {
+      "key": "defaultSwitchState"
+    },
+    {
+      "key": "labelTextColor"
+    }
+  ],
+  "dynamicTriggerPathList": [],
+  "isDisabled": false,
+  "isLoading": false,
+  "isVisible": true,
+  "key": "3002ux1b4q",
+  "label": "Atenção especial para está PARTICULARIDADE",
+  "labelPosition": "Right",
+  "labelStyle": "BOLD",
+  "labelTextColor": "{{ Switch1Atencao.isSwitchedOn ? \"#FF0000\" : \"#000000\" }}",
+  "leftColumn": 0,
+  "maxDynamicHeight": 9000,
+  "minDynamicHeight": 4,
+  "mobileBottomRow": 27,
+  "mobileLeftColumn": 2,
+  "mobileRightColumn": 14,
+  "mobileTopRow": 23,
+  "needsErrorInfo": false,
+  "originalBottomRow": 26,
+  "originalTopRow": 22,
+  "parentColumnSpace": 6.8525390625,
+  "parentId": "pnxhjk0lxc",
+  "parentRowSpace": 10,
+  "renderMode": "CANVAS",
+  "responsiveBehavior": "fill",
+  "rightColumn": 64,
+  "topRow": 22,
+  "type": "SWITCH_WIDGET",
+  "version": 1,
+  "widgetId": "jti1ahlyey",
+  "widgetName": "Switch1AtencaoCopy"
+}

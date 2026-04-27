@@ -55,7 +55,7 @@
     "ali002_alimentacao": 239,
     "ali002_observacao": 203,
     "ali002_opcao": 111,
-    "ali002_permitido": 121
+    "ali002_permitido": 139
   },
   "compactMode": "SHORT",
   "customIsLoading": false,
@@ -723,7 +723,7 @@
       "allowSameOptionsInNewRow": true,
       "cellBackground": "",
       "columnType": "text",
-      "computedValue": "{{(() => { const tableData = Table1Alimentos.processedTableData || []; return tableData.length > 0 ? tableData.map((currentRow, currentIndex) => (currentRow[\"nome_alimento\"])) : nome_alimento })()}}",
+      "computedValue": "{{(() => { const tableData = Table1Alimentos.processedTableData || []; return tableData.length > 0 ? tableData.map((currentRow, currentIndex) => ( Table1Alimentos.processedTableData[Table1Alimentos.triggeredRowIndex]?.nome_alimento )) :  Table1Alimentos.processedTableData[Table1Alimentos.triggeredRowIndex]?.nome_alimento  })()}}",
       "currencyCode": "USD",
       "decimals": 0,
       "enableFilter": true,

@@ -45,6 +45,9 @@
   "dynamicTriggerPathList": [
     {
       "key": "groupButtons.groupButton1.onClick"
+    },
+    {
+      "key": "groupButtons.groupButton2.onClick"
     }
   ],
   "groupButtons": {
@@ -74,6 +77,7 @@
       "isVisible": true,
       "label": "Particularidades",
       "menuItems": {},
+      "onClick": "{{JSconfirmationPART.abrirParticularidades();}}",
       "placement": "CENTER",
       "widgetId": ""
     },
@@ -174,7 +178,7 @@
   "mobileTopRow": 11,
   "needsErrorInfo": false,
   "orientation": "horizontal",
-  "originalBottomRow": 0,
+  "originalBottomRow": 4,
   "originalTopRow": 0,
   "parentColumnSpace": 3.5,
   "parentId": "o6izndexib",
