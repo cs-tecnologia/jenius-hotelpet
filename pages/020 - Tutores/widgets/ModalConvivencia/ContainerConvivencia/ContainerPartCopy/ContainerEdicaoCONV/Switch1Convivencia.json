@@ -2,9 +2,9 @@
   "accentColor": "#ef4444",
   "alignWidget": "LEFT",
   "animateLoading": true,
-  "bottomRow": 26,
+  "bottomRow": 27,
   "boxShadow": "none",
-  "defaultSwitchState": "{{  appsmith.store.modalContexto?.acaoTipo === \"ADICIONAR\" ? false : TableParticularidades.selectedRow.par002_alerta || false\n}}",
+  "defaultSwitchState": "{{  appsmith.store.modalContexto?.acaoTipo === \"ADICIONAR\" ? false : Table1Amigos.selectedRow.amigo001_permitido || false\n}}",
   "dynamicBindingPathList": [
     {
       "key": "defaultSwitchState"
@@ -27,7 +27,7 @@
   "isLoading": false,
   "isVisible": true,
   "key": "3002ux1b4q",
-  "label": "Atenção especial para está PARTICULARIDADE",
+  "label": "RESTRINGIR CONVIVÊNCIA",
   "labelPosition": "Right",
   "labelStyle": "BOLD",
   "labelTextColor": "{{ Switch1Atencao.isSwitchedOn ? \"#FF0000\" : \"#000000\" }}",
@@ -39,17 +39,17 @@
   "mobileRightColumn": 14,
   "mobileTopRow": 23,
   "needsErrorInfo": false,
-  "originalBottomRow": 26,
-  "originalTopRow": 22,
+  "originalBottomRow": 27,
+  "originalTopRow": 23,
   "parentColumnSpace": 6.8525390625,
   "parentId": "pnxhjk0lxc",
   "parentRowSpace": 10,
   "renderMode": "CANVAS",
   "responsiveBehavior": "fill",
   "rightColumn": 64,
-  "topRow": 22,
+  "topRow": 23,
   "type": "SWITCH_WIDGET",
   "version": 1,
   "widgetId": "jti1ahlyey",
-  "widgetName": "Switch1AtencaoCopy"
+  "widgetName": "Switch1Convivencia"
 }

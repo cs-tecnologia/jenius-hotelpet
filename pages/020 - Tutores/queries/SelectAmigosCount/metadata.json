@@ -1,11 +1,11 @@
 {
-  "gitSyncId": "69df81de1424f43dde27e012_2a397ef9-fdf0-4ea4-abce-6c21d54748f7",
-  "id": "020 - Tutores_SelectAmigos",
+  "gitSyncId": "69df81de1424f43dde27e012_659184e9-a7e0-4bd4-88bc-34713e230a98",
+  "id": "020 - Tutores_SelectAmigosCount",
   "pluginId": "postgres-plugin",
   "pluginType": "DB",
   "unpublishedAction": {
     "actionConfiguration": {
-      "body": "SELECT \n    amigo001.*,\n    p1.ani002_id,\n    p1.ani002_nome\nFROM \"{{JSutils.currentSchema()}}\".hotamigo001 amigo001\nINNER JOIN \"{{JSutils.currentSchema()}}\".hotani002 p1 \n    ON p1.ani002_id = amigo001.amigo001_ani002_id_amigo\nWHERE amigo001.amigo001_deleted <> true \nAND amigo001.amigo001_ani002_id_animal = {{ appsmith.store.petID_Amigos }}\nORDER BY p1.ani002_nome ASC;",
+      "body": "SELECT count(amigo001_id) FROM \"{{JSutils.currentSchema()}}\".hotamigo001\nWHERE amigo001_deleted <> true and amigo001_ani002_id_animal = {{ appsmith.store.petID_Amigos  }}",
       "encodeParamsToggle": true,
       "paginationType": "NONE",
       "pluginSpecifiedTemplates": [
@@ -27,7 +27,7 @@
         "key": "body"
       }
     ],
-    "name": "SelectAmigos",
+    "name": "SelectAmigosCount",
     "pageId": "020 - Tutores",
     "runBehaviour": "ON_PAGE_LOAD",
     "userSetOnLoad": true

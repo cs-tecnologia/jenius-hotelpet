@@ -3,13 +3,10 @@
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
   "bottomRow": 32,
   "boxShadow": "none",
-  "buttonColor": "{{ JSvalidateButtonPART.podeCancelarPART() ? '#E11D48' : '#94A3B8' }}",
-  "buttonVariant": "SECONDARY",
+  "buttonColor": "#ef4444",
+  "buttonVariant": "PRIMARY",
   "disabledWhenInvalid": false,
   "dynamicBindingPathList": [
-    {
-      "key": "buttonColor"
-    },
     {
       "key": "borderRadius"
     },
@@ -18,9 +15,6 @@
     }
   ],
   "dynamicPropertyPathList": [
-    {
-      "key": "buttonColor"
-    },
     {
       "key": "onClick"
     },
@@ -34,20 +28,20 @@
     }
   ],
   "iconAlign": "left",
-  "iconName": "stop",
+  "iconName": "trash",
   "isDefaultClickDisabled": true,
-  "isDisabled": "{{ !JSvalidateButtonPART.podeCancelarPART() }}",
+  "isDisabled": "{{ \nappsmith.store.modalContexto?.acaoTipo === \"ADICIONAR\" || \n JSvalidateButtonAMIGO.temAlteracaoCONV() \n}}",
   "isLoading": false,
   "isVisible": true,
   "key": "mfa917wnro",
-  "leftColumn": 1,
+  "leftColumn": 45,
   "minWidth": 120,
   "mobileBottomRow": 9,
   "mobileLeftColumn": 1,
   "mobileRightColumn": 17,
   "mobileTopRow": 5,
   "needsErrorInfo": false,
-  "onClick": "{{ !JSvalidateButtonPART.resetFormPART()  }}",
+  "onClick": "{{ JSvalidateButtonAMIGO.deleteAmigos() }}",
   "originalBottomRow": 32,
   "originalTopRow": 28,
   "parentColumnSpace": 7.1826171875,
@@ -58,12 +52,12 @@
   "renderMode": "CANVAS",
   "resetFormOnClick": false,
   "responsiveBehavior": "hug",
-  "rightColumn": 20,
-  "text": "CANCELAR",
-  "tooltip": "Cancelar Edição",
+  "rightColumn": 64,
+  "text": "DELETAR",
+  "tooltip": "CONFIRMA DELETAR",
   "topRow": 28,
   "type": "BUTTON_WIDGET",
   "version": 1,
-  "widgetId": "wprsb35m7q",
-  "widgetName": "ButtonCancelarPartCopy"
+  "widgetId": "55uzsbwp2i",
+  "widgetName": "ButtonDeletarConvivencia"
 }

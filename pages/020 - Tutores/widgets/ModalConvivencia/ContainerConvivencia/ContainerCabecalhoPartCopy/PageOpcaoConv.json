@@ -8,6 +8,9 @@
     },
     {
       "key": "borderRadius"
+    },
+    {
+      "key": "text"
     }
   ],
   "dynamicHeight": "AUTO_HEIGHT",
@@ -37,7 +40,7 @@
   "responsiveBehavior": "fill",
   "rightColumn": 48,
   "shouldTruncate": false,
-  "text": "CONVIVÊNCIA COM OUTROS PETS",
+  "text": "{{\"CONVIVÊNCIA ENTRE OUTROS PETS\"}} ",
   "textAlign": "CENTER",
   "textColor": "#231F20",
   "topRow": 2,

@@ -48,6 +48,9 @@
     },
     {
       "key": "groupButtons.groupButton2.onClick"
+    },
+    {
+      "key": "groupButtons.groupButton3.onClick"
     }
   ],
   "groupButtons": {
@@ -130,6 +133,7 @@
           "widgetId": ""
         }
       },
+      "onClick": "{{JSconfirmationAMIGO.abrirAmigos();}}",
       "placement": "CENTER",
       "widgetId": ""
     },

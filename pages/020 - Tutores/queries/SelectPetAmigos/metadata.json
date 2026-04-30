@@ -1,11 +1,11 @@
 {
-  "gitSyncId": "69df81de1424f43dde27e012_d5dc040f-b619-42ff-bf91-0f357c5b6f97",
-  "id": "020 - Tutores_SelectParticularidadesPETCount",
+  "gitSyncId": "69df81de1424f43dde27e012_00fa565d-2bdd-4864-afa9-104592a44904",
+  "id": "020 - Tutores_SelectPetAmigos",
   "pluginId": "postgres-plugin",
   "pluginType": "DB",
   "unpublishedAction": {
     "actionConfiguration": {
-      "body": "SELECT count(par002_id) FROM \"{{JSutils.currentSchema()}}\".hotpar002\nWHERE par002_deleted <> true and par002_ani002_id = {{ appsmith.store.petID_Particularidades }}",
+      "body": "SELECT * FROM \"{{JSutils.currentSchema()}}\".\"hotani002\"\nWHERE ani002_id <> {{ Number(Input1id.text) || 0 }}\nORDER BY ani002_nome ASC;",
       "encodeParamsToggle": true,
       "paginationType": "NONE",
       "pluginSpecifiedTemplates": [
@@ -27,9 +27,9 @@
         "key": "body"
       }
     ],
-    "name": "SelectParticularidadesPETCount",
+    "name": "SelectPetAmigos",
     "pageId": "020 - Tutores",
-    "runBehaviour": "ON_PAGE_LOAD",
-    "userSetOnLoad": true
+    "runBehaviour": "AUTOMATIC",
+    "userSetOnLoad": false
   }
 }

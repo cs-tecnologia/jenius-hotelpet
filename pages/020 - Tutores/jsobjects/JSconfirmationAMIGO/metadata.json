@@ -1,0 +1,20 @@
+{
+  "gitSyncId": "69df81de1424f43dde27e012_9037191d-fc61-4dc1-9864-6e1d248b6c8b",
+  "id": "020 - Tutores_JSconfirmationAMIGO",
+  "unpublishedCollection": {
+    "name": "JSconfirmationAMIGO",
+    "pageId": "020 - Tutores",
+    "pluginId": "js-plugin",
+    "pluginType": "JS",
+    "variables": [
+      {
+        "name": "modalconfig",
+        "value": "{\n  action: \"Delete\",\n  message: \"\",\n  row: {},\n  icon: \"plus\",\n  color: \"blue\"\n}"
+      },
+      {
+        "name": "widgetsAMIGOS",
+        "value": "[\"Input1IDConveniencia\", \"InputDescConvivencia\", \"Select1Convivencia\", \"Switch1Convivencia\"]"
+      }
+    ]
+  }
+}

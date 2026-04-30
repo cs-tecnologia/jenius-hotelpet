@@ -3,9 +3,9 @@
   "animateLoading": true,
   "autoFocus": true,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 21,
+  "bottomRow": 23,
   "boxShadow": "none",
-  "defaultText": "{{  appsmith.store.modalContexto?.acaoTipo === \"ADICIONAR\" ? \"\" : TableParticularidades.selectedRow.par002_descricao || \"\"\n}}",
+  "defaultText": "{{  appsmith.store.modalContexto?.acaoTipo === \"ADICIONAR\" ? \"\" : Table1Amigos.selectedRow.amigo001_observacao || \"\"\n}}",
   "dynamicBindingPathList": [
     {
       "key": "accentColor"
@@ -15,12 +15,6 @@
     },
     {
       "key": "defaultText"
-    },
-    {
-      "key": "label"
-    },
-    {
-      "key": "tooltip"
     }
   ],
   "dynamicHeight": "AUTO_HEIGHT",
@@ -33,7 +27,7 @@
   "isRequired": true,
   "isVisible": true,
   "key": "ltiectt39c",
-  "label": "Descreva as Particularidades para {{Select1Particularidade.selectedOptionLabel}}",
+  "label": "Descreva observações para uma convivência segura",
   "labelAlignment": "left",
   "labelPosition": "Auto",
   "labelStyle": "",
@@ -48,8 +42,8 @@
   "mobileRightColumn": 20,
   "mobileTopRow": 15,
   "needsErrorInfo": false,
-  "originalBottomRow": 21,
-  "originalTopRow": 11,
+  "originalBottomRow": 23,
+  "originalTopRow": 13,
   "parentColumnSpace": 7.1826171875,
   "parentId": "pnxhjk0lxc",
   "parentRowSpace": 10,
@@ -59,10 +53,10 @@
   "rightColumn": 64,
   "shouldAllowAutofill": false,
   "showStepArrows": false,
-  "tooltip": "Informações essenciais para a equipe. Relate aqui qualquer particularidade de {{  appsmith.store.modalContexto?.acaoTipo === \"ADICIONAR\" ? \"\" : TableParticularidades.selectedRow.par001_desc || \"\"\n}} que exija atenção diferenciada durante a estadia.",
-  "topRow": 11,
+  "tooltip": "",
+  "topRow": 13,
   "type": "INPUT_WIDGET_V2",
   "version": 2,
   "widgetId": "5cpbddrjaz",
-  "widgetName": "InputDescParticularCopy"
+  "widgetName": "InputDescConvivencia"
 }

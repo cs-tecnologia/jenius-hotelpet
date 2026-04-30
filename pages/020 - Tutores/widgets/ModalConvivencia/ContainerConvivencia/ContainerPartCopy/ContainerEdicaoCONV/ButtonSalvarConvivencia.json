@@ -1,0 +1,71 @@
+{
+  "animateLoading": true,
+  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+  "bottomRow": 32,
+  "bottomRowBeforeCollapse": 29,
+  "boxShadow": "none",
+  "buttonColor": "{{appsmith.theme.colors.primaryColor}}",
+  "buttonVariant": "PRIMARY",
+  "disabledWhenInvalid": false,
+  "dynamicBindingPathList": [
+    {
+      "key": "buttonColor"
+    },
+    {
+      "key": "borderRadius"
+    },
+    {
+      "key": "text"
+    },
+    {
+      "key": "isDisabled"
+    }
+  ],
+  "dynamicPropertyPathList": [
+    {
+      "key": "onClick"
+    },
+    {
+      "key": "isDisabled"
+    }
+  ],
+  "dynamicTriggerPathList": [
+    {
+      "key": "onClick"
+    }
+  ],
+  "iconAlign": "left",
+  "iconName": "floppy-disk",
+  "isDefaultClickDisabled": true,
+  "isDisabled": "{{ !JSvalidateButtonAMIGO.podeSalvarCONV() }}",
+  "isLoading": false,
+  "isVisible": true,
+  "key": "mfa917wnro",
+  "leftColumn": 23,
+  "minWidth": 120,
+  "mobileBottomRow": 9,
+  "mobileLeftColumn": 1,
+  "mobileRightColumn": 17,
+  "mobileTopRow": 5,
+  "needsErrorInfo": false,
+  "onClick": "{{\n(async () => {\n  JSutils.resetInactivityTimer();\n  \n  const isInsert = appsmith.store.modalContexto?.acaoTipo === \"ADICIONAR\";\n  const query = isInsert ? InsertPetAmigos : UpdatePetAmigos;\n\n  const currentID = isInsert\n    ? null\n    : appsmith.store.amigoSelecionado?.amigo001_id;\n\n  const params = {\n    amigo001_ani002_id_amigo: Number(Select1Convivencia.selectedOptionValue),\n    amigo001_observacao: (InputDescConvivencia.text || \"\").trim().toUpperCase(),\n    amigo001_permitido: Switch1Convivencia.isSwitchedOn ? 'S' : 'N',\n    amigo001_ani002_id_animal: Number(appsmith.store.petID_Amigos),\n    amigo001_id: currentID\n  };\n\n  if (isInsert && !params.amigo001_ani002_id_amigo) {\n    return showAlert(\"Selecione um animal para a convivência.\", \"warning\");\n  }\n\n  try {\n    const response = await query.run(params);\n\n    const idParaSelecionar = isInsert\n      ? response[0].amigo001_id\n      : currentID;\n\n    // 1. Atualiza lista\n    await SelectAmigos.run();\n\n    // 2. Define seleção (apenas via store)\n    await storeValue('idSelecionadoAMIGO', idParaSelecionar);\n\n    // 3. Atualiza registro selecionado (será sincronizado no onRowSelected)\n    await storeValue('amigoSelecionado', {});\n\n    // 4. Mantém modo edição\n    await storeValue('modalContexto', {\n      entidade: \"AMIGO\",\n      acaoTipo: \"EDITAR\",\n      acaoBotao: \"ATUALIZAR\"\n    });\n\n    showAlert(\n      `Amigo ${isInsert ? 'incluído' : 'atualizado'} com sucesso!`,\n      \"success\"\n    );\n\n  } catch (err) {\n    showAlert(\"Erro ao salvar: \" + err.message, \"error\");\n  }\n})()\n}}",
+  "originalBottomRow": 32,
+  "originalTopRow": 28,
+  "parentColumnSpace": 7.1826171875,
+  "parentId": "pnxhjk0lxc",
+  "parentRowSpace": 10,
+  "placement": "CENTER",
+  "recaptchaType": "V3",
+  "renderMode": "CANVAS",
+  "resetFormOnClick": false,
+  "responsiveBehavior": "hug",
+  "rightColumn": 43,
+  "text": "{{appsmith.store.modalContexto?.acaoBotao}}",
+  "tooltip": "CONFIRMAR",
+  "topRow": 28,
+  "topRowBeforeCollapse": 25,
+  "type": "BUTTON_WIDGET",
+  "version": 1,
+  "widgetId": "3v36hgdmkd",
+  "widgetName": "ButtonSalvarConvivencia"
+}

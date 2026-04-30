@@ -1,16 +1,16 @@
 {
-  "gitSyncId": "69df81de1424f43dde27e012_d5dc040f-b619-42ff-bf91-0f357c5b6f97",
-  "id": "020 - Tutores_SelectParticularidadesPETCount",
+  "gitSyncId": "69df81de1424f43dde27e012_9c490b95-f3f9-4120-9e2e-69622c1a14a4",
+  "id": "020 - Tutores_DeletePetAmigos",
   "pluginId": "postgres-plugin",
   "pluginType": "DB",
   "unpublishedAction": {
     "actionConfiguration": {
-      "body": "SELECT count(par002_id) FROM \"{{JSutils.currentSchema()}}\".hotpar002\nWHERE par002_deleted <> true and par002_ani002_id = {{ appsmith.store.petID_Particularidades }}",
+      "body": "UPDATE \"{{JSutils.currentSchema()}}\".hotamigo001 SET\n  amigo001_deleted = true,\n  amigo001_last_modification = now(),\n  amigo001_modified_by = {{ appsmith.user.id || 1 }}\nWHERE \n  amigo001_id = {{ Number(this.params.amigo001_id) }};",
       "encodeParamsToggle": true,
       "paginationType": "NONE",
       "pluginSpecifiedTemplates": [
         {
-          "value": false
+          "value": true
         }
       ],
       "timeoutInMillisecond": 10000
@@ -27,9 +27,9 @@
         "key": "body"
       }
     ],
-    "name": "SelectParticularidadesPETCount",
+    "name": "DeletePetAmigos",
     "pageId": "020 - Tutores",
-    "runBehaviour": "ON_PAGE_LOAD",
-    "userSetOnLoad": true
+    "runBehaviour": "MANUAL",
+    "userSetOnLoad": false
   }
 }

@@ -1,0 +1,3 @@
+SELECT * FROM "{{JSutils.currentSchema()}}"."hotani002"
+WHERE ani002_id <> {{ Number(Input1id.text) || 0 }}
+ORDER BY ani002_nome ASC;

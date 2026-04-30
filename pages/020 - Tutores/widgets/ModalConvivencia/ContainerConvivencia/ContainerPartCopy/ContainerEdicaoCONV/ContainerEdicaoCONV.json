@@ -72,7 +72,7 @@
   "flexVerticalAlignment": "stretch",
   "isCanvas": true,
   "isLoading": false,
-  "isVisible": "{{ \n  // O container será visível se:\n  // 1. Tiver uma linha selecionada na tabela OU\n  // 2. O modo atual for \"ADICIONAR\" (clicou no botão Novo)\n  !!TableParticularidades.selectedRow?.par002_id || appsmith.store.modalContexto?.acaoTipo === \"ADICIONAR\"\n}}",
+  "isVisible": "{{ \n  // O container será visível se:\n  // 1. Tiver uma linha selecionada na tabela OU\n  // 2. O modo atual for \"ADICIONAR\" (clicou no botão Novo)\n  !!Table1Amigos.selectedRow?.amigo001_id || appsmith.store.modalContexto?.acaoTipo === \"ADICIONAR\"\n}}",
   "key": "2lkw3t1gin",
   "leftColumn": 35,
   "maxDynamicHeight": 9000,
@@ -96,5 +96,5 @@
   "type": "CONTAINER_WIDGET",
   "version": 1,
   "widgetId": "qjykyao28m",
-  "widgetName": "ContainerEdicaoPartCopy"
+  "widgetName": "ContainerEdicaoCONV"
 }
