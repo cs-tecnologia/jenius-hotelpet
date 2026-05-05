@@ -1,6 +1,6 @@
 {
-  "gitSyncId": "69df81de1424f43dde27e012_a2331a57-5a56-4130-9197-1857fa6035d6",
-  "id": "020 - Tutores_JSvalidateButtonAMIGO.temAlteracaoCONV",
+  "gitSyncId": "69df81de1424f43dde27e012_e796066d-64ea-4b7e-9fe9-9e3c08859beb",
+  "id": "020 - Tutores_JSvalidateButtonAMIGO.podeSalvarAMIGO",
   "pluginId": "js-plugin",
   "pluginType": "JS",
   "unpublishedAction": {
@@ -22,8 +22,8 @@
         "key": "body"
       }
     ],
-    "fullyQualifiedName": "JSvalidateButtonAMIGO.temAlteracaoCONV",
-    "name": "temAlteracaoCONV",
+    "fullyQualifiedName": "JSvalidateButtonAMIGO.podeSalvarAMIGO",
+    "name": "podeSalvarAMIGO",
     "pageId": "020 - Tutores",
     "runBehaviour": "MANUAL",
     "userSetOnLoad": false

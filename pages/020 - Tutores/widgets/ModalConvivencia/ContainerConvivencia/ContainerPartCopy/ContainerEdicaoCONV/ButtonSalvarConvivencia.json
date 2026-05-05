@@ -37,7 +37,7 @@
   "iconAlign": "left",
   "iconName": "floppy-disk",
   "isDefaultClickDisabled": true,
-  "isDisabled": "{{ !JSvalidateButtonAMIGO.podeSalvarCONV() }}",
+  "isDisabled": "{{ !JSvalidateButtonAMIGO.podeSalvarAMIGO() }}",
   "isLoading": false,
   "isVisible": true,
   "key": "mfa917wnro",

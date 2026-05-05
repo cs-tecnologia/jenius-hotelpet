@@ -1,6 +1,6 @@
 {
-  "gitSyncId": "69df81de1424f43dde27e012_e796066d-64ea-4b7e-9fe9-9e3c08859beb",
-  "id": "020 - Tutores_JSvalidateButtonAMIGO.podeSalvarCONV",
+  "gitSyncId": "69df81de1424f43dde27e012_7e7b91fd-986c-410a-8488-1ae5e09deaa5",
+  "id": "020 - Tutores_JSvalidateButtonAMIGO.deleteAMIGO",
   "pluginId": "js-plugin",
   "pluginType": "JS",
   "unpublishedAction": {
@@ -22,8 +22,8 @@
         "key": "body"
       }
     ],
-    "fullyQualifiedName": "JSvalidateButtonAMIGO.podeSalvarCONV",
-    "name": "podeSalvarCONV",
+    "fullyQualifiedName": "JSvalidateButtonAMIGO.deleteAMIGO",
+    "name": "deleteAMIGO",
     "pageId": "020 - Tutores",
     "runBehaviour": "MANUAL",
     "userSetOnLoad": false

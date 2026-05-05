@@ -1,6 +1,6 @@
 {
-  "gitSyncId": "69df81de1424f43dde27e012_09effb1d-1e6e-4f22-b2f1-17ef74735cbc",
-  "id": "020 - Tutores_JSvalidateButtonAMIGO.resetFormCONV",
+  "gitSyncId": "69df81de1424f43dde27e012_a2331a57-5a56-4130-9197-1857fa6035d6",
+  "id": "020 - Tutores_JSvalidateButtonAMIGO.temAlteracaoAMIGO",
   "pluginId": "js-plugin",
   "pluginType": "JS",
   "unpublishedAction": {
@@ -22,8 +22,8 @@
         "key": "body"
       }
     ],
-    "fullyQualifiedName": "JSvalidateButtonAMIGO.resetFormCONV",
-    "name": "resetFormCONV",
+    "fullyQualifiedName": "JSvalidateButtonAMIGO.temAlteracaoAMIGO",
+    "name": "temAlteracaoAMIGO",
     "pageId": "020 - Tutores",
     "runBehaviour": "MANUAL",
     "userSetOnLoad": false

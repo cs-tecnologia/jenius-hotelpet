@@ -1,6 +1,6 @@
 {
   "gitSyncId": "69df81de1424f43dde27e012_a90a41f3-3344-4931-8499-6086379d1470",
-  "id": "020 - Tutores_JSvalidateButtonAMIGO.podeCancelarCONV",
+  "id": "020 - Tutores_JSvalidateButtonAMIGO.podeCancelarAMIGO",
   "pluginId": "js-plugin",
   "pluginType": "JS",
   "unpublishedAction": {
@@ -22,8 +22,8 @@
         "key": "body"
       }
     ],
-    "fullyQualifiedName": "JSvalidateButtonAMIGO.podeCancelarCONV",
-    "name": "podeCancelarCONV",
+    "fullyQualifiedName": "JSvalidateButtonAMIGO.podeCancelarAMIGO",
+    "name": "podeCancelarAMIGO",
     "pageId": "020 - Tutores",
     "runBehaviour": "MANUAL",
     "userSetOnLoad": false

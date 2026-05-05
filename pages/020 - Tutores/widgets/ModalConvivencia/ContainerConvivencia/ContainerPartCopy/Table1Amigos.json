@@ -60,7 +60,7 @@
   "customIsLoading": false,
   "customIsLoadingValue": "",
   "defaultPageSize": 0,
-  "defaultSelectedRowIndex": "{{\n  appsmith.store.idSelecionadoAMIGO !== null &&\n  appsmith.store.idSelecionadoAMIGO !== undefined\n    ? Table1Amigos.tableData.findIndex(\n        r => Number(r.amigo001_id) === Number(appsmith.store.idSelecionadoAMIGO)\n      )\n    : -1\n}}",
+  "defaultSelectedRowIndex": "{{ \n  (appsmith.store.idSelecionadoAMIGO) \n  ? Table1Amigos.tableData.findIndex(r => Number(r.amigo001_id) === Number(appsmith.store.idSelecionadoAMIGO)) \n  : 0 \n}}",
   "defaultSelectedRowIndices": [
     0
   ],

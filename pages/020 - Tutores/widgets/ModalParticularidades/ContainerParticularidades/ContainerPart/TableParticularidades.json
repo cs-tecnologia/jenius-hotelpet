@@ -59,7 +59,7 @@
   "customIsLoading": false,
   "customIsLoadingValue": "",
   "defaultPageSize": 0,
-  "defaultSelectedRowIndex": "{{ \n  (() => {\n    const idParaFocar = appsmith.store.idSelecionadoPART;\n    if (!idParaFocar) return 0;\n\n    // Encontra o índice da linha que possui esse ID nos dados atuais da tabela\n    const index = TableParticularidades.tableData.findIndex(row => row.par002_id == idParaFocar);\n    \n    // Se achou, retorna o índice. Se não achou (ex: deletado), volta para a primeira\n    return index !== -1 ? index : 0;\n  })()\n}}",
+  "defaultSelectedRowIndex": "{{ \n  (() => {\n    const idParaFocar = appsmith.store.idSelecionadoPART;\n    // Se não tem ID no store, não seleciona nada (-1)\n    if (!idParaFocar) return -1; \n\n    const index = TableParticularidades.tableData.findIndex(row => row.par002_id == idParaFocar);\n    \n    // Se não encontrou o ID nos dados atuais, retorna -1 para limpar a seleção\n    return index !== -1 ? index : -1;\n  })()\n}}",
   "defaultSelectedRowIndices": [
     0
   ],
@@ -171,7 +171,7 @@
   "needsErrorInfo": false,
   "onPageChange": "{{SelectParticularidadesPETCount.run().then(() => {\n  SelectParticularidadesPET.run();\n});}}",
   "onPageSizeChange": "{{SelectParticularidadesPETCount.run().then(() => {\n  SelectParticularidadesPET.run();\n});}}",
-  "onRowSelected": "{{\n  (async () => {\n    // 1. Guarda a linha completa no store para ser o nosso \"Original\"\n    await storeValue('particularidadeSelecionada', TableParticularidades.selectedRow);\n    \n    await storeValue('modalContexto', {\n      entidade: \"PART\",\n      acaoTipo: \"EDITAR\",\n      acaoBotao: \"ATUALIZAR\"\n    });\n\n    JSutils.resetInactivityTimer();\n  })()\n}}",
+  "onRowSelected": "{{\n  (async () => {\n    // 1. Sinaliza atividade no sistema\n    JSutils.resetInactivityTimer();\n\n    // 2. Garante que temos uma linha selecionada antes de prosseguir\n    if (!TableParticularidades.selectedRow) return;\n\n    // 3. Sincroniza o ID no store para manter a tarja rosa de seleção na linha certa\n    await storeValue('idSelecionadoPART', TableParticularidades.selectedRow.par002_id);\n\n    // 4. Guarda a linha completa para comparação de \"Original\" vs \"Atual\"\n    await storeValue('particularidadeSelecionada', TableParticularidades.selectedRow);\n    \n    // 5. Configura o contexto do modal/formulário\n    await storeValue('modalContexto', {\n      entidade: \"PART\",\n      acaoTipo: \"EDITAR\",\n      acaoBotao: \"ATUALIZAR\"\n    });\n\n    // 6. O PONTO CRÍTICO: Reseta os widgets para forçá-los a ler os novos valores \n    // vindos da TableParticularidades.selectedRow (Default Value)\n    resetWidget(\"InputDescParticularidade\", true);\n    resetWidget(\"SelectTipoParticularidade\", true); \n    // Adicione aqui outros widgets que precisem atualizar ao clicar na linha\n  })()\n}}",
   "parentColumnSpace": 19.1875,
   "parentId": "8ml3eob5zi",
   "parentRowSpace": 10,
