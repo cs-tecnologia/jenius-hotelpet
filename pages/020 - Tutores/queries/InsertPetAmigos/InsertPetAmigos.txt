@@ -1,0 +1,20 @@
+INSERT INTO "{{JSutils.currentSchema()}}".hotamigo001 (
+    amigo001_ani002_id_amigo, 
+    amigo001_ani002_id_animal, 
+    amigo001_observacao, 
+    amigo001_permitido, 
+    amigo001_creation_date,
+    amigo001_created_by,
+    amigo001_last_modification,
+    amigo001_modified_by
+) VALUES (
+  {{ Number(this.params.amigo001_ani002_id_amigo || 0) }},
+  {{ Number(this.params.amigo001_ani002_id_animal || 0) }},
+  '{{ this.params.amigo001_observacao }}', -- Adicionado aspas simples
+  {{ this.params.amigo001_permitido === 'S' ? true : false }}, -- Removido '!!' e colocado lógica boolean
+  now(),
+  {{ appsmith.user.id || 1 }},
+  now(),
+  {{ appsmith.user.id || 1 }}	
+)
+RETURNING amigo001_id;

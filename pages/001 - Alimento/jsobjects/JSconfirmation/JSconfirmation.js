@@ -45,6 +45,8 @@ async executeAction() {
                 // vai carregar automaticamente o que estiver selecionado na tabela.
                 resetWidget("InputDescricao", true);
                 resetWidget("InputID", true);
+								resetWidget("FilePicker1logo", true);
+								resetWidget("Image1Alimento", true);
             })
             .catch((err) => showAlert("Erro: " + err.message, "error"));
     }
@@ -64,7 +66,9 @@ async cancelarOperacao() {
     // 3. Resetamos os widgets para limparem o que o usuário digitou
     resetWidget("InputDescricao", true);
     resetWidget("InputID", true);
-
+		resetWidget("FilePicker1logo", true);
+		resetWidget("Image1Alimento", true);
+	
     showAlert("Alterações descartadas.", "info");
 	},
 	

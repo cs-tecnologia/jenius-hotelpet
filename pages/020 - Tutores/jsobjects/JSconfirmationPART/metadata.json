@@ -1,0 +1,20 @@
+{
+  "gitSyncId": "69df81de1424f43dde27e012_7e71d45b-43c1-4563-85f8-687f23050e81",
+  "id": "020 - Tutores_JSconfirmationPART",
+  "unpublishedCollection": {
+    "name": "JSconfirmationPART",
+    "pageId": "020 - Tutores",
+    "pluginId": "js-plugin",
+    "pluginType": "JS",
+    "variables": [
+      {
+        "name": "modalconfig",
+        "value": "{\n  action: \"Delete\",\n  message: \"\",\n  row: {},\n  icon: \"plus\",\n  color: \"blue\"\n}"
+      },
+      {
+        "name": "widgetsPART",
+        "value": "[\"InputID\", \"InputDescricao\", \"Select1Particularidade\", \"Switch1Atencao\"]"
+      }
+    ]
+  }
+}

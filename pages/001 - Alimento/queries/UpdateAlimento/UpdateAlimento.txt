@@ -1,5 +1,6 @@
 UPDATE "{{JSutils.currentSchema()}}".hotali001 SET
 		"ali001_desc" = '{{JSconfirmation.modalconfig.row.ali001_desc}}',
+		"ali001_imagem" = '{{JSconfirmation.modalconfig.row.ali001_imagem}}',		
 		"ali001_last_modification" = now(),
     "ali001_modified_by" = {{ appsmith.user.id || 1 }}
 WHERE "ali001_id" = {{JSconfirmation.modalconfig.row.ali001_id}};

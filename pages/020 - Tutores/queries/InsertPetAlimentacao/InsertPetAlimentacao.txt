@@ -1,0 +1,22 @@
+INSERT INTO "{{JSutils.currentSchema()}}".hotali002 (
+  ali002_ani002_id, 
+  ali002_alimentacao, 
+  ali002_opcao, 
+  ali002_observacao, 
+  ali002_permitido,
+  ali002_creation_date, 
+  ali002_created_by, 
+  ali002_last_modification, 
+  ali002_modified_by
+) 
+VALUES (
+  {{ appsmith.store.petSelecionado.ani002_id }},
+  {{ this.params.ali002_alimentacao }},
+  '{{ this.params.ali002_opcao }}',      -- Note as aspas simples aqui
+  '{{ this.params.ali002_observacao }}', -- e aqui
+  {{ this.params.ali002_permitido }},
+  now(),
+  {{ appsmith.user.id || 1 }},
+  now(),
+  {{ appsmith.user.id || 1 }}
+);

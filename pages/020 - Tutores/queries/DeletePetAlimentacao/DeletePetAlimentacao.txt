@@ -1,0 +1,5 @@
+UPDATE "{{JSutils.currentSchema()}}".hotali002
+SET ali002_deleted = 'true',
+    ali002_deleted_at = NOW(),
+    ali002_deleted_by = {{ appsmith.user.name || 1}}
+WHERE ali002_id = {{ Table1Alimentos.triggeredRow.ali002_id }};

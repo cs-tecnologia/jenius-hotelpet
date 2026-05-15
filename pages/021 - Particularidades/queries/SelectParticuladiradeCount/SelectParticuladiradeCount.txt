@@ -1,0 +1,2 @@
+SELECT count(par001_id) FROM "{{JSutils.currentSchema()}}".hotpar001
+WHERE par001_deleted <> true and par001_desc ILIKE '%{{TableParticularidade.searchText}}%';

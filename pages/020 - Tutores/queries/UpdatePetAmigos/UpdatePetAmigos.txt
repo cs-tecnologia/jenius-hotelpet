@@ -1,0 +1,8 @@
+UPDATE "{{JSutils.currentSchema()}}".hotamigo001 SET
+  amigo001_observacao = '{{ this.params.amigo001_observacao }}',
+  -- Converte o 'S'/'N' do parâmetro para boolean real do Postgres
+  amigo001_permitido = {{ this.params.amigo001_permitido === 'S' ? true : false }},
+  amigo001_last_modification = now(),
+  amigo001_modified_by = {{ appsmith.user.id || 1 }}
+WHERE 
+  amigo001_id = {{ Number(this.params.amigo001_id) }};

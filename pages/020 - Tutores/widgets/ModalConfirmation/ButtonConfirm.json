@@ -1,0 +1,63 @@
+{
+  "animateLoading": "{{ \n  appsmith.store.modalContexto?.entidade === \"PART\"\n  ? (InsertParticularidadesPet.isLoading || UpdateParticularidadesPet.isLoading || DeleteParticularidadesPet.isLoading)\n  : (InsertPet.isLoading || UpdatePet.isLoading || DeletePet.isLoading || InsertTutor.isLoading || UpdateTutor.isLoading)\n}}",
+  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+  "bottomRow": 19,
+  "boxShadow": "none",
+  "buttonColor": "{{appsmith.theme.colors.primaryColor}}",
+  "buttonStyle": "PRIMARY_BUTTON",
+  "buttonVariant": "PRIMARY",
+  "disabledWhenInvalid": false,
+  "dynamicBindingPathList": [
+    {
+      "key": "buttonColor"
+    },
+    {
+      "key": "borderRadius"
+    },
+    {
+      "key": "animateLoading"
+    }
+  ],
+  "dynamicPropertyPathList": [
+    {
+      "key": "animateLoading"
+    },
+    {
+      "key": "onClick"
+    }
+  ],
+  "dynamicTriggerPathList": [
+    {
+      "key": "onClick"
+    }
+  ],
+  "isDefaultClickDisabled": true,
+  "isDisabled": false,
+  "isLoading": false,
+  "isVisible": true,
+  "key": "esjyig9l8z",
+  "leftColumn": 47,
+  "minWidth": 120,
+  "mobileBottomRow": 22,
+  "mobileLeftColumn": 47,
+  "mobileRightColumn": 63,
+  "mobileTopRow": 18,
+  "needsErrorInfo": false,
+  "onClick": "{{ JS_ModalRouter.executarConfirmacao() }}",
+  "originalBottomRow": 21,
+  "originalTopRow": 17,
+  "parentId": "02ls0xqqoo",
+  "placement": "CENTER",
+  "recaptchaType": "V3",
+  "renderMode": "CANVAS",
+  "resetFormOnClick": false,
+  "responsiveBehavior": "hug",
+  "rightColumn": 63,
+  "text": "Confirmar",
+  "tooltip": "Confirmar ação",
+  "topRow": 15,
+  "type": "BUTTON_WIDGET",
+  "version": 1,
+  "widgetId": "ripky9i49l",
+  "widgetName": "ButtonConfirm"
+}

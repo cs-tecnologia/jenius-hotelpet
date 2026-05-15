@@ -1,0 +1,12 @@
+SELECT * FROM "{{JSutils.currentSchema()}}".hotpar001
+WHERE par001_deleted <> true and par001_desc ILIKE '%{{TableParticularidade.searchText}}%'
+ORDER BY
+{{
+  ({
+    par001_desc: 'par001_desc',
+    par001_id: 'par001_id'
+  }[TableParticularidade.sortOrder.column]) || 'par001_desc'
+}}
+{{ TableParticularidade.sortOrder.order === 'DESC' ? 'DESC' : 'ASC' }}
+LIMIT {{TableParticularidade.pageSize}}
+OFFSET {{(TableParticularidade.pageNo - 1) * TableParticularidade.pageSize}};

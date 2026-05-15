@@ -1,0 +1,2 @@
+SELECT count(amigo001_id) FROM "{{JSutils.currentSchema()}}".hotamigo001
+WHERE amigo001_deleted <> true and amigo001_ani002_id_animal = {{ appsmith.store.petID_Amigos  }}

@@ -1,0 +1,20 @@
+{
+  "gitSyncId": "69b814afccdcda4eb595c07f_91877d06-180f-4291-a276-fe8f461fbf40",
+  "id": "020 - Tutores_JSconfirmationPET",
+  "unpublishedCollection": {
+    "name": "JSconfirmationPET",
+    "pageId": "020 - Tutores",
+    "pluginId": "js-plugin",
+    "pluginType": "JS",
+    "variables": [
+      {
+        "name": "modalconfig",
+        "value": "{\n  action: \"Delete\",\n  message: \"\",\n  row: {},\n  icon: \"plus\",\n  color: \"blue\"\n}"
+      },
+      {
+        "name": "widgetsPet",
+        "value": "[\"ImagePet\", \"FilePicker1Pet\", \"Input1Nome\", \"DatePicker1Nascimento\", \"Input2Idade\", \"Input3Peso\", \"Input3Registro\", \"Input3Microchip\", \"DatePicker1Obito\", \"Select1Especie\", \"Select1Raca\", \"Select1Sexo\", \"Select1Castrado\", \"Select1Porte\", \"Select1Pelagem\", \"Select1Cor\", \"Select1Temperamento\", \"Select1Convivio\", \"Select1Veterinario\", \"Select1Clinica\", \"Input1Canil\", \"Input1Pedigree\", \"Input1PedigreeNome\", \"Input1Observacao\"]"
+      }
+    ]
+  }
+}

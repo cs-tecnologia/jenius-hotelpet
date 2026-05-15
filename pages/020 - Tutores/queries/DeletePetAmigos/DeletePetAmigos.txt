@@ -1,0 +1,6 @@
+UPDATE "{{JSutils.currentSchema()}}".hotamigo001 SET
+  amigo001_deleted = true,
+  amigo001_last_modification = now(),
+  amigo001_modified_by = {{ appsmith.user.id || 1 }}
+WHERE 
+  amigo001_id = {{ Number(this.params.amigo001_id) }};

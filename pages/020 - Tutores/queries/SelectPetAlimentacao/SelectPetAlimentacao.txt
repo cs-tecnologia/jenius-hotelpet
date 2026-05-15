@@ -1,0 +1,9 @@
+SELECT 
+    ali001.ali001_desc AS nome_alimento, -- Descrição vinda da hotali001
+    ali002.* -- Todos os campos do registro do pet
+FROM "{{JSutils.currentSchema()}}".hotali002 AS ali002
+INNER JOIN "{{JSutils.currentSchema()}}".hotali001 AS ali001 
+    ON ali002.ali002_alimentacao = ali001.ali001_id
+WHERE ali002.ali002_deleted <> 'true' 
+AND ali002.ali002_ani002_id = {{ appsmith.store.petSelecionado.ani002_id }}
+ORDER BY ali002.ali002_permitido DESC, ali001.ali001_desc;

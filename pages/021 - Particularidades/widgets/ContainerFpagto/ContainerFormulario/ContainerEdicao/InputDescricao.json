@@ -1,0 +1,58 @@
+{
+  "accentColor": "{{appsmith.theme.colors.primaryColor}}",
+  "animateLoading": true,
+  "autoFocus": true,
+  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+  "bottomRow": 20,
+  "boxShadow": "none",
+  "defaultText": "{{  appsmith.store.modalContexto?.acaoTipo === \"ADICIONAR\" ? \"\" : TableParticularidade.selectedRow.par001_desc\n}}",
+  "dynamicBindingPathList": [
+    {
+      "key": "accentColor"
+    },
+    {
+      "key": "borderRadius"
+    },
+    {
+      "key": "defaultText"
+    }
+  ],
+  "dynamicHeight": "FIXED",
+  "dynamicTriggerPathList": [],
+  "iconAlign": "left",
+  "inputType": "TEXT",
+  "isDisabled": false,
+  "isLoading": false,
+  "isRequired": true,
+  "isVisible": true,
+  "key": "ltiectt39c",
+  "label": "Particularidade",
+  "labelAlignment": "left",
+  "labelPosition": "Top",
+  "labelStyle": "",
+  "labelTextSize": "0.875rem",
+  "labelWidth": 5,
+  "leftColumn": 0,
+  "maxDynamicHeight": 9000,
+  "minDynamicHeight": 4,
+  "minWidth": 450,
+  "mobileBottomRow": 22,
+  "mobileLeftColumn": 0,
+  "mobileRightColumn": 20,
+  "mobileTopRow": 15,
+  "needsErrorInfo": false,
+  "parentColumnSpace": 7.1826171875,
+  "parentId": "bta2kewsl8",
+  "parentRowSpace": 10,
+  "renderMode": "CANVAS",
+  "resetOnSubmit": true,
+  "responsiveBehavior": "fill",
+  "rightColumn": 64,
+  "showStepArrows": false,
+  "tooltip": "Para que o seu sistema de hotel/creche pet seja profissional e cubra todos os riscos e necessidades operacionais, os grupos de particularidades devem ser pensados para facilitar a leitura rápida da equipe.\n\nAqui estão os principais grupos sugeridos, organizados por relevância:\n\n1. Saúde e Condição Física (Crítico)\n2. Comportamento e Socialização\nEssencial para a segurança da equipe e dos outros hóspedes durante as brincadeiras ou manejo.\n3. Manejo e Estética (Tosa/Banho)\nÚtil para o setor de estética pet ou para o cuidado diário no hotel.\n4. Alimentação e Restrições\nEmbora você já tenha uma tabela de alimentos, este grupo serve para regras gerais de comportamento alimentar.\n5. Nível de Energia e Atividade\nAjuda a equipe a planejar o dia do animal.",
+  "topRow": 13,
+  "type": "INPUT_WIDGET_V2",
+  "version": 2,
+  "widgetId": "y7cgt1mkfe",
+  "widgetName": "InputDescricao"
+}
