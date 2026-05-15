@@ -1,0 +1,3 @@
+SELECT * FROM "{{JSutils.currentSchema()}}"."hotimun001"
+WHERE imun001_deleted <> true 
+ORDER BY imun001_desc ASC;
