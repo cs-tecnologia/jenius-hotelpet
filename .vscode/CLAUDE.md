@@ -4,6 +4,8 @@
 - Português Brasil
 
 ## Como escrever o codigo
+- utilizo o appsmith
+- ter atenção com JS dos widgets
 
 ## Banco de Dados
 - Usamos o PostgreSQL
