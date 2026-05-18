@@ -1,0 +1,12 @@
+-- Retorna as imunizações vencidas do pet selecionado para exibir alerta
+SELECT
+    imun003.imun003_id,
+    imun001.imun001_desc AS vacina,
+    imun003.imun003_datavalidade
+FROM "{{JSutils.currentSchema()}}".hotimun003 imun003
+INNER JOIN "{{JSutils.currentSchema()}}".hotimun001 imun001
+    ON imun001.imun001_id = imun003.imun003_imun001
+WHERE imun003.imun003_deleted <> true
+  AND imun003.imun003_ani002_id = {{ appsmith.store.petID_Reserva }}
+  AND imun003.imun003_datavalidade < CURRENT_DATE
+ORDER BY imun003.imun003_datavalidade ASC;
