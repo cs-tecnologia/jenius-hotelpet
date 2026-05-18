@@ -1,9 +1,0 @@
--- Retorna o número de reservas ativas que se sobrepõem ao período solicitado
--- Usado para validar se a capacidade da acomodação foi atingida antes do Insert/Update
-SELECT COUNT(reserva001_id) AS ocupacao_atual
-FROM "{{JSutils.currentSchema()}}".hotreserva001
-WHERE reserva001_deleted <> true
-  AND reserva001_acomo001_id = {{ appsmith.store.reservaContexto.acomo001_id }}
-  AND reserva001_situacao NOT IN (3, 4)
-  AND reserva001_checkin  < '{{ appsmith.store.reservaContexto.checkout }}'
-  AND reserva001_checkout > '{{ appsmith.store.reservaContexto.checkin }}';
