@@ -1,0 +1,7 @@
+SELECT
+    ac.acomo001_id    AS value,
+    ac.acomo001_desc  AS label,
+    ac.acomo001_capacidade
+FROM "{{JSutils.currentSchema()}}".hotacomo001 ac
+WHERE ac.acomo001_deleted <> true
+ORDER BY ac.acomo001_desc ASC;

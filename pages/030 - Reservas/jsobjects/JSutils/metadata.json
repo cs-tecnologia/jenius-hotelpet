@@ -1,0 +1,16 @@
+{
+  "gitSyncId": "69df81de1424f43dde27e012_res030_jsutils",
+  "id": "030 - Reservas_JSutils",
+  "unpublishedCollection": {
+    "name": "JSutils",
+    "pageId": "030 - Reservas",
+    "pluginId": "js-plugin",
+    "pluginType": "JS",
+    "variables": [
+      { "name": "timeoutId",      "value": "null" },
+      { "name": "intervalId",     "value": "null" },
+      { "name": "tempoRestante",  "value": "3600" },
+      { "name": "tempoPadrao",    "value": "3600" }
+    ]
+  }
+}
