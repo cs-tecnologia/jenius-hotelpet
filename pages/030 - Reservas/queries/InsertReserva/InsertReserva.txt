@@ -1,0 +1,38 @@
+INSERT INTO "{{JSutils.currentSchema()}}".hotreserva001 (
+    reserva001_ani002_id,
+    reserva001_acomo001_id,
+    reserva001_prevdatain,
+    reserva001_checkin,
+    reserva001_checkout,
+    reserva001_tamanho_leito,
+    reserva001_tipo_hospedagem,
+    reserva001_pertences,
+    reserva001_medicamentos,
+    reserva001_transporte,
+    reserva001_obstransporte,
+    reserva001_obsgerais,
+    reserva001_situacao,
+    reserva001_creation_date,
+    reserva001_created_by,
+    reserva001_last_modification,
+    reserva001_modified_by
+) VALUES (
+    {{ JSReserva.modalconfig.row.reserva001_ani002_id }}::int,
+    {{ JSReserva.modalconfig.row.reserva001_acomo001_id }}::int,
+    '{{ JSReserva.modalconfig.row.reserva001_prevdatain || JSReserva.modalconfig.row.reserva001_checkin }}'::date,
+    '{{ JSReserva.modalconfig.row.reserva001_checkin }}'::date,
+    '{{ JSReserva.modalconfig.row.reserva001_checkout }}'::date,
+    '{{ JSReserva.modalconfig.row.reserva001_tamanho_leito || "" }}',
+    '{{ JSReserva.modalconfig.row.reserva001_tipo_hospedagem || "" }}',
+    '{{ JSReserva.modalconfig.row.reserva001_pertences || "" }}',
+    '{{ JSReserva.modalconfig.row.reserva001_medicamentos || "" }}',
+    {{ JSReserva.modalconfig.row.reserva001_transporte || false }},
+    '{{ JSReserva.modalconfig.row.reserva001_obstransporte || "" }}',
+    '{{ JSReserva.modalconfig.row.reserva001_obsgerais || "" }}',
+    1,
+    now(),
+    {{ appsmith.user.id || 1 }},
+    now(),
+    {{ appsmith.user.id || 1 }}
+)
+RETURNING reserva001_id;

@@ -1,0 +1,12 @@
+SELECT COUNT(r.reserva001_id)
+FROM "{{JSutils.currentSchema()}}".hotreserva001 r
+INNER JOIN "{{JSutils.currentSchema()}}".hotani002 a
+    ON a.ani002_id = r.reserva001_ani002_id
+LEFT JOIN "{{JSutils.currentSchema()}}".hotacomo001 ac
+    ON ac.acomo001_id = r.reserva001_acomo001_id
+WHERE r.reserva001_deleted <> true
+    AND (
+        '{{TableReservas.searchText || ""}}' = ''
+        OR a.ani002_nome ILIKE '%{{TableReservas.searchText || ""}}%'
+        OR ac.acomo001_desc ILIKE '%{{TableReservas.searchText || ""}}%'
+    );
