@@ -54,9 +54,6 @@
     },
     {
       "key": "groupButtons.groupButtonicjqm188q1.onClick"
-    },
-    {
-      "key": "groupButtons.groupButtonhrop5w8994.onClick"
     }
   ],
   "groupButtons": {
@@ -155,7 +152,6 @@
       "itemType": "BUTTON",
       "label": "Estadias",
       "menuItems": {},
-      "onClick": "{{JSconfirmationESTAD.abrirESTAD();}}",
       "placement": "CENTER",
       "variant": "filled",
       "widgetId": "rrolqrkuni"
