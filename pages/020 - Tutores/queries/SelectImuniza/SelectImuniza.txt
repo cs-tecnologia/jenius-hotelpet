@@ -1,0 +1,10 @@
+SELECT 
+    imun003.*,
+    imun001.imun001_id,
+    imun001.imun001_desc -- Assumindo que o nome da vacina esteja nesta coluna
+FROM "{{JSutils.currentSchema()}}".hotimun003 imun003
+INNER JOIN "{{JSutils.currentSchema()}}".hotimun001 imun001 
+    ON imun001.imun001_id = imun003.imun003_imun001
+WHERE imun003.imun003_deleted <> true 
+AND imun003.imun003_ani002_id = {{ appsmith.store.petID_Amigos }}
+ORDER BY imun003.imun003_datavalidade DESC; -- Ordenado pela data de aplicação mais recente

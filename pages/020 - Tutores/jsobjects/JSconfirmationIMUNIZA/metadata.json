@@ -1,0 +1,20 @@
+{
+  "gitSyncId": "69df81de1424f43dde27e012_acc30e7d-1a08-4799-be5b-4f582dc95dcb",
+  "id": "020 - Tutores_JSconfirmationIMUNIZA",
+  "unpublishedCollection": {
+    "name": "JSconfirmationIMUNIZA",
+    "pageId": "020 - Tutores",
+    "pluginId": "js-plugin",
+    "pluginType": "JS",
+    "variables": [
+      {
+        "name": "modalconfig",
+        "value": "{\n  action: \"Delete\",\n  message: \"\",\n  row: {},\n  icon: \"plus\",\n  color: \"blue\"\n}"
+      },
+      {
+        "name": "widgetsIMUNIZA",
+        "value": "[\"Input1IDImuniza\", \"InputDescImuniza\", \"Select1Imuniza\", \"Switch1Imuniza\"]"
+      }
+    ]
+  }
+}

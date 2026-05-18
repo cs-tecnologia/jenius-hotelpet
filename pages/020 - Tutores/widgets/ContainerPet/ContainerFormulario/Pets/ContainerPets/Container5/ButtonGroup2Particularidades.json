@@ -51,6 +51,9 @@
     },
     {
       "key": "groupButtons.groupButton3.onClick"
+    },
+    {
+      "key": "groupButtons.groupButtonicjqm188q1.onClick"
     }
   ],
   "groupButtons": {
@@ -165,6 +168,7 @@
       "itemType": "BUTTON",
       "label": "Imunização",
       "menuItems": {},
+      "onClick": "{{JSconfirmationIMUNIZA.abrirIMUNIZA();}}",
       "placement": "CENTER",
       "variant": "filled",
       "widgetId": "sgo4d11a37"

@@ -1,0 +1,3 @@
+SELECT count(imun003_id) FROM "{{JSutils.currentSchema()}}".hotimun003
+WHERE imun003_deleted <> true 
+AND imun003_ani002_id = {{ appsmith.store.petID_Amigos }}

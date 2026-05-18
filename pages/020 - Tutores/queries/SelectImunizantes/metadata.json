@@ -1,11 +1,11 @@
 {
-  "gitSyncId": "69df81de1424f43dde27e012_2a397ef9-fdf0-4ea4-abce-6c21d54748f7",
-  "id": "020 - Tutores_SelectAmigos",
+  "gitSyncId": "69df81de1424f43dde27e012_0137f09d-82b0-459d-b3ec-0a0800b8127e",
+  "id": "020 - Tutores_SelectImunizantes",
   "pluginId": "postgres-plugin",
   "pluginType": "DB",
   "unpublishedAction": {
     "actionConfiguration": {
-      "body": "SELECT \n    amigo001.*,\n    p1.ani002_id,\n    p1.ani002_nome\nFROM \"{{JSutils.currentSchema()}}\".hotamigo001 amigo001\nINNER JOIN \"{{JSutils.currentSchema()}}\".hotani002 p1 \n    ON p1.ani002_id = amigo001.amigo001_ani002_id_amigo\nWHERE amigo001.amigo001_deleted <> true \nAND amigo001.amigo001_ani002_id_animal = {{ appsmith.store.petID_Amigos }}\nORDER BY p1.ani002_nome ASC;",
+      "body": "SELECT * FROM \"{{JSutils.currentSchema()}}\".\"hotimun001\"\nWHERE imun001_deleted <> true \nORDER BY imun001_desc ASC;",
       "encodeParamsToggle": true,
       "paginationType": "NONE",
       "pluginSpecifiedTemplates": [
@@ -27,9 +27,9 @@
         "key": "body"
       }
     ],
-    "name": "SelectAmigos",
+    "name": "SelectImunizantes",
     "pageId": "020 - Tutores",
     "runBehaviour": "AUTOMATIC",
-    "userSetOnLoad": true
+    "userSetOnLoad": false
   }
 }
