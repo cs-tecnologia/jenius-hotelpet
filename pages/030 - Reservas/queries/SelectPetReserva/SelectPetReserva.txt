@@ -1,6 +1,0 @@
-SELECT
-    ani002_id    AS value,
-    ani002_nome  AS label
-FROM "{{JSutils.currentSchema()}}".hotani002
-WHERE ani002_deleted <> true
-ORDER BY ani002_nome ASC;
