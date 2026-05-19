@@ -1,0 +1,8 @@
+-- ATENÇÃO: verificar nomes exatos das colunas em hotacomo001
+-- (capacidade pode ser acomo001_capacidade ou acomo001_capaciade)
+SELECT
+    acomo001_id   AS value,
+    acomo001_desc AS label
+FROM "{{JSutils.currentSchema()}}".hotacomo001
+WHERE acomo001_deleted <> true
+ORDER BY acomo001_desc ASC;

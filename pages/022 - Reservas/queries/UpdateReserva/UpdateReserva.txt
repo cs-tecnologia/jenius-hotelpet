@@ -1,0 +1,15 @@
+UPDATE "{{JSutils.currentSchema()}}".hotreserva001 SET
+    reserva001_ani002_id          = {{JSReserva.modalconfig.row.reserva001_ani002_id}},
+    reserva001_prevdatain         = '{{JSReserva.modalconfig.row.reserva001_prevdatain}}',
+    reserva001_prevhorarioin      = '{{(JSReserva.modalconfig.row.reserva001_prevhorarioin || "").trim()}}',
+    reserva001_prevdiashospedagem = {{Number(JSReserva.modalconfig.row.reserva001_prevdiashospedagem || 0)}},
+    reserva001_checkout           = '{{JSReserva.modalconfig.row.reserva001_checkout}}',
+    reserva001_acomo001_id        = {{JSReserva.modalconfig.row.reserva001_acomo001_id}},
+    reserva001_pertences          = '{{(JSReserva.modalconfig.row.reserva001_pertences || "").trim().toUpperCase()}}',
+    reserva001_medicamentos       = '{{(JSReserva.modalconfig.row.reserva001_medicamentos || "").trim().toUpperCase()}}',
+    reserva001_transporte         = {{JSReserva.modalconfig.row.reserva001_transporte === true ? true : false}},
+    reserva001_obstransporte      = '{{(JSReserva.modalconfig.row.reserva001_obstransporte || "").trim().toUpperCase()}}',
+    reserva001_obsgerais          = '{{(JSReserva.modalconfig.row.reserva001_obsgerais || "").trim().toUpperCase()}}',
+    reserva001_last_modification  = now(),
+    reserva001_modified_by        = {{appsmith.user.id || 1}}
+WHERE reserva001_id = {{JSReserva.modalconfig.row.reserva001_id}};

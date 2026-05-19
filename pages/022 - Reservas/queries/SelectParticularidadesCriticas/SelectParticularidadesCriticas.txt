@@ -1,0 +1,11 @@
+-- Busca particularidades com alerta ativo (par002_alerta = true) para o pet.
+SELECT
+    p2.*,
+    p1.par001_desc AS particularidade_nome
+FROM "{{JSutils.currentSchema()}}".hotpar002 p2
+INNER JOIN "{{JSutils.currentSchema()}}".hotpar001 p1
+    ON p1.par001_id = p2.par002_par001_id
+WHERE p2.par002_deleted  <> true
+  AND p2.par002_ani002_id  = {{appsmith.store.petID_Reserva}}
+  AND p2.par002_alerta     = true
+ORDER BY p1.par001_desc ASC;

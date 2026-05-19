@@ -1,0 +1,3 @@
+SELECT COUNT(*) AS total
+FROM "{{JSutils.currentSchema()}}".hotreserva001
+WHERE reserva001_deleted <> true;
