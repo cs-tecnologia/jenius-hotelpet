@@ -1,0 +1,20 @@
+{
+  "gitSyncId": "6a0c3fabfb1761ef97e6774e_aa020000-0000-4000-8000-000000000001",
+  "id": "022 - Reservas_JSReserva",
+  "unpublishedCollection": {
+    "name": "JSReserva",
+    "pageId": "022 - Reservas",
+    "pluginId": "js-plugin",
+    "pluginType": "JS",
+    "variables": [
+      {
+        "name": "modalconfig",
+        "value": "{\n  action: \"Insert\",\n  message: \"\",\n  row: {},\n  icon: \"plus\",\n  color: \"blue\"\n}"
+      },
+      {
+        "name": "widgetsReserva",
+        "value": "[\"InputIDReserva\", \"SelectPetReserva\", \"SelectAcomodacao\", \"DatePickerCheckIn\", \"DatePickerCheckOut\", \"InputHorarioIn\", \"InputHorarioOut\", \"InputPrevDiasHospedagem\", \"InputPertences\", \"InputMedicamentos\", \"SwitchTransporte\", \"InputObsTransporte\", \"InputObsGerais\"]"
+      }
+    ]
+  }
+}
