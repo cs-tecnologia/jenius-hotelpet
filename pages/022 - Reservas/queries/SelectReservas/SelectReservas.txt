@@ -1,0 +1,23 @@
+SELECT
+    r.*,
+    an.ani002_nome          AS pet_nome,
+    ac.acomo001_desc        AS acomodacao_nome
+FROM "{{JSutils.currentSchema()}}".hotreserva001 r
+INNER JOIN "{{JSutils.currentSchema()}}".hotani002 an
+    ON an.ani002_id = r.reserva001_ani002_id
+INNER JOIN "{{JSutils.currentSchema()}}".hotacomo001 ac
+    ON ac.acomo001_id = r.reserva001_acomo001_id
+WHERE r.reserva001_deleted <> true
+ORDER BY
+{{
+  ({
+    pet_nome:              'an.ani002_nome',
+    acomodacao_nome:       'ac.acomo001_desc',
+    reserva001_id:         'r.reserva001_id',
+    reserva001_prevdatain: 'r.reserva001_prevdatain',
+    reserva001_situacao:   'r.reserva001_situacao'
+  }[TableReservas.sortOrder.column]) || 'r.reserva001_prevdatain'
+}}
+{{ TableReservas.sortOrder.order === 'DESC' ? 'DESC' : 'ASC' }}
+LIMIT  {{TableReservas.pageSize}}
+OFFSET {{(TableReservas.pageNo - 1) * TableReservas.pageSize}};

@@ -1,0 +1,10 @@
+SELECT
+    i.*,
+    v.imun001_desc AS vacina_nome
+FROM "{{JSutils.currentSchema()}}".hotimun003 i
+INNER JOIN "{{JSutils.currentSchema()}}".hotimun001 v
+    ON v.imun001_id = i.imun003_imun001
+WHERE i.imun003_deleted      <> true
+  AND i.imun003_ani002_id     = {{appsmith.store.petID_Reserva}}
+  AND i.imun003_datavalidade  < CURRENT_DATE
+ORDER BY i.imun003_datavalidade ASC;
