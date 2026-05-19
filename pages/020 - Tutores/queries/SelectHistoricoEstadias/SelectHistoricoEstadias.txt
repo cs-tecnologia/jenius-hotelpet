@@ -1,5 +1,0 @@
-SELECT *
-FROM "{{JSutils.currentSchema()}}".hotreserva001
-WHERE reserva001_deleted <> true
-AND reserva001_ani002_id = {{ appsmith.store.petSelecionado.ani002_id }}
-ORDER BY reserva001_checkin DESC, reserva001_id DESC;

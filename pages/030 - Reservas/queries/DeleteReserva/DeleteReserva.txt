@@ -1,5 +1,0 @@
-UPDATE "{{JSutils.currentSchema()}}".hotreserva001 SET
-    reserva001_deleted      = true,
-    reserva001_deleted_date = now(),
-    reserva001_deleted_by   = {{ appsmith.user.id || 1 }}
-WHERE reserva001_id = {{ JSReserva.modalconfig.row.reserva001_id }};
