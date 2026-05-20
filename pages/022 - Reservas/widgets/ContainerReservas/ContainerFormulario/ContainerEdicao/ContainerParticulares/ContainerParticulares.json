@@ -8,7 +8,6 @@
   "boxShadow": "none",
   "children": [
     {
-      "children": [],
       "dynamicBindingPathList": [],
       "dynamicHeight": "AUTO_HEIGHT",
       "dynamicTriggerPathList": [],
@@ -35,7 +34,11 @@
       "widgetName": "Canvas_rv022cprc"
     }
   ],
-  "dynamicBindingPathList": [{"key": "borderRadius"}],
+  "dynamicBindingPathList": [
+    {
+      "key": "borderRadius"
+    }
+  ],
   "dynamicHeight": "FIXED",
   "dynamicTriggerPathList": [],
   "isLoading": false,
