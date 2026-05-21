@@ -2,10 +2,23 @@
   "accentColor": "{{appsmith.theme.colors.primaryColor}}",
   "animateLoading": true,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 71,
+  "bottomRow": 29,
   "boxShadow": "none",
   "defaultText": "{{appsmith.store.modalContexto?.acaoTipo === 'ADICIONAR' ? '' : TableReservas.selectedRow?.reserva001_prevdiashospedagem || ''}}",
-  "dynamicBindingPathList": [{"key": "accentColor"}, {"key": "borderRadius"}, {"key": "defaultText"}],
+  "dynamicBindingPathList": [
+    {
+      "key": "accentColor"
+    },
+    {
+      "key": "borderRadius"
+    },
+    {
+      "key": "defaultText"
+    },
+    {
+      "key": "labelTextColor"
+    }
+  ],
   "dynamicHeight": "FIXED",
   "dynamicTriggerPathList": [],
   "iconAlign": "left",
@@ -18,10 +31,11 @@
   "label": "Dias Previstos",
   "labelAlignment": "left",
   "labelPosition": "Top",
-  "labelStyle": "",
+  "labelStyle": "BOLD",
+  "labelTextColor": "{{appsmith.theme.colors.primaryColor}}",
   "labelTextSize": "0.875rem",
   "labelWidth": 5,
-  "leftColumn": 0,
+  "leftColumn": 45,
   "maxDynamicHeight": 9000,
   "minDynamicHeight": 4,
   "minWidth": 450,
@@ -39,10 +53,10 @@
   "renderMode": "CANVAS",
   "resetOnSubmit": true,
   "responsiveBehavior": "fill",
-  "rightColumn": 32,
+  "rightColumn": 63,
   "showStepArrows": false,
   "tooltip": "Calculado automaticamente ao salvar",
-  "topRow": 57,
+  "topRow": 22,
   "type": "INPUT_WIDGET_V2",
   "version": 2,
   "widgetId": "rv022ipdh",

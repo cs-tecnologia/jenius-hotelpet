@@ -1,19 +1,26 @@
 {
   "accentColor": "{{appsmith.theme.colors.primaryColor}}",
-  "alignWidget": "LEFT",
+  "alignWidget": "RIGHT",
   "animateLoading": true,
-  "bottomRow": 78,
+  "bottomRow": 18,
   "defaultSwitchState": "{{appsmith.store.modalContexto?.acaoTipo === 'ADICIONAR' ? false : TableReservas.selectedRow?.reserva001_transporte || false}}",
-  "dynamicBindingPathList": [{"key": "accentColor"}, {"key": "defaultSwitchState"}],
+  "dynamicBindingPathList": [
+    {
+      "key": "accentColor"
+    },
+    {
+      "key": "defaultSwitchState"
+    }
+  ],
   "dynamicHeight": "FIXED",
   "dynamicTriggerPathList": [],
   "isDisabled": false,
   "isLoading": false,
   "isVisible": true,
   "key": "rv022swtk",
-  "label": "Necessita Transporte",
-  "labelPosition": "LEFT",
-  "leftColumn": 0,
+  "label": "Necessita\nTransporte",
+  "labelPosition": "Left",
+  "leftColumn": 47,
   "maxDynamicHeight": 9000,
   "minDynamicHeight": 4,
   "minWidth": 450,
@@ -30,7 +37,7 @@
   "renderMode": "CANVAS",
   "responsiveBehavior": "hug",
   "rightColumn": 64,
-  "topRow": 71,
+  "topRow": 13,
   "type": "SWITCH_WIDGET",
   "version": 1,
   "widgetId": "rv022swtr",

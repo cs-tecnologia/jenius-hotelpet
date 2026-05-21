@@ -4,12 +4,20 @@
   "borderColor": "#e0dede",
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
   "borderWidth": "1",
-  "bottomRow": 5,
+  "bottomRow": 4,
   "dynamicBindingPathList": [
-    {"key": "truncateButtonColor"},
-    {"key": "fontFamily"},
-    {"key": "borderRadius"},
-    {"key": "text"}
+    {
+      "key": "truncateButtonColor"
+    },
+    {
+      "key": "fontFamily"
+    },
+    {
+      "key": "borderRadius"
+    },
+    {
+      "key": "text"
+    }
   ],
   "dynamicHeight": "AUTO_HEIGHT",
   "dynamicTriggerPathList": [],
@@ -28,6 +36,8 @@
   "mobileRightColumn": 64,
   "mobileTopRow": 0,
   "needsErrorInfo": false,
+  "originalBottomRow": 5,
+  "originalTopRow": 0,
   "overflow": "NONE",
   "parentColumnSpace": 7.1826171875,
   "parentId": "rv022edcc",

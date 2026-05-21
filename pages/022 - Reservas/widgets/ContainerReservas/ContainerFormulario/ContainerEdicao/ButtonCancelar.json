@@ -1,21 +1,35 @@
 {
   "animateLoading": true,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 162,
+  "bottomRow": 94,
   "boxShadow": "none",
   "buttonColor": "{{appsmith.theme.colors.primaryColor}}",
   "buttonVariant": "SECONDARY",
   "disabledWhenInvalid": false,
-  "dynamicBindingPathList": [{"key": "borderRadius"}, {"key": "buttonColor"}, {"key": "isDisabled"}],
+  "dynamicBindingPathList": [
+    {
+      "key": "borderRadius"
+    },
+    {
+      "key": "buttonColor"
+    },
+    {
+      "key": "isDisabled"
+    }
+  ],
   "dynamicHeight": "FIXED",
-  "dynamicTriggerPathList": [{"key": "onClick"}],
+  "dynamicTriggerPathList": [
+    {
+      "key": "onClick"
+    }
+  ],
   "iconAlign": "left",
   "isDisabled": "{{!JSvalidateButton.podeCancelar()}}",
   "isLoading": false,
   "isVisible": true,
   "key": "rv022bcnck",
   "label": "CANCELAR",
-  "leftColumn": 32,
+  "leftColumn": 36,
   "maxDynamicHeight": 9000,
   "minDynamicHeight": 4,
   "minWidth": 450,
@@ -25,8 +39,8 @@
   "mobileTopRow": 155,
   "needsErrorInfo": false,
   "onClick": "{{JSvalidateButton.resetForm()}}",
-  "originalBottomRow": 162,
-  "originalTopRow": 155,
+  "originalBottomRow": 94,
+  "originalTopRow": 87,
   "parentColumnSpace": 7.1826171875,
   "parentId": "rv022edcc",
   "parentRowSpace": 10,
@@ -35,7 +49,7 @@
   "responsiveBehavior": "fill",
   "rightColumn": 64,
   "text": "CANCELAR",
-  "topRow": 155,
+  "topRow": 87,
   "type": "BUTTON_WIDGET",
   "version": 1,
   "widgetId": "rv022bcnc",

@@ -4,17 +4,24 @@
   "borderColor": "#E0DEDE",
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
   "borderWidth": "1",
-  "bottomRow": 165,
+  "bottomRow": 96,
   "boxShadow": "{{appsmith.theme.boxShadow.appBoxShadow}}",
   "children": [
     {
       "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-      "bottomRow": 1650,
+      "bottomRow": 960,
       "boxShadow": "{{appsmith.theme.boxShadow.appBoxShadow}}",
       "canExtend": false,
       "containerStyle": "none",
       "detachFromLayout": true,
-      "dynamicBindingPathList": [{"key": "borderRadius"}, {"key": "boxShadow"}],
+      "dynamicBindingPathList": [
+        {
+          "key": "borderRadius"
+        },
+        {
+          "key": "boxShadow"
+        }
+      ],
       "dynamicHeight": "AUTO_HEIGHT",
       "flexLayers": [],
       "isLoading": false,
@@ -44,7 +51,14 @@
     }
   ],
   "containerStyle": "card",
-  "dynamicBindingPathList": [{"key": "borderRadius"}, {"key": "boxShadow"}],
+  "dynamicBindingPathList": [
+    {
+      "key": "borderRadius"
+    },
+    {
+      "key": "boxShadow"
+    }
+  ],
   "dynamicHeight": "AUTO_HEIGHT",
   "flexVerticalAlignment": "stretch",
   "isCanvas": true,
@@ -60,7 +74,7 @@
   "mobileRightColumn": 63,
   "mobileTopRow": 0,
   "needsErrorInfo": false,
-  "originalBottomRow": 165,
+  "originalBottomRow": 96,
   "originalTopRow": 0,
   "parentColumnSpace": 19.1875,
   "parentId": "rv022frmc",

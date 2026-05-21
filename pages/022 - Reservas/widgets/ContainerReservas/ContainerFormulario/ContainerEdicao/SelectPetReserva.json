@@ -2,18 +2,37 @@
   "accentColor": "{{appsmith.theme.colors.primaryColor}}",
   "animateLoading": true,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 15,
+  "bottomRow": 11,
   "boxShadow": "none",
   "defaultOptionValue": "{{appsmith.store.modalContexto?.acaoTipo === 'ADICIONAR' ? '' : (TableReservas.selectedRow?.reserva001_ani002_id ?? '')}}",
   "dynamicBindingPathList": [
-    {"key": "accentColor"},
-    {"key": "borderRadius"},
-    {"key": "sourceData"},
-    {"key": "defaultOptionValue"}
+    {
+      "key": "accentColor"
+    },
+    {
+      "key": "borderRadius"
+    },
+    {
+      "key": "sourceData"
+    },
+    {
+      "key": "defaultOptionValue"
+    }
   ],
   "dynamicHeight": "FIXED",
-  "dynamicPropertyPathList": [{"key": "sourceData"}, {"key": "onOptionChange"}],
-  "dynamicTriggerPathList": [{"key": "onOptionChange"}],
+  "dynamicPropertyPathList": [
+    {
+      "key": "sourceData"
+    },
+    {
+      "key": "onOptionChange"
+    }
+  ],
+  "dynamicTriggerPathList": [
+    {
+      "key": "onOptionChange"
+    }
+  ],
   "isDisabled": false,
   "isFilterable": true,
   "isLoading": false,
@@ -48,7 +67,7 @@
   "rightColumn": 64,
   "serverSideFiltering": false,
   "sourceData": "{{SelectPetsDropdown.data}}",
-  "topRow": 5,
+  "topRow": 4,
   "type": "SELECT_WIDGET",
   "version": 1,
   "widgetId": "rv022spet",
