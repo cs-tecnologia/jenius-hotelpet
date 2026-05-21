@@ -2,17 +2,29 @@
   "accentColor": "{{appsmith.theme.colors.primaryColor}}",
   "animateLoading": true,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 25,
+  "bottomRow": 18,
   "boxShadow": "none",
   "defaultOptionValue": "{{appsmith.store.modalContexto?.acaoTipo === 'ADICIONAR' ? '' : (TableReservas.selectedRow?.reserva001_acomo001_id ?? '')}}",
   "dynamicBindingPathList": [
-    {"key": "accentColor"},
-    {"key": "borderRadius"},
-    {"key": "sourceData"},
-    {"key": "defaultOptionValue"}
+    {
+      "key": "accentColor"
+    },
+    {
+      "key": "borderRadius"
+    },
+    {
+      "key": "sourceData"
+    },
+    {
+      "key": "defaultOptionValue"
+    }
   ],
   "dynamicHeight": "FIXED",
-  "dynamicPropertyPathList": [{"key": "sourceData"}],
+  "dynamicPropertyPathList": [
+    {
+      "key": "sourceData"
+    }
+  ],
   "dynamicTriggerPathList": [],
   "isDisabled": false,
   "isFilterable": true,
@@ -44,10 +56,10 @@
   "placeholderText": "Selecione a acomodação",
   "renderMode": "CANVAS",
   "responsiveBehavior": "fill",
-  "rightColumn": 64,
+  "rightColumn": 47,
   "serverSideFiltering": false,
   "sourceData": "{{SelectAcomodacoesDropdown.data}}",
-  "topRow": 15,
+  "topRow": 11,
   "type": "SELECT_WIDGET",
   "version": 1,
   "widgetId": "rv022saco",

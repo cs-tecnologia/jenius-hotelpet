@@ -1,8 +1,18 @@
 {
   "animateLoading": true,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 60,
-  "dynamicBindingPathList": [{"key": "truncateButtonColor"}, {"key": "borderRadius"}, {"key": "text"}],
+  "bottomRow": 101,
+  "dynamicBindingPathList": [
+    {
+      "key": "truncateButtonColor"
+    },
+    {
+      "key": "borderRadius"
+    },
+    {
+      "key": "text"
+    }
+  ],
   "dynamicHeight": "AUTO_HEIGHT",
   "dynamicTriggerPathList": [],
   "fontFamily": "Roboto",
@@ -20,6 +30,8 @@
   "mobileRightColumn": 9,
   "mobileTopRow": 4,
   "needsErrorInfo": false,
+  "originalBottomRow": 60,
+  "originalTopRow": 55,
   "overflow": "NONE",
   "parentColumnSpace": 19.1875,
   "parentId": "rv022frmc",
@@ -31,7 +43,7 @@
   "text": "{{SelectReservasCount.data[0]?.total || 0}} registro(s)",
   "textAlign": "RIGHT",
   "textColor": "#71717a",
-  "topRow": 55,
+  "topRow": 97,
   "truncateButtonColor": "{{appsmith.theme.colors.primaryColor}}",
   "type": "TEXT_WIDGET",
   "version": 1,

@@ -1,8 +1,12 @@
 {
   "animateLoading": true,
-  "bottomRow": 24,
+  "bottomRow": 4,
   "disableLink": false,
-  "dynamicBindingPathList": [{"key": "text"}],
+  "dynamicBindingPathList": [
+    {
+      "key": "text"
+    }
+  ],
   "dynamicHeight": "AUTO_HEIGHT",
   "dynamicTriggerPathList": [],
   "fontFamily": "{{appsmith.theme.fontFamily.appFont}}",

@@ -2,14 +2,24 @@
   "accentColor": "{{appsmith.theme.colors.primaryColor}}",
   "animateLoading": true,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 90,
+  "bottomRow": 42,
   "boxShadow": "none",
   "defaultText": "{{appsmith.store.modalContexto?.acaoTipo === 'ADICIONAR' ? '' : TableReservas.selectedRow?.reserva001_obstransporte || ''}}",
-  "dynamicBindingPathList": [{"key": "accentColor"}, {"key": "borderRadius"}, {"key": "defaultText"}],
-  "dynamicHeight": "FIXED",
+  "dynamicBindingPathList": [
+    {
+      "key": "accentColor"
+    },
+    {
+      "key": "borderRadius"
+    },
+    {
+      "key": "defaultText"
+    }
+  ],
+  "dynamicHeight": "AUTO_HEIGHT",
   "dynamicTriggerPathList": [],
   "iconAlign": "left",
-  "inputType": "TEXT",
+  "inputType": "MULTI_LINE_TEXT",
   "isDisabled": false,
   "isLoading": false,
   "isRequired": false,
@@ -30,8 +40,8 @@
   "mobileRightColumn": 64,
   "mobileTopRow": 78,
   "needsErrorInfo": false,
-  "originalBottomRow": 90,
-  "originalTopRow": 78,
+  "originalBottomRow": 42,
+  "originalTopRow": 32,
   "parentColumnSpace": 7.1826171875,
   "parentId": "rv022edcc",
   "parentRowSpace": 10,
@@ -39,8 +49,9 @@
   "resetOnSubmit": true,
   "responsiveBehavior": "fill",
   "rightColumn": 64,
+  "shouldAllowAutofill": false,
   "showStepArrows": false,
-  "topRow": 78,
+  "topRow": 32,
   "type": "INPUT_WIDGET_V2",
   "version": 2,
   "widgetId": "rv022iotr",

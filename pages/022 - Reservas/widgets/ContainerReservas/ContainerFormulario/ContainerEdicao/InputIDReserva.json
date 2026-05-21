@@ -2,10 +2,20 @@
   "accentColor": "{{appsmith.theme.colors.primaryColor}}",
   "animateLoading": true,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 2,
+  "bottomRow": 91,
   "boxShadow": "none",
   "defaultText": "{{TableReservas.selectedRow?.reserva001_id || ''}}",
-  "dynamicBindingPathList": [{"key": "accentColor"}, {"key": "borderRadius"}, {"key": "defaultText"}],
+  "dynamicBindingPathList": [
+    {
+      "key": "accentColor"
+    },
+    {
+      "key": "borderRadius"
+    },
+    {
+      "key": "defaultText"
+    }
+  ],
   "dynamicHeight": "FIXED",
   "dynamicTriggerPathList": [],
   "iconAlign": "left",
@@ -21,7 +31,7 @@
   "labelStyle": "",
   "labelTextSize": "0.875rem",
   "labelWidth": 5,
-  "leftColumn": 50,
+  "leftColumn": 31,
   "maxDynamicHeight": 9000,
   "minDynamicHeight": 4,
   "minWidth": 450,
@@ -30,15 +40,17 @@
   "mobileRightColumn": 64,
   "mobileTopRow": 0,
   "needsErrorInfo": false,
+  "originalBottomRow": 91,
+  "originalTopRow": 89,
   "parentColumnSpace": 7.1826171875,
   "parentId": "rv022edcc",
   "parentRowSpace": 10,
   "renderMode": "CANVAS",
   "resetOnSubmit": false,
   "responsiveBehavior": "fill",
-  "rightColumn": 64,
+  "rightColumn": 35,
   "showStepArrows": false,
-  "topRow": 0,
+  "topRow": 89,
   "type": "INPUT_WIDGET_V2",
   "version": 2,
   "widgetId": "rv022iidr",

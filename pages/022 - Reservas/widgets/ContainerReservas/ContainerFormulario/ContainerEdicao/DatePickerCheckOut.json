@@ -2,16 +2,22 @@
   "accentColor": "{{appsmith.theme.colors.primaryColor}}",
   "animateLoading": true,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 43,
+  "bottomRow": 32,
   "boxShadow": "none",
   "closeOnSelection": false,
-  "dateFormat": "YYYY-MM-DD",
+  "dateFormat": "DD-MM-YYYY",
   "defaultDate": "{{appsmith.store.modalContexto?.acaoTipo === 'ADICIONAR' ? '' : TableReservas.selectedRow?.reserva001_checkout || ''}}",
   "displayTimezone": "Etc/UTC",
   "dynamicBindingPathList": [
-    {"key": "accentColor"},
-    {"key": "borderRadius"},
-    {"key": "defaultDate"}
+    {
+      "key": "accentColor"
+    },
+    {
+      "key": "borderRadius"
+    },
+    {
+      "key": "defaultDate"
+    }
   ],
   "dynamicHeight": "FIXED",
   "dynamicTriggerPathList": [],
@@ -20,12 +26,13 @@
   "isRequired": true,
   "isVisible": true,
   "key": "rv022dpotk",
+  "label": "Previsão Check-Out",
   "labelAlignment": "left",
   "labelPosition": "Top",
   "labelText": "Check-Out Previsto",
   "labelTextSize": "0.875rem",
   "labelWidth": 5,
-  "leftColumn": 32,
+  "leftColumn": 0,
   "maxDynamicHeight": 9000,
   "minDynamicHeight": 4,
   "minWidth": 450,
@@ -41,7 +48,7 @@
   "parentRowSpace": 10,
   "renderMode": "CANVAS",
   "responsiveBehavior": "fill",
-  "rightColumn": 64,
+  "rightColumn": 23,
   "shortcuts": false,
   "timePrecision": "None",
   "topRow": 25,
