@@ -5,7 +5,7 @@
   "pluginType": "DB",
   "unpublishedAction": {
     "actionConfiguration": {
-      "body": "SELECT count(*) AS total\nFROM \"{{JSutils.currentSchema()}}\".hotreserva001 r\nWHERE r.reserva001_deleted <> true\nAND (\n  r.reserva001_checkout = CURRENT_DATE\n  OR (\n    r.reserva001_checkin IS NOT NULL\n    AND r.reserva001_checkout IS NULL\n    AND (r.reserva001_prevdatain + r.reserva001_prevdiashospedagem * INTERVAL '1 day')::date = CURRENT_DATE\n  )\n);",
+      "body": "SELECT count(*) AS total\nFROM \"{{JSutils.currentSchema()}}\".hotreserva001 r\nWHERE r.reserva001_deleted <> true\nAND (\n  r.reserva001_checkout = CURRENT_DATE\n  OR (\n    r.reserva001_checkin IS NOT NULL\n    AND r.reserva001_checkout IS NULL\n    AND (r.reserva001_prevdatain + r.reserva001_prevdiashospedagem * INTERVAL '1 day')::date = CURRENT_DATE\n  )\n);\n",
       "encodeParamsToggle": true,
       "paginationType": "NONE",
       "pluginSpecifiedTemplates": [

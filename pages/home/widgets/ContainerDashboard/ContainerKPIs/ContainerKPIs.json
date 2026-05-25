@@ -3,11 +3,11 @@
   "backgroundColor": "transparent",
   "borderColor": "transparent",
   "borderWidth": "0",
-  "bottomRow": 13,
+  "bottomRow": 14,
   "boxShadow": "NONE",
   "children": [
     {
-      "bottomRow": 1000,
+      "bottomRow": 130,
       "canExtend": true,
       "containerStyle": "none",
       "detachFromLayout": true,
@@ -42,7 +42,7 @@
   "minDynamicHeight": 4,
   "minWidth": 450,
   "needsErrorInfo": false,
-  "originalBottomRow": 13,
+  "originalBottomRow": 14,
   "originalTopRow": 1,
   "parentColumnSpace": 4.21875,
   "parentId": "cnvdash01a",

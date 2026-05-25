@@ -2,7 +2,14 @@
   "animateLoading": true,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
   "bottomRow": 4,
-  "dynamicBindingPathList": [{"key": "truncateButtonColor"}, {"key": "borderRadius"}],
+  "dynamicBindingPathList": [
+    {
+      "key": "truncateButtonColor"
+    },
+    {
+      "key": "borderRadius"
+    }
+  ],
   "dynamicHeight": "AUTO_HEIGHT",
   "dynamicTriggerPathList": [],
   "fontFamily": "Roboto",
@@ -11,22 +18,24 @@
   "isLoading": false,
   "isVisible": true,
   "key": "txlbhsp01k",
-  "leftColumn": 1,
+  "leftColumn": 11,
   "maxDynamicHeight": 9000,
   "minDynamicHeight": 4,
   "needsErrorInfo": false,
+  "originalBottomRow": 4,
+  "originalTopRow": 0,
   "overflow": "NONE",
   "parentColumnSpace": 4.21875,
   "parentId": "cnvhsp01a",
   "parentRowSpace": 10,
   "renderMode": "CANVAS",
   "responsiveBehavior": "fill",
-  "rightColumn": 14,
+  "rightColumn": 53,
   "shouldTruncate": false,
   "text": "Hospedados Agora",
   "textAlign": "CENTER",
   "textColor": "#1E40AF",
-  "topRow": 1,
+  "topRow": 0,
   "truncateButtonColor": "{{appsmith.theme.colors.primaryColor}}",
   "type": "TEXT_WIDGET",
   "version": 1,

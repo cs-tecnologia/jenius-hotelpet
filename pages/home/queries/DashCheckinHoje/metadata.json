@@ -5,7 +5,7 @@
   "pluginType": "DB",
   "unpublishedAction": {
     "actionConfiguration": {
-      "body": "SELECT count(*) AS total\nFROM \"{{JSutils.currentSchema()}}\".hotreserva001\nWHERE reserva001_deleted <> true\nAND (\n  reserva001_prevdatain = CURRENT_DATE\n  OR reserva001_checkin = CURRENT_DATE\n);",
+      "body": "SELECT count(*) AS total\nFROM \"{{JSutils.currentSchema()}}\".hotreserva001\nWHERE reserva001_deleted <> true\nAND (\n  reserva001_prevdatain = CURRENT_DATE\n  OR reserva001_checkin = CURRENT_DATE\n);\n",
       "encodeParamsToggle": true,
       "paginationType": "NONE",
       "pluginSpecifiedTemplates": [

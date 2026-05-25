@@ -10,11 +10,11 @@
     "navigationSetting": {
       "colorStyle": "light",
       "logoAssetId": "",
-      "logoConfiguration": "logoAndApplicationTitle",
+      "logoConfiguration": "logoOnly",
       "navStyle": "inline",
       "orientation": "top",
       "position": "static",
-      "showNavbar": true,
+      "showNavbar": false,
       "showSignIn": true
     },
     "themeSetting": {
@@ -128,11 +128,11 @@
     "navigationSetting": {
       "colorStyle": "light",
       "logoAssetId": "",
-      "logoConfiguration": "logoAndApplicationTitle",
+      "logoConfiguration": "logoOnly",
       "navStyle": "inline",
       "orientation": "top",
       "position": "static",
-      "showNavbar": true,
+      "showNavbar": false,
       "showSignIn": true
     },
     "themeSetting": {
