@@ -1,0 +1,14 @@
+SELECT
+    r.reserva001_id,
+    r.reserva001_prevdatain,
+    a.ani002_nome AS pet_nome,
+    ac.acomo001_desc AS acomodacao
+FROM "{{JSutils.currentSchema()}}".hotreserva001 r
+LEFT JOIN "{{JSutils.currentSchema()}}".hotani002 a
+    ON a.ani002_id = r.reserva001_ani002_id
+LEFT JOIN "{{JSutils.currentSchema()}}".hotacomo001 ac
+    ON ac.acomo001_id = r.reserva001_acomo001_id
+WHERE r.reserva001_deleted <> true
+AND r.reserva001_checkin IS NULL
+AND r.reserva001_prevdatain BETWEEN CURRENT_DATE AND CURRENT_DATE + 7
+ORDER BY r.reserva001_prevdatain;

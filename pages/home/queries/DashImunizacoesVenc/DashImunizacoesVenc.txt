@@ -1,0 +1,4 @@
+SELECT count(*) AS total
+FROM "{{JSutils.currentSchema()}}".hotimun003
+WHERE imun003_deleted <> true
+AND imun003_datavalidade BETWEEN CURRENT_DATE AND CURRENT_DATE + 30;
