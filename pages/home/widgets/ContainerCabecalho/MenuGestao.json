@@ -19,46 +19,22 @@
     }
   ],
   "dynamicTriggerPathList": [
-    {
-      "key": "menuItems.menuItem1.onClick"
-    }
+    {"key": "menuItems.menuItem1.onClick"},
+    {"key": "menuItems.menuItem2.onClick"}
   ],
   "iconAlign": "left",
-  "iconName": "menu",
+  "iconName": "briefcase",
   "isCompact": true,
   "isDisabled": false,
   "isLoading": false,
   "isVisible": true,
-  "key": "8plcf47iwn",
-  "label": "",
-  "leftColumn": 58,
+  "key": "menuges01key",
+  "label": "Gestão",
+  "leftColumn": 52,
   "menuColor": "{{appsmith.theme.colors.primaryColor}}",
   "menuItems": {
-    "menuItem1": {
-      "id": "menuItem1",
-      "index": 0,
-      "isDisabled": false,
-      "isVisible": true,
-      "label": "Alimentos",
-      "onClick": "{{navigateTo('001 - Alimentos', {}, 'SAME_WINDOW');}}",
-      "widgetId": ""
-    },
-    "menuItem2": {
-      "id": "menuItem2",
-      "index": 1,
-      "isDisabled": false,
-      "isVisible": true,
-      "label": "Second Menu Item",
-      "widgetId": ""
-    },
-    "menuItem3": {
-      "id": "menuItem3",
-      "index": 2,
-      "isDisabled": false,
-      "isVisible": true,
-      "label": "Third Menu Item",
-      "widgetId": ""
-    }
+    "menuItem1": {"id": "menuItem1", "index": 0, "isDisabled": false, "isVisible": true, "label": "020 - Tutores",  "onClick": "{{navigateTo('020 - Tutores', {}, 'SAME_WINDOW');}}", "widgetId": ""},
+    "menuItem2": {"id": "menuItem2", "index": 1, "isDisabled": false, "isVisible": true, "label": "022 - Reservas", "onClick": "{{navigateTo('022 - Reservas', {}, 'SAME_WINDOW');}}", "widgetId": ""}
   },
   "menuItemsSource": "STATIC",
   "menuVariant": "TERTIARY",
@@ -69,16 +45,16 @@
   "needsErrorInfo": false,
   "originalBottomRow": 8,
   "originalTopRow": 4,
-  "parentColumnSpace": 19.8125,
+  "parentColumnSpace": 4.21875,
   "parentId": "s6kho6ttm9",
   "parentRowSpace": 10,
   "placement": "CENTER",
   "renderMode": "CANVAS",
-  "rightColumn": 64,
+  "rightColumn": 58,
   "sourceData": [],
   "topRow": 0,
   "type": "MENU_BUTTON_WIDGET",
   "version": 1,
-  "widgetId": "g8hxad5aya",
-  "widgetName": "MenuPrincipal"
+  "widgetId": "menuges01a",
+  "widgetName": "MenuGestao"
 }
