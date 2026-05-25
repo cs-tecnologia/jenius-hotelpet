@@ -14,13 +14,47 @@
     "label": "Configure menu items"
   },
   "dynamicBindingPathList": [
-    {"key": "menuColor"},
-    {"key": "menuItems.menuItem1.label"},
-    {"key": "menuItems.menuItem2.label"}
+    {
+      "key": "menuColor"
+    },
+    {
+      "key": "menuItems.menuItem1.label"
+    },
+    {
+      "key": "menuItems.menuItem2.label"
+    },
+    {
+      "key": "menuItems.menuItem4667zgh1av.label"
+    },
+    {
+      "key": "menuItems.menuItemp80s4l92nr.label"
+    },
+    {
+      "key": "menuItems.menuItemgq165rgw1q.label"
+    },
+    {
+      "key": "menuItems.menuItemd941zjcovm.label"
+    }
   ],
   "dynamicTriggerPathList": [
-    {"key": "menuItems.menuItem1.onClick"},
-    {"key": "menuItems.menuItem2.onClick"}
+    {
+      "key": "menuItems.menuItem1.onClick"
+    },
+    {
+      "key": "menuItems.menuItem2.onClick"
+    },
+    {
+      "key": "menuItems.menuItem4667zgh1av.onClick"
+    },
+    {
+      "key": "menuItems.menuItemp80s4l92nr.onClick"
+    },
+    {
+      "key": "menuItems.menuItemgq165rgw1q.onClick"
+    },
+    {
+      "key": "menuItems.menuItemd941zjcovm.onClick"
+    }
   ],
   "iconAlign": "left",
   "iconName": "briefcase",
@@ -44,12 +78,48 @@
     },
     "menuItem2": {
       "id": "menuItem2",
-      "index": 1,
+      "index": 2,
       "isDisabled": false,
       "isVisible": true,
       "label": "{{'022 - Reservas'.substring(6)}}",
       "onClick": "{{navigateTo('022 - Reservas', {}, 'SAME_WINDOW');}}",
       "widgetId": ""
+    },
+    "menuItem4667zgh1av": {
+      "id": "menuItem4667zgh1av",
+      "index": 3,
+      "isDisabled": false,
+      "isVisible": true,
+      "label": "{{'015 - Produtos e Serviços'.substring(6)}}",
+      "onClick": "{{navigateTo('015 - Produtos e Serviços', {}, 'SAME_WINDOW');}}",
+      "widgetId": "sbhzgx8xv4"
+    },
+    "menuItemd941zjcovm": {
+      "id": "menuItemd941zjcovm",
+      "index": 5,
+      "isDisabled": false,
+      "isVisible": true,
+      "label": "{{'011 - Imunizante'.substring(6)}}",
+      "onClick": "{{navigateTo('011 - Imunizante', {}, 'SAME_WINDOW');}}",
+      "widgetId": "x2f3lpvfj4"
+    },
+    "menuItemgq165rgw1q": {
+      "id": "menuItemgq165rgw1q",
+      "index": 4,
+      "isDisabled": false,
+      "isVisible": true,
+      "label": "{{'017 - Acomodações'.substring(6)}}",
+      "onClick": "{{navigateTo('017 - Acomodações', {}, 'SAME_WINDOW');}}",
+      "widgetId": "z4twdoqzuq"
+    },
+    "menuItemp80s4l92nr": {
+      "id": "menuItemp80s4l92nr",
+      "index": 1,
+      "isDisabled": false,
+      "isVisible": true,
+      "label": "{{'005 - Clinicas'.substring(6)}}",
+      "onClick": "{{navigateTo('005 - Clinica', {}, 'SAME_WINDOW');}}",
+      "widgetId": "lbdvd5ig84"
     }
   },
   "menuItemsSource": "STATIC",
