@@ -1,7 +1,7 @@
 {
   "animateLoading": true,
   "borderRadius": "0px",
-  "bottomRow": 4,
+  "bottomRow": 15,
   "boxShadow": "0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05)",
   "configureMenuItems": {
     "config": {
@@ -14,24 +14,23 @@
     "label": "Configure menu items"
   },
   "dynamicBindingPathList": [
-    {
-      "key": "menuColor"
-    }
+    {"key": "menuColor"},
+    {"key": "menuItems.menuItem1.label"},
+    {"key": "menuItems.menuItem2.label"}
   ],
   "dynamicTriggerPathList": [
-    {
-      "key": "menuItems.menuItem1.onClick"
-    }
+    {"key": "menuItems.menuItem1.onClick"},
+    {"key": "menuItems.menuItem2.onClick"}
   ],
   "iconAlign": "left",
-  "iconName": "menu",
+  "iconName": "briefcase",
   "isCompact": true,
   "isDisabled": false,
   "isLoading": false,
   "isVisible": true,
-  "key": "8plcf47iwn",
-  "label": "",
-  "leftColumn": 58,
+  "key": "menuges01key",
+  "label": "Gestão",
+  "leftColumn": 32,
   "menuColor": "{{appsmith.theme.colors.primaryColor}}",
   "menuItems": {
     "menuItem1": {
@@ -39,8 +38,8 @@
       "index": 0,
       "isDisabled": false,
       "isVisible": true,
-      "label": "Alimentos",
-      "onClick": "{{navigateTo('001 - Alimentos', {}, 'SAME_WINDOW');}}",
+      "label": "{{'020 - Tutores'.substring(6)}}",
+      "onClick": "{{navigateTo('020 - Tutores', {}, 'SAME_WINDOW');}}",
       "widgetId": ""
     },
     "menuItem2": {
@@ -48,15 +47,8 @@
       "index": 1,
       "isDisabled": false,
       "isVisible": true,
-      "label": "Second Menu Item",
-      "widgetId": ""
-    },
-    "menuItem3": {
-      "id": "menuItem3",
-      "index": 2,
-      "isDisabled": false,
-      "isVisible": true,
-      "label": "Third Menu Item",
+      "label": "{{'022 - Reservas'.substring(6)}}",
+      "onClick": "{{navigateTo('022 - Reservas', {}, 'SAME_WINDOW');}}",
       "widgetId": ""
     }
   },
@@ -67,18 +59,18 @@
   "mobileRightColumn": 15,
   "mobileTopRow": 2,
   "needsErrorInfo": false,
-  "originalBottomRow": 8,
-  "originalTopRow": 4,
-  "parentColumnSpace": 19.8125,
-  "parentId": "s6kho6ttm9",
+  "originalBottomRow": 15,
+  "originalTopRow": 11,
+  "parentColumnSpace": 4.21875,
+  "parentId": "0",
   "parentRowSpace": 10,
   "placement": "CENTER",
   "renderMode": "CANVAS",
   "rightColumn": 64,
   "sourceData": [],
-  "topRow": 0,
+  "topRow": 11,
   "type": "MENU_BUTTON_WIDGET",
   "version": 1,
-  "widgetId": "g8hxad5aya",
-  "widgetName": "MenuPrincipal"
+  "widgetId": "sgfijvnulq",
+  "widgetName": "MenuGestao"
 }

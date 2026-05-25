@@ -1,0 +1,45 @@
+{
+  "accentColor": "{{appsmith.theme.colors.primaryColor}}",
+  "alignWidget": "RIGHT",
+  "animateLoading": true,
+  "bottomRow": 18,
+  "defaultSwitchState": "{{appsmith.store.modalContexto?.acaoTipo === 'ADICIONAR' ? false : TableReservas.selectedRow?.reserva001_transporte || false}}",
+  "dynamicBindingPathList": [
+    {
+      "key": "accentColor"
+    },
+    {
+      "key": "defaultSwitchState"
+    }
+  ],
+  "dynamicHeight": "FIXED",
+  "dynamicTriggerPathList": [],
+  "isDisabled": false,
+  "isLoading": false,
+  "isVisible": true,
+  "key": "rv022swtk",
+  "label": "Necessita\nTransporte",
+  "labelPosition": "Left",
+  "leftColumn": 47,
+  "maxDynamicHeight": 9000,
+  "minDynamicHeight": 4,
+  "minWidth": 450,
+  "mobileBottomRow": 78,
+  "mobileLeftColumn": 0,
+  "mobileRightColumn": 64,
+  "mobileTopRow": 71,
+  "needsErrorInfo": false,
+  "originalBottomRow": 78,
+  "originalTopRow": 71,
+  "parentColumnSpace": 7.1826171875,
+  "parentId": "rv022edcc",
+  "parentRowSpace": 10,
+  "renderMode": "CANVAS",
+  "responsiveBehavior": "hug",
+  "rightColumn": 64,
+  "topRow": 13,
+  "type": "SWITCH_WIDGET",
+  "version": 1,
+  "widgetId": "rv022swtr",
+  "widgetName": "SwitchTransporte"
+}

@@ -1,64 +1,58 @@
 {
   "animateLoading": true,
+  "backgroundColor": "#ffffff",
+  "borderColor": "#e0dede",
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 6,
+  "borderWidth": "1",
+  "bottomRow": 4,
   "dynamicBindingPathList": [
     {
       "key": "truncateButtonColor"
+    },
+    {
+      "key": "fontFamily"
     },
     {
       "key": "borderRadius"
     },
     {
       "key": "text"
-    },
-    {
-      "key": "textColor"
     }
   ],
   "dynamicHeight": "AUTO_HEIGHT",
-  "dynamicPropertyPathList": [
-    {
-      "key": "textColor"
-    },
-    {
-      "key": "fontSize"
-    }
-  ],
   "dynamicTriggerPathList": [],
-  "fontFamily": "Roboto",
-  "fontSize": "0.6rem",
+  "fontFamily": "{{appsmith.theme.fontFamily.appFont}}",
+  "fontSize": "0.875rem",
   "fontStyle": "BOLD",
   "isLoading": false,
   "isVisible": true,
-  "key": "kb582uc1yk",
-  "leftColumn": 58,
+  "key": "rv022ttitk",
+  "leftColumn": 0,
   "maxDynamicHeight": 9000,
   "minDynamicHeight": 4,
   "minWidth": 450,
-  "mobileBottomRow": 10,
-  "mobileLeftColumn": 48,
+  "mobileBottomRow": 4,
+  "mobileLeftColumn": 0,
   "mobileRightColumn": 64,
-  "mobileTopRow": 6,
+  "mobileTopRow": 0,
   "needsErrorInfo": false,
-  "originalBottomRow": 4,
+  "originalBottomRow": 5,
   "originalTopRow": 0,
   "overflow": "NONE",
-  "parentColumnSpace": 19.1875,
-  "parentId": "s6kho6ttm9",
+  "parentColumnSpace": 7.1826171875,
+  "parentId": "rv022edcc",
   "parentRowSpace": 10,
   "renderMode": "CANVAS",
   "responsiveBehavior": "fill",
   "rightColumn": 64,
-  "shouldScrollContents": true,
   "shouldTruncate": false,
-  "text": "Sessão expira em: {{ JSutils.formatarTempo() }}",
+  "text": "{{appsmith.store.modalContexto?.acaoTipo === 'ADICIONAR' ? '+ NOVA RESERVA' : 'EDITAR RESERVA'}}",
   "textAlign": "CENTER",
-  "textColor": "{{ JSutils.tempoRestante < 60 ? '#E11D48' : '#64748B' }}",
-  "topRow": 2,
+  "textColor": "#71717a",
+  "topRow": 0,
   "truncateButtonColor": "{{appsmith.theme.colors.primaryColor}}",
   "type": "TEXT_WIDGET",
   "version": 1,
-  "widgetId": "ealz155ede",
-  "widgetName": "Text1"
+  "widgetId": "rv022ttit",
+  "widgetName": "TextTitulo"
 }

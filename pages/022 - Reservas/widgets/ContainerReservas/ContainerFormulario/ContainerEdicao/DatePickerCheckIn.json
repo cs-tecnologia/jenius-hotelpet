@@ -1,0 +1,59 @@
+{
+  "accentColor": "{{appsmith.theme.colors.primaryColor}}",
+  "animateLoading": true,
+  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+  "bottomRow": 25,
+  "boxShadow": "none",
+  "closeOnSelection": false,
+  "dateFormat": "DD/MM/YYYY",
+  "defaultDate": "{{appsmith.store.modalContexto?.acaoTipo === 'ADICIONAR' ? '' : TableReservas.selectedRow?.reserva001_prevdatain || ''}}",
+  "displayTimezone": "Etc/UTC",
+  "dynamicBindingPathList": [
+    {
+      "key": "accentColor"
+    },
+    {
+      "key": "borderRadius"
+    },
+    {
+      "key": "defaultDate"
+    }
+  ],
+  "dynamicHeight": "FIXED",
+  "dynamicTriggerPathList": [],
+  "isDisabled": false,
+  "isLoading": false,
+  "isRequired": true,
+  "isVisible": true,
+  "key": "rv022dpink",
+  "label": "Previsão Check-In",
+  "labelAlignment": "left",
+  "labelPosition": "Top",
+  "labelText": "Check-In Previsto",
+  "labelTextSize": "0.875rem",
+  "labelWidth": 5,
+  "leftColumn": 0,
+  "maxDynamicHeight": 9000,
+  "minDynamicHeight": 4,
+  "minWidth": 450,
+  "mobileBottomRow": 43,
+  "mobileLeftColumn": 0,
+  "mobileRightColumn": 32,
+  "mobileTopRow": 25,
+  "needsErrorInfo": false,
+  "originalBottomRow": 43,
+  "originalTopRow": 25,
+  "parentColumnSpace": 7.1826171875,
+  "parentId": "rv022edcc",
+  "parentRowSpace": 10,
+  "renderMode": "CANVAS",
+  "responsiveBehavior": "fill",
+  "rightColumn": 23,
+  "shortcuts": false,
+  "timePrecision": "None",
+  "topRow": 18,
+  "type": "DATE_PICKER_WIDGET2",
+  "version": 2,
+  "widgetId": "rv022dpin",
+  "widgetName": "DatePickerCheckIn"
+}

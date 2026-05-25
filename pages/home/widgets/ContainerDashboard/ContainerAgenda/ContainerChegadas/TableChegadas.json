@@ -1,0 +1,165 @@
+{
+  "accentColor": "{{appsmith.theme.colors.primaryColor}}",
+  "animateLoading": true,
+  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+  "bottomRow": 35,
+  "boxShadow": "none",
+  "canFreezeColumn": true,
+  "columnUpdatedAt": 1700000001,
+  "columnWidthMap": {},
+  "delimiter": ",",
+  "dynamicBindingPathList": [
+    {
+      "key": "accentColor"
+    },
+    {
+      "key": "borderRadius"
+    },
+    {
+      "key": "tableData"
+    },
+    {
+      "key": "primaryColumns.reserva001_prevdatain.computedValue"
+    },
+    {
+      "key": "primaryColumns.pet_nome.computedValue"
+    },
+    {
+      "key": "primaryColumns.acomodacao.computedValue"
+    }
+  ],
+  "dynamicHeight": "AUTO_HEIGHT",
+  "dynamicPropertyPathList": [
+    {
+      "key": "tableData"
+    }
+  ],
+  "dynamicTriggerPathList": [],
+  "enableClientSideSearch": true,
+  "enableServerSideSearch": false,
+  "filters": [],
+  "isLoading": false,
+  "isSortable": true,
+  "isVisible": true,
+  "isVisibleDownload": false,
+  "isVisibleFilters": false,
+  "isVisiblePagination": false,
+  "isVisibleSearch": false,
+  "key": "tbltcheg01k",
+  "leftColumn": 0,
+  "multiRowSelection": false,
+  "needsErrorInfo": false,
+  "originalBottomRow": 35,
+  "originalTopRow": 4,
+  "pageSize": 10,
+  "parentColumnSpace": 4.21875,
+  "parentId": "cnvcheg01a",
+  "parentRowSpace": 10,
+  "primaryColumnId": "reserva001_prevdatain",
+  "primaryColumns": {
+    "acomodacao": {
+      "allowCellWrapping": false,
+      "allowSameOptionsInNewRow": true,
+      "columnType": "text",
+      "computedValue": "{{TableChegadas.processedTableData.map((currentRow___) => ( currentRow___['acomodacao']))}}",
+      "enableFilter": true,
+      "enableSort": true,
+      "id": "acomodacao",
+      "index": 3,
+      "isDerived": false,
+      "isDiscardVisible": true,
+      "isEditable": false,
+      "isHidden": false,
+      "isSaveVisible": true,
+      "label": "Acomodação",
+      "labelColor": "#FFFFFF",
+      "originalId": "acomodacao",
+      "sticky": "",
+      "validation": {},
+      "visibleSize": 150
+    },
+    "pet_nome": {
+      "allowCellWrapping": false,
+      "allowSameOptionsInNewRow": true,
+      "cellBackground": "",
+      "columnType": "text",
+      "computedValue": "{{TableChegadas.processedTableData.map((currentRow___) => ( currentRow___['pet_nome']))}}",
+      "enableFilter": true,
+      "enableSort": true,
+      "id": "pet_nome",
+      "index": 2,
+      "isDerived": false,
+      "isDiscardVisible": true,
+      "isEditable": false,
+      "isHidden": false,
+      "isSaveVisible": true,
+      "label": "Pet",
+      "labelColor": "#FFFFFF",
+      "originalId": "pet_nome",
+      "sticky": "",
+      "validation": {},
+      "visibleSize": 150
+    },
+    "reserva001_id": {
+      "allowCellWrapping": false,
+      "allowSameOptionsInNewRow": true,
+      "columnType": "number",
+      "computedValue": "{{TableChegadas.processedTableData.map((currentRow___) => ( currentRow___['reserva001_id']))}}",
+      "enableFilter": true,
+      "enableSort": true,
+      "id": "reserva001_id",
+      "index": 0,
+      "isDerived": false,
+      "isDiscardVisible": true,
+      "isEditable": false,
+      "isHidden": true,
+      "isSaveVisible": true,
+      "label": "ID",
+      "labelColor": "#FFFFFF",
+      "originalId": "reserva001_id",
+      "sticky": "",
+      "validation": {},
+      "visibleSize": 150
+    },
+    "reserva001_prevdatain": {
+      "allowCellWrapping": false,
+      "allowSameOptionsInNewRow": true,
+      "columnType": "date",
+      "computedValue": "{{TableChegadas.processedTableData.map((currentRow___) => ( currentRow___['reserva001_prevdatain']))}}",
+      "enableFilter": true,
+      "enableSort": true,
+      "id": "reserva001_prevdatain",
+      "index": 1,
+      "inputFormat": "YYYY-MM-DD",
+      "isDerived": false,
+      "isDiscardVisible": true,
+      "isEditable": false,
+      "isHidden": false,
+      "isSaveVisible": true,
+      "label": "Prev. Entrada",
+      "labelColor": "#FFFFFF",
+      "originalId": "reserva001_prevdatain",
+      "outputFormat": "DD/MM/YYYY",
+      "sticky": "",
+      "validation": {},
+      "visibleSize": 120
+    }
+  },
+  "renderMode": "CANVAS",
+  "responsiveBehavior": "fill",
+  "rightColumn": 30,
+  "searchText": "",
+  "selectedRowIndex": -1,
+  "selectedRowIndices": [],
+  "serverSidePaginationEnabled": false,
+  "sortOrder": {
+    "column": ""
+  },
+  "tableData": "{{DashProximasChegadas.data}}",
+  "topRow": 4,
+  "totalRecordsCount": 0,
+  "type": "TABLE_WIDGET_V2",
+  "version": 1,
+  "widgetId": "tbltcheg01",
+  "widgetName": "TableChegadas"
+}

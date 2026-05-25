@@ -11,54 +11,42 @@
     },
     {
       "key": "text"
-    },
-    {
-      "key": "textColor"
     }
   ],
   "dynamicHeight": "AUTO_HEIGHT",
-  "dynamicPropertyPathList": [
-    {
-      "key": "textColor"
-    },
-    {
-      "key": "fontSize"
-    }
-  ],
   "dynamicTriggerPathList": [],
   "fontFamily": "Roboto",
-  "fontSize": "0.6rem",
-  "fontStyle": "BOLD",
+  "fontSize": "1.25rem",
+  "fontStyle": "",
   "isLoading": false,
   "isVisible": true,
-  "key": "kb582uc1yk",
-  "leftColumn": 58,
+  "key": "33vrtp9q17",
+  "leftColumn": 5,
   "maxDynamicHeight": 9000,
   "minDynamicHeight": 4,
   "minWidth": 450,
-  "mobileBottomRow": 10,
-  "mobileLeftColumn": 48,
-  "mobileRightColumn": 64,
-  "mobileTopRow": 6,
+  "mobileBottomRow": 4,
+  "mobileLeftColumn": 0,
+  "mobileRightColumn": 9,
+  "mobileTopRow": 0,
   "needsErrorInfo": false,
-  "originalBottomRow": 4,
-  "originalTopRow": 0,
+  "originalBottomRow": 6,
+  "originalTopRow": 2,
   "overflow": "NONE",
-  "parentColumnSpace": 19.1875,
-  "parentId": "s6kho6ttm9",
+  "parentColumnSpace": 4.21875,
+  "parentId": "cnvcabe01a",
   "parentRowSpace": 10,
   "renderMode": "CANVAS",
   "responsiveBehavior": "fill",
-  "rightColumn": 64,
-  "shouldScrollContents": true,
+  "rightColumn": 48,
   "shouldTruncate": false,
-  "text": "Sessão expira em: {{ JSutils.formatarTempo() }}",
+  "text": "{{\"HISTÓRICO DE ESTADIAS DO PET: \" + (appsmith.store.petSelecionado?.ani002_nome || \"\")}}",
   "textAlign": "CENTER",
-  "textColor": "{{ JSutils.tempoRestante < 60 ? '#E11D48' : '#64748B' }}",
+  "textColor": "#231F20",
   "topRow": 2,
   "truncateButtonColor": "{{appsmith.theme.colors.primaryColor}}",
   "type": "TEXT_WIDGET",
   "version": 1,
-  "widgetId": "ealz155ede",
-  "widgetName": "Text1"
+  "widgetId": "pgopcest01",
+  "widgetName": "PageOpcaoEstadias"
 }
