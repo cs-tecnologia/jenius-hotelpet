@@ -14,71 +14,47 @@
     "label": "Configure menu items"
   },
   "dynamicBindingPathList": [
-    {
-      "key": "menuColor"
-    },
-    {
-      "key": "menuItems.menuItem1.label"
-    }
+    {"key": "menuColor"},
+    {"key": "menuItems.menuItem1.label"},
+    {"key": "menuItems.menuItem2.label"},
+    {"key": "menuItems.menuItem3.label"},
+    {"key": "menuItems.menuItem4.label"},
+    {"key": "menuItems.menuItem5.label"},
+    {"key": "menuItems.menuItem6.label"},
+    {"key": "menuItems.menuItem7.label"},
+    {"key": "menuItems.menuItem8.label"},
+    {"key": "menuItems.menuItem9.label"},
+    {"key": "menuItems.menuItem10.label"},
+    {"key": "menuItems.menuItem11.label"},
+    {"key": "menuItems.menuItem12.label"},
+    {"key": "menuItems.menuItem13.label"},
+    {"key": "menuItems.menuItem14.label"},
+    {"key": "menuItems.menuItem15.label"},
+    {"key": "menuItems.menuItem16.label"},
+    {"key": "menuItems.menuItem17.label"},
+    {"key": "menuItems.menuItem18.label"},
+    {"key": "menuItems.menuItem19.label"}
   ],
   "dynamicTriggerPathList": [
-    {
-      "key": "menuItems.menuItem1.onClick"
-    },
-    {
-      "key": "menuItems.menuItem2.onClick"
-    },
-    {
-      "key": "menuItems.menuItem3.onClick"
-    },
-    {
-      "key": "menuItems.menuItem4.onClick"
-    },
-    {
-      "key": "menuItems.menuItem5.onClick"
-    },
-    {
-      "key": "menuItems.menuItem6.onClick"
-    },
-    {
-      "key": "menuItems.menuItem7.onClick"
-    },
-    {
-      "key": "menuItems.menuItem8.onClick"
-    },
-    {
-      "key": "menuItems.menuItem9.onClick"
-    },
-    {
-      "key": "menuItems.menuItem10.onClick"
-    },
-    {
-      "key": "menuItems.menuItem11.onClick"
-    },
-    {
-      "key": "menuItems.menuItem12.onClick"
-    },
-    {
-      "key": "menuItems.menuItem13.onClick"
-    },
-    {
-      "key": "menuItems.menuItem14.onClick"
-    },
-    {
-      "key": "menuItems.menuItem15.onClick"
-    },
-    {
-      "key": "menuItems.menuItem16.onClick"
-    },
-    {
-      "key": "menuItems.menuItem17.onClick"
-    },
-    {
-      "key": "menuItems.menuItem18.onClick"
-    },
-    {
-      "key": "menuItems.menuItem19.onClick"
-    }
+    {"key": "menuItems.menuItem1.onClick"},
+    {"key": "menuItems.menuItem2.onClick"},
+    {"key": "menuItems.menuItem3.onClick"},
+    {"key": "menuItems.menuItem4.onClick"},
+    {"key": "menuItems.menuItem5.onClick"},
+    {"key": "menuItems.menuItem6.onClick"},
+    {"key": "menuItems.menuItem7.onClick"},
+    {"key": "menuItems.menuItem8.onClick"},
+    {"key": "menuItems.menuItem9.onClick"},
+    {"key": "menuItems.menuItem10.onClick"},
+    {"key": "menuItems.menuItem11.onClick"},
+    {"key": "menuItems.menuItem12.onClick"},
+    {"key": "menuItems.menuItem13.onClick"},
+    {"key": "menuItems.menuItem14.onClick"},
+    {"key": "menuItems.menuItem15.onClick"},
+    {"key": "menuItems.menuItem16.onClick"},
+    {"key": "menuItems.menuItem17.onClick"},
+    {"key": "menuItems.menuItem18.onClick"},
+    {"key": "menuItems.menuItem19.onClick"}
   ],
   "iconAlign": "left",
   "iconName": "cog",
@@ -96,7 +72,7 @@
       "index": 0,
       "isDisabled": false,
       "isVisible": true,
-      "label": "{{\"001 - Alimento\".substring(6) }}",
+      "label": "{{'001 - Alimento'.substring(6)}}",
       "onClick": "{{navigateTo('001 - Alimento', {}, 'SAME_WINDOW');}}",
       "widgetId": ""
     },
@@ -105,7 +81,7 @@
       "index": 9,
       "isDisabled": false,
       "isVisible": true,
-      "label": "010 - Imunizante Vias",
+      "label": "{{'010 - Imunizante Vias'.substring(6)}}",
       "onClick": "{{navigateTo('010 - Imunizante Vias', {}, 'SAME_WINDOW');}}",
       "widgetId": ""
     },
@@ -114,7 +90,7 @@
       "index": 10,
       "isDisabled": false,
       "isVisible": true,
-      "label": "011 - Imunizante",
+      "label": "{{'011 - Imunizante'.substring(6)}}",
       "onClick": "{{navigateTo('011 - Imunizante', {}, 'SAME_WINDOW');}}",
       "widgetId": ""
     },
@@ -123,7 +99,7 @@
       "index": 11,
       "isDisabled": false,
       "isVisible": true,
-      "label": "012 - Pelagem",
+      "label": "{{'012 - Pelagem'.substring(6)}}",
       "onClick": "{{navigateTo('012 - Pelagem', {}, 'SAME_WINDOW');}}",
       "widgetId": ""
     },
@@ -132,7 +108,7 @@
       "index": 12,
       "isDisabled": false,
       "isVisible": true,
-      "label": "013 - Porte",
+      "label": "{{'013 - Porte'.substring(6)}}",
       "onClick": "{{navigateTo('013 - Porte', {}, 'SAME_WINDOW');}}",
       "widgetId": ""
     },
@@ -141,7 +117,7 @@
       "index": 13,
       "isDisabled": false,
       "isVisible": true,
-      "label": "014 - Raça",
+      "label": "{{'014 - Raça'.substring(6)}}",
       "onClick": "{{navigateTo('014 - Raça', {}, 'SAME_WINDOW');}}",
       "widgetId": ""
     },
@@ -150,7 +126,7 @@
       "index": 14,
       "isDisabled": false,
       "isVisible": true,
-      "label": "015 - Produtos e Serviços",
+      "label": "{{'015 - Produtos e Serviços'.substring(6)}}",
       "onClick": "{{navigateTo('015 - Produtos e Serviços', {}, 'SAME_WINDOW');}}",
       "widgetId": ""
     },
@@ -159,7 +135,7 @@
       "index": 15,
       "isDisabled": false,
       "isVisible": true,
-      "label": "016 - Acomodações Categoria",
+      "label": "{{'016 - Acomodações Categoria'.substring(6)}}",
       "onClick": "{{navigateTo('016 - Acomodações Categoria', {}, 'SAME_WINDOW');}}",
       "widgetId": ""
     },
@@ -168,7 +144,7 @@
       "index": 16,
       "isDisabled": false,
       "isVisible": true,
-      "label": "017 - Acomodações",
+      "label": "{{'017 - Acomodações'.substring(6)}}",
       "onClick": "{{navigateTo('017 - Acomodações', {}, 'SAME_WINDOW');}}",
       "widgetId": ""
     },
@@ -177,7 +153,7 @@
       "index": 17,
       "isDisabled": false,
       "isVisible": true,
-      "label": "018 - Temperamento",
+      "label": "{{'018 - Temperamento'.substring(6)}}",
       "onClick": "{{navigateTo('018 - Temperamento', {}, 'SAME_WINDOW');}}",
       "widgetId": ""
     },
@@ -186,7 +162,7 @@
       "index": 18,
       "isDisabled": false,
       "isVisible": true,
-      "label": "021 - Particularidades",
+      "label": "{{'021 - Particularidades'.substring(6)}}",
       "onClick": "{{navigateTo('021 - Particularidades', {}, 'SAME_WINDOW');}}",
       "widgetId": ""
     },
@@ -195,7 +171,7 @@
       "index": 1,
       "isDisabled": false,
       "isVisible": true,
-      "label": "002 - Espécie PET",
+      "label": "{{'002 - Espécie PET'.substring(6)}}",
       "onClick": "{{navigateTo('002 - Espécie PET', {}, 'SAME_WINDOW');}}",
       "widgetId": ""
     },
@@ -204,7 +180,7 @@
       "index": 2,
       "isDisabled": false,
       "isVisible": true,
-      "label": "003 - Aspecto PET",
+      "label": "{{'003 - Aspecto PET'.substring(6)}}",
       "onClick": "{{navigateTo('003 - Aspecto PET', {}, 'SAME_WINDOW');}}",
       "widgetId": ""
     },
@@ -213,7 +189,7 @@
       "index": 3,
       "isDisabled": false,
       "isVisible": true,
-      "label": "004 - Centro de Custo",
+      "label": "{{'004 - Centro de Custo'.substring(6)}}",
       "onClick": "{{navigateTo('004 - Centro de Custo', {}, 'SAME_WINDOW');}}",
       "widgetId": ""
     },
@@ -222,7 +198,7 @@
       "index": 4,
       "isDisabled": false,
       "isVisible": true,
-      "label": "005 - Clinica",
+      "label": "{{'005 - Clinica'.substring(6)}}",
       "onClick": "{{navigateTo('005 - Clinica', {}, 'SAME_WINDOW');}}",
       "widgetId": ""
     },
@@ -231,7 +207,7 @@
       "index": 5,
       "isDisabled": false,
       "isVisible": true,
-      "label": "006 - Marketing Captação",
+      "label": "{{'006 - Marketing Captação'.substring(6)}}",
       "onClick": "{{navigateTo('006 - Marketing Captação', {}, 'SAME_WINDOW');}}",
       "widgetId": ""
     },
@@ -240,7 +216,7 @@
       "index": 6,
       "isDisabled": false,
       "isVisible": true,
-      "label": "007 - Cor",
+      "label": "{{'007 - Cor'.substring(6)}}",
       "onClick": "{{navigateTo('007 - Cor', {}, 'SAME_WINDOW');}}",
       "widgetId": ""
     },
@@ -249,7 +225,7 @@
       "index": 7,
       "isDisabled": false,
       "isVisible": true,
-      "label": "008 - Forma de Pagamento",
+      "label": "{{'008 - Forma de Pagamento'.substring(6)}}",
       "onClick": "{{navigateTo('008 - Forma de Pagamento', {}, 'SAME_WINDOW');}}",
       "widgetId": ""
     },
@@ -258,7 +234,7 @@
       "index": 8,
       "isDisabled": false,
       "isVisible": true,
-      "label": "009 - Imunizante Forma",
+      "label": "{{'009 - Imunizante Forma'.substring(6)}}",
       "onClick": "{{navigateTo('009 - Imunizante Forma', {}, 'SAME_WINDOW');}}",
       "widgetId": ""
     }

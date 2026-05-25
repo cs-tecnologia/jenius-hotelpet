@@ -14,17 +14,13 @@
     "label": "Configure menu items"
   },
   "dynamicBindingPathList": [
-    {
-      "key": "menuColor"
-    }
+    {"key": "menuColor"},
+    {"key": "menuItems.menuItem1.label"},
+    {"key": "menuItems.menuItem2.label"}
   ],
   "dynamicTriggerPathList": [
-    {
-      "key": "menuItems.menuItem1.onClick"
-    },
-    {
-      "key": "menuItems.menuItem2.onClick"
-    }
+    {"key": "menuItems.menuItem1.onClick"},
+    {"key": "menuItems.menuItem2.onClick"}
   ],
   "iconAlign": "left",
   "iconName": "briefcase",
@@ -42,7 +38,7 @@
       "index": 0,
       "isDisabled": false,
       "isVisible": true,
-      "label": "020 - Tutores",
+      "label": "{{'020 - Tutores'.substring(6)}}",
       "onClick": "{{navigateTo('020 - Tutores', {}, 'SAME_WINDOW');}}",
       "widgetId": ""
     },
@@ -51,7 +47,7 @@
       "index": 1,
       "isDisabled": false,
       "isVisible": true,
-      "label": "022 - Reservas",
+      "label": "{{'022 - Reservas'.substring(6)}}",
       "onClick": "{{navigateTo('022 - Reservas', {}, 'SAME_WINDOW');}}",
       "widgetId": ""
     }
