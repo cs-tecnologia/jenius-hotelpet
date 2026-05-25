@@ -1,8 +1,15 @@
 {
   "animateLoading": true,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 3,
-  "dynamicBindingPathList": [{"key": "truncateButtonColor"}, {"key": "borderRadius"}],
+  "bottomRow": 4,
+  "dynamicBindingPathList": [
+    {
+      "key": "truncateButtonColor"
+    },
+    {
+      "key": "borderRadius"
+    }
+  ],
   "dynamicHeight": "AUTO_HEIGHT",
   "dynamicTriggerPathList": [],
   "fontFamily": "Roboto",
@@ -15,13 +22,15 @@
   "maxDynamicHeight": 9000,
   "minDynamicHeight": 4,
   "needsErrorInfo": false,
+  "originalBottomRow": 3,
+  "originalTopRow": 0,
   "overflow": "NONE",
   "parentColumnSpace": 4.21875,
   "parentId": "cnvcheg01a",
   "parentRowSpace": 10,
   "renderMode": "CANVAS",
   "responsiveBehavior": "fill",
-  "rightColumn": 30,
+  "rightColumn": 64,
   "shouldTruncate": false,
   "text": "Próximas Chegadas (7 dias)",
   "textAlign": "LEFT",

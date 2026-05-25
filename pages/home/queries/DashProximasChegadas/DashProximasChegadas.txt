@@ -10,5 +10,5 @@ LEFT JOIN "{{JSutils.currentSchema()}}".hotacomo001 ac
     ON ac.acomo001_id = r.reserva001_acomo001_id
 WHERE r.reserva001_deleted <> true
 AND r.reserva001_checkin IS NULL
-AND r.reserva001_prevdatain BETWEEN CURRENT_DATE AND CURRENT_DATE + 7
+--AND r.reserva001_prevdatain BETWEEN CURRENT_DATE AND CURRENT_DATE + 7
 ORDER BY r.reserva001_prevdatain;
