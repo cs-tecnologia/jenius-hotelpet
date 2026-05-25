@@ -1,0 +1,20 @@
+SELECT
+    r.reserva001_id,
+    r.reserva001_prevdatain,
+    r.reserva001_checkin,
+    r.reserva001_horarioin,
+    r.reserva001_checkout,
+    r.reserva001_horarioout,
+    r.reserva001_prevdiashospedagem,
+    r.reserva001_situacao,
+    r.reserva001_pertences,
+    r.reserva001_medicamentos,
+    r.reserva001_obsgerais,
+    r.reserva001_acomo001_id,
+    a.acomo001_desc
+FROM "{{JSutils.currentSchema()}}".hotreserva001 r
+LEFT JOIN "{{JSutils.currentSchema()}}".hotacomo001 a
+    ON a.acomo001_id = r.reserva001_acomo001_id
+WHERE r.reserva001_deleted <> true
+AND r.reserva001_ani002_id = {{ appsmith.store.petID_Estadias }}
+ORDER BY COALESCE(r.reserva001_checkin, r.reserva001_prevdatain) DESC NULLS LAST;
