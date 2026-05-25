@@ -30,7 +30,7 @@
   "isVisible": true,
   "key": "menuges01key",
   "label": "Gestão",
-  "leftColumn": 11,
+  "leftColumn": 32,
   "menuColor": "{{appsmith.theme.colors.primaryColor}}",
   "menuItems": {
     "menuItem1": {
@@ -66,7 +66,7 @@
   "parentRowSpace": 10,
   "placement": "CENTER",
   "renderMode": "CANVAS",
-  "rightColumn": 22,
+  "rightColumn": 64,
   "sourceData": [],
   "topRow": 11,
   "type": "MENU_BUTTON_WIDGET",

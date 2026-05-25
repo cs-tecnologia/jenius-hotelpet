@@ -253,7 +253,7 @@
   "parentRowSpace": 10,
   "placement": "CENTER",
   "renderMode": "CANVAS",
-  "rightColumn": 10,
+  "rightColumn": 32,
   "sourceData": [],
   "topRow": 11,
   "type": "MENU_BUTTON_WIDGET",
