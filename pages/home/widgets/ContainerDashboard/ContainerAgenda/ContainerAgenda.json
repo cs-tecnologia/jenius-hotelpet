@@ -3,11 +3,11 @@
   "backgroundColor": "transparent",
   "borderColor": "transparent",
   "borderWidth": "0",
-  "bottomRow": 55,
+  "bottomRow": 28,
   "boxShadow": "NONE",
   "children": [
     {
-      "bottomRow": 390,
+      "bottomRow": 120,
       "canExtend": true,
       "containerStyle": "none",
       "detachFromLayout": true,
