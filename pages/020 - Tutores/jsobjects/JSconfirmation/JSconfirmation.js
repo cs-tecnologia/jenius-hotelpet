@@ -1,4 +1,4 @@
-export default {
+﻿export default {
 	modalconfig: {
 		action: "Delete",
 		message: "",
@@ -48,8 +48,7 @@ export default {
 				}
 
 				// Atualiza os dados da tabela e contadores
-				await SelectTutorCount.run(); 
-				await SelectTutor.run(); 
+				await Promise.all([SelectTutorCount.run(), SelectTutor.run()]); 
 				
 				// Limpa/Restaura os widgets
 				this.resetAllWidgets();

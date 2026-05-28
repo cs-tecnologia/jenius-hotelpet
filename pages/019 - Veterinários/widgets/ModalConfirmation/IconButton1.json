@@ -1,0 +1,38 @@
+{
+  "animateLoading": true,
+  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+  "bottomRow": 5,
+  "boxShadow": "none",
+  "buttonColor": "{{appsmith.theme.colors.primaryColor}}",
+  "buttonVariant": "TERTIARY",
+  "dynamicBindingPathList": [
+    {"key": "buttonColor"},
+    {"key": "borderRadius"}
+  ],
+  "dynamicTriggerPathList": [
+    {"key": "onClick"}
+  ],
+  "iconName": "cross",
+  "isDisabled": false,
+  "isLoading": false,
+  "isVisible": true,
+  "key": "esjyig9l8z",
+  "leftColumn": 55,
+  "minWidth": 50,
+  "mobileBottomRow": 5,
+  "mobileLeftColumn": 55,
+  "mobileRightColumn": 63,
+  "mobileTopRow": 1,
+  "needsErrorInfo": false,
+  "onClick": "{{ JSconfirmation.cancelarOperacao() }}",
+  "parentId": "vet19mdlcv1",
+  "renderMode": "CANVAS",
+  "responsiveBehavior": "hug",
+  "rightColumn": 63,
+  "tooltip": "Fechar",
+  "topRow": 1,
+  "type": "ICON_BUTTON_WIDGET",
+  "version": 1,
+  "widgetId": "vet19icbtn1",
+  "widgetName": "IconButton1"
+}

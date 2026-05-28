@@ -1,0 +1,2 @@
+SELECT count(vet001_id) FROM "{{JSutils.currentSchema()}}".hotvet001
+WHERE vet001_deleted <> true and vet001_nome ILIKE '%{{TableVeterinario.searchText}}%';

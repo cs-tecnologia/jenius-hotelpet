@@ -1,0 +1,53 @@
+{
+  "animateLoading": true,
+  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+  "bottomRow": 76,
+  "boxShadow": "none",
+  "buttonColor": "#ef4444",
+  "buttonVariant": "PRIMARY",
+  "disabledWhenInvalid": false,
+  "dynamicBindingPathList": [
+    {"key": "borderRadius"},
+    {"key": "isDisabled"}
+  ],
+  "dynamicPropertyPathList": [
+    {"key": "onClick"},
+    {"key": "isDisabled"}
+  ],
+  "dynamicTriggerPathList": [
+    {"key": "onClick"}
+  ],
+  "iconAlign": "left",
+  "iconName": "trash",
+  "isDefaultClickDisabled": true,
+  "isDisabled": "{{ \nappsmith.store.modalContexto?.acaoTipo === \"ADICIONAR\" || \n!TableVeterinario.selectedRow?.vet001_id ||  JSvalidateButton.temAlteracao()\n}}",
+  "isLoading": false,
+  "isVisible": true,
+  "key": "mfa917wnro",
+  "leftColumn": 45,
+  "minWidth": 120,
+  "mobileBottomRow": 9,
+  "mobileLeftColumn": 1,
+  "mobileRightColumn": 17,
+  "mobileTopRow": 5,
+  "needsErrorInfo": false,
+  "onClick": "{{\n  (() => {\n    JSutils.resetInactivityTimer();\n    const formData = TableVeterinario.selectedRow;\n    if (!formData.vet001_id) {\n      return showAlert(\"Selecione um registro na tabela para excluir.\", \"warning\");\n    }\n    return JSconfirmation.showModal({\n      action: \"Delete\",\n      message: \"Deseja realmente EXCLUIR o registro ?\",\n      icon: \"trash\",\n      color: \"red\",\n      row: formData\n    });\n  })()\n}}",
+  "originalBottomRow": 76,
+  "originalTopRow": 72,
+  "parentColumnSpace": 7.1826171875,
+  "parentId": "vet19edccv1",
+  "parentRowSpace": 10,
+  "placement": "CENTER",
+  "recaptchaType": "V3",
+  "renderMode": "CANVAS",
+  "resetFormOnClick": false,
+  "responsiveBehavior": "hug",
+  "rightColumn": 64,
+  "text": "DELETAR",
+  "tooltip": "CONFIRMA DELETAR",
+  "topRow": 72,
+  "type": "BUTTON_WIDGET",
+  "version": 1,
+  "widgetId": "vet19butdel",
+  "widgetName": "ButtonDeletar"
+}

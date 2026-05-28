@@ -1,0 +1,16 @@
+{
+  "gitSyncId": "6a0c3fabfb1761ef97e6774e_a1b2c3d4-e5f6-7890-abcd-ef1234567841",
+  "id": "019 - Veterinários_JSconfirmation",
+  "unpublishedCollection": {
+    "name": "JSconfirmation",
+    "pageId": "019 - Veterinários",
+    "pluginId": "js-plugin",
+    "pluginType": "JS",
+    "variables": [
+      {
+        "name": "modalconfig",
+        "value": "{\n  action: \"Delete\",\n  message: \"\",\n  row: {},\n  icon: \"plus\",\n  color: \"blue\"\n}"
+      }
+    ]
+  }
+}

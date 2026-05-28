@@ -1,0 +1,5 @@
+UPDATE "{{JSutils.currentSchema()}}".hotvet001 SET
+		"vet001_deleted" = TRUE,
+		"vet001_deleted_date" = now(),
+    "vet001_deleted_by" = {{ appsmith.user.id || 1 }}
+WHERE "vet001_id" = {{JSconfirmation.modalconfig.row.vet001_id}};

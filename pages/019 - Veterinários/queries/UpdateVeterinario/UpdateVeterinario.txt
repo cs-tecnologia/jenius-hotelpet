@@ -1,0 +1,17 @@
+UPDATE "{{JSutils.currentSchema()}}".hotvet001 SET
+  vet001_nome = '{{ JSconfirmation.modalconfig.row.vet001_nome.trim().toUpperCase() }}',
+  vet001_crmv = {{ JSconfirmation.modalconfig.row.vet001_crmv || 0 }},
+  vet001_endereco = '{{ JSconfirmation.modalconfig.row.vet001_endereco.trim().toUpperCase() }}',
+  vet001_bairro = '{{ JSconfirmation.modalconfig.row.vet001_bairro.trim().toUpperCase() }}',
+  vet001_numero = '{{ JSconfirmation.modalconfig.row.vet001_numero.trim().toUpperCase() }}',
+  vet001_complemento = '{{ JSconfirmation.modalconfig.row.vet001_complemento.trim().toUpperCase() }}',
+  vet001_cidade = '{{ JSconfirmation.modalconfig.row.vet001_cidade.trim().toUpperCase() }}',
+  vet001_email = '{{ JSconfirmation.modalconfig.row.vet001_email.trim().toLowerCase() }}',
+  vet001_telefone = '{{ JSconfirmation.modalconfig.row.vet001_telefone.trim().toUpperCase().replace(/\D/g, "") }}',
+  vet001_celular = '{{ JSconfirmation.modalconfig.row.vet001_celular.trim().toUpperCase().replace(/\D/g, "") }}',
+  vet001_uf = '{{ SelectUF.selectedOptionValue.trim().toUpperCase() }}',
+  vet001_cep = '{{ JSconfirmation.modalconfig.row.vet001_cep.trim().toUpperCase().replace(/\D/g, "") }}',
+  vet001_clinica = {{ JSconfirmation.modalconfig.row.vet001_clinica || 'NULL' }},
+  vet001_last_modification = now(),
+  vet001_modified_by = {{ appsmith.user.id || 1 }}
+WHERE vet001_id = {{ JSconfirmation.modalconfig.row.vet001_id }};

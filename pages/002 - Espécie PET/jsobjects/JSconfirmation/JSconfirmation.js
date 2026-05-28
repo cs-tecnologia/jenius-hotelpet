@@ -1,4 +1,4 @@
-export default {
+﻿export default {
 	modalconfig: {
 		action: "Delete", // Pode ser "Insert", "Update", "Delete", etc.
 		message: "",
@@ -37,8 +37,7 @@ async executeAction() {
 
                 // 3. Atualiza os dados da tabela
                 // O await aqui é crucial para garantir que a tabela tenha os dados novos
-                await SelectEspecieCount.run(); 
-                await SelectEspecie.run(); 
+                await Promise.all([SelectEspecieCount.run(), SelectEspecie.run()]); 
                 
                 // 4. Resetamos os widgets. 
                 // Agora, como o acaoTipo é EDITAR, o Default Value do Input 
