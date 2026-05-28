@@ -116,6 +116,10 @@
     {
       "id": "022 - Reservas",
       "isDefault": false
+    },
+    {
+      "id": "019 - Veterinários",
+      "isDefault": false
     }
   ],
   "unpublishedAppLayout": {
