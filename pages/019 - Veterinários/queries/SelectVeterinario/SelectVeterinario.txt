@@ -1,0 +1,13 @@
+SELECT * FROM "{{JSutils.currentSchema()}}".hotvet001
+WHERE vet001_deleted <> true and vet001_nome ILIKE '%{{TableVeterinario.searchText}}%'
+ORDER BY
+{{
+  ({
+    vet001_nome: 'vet001_nome',
+    vet001_id: 'vet001_id',
+    vet001_crmv: 'vet001_crmv'
+  }[TableVeterinario.sortOrder.column]) || 'vet001_nome'
+}}
+{{ TableVeterinario.sortOrder.order === 'DESC' ? 'DESC' : 'ASC' }}
+LIMIT {{TableVeterinario.pageSize}}
+OFFSET {{(TableVeterinario.pageNo - 1) * TableVeterinario.pageSize}};

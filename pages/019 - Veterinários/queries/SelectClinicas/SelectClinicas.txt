@@ -1,0 +1,4 @@
+SELECT clinica001_id, clinica001_nome
+FROM "{{JSutils.currentSchema()}}".hotclinica001
+WHERE clinica001_deleted <> true
+ORDER BY clinica001_nome ASC;
