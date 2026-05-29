@@ -4,19 +4,23 @@
   "borderColor": "#E0DEDE",
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
   "borderWidth": "1",
-  "bottomRow": 55,
+  "bottomRow": 61,
   "boxShadow": "{{appsmith.theme.boxShadow.appBoxShadow}}",
   "children": [
     {
       "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-      "bottomRow": 600,
+      "bottomRow": 610,
       "boxShadow": "{{appsmith.theme.boxShadow.appBoxShadow}}",
       "canExtend": false,
       "containerStyle": "none",
       "detachFromLayout": true,
       "dynamicBindingPathList": [
-        {"key": "borderRadius"},
-        {"key": "boxShadow"}
+        {
+          "key": "borderRadius"
+        },
+        {
+          "key": "boxShadow"
+        }
       ],
       "dynamicHeight": "AUTO_HEIGHT",
       "flexLayers": [],
@@ -48,8 +52,12 @@
   ],
   "containerStyle": "card",
   "dynamicBindingPathList": [
-    {"key": "borderRadius"},
-    {"key": "boxShadow"}
+    {
+      "key": "borderRadius"
+    },
+    {
+      "key": "boxShadow"
+    }
   ],
   "dynamicHeight": "AUTO_HEIGHT",
   "flexVerticalAlignment": "stretch",
@@ -66,7 +74,7 @@
   "mobileRightColumn": 63,
   "mobileTopRow": 0,
   "needsErrorInfo": false,
-  "originalBottomRow": 55,
+  "originalBottomRow": 61,
   "originalTopRow": 0,
   "parentColumnSpace": 19.1875,
   "parentId": "vet19frmcv1",

@@ -2,18 +2,28 @@
   "accentColor": "{{appsmith.theme.colors.primaryColor}}",
   "animateLoading": true,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 44,
+  "bottomRow": 32,
   "boxShadow": "none",
   "defaultOptionValue": "{{ ((options, serverSideFiltering) => (  \n  (ApiViaCep.data && InputCep.isDirty) \n    ? ApiViaCep.data.uf.trim().toUpperCase()  \n    : (appsmith.store.modalContexto?.acaoTipo === \"ADICIONAR\" ? \"\" : TableVeterinario.selectedRow.vet001_uf || \"\")\n))(SelectUF.options, SelectUF.serverSideFiltering) }}",
   "dynamicBindingPathList": [
-    {"key": "accentColor"},
-    {"key": "borderRadius"},
-    {"key": "sourceData"},
-    {"key": "defaultOptionValue"}
+    {
+      "key": "accentColor"
+    },
+    {
+      "key": "borderRadius"
+    },
+    {
+      "key": "sourceData"
+    },
+    {
+      "key": "defaultOptionValue"
+    }
   ],
   "dynamicHeight": "FIXED",
   "dynamicPropertyPathList": [
-    {"key": "sourceData"}
+    {
+      "key": "sourceData"
+    }
   ],
   "dynamicTriggerPathList": [],
   "isDisabled": false,
@@ -49,7 +59,7 @@
   "rightColumn": 64,
   "serverSideFiltering": false,
   "sourceData": "{{SelectUf.data}}",
-  "topRow": 37,
+  "topRow": 25,
   "type": "SELECT_WIDGET",
   "version": 1,
   "widgetId": "vet19seluf1",
