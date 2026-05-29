@@ -5,7 +5,7 @@ podeSalvar: () => {
     const row = TableVeterinario.selectedRow || {};
 
     const nomeAtual    = (InputNome.text || "").trim();
-    const crmvAtual    = (InputCRMV.text || "").trim();
+    const crmvAtual    = (InputCRMV.text || "").toString().trim();
     const endAtual     = (InputEndereco.text || "").trim();
     const bairroAtual  = (InputBairro.text || "").trim();
     const numeroAtual  = (InputNumero.text || "").trim();
@@ -96,7 +96,7 @@ podeCancelar: () => {
     const contexto = appsmith.store.modalContexto?.acaoTipo;
 
     const nomeAtual    = (InputNome.text || "").trim().toUpperCase();
-    const crmvAtual    = (InputCRMV.text || "").trim();
+    const crmvAtual    = (InputCRMV.text || "").toString().trim();
     const endAtual     = (InputEndereco.text || "").trim().toUpperCase();
     const bairroAtual  = (InputBairro.text || "").trim().toUpperCase();
     const numeroAtual  = (InputNumero.text || "").trim().toUpperCase();

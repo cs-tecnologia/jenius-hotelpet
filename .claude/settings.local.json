@@ -8,7 +8,9 @@
       "Bash(git ls-tree *)",
       "Bash(git checkout *)",
       "Bash(git commit *)",
-      "Bash(git *)"
+      "Bash(git *)",
+      "Bash(xxd -l 20 \"C:\\\\Users\\\\Claudio\\\\iCloudDrive\\\\My Docs\\\\CS Tecnologia\\\\#CS Projetos\\\\HotelPet\\\\appsmith\\\\jenius-hotelpet\\\\pages\\\\005 - Clinica\\\\jsobjects\\\\JSconfirmation\\\\JSconfirmation.js\")",
+      "Bash(xxd -l 20 \"C:\\\\Users\\\\Claudio\\\\iCloudDrive\\\\My Docs\\\\CS Tecnologia\\\\#CS Projetos\\\\HotelPet\\\\appsmith\\\\jenius-hotelpet\\\\pages\\\\019 - Veterinários\\\\jsobjects\\\\JSconfirmation\\\\JSconfirmation.js\")"
     ]
   }
 }
