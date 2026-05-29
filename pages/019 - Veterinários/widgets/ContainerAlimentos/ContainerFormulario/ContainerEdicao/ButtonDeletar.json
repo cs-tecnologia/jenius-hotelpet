@@ -1,21 +1,31 @@
 {
   "animateLoading": true,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 76,
+  "bottomRow": 59,
   "boxShadow": "none",
   "buttonColor": "#ef4444",
   "buttonVariant": "PRIMARY",
   "disabledWhenInvalid": false,
   "dynamicBindingPathList": [
-    {"key": "borderRadius"},
-    {"key": "isDisabled"}
+    {
+      "key": "borderRadius"
+    },
+    {
+      "key": "isDisabled"
+    }
   ],
   "dynamicPropertyPathList": [
-    {"key": "onClick"},
-    {"key": "isDisabled"}
+    {
+      "key": "onClick"
+    },
+    {
+      "key": "isDisabled"
+    }
   ],
   "dynamicTriggerPathList": [
-    {"key": "onClick"}
+    {
+      "key": "onClick"
+    }
   ],
   "iconAlign": "left",
   "iconName": "trash",
@@ -24,7 +34,7 @@
   "isLoading": false,
   "isVisible": true,
   "key": "mfa917wnro",
-  "leftColumn": 45,
+  "leftColumn": 44,
   "minWidth": 120,
   "mobileBottomRow": 9,
   "mobileLeftColumn": 1,
@@ -42,10 +52,10 @@
   "renderMode": "CANVAS",
   "resetFormOnClick": false,
   "responsiveBehavior": "hug",
-  "rightColumn": 64,
+  "rightColumn": 63,
   "text": "DELETAR",
   "tooltip": "CONFIRMA DELETAR",
-  "topRow": 72,
+  "topRow": 55,
   "type": "BUTTON_WIDGET",
   "version": 1,
   "widgetId": "vet19butdel",

@@ -2,18 +2,28 @@
   "accentColor": "{{appsmith.theme.colors.primaryColor}}",
   "animateLoading": true,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 68,
+  "bottomRow": 54,
   "boxShadow": "none",
   "defaultOptionValue": "{{ appsmith.store.modalContexto?.acaoTipo === \"ADICIONAR\" ? \"\" : TableVeterinario.selectedRow.vet001_clinica || \"\" }}",
   "dynamicBindingPathList": [
-    {"key": "accentColor"},
-    {"key": "borderRadius"},
-    {"key": "sourceData"},
-    {"key": "defaultOptionValue"}
+    {
+      "key": "accentColor"
+    },
+    {
+      "key": "borderRadius"
+    },
+    {
+      "key": "sourceData"
+    },
+    {
+      "key": "defaultOptionValue"
+    }
   ],
   "dynamicHeight": "FIXED",
   "dynamicPropertyPathList": [
-    {"key": "sourceData"}
+    {
+      "key": "sourceData"
+    }
   ],
   "dynamicTriggerPathList": [],
   "isDisabled": false,
@@ -46,10 +56,10 @@
   "placeholderText": "Selecione a Clínica",
   "renderMode": "CANVAS",
   "responsiveBehavior": "fill",
-  "rightColumn": 64,
+  "rightColumn": 54,
   "serverSideFiltering": false,
   "sourceData": "{{SelectClinicas.data}}",
-  "topRow": 61,
+  "topRow": 47,
   "type": "SELECT_WIDGET",
   "version": 1,
   "widgetId": "vet19selcli",

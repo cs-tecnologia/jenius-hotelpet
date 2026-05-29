@@ -3,13 +3,19 @@
   "animateLoading": true,
   "autoFocus": false,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 36,
+  "bottomRow": 25,
   "boxShadow": "none",
   "defaultText": "{{ \n  (ApiViaCep.data && InputCep.isDirty) \n    ? ApiViaCep.data.bairro.trim().toUpperCase()  \n    : (appsmith.store.modalContexto?.acaoTipo === \"ADICIONAR\" ? \"\" : TableVeterinario.selectedRow.vet001_bairro || \"\")\n}}",
   "dynamicBindingPathList": [
-    {"key": "accentColor"},
-    {"key": "borderRadius"},
-    {"key": "defaultText"}
+    {
+      "key": "accentColor"
+    },
+    {
+      "key": "borderRadius"
+    },
+    {
+      "key": "defaultText"
+    }
   ],
   "dynamicHeight": "FIXED",
   "dynamicTriggerPathList": [],
@@ -26,7 +32,7 @@
   "labelStyle": "",
   "labelTextSize": "0.875rem",
   "labelWidth": 5,
-  "leftColumn": 36,
+  "leftColumn": 35,
   "maxDynamicHeight": 9000,
   "minDynamicHeight": 4,
   "minWidth": 450,
@@ -46,7 +52,7 @@
   "rightColumn": 64,
   "showStepArrows": false,
   "tooltip": "",
-  "topRow": 29,
+  "topRow": 18,
   "type": "INPUT_WIDGET_V2",
   "version": 2,
   "widgetId": "vet19inpbai",
