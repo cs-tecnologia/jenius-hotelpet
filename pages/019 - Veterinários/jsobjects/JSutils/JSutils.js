@@ -1,4 +1,4 @@
-﻿export default {
+export default {
 	timeoutId: null,
 	intervalId: null,
 	tempoRestante: 3600, // 15 minutos em segundos
