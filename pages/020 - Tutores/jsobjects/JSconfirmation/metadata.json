@@ -6,15 +6,6 @@
     "pageId": "020 - Tutores",
     "pluginId": "js-plugin",
     "pluginType": "JS",
-    "variables": [
-      {
-        "name": "modalconfig",
-        "value": "{\n  action: \"Delete\",\n  message: \"\",\n  row: {},\n  icon: \"plus\",\n  color: \"blue\"\n}"
-      },
-      {
-        "name": "widgetsTutor",
-        "value": "[\"InputNome\", \"InputID\", \"InputRG\", \"InputCPF\", \"InputCEP\", \"InputEndereco\", \"InputNumero\", \"InputComplemento\", \"InputBairro\", \"InputCidade\", \"SelectUF\", \"InputEmail\", \"PhoneInput1Telefone\", \"PhoneInput1Celular\", \"InputObservacao\"]"
-      }
-    ]
+    "variables": []
   }
 }
