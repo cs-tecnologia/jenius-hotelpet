@@ -1,0 +1,41 @@
+SELECT
+    p.ani002_id,
+    p.ani002_nome,
+    p.ani002_imagem,
+    p.ani002_datanasc,
+    TO_CHAR(p.ani002_datanasc, 'DD/MM/YYYY') AS nascimento_fmt,
+    p.ani002_data_obito,
+    TO_CHAR(p.ani002_data_obito, 'DD/MM/YYYY') AS obito_fmt,
+    p.ani002_microchip,
+    p.ani002_registro,
+    p.ani002_registro_pedigree,
+    p.ani002_nome_registro,
+    CASE WHEN p.ani002_castrado = true THEN 'Sim' ELSE 'Não' END AS castrado_desc,
+    p.ani002_peso::text AS peso_fmt,
+    p.ani002_canil,
+    p.ani002_observacao,
+    p.ani002_tutor,
+    p.ani002_sexo,
+    CASE WHEN p.ani002_sexo = 'M' THEN 'Macho' WHEN p.ani002_sexo = 'F' THEN 'Fêmea' ELSE '' END AS sexo_desc,
+    CASE WHEN p.ani002_convivio::integer = 1 THEN 'Grupo' WHEN p.ani002_convivio::integer = 2 THEN 'Isolado' ELSE p.ani002_convivio END AS convivio_desc,
+    COALESCE(t.prop001_nome, '') AS tutor_nome,
+    COALESCE(e.ani001_animal, '') AS especie_nome,
+    COALESCE(r.raca001_desc, '') AS raca_nome,
+    COALESCE(po.porte001_desc, '') AS porte_nome,
+    COALESCE(pel.pel001_desc, '') AS pelagem_nome,
+    COALESCE(cor.cor001_desc, '') AS cor_nome,
+    COALESCE(tmp.temp001_desc, '') AS temperamento_nome,
+    COALESCE(v.vet001_nome, '') AS veterinario_nome,
+    COALESCE(c.clinica001_nome, '') AS clinica_nome
+FROM "{{JSutils.currentSchema()}}"."hotani002" p
+LEFT JOIN "{{JSutils.currentSchema()}}".hotprop001 t ON t.prop001_id = p.ani002_tutor
+LEFT JOIN "{{JSutils.currentSchema()}}".hotani001 e ON e.ani001_id::text = p.ani002_tipo
+LEFT JOIN "{{JSutils.currentSchema()}}".hotraca001 r ON r.raca001_id::text = p.ani002_raca
+LEFT JOIN "{{JSutils.currentSchema()}}".hotporte001 po ON po.porte001_id::text = p.ani002_porte
+LEFT JOIN "{{JSutils.currentSchema()}}".hotpel001 pel ON pel.pel001_id::text = p.ani002_pelagem
+LEFT JOIN "{{JSutils.currentSchema()}}".hotcor001 cor ON cor.cor001_id::text = p.ani002_cor
+LEFT JOIN "{{JSutils.currentSchema()}}".hottemp001 tmp ON tmp.temp001_id::text = p.ani002_temp
+LEFT JOIN "{{JSutils.currentSchema()}}".hotvet001 v ON v.vet001_id::text = p.ani002_vet
+LEFT JOIN "{{JSutils.currentSchema()}}".hotclinica001 c ON c.clinica001_id::text = p.ani002_clinica
+WHERE p.ani002_deleted <> true
+ORDER BY t.prop001_nome ASC, p.ani002_nome ASC;

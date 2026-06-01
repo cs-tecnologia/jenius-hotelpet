@@ -1,0 +1,28 @@
+{
+  "gitSyncId": "6a0c3fabfb1761ef97e6774e_00000001-0000-0023-0001-000000000001",
+  "id": "023 - Pets_JSutils",
+  "unpublishedCollection": {
+    "name": "JSutils",
+    "pageId": "023 - Pets",
+    "pluginId": "js-plugin",
+    "pluginType": "JS",
+    "variables": [
+      {
+        "name": "timeoutId",
+        "value": "null"
+      },
+      {
+        "name": "intervalId",
+        "value": "null"
+      },
+      {
+        "name": "tempoRestante",
+        "value": "3600"
+      },
+      {
+        "name": "tempoPadrao",
+        "value": "3600"
+      }
+    ]
+  }
+}
