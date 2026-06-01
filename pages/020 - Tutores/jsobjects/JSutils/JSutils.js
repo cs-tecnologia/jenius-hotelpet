@@ -12,6 +12,9 @@ export default {
 		if (this.intervalId) clearInterval(this.intervalId);
 		this.tempoRestante = this.tempoPadrao;
 		this.resetInactivityTimer();
+
+		// Carrega dados iniciais da tabela de tutores
+		await Promise.all([SelectTutorCount.run(), SelectTutor.run()]);
 	},
 
 	// 2. Controle de Inatividade
