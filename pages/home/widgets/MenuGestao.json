@@ -34,6 +34,9 @@
     },
     {
       "key": "menuItems.menuItemd941zjcovm.label"
+    },
+    {
+      "key": "menuItems.menuItem7umjza8m0l.label"
     }
   ],
   "dynamicTriggerPathList": [
@@ -54,6 +57,9 @@
     },
     {
       "key": "menuItems.menuItemd941zjcovm.onClick"
+    },
+    {
+      "key": "menuItems.menuItem7umjza8m0l.onClick"
     }
   ],
   "iconAlign": "left",
@@ -93,6 +99,15 @@
       "label": "{{'015 - Produtos e Serviços'.substring(6)}}",
       "onClick": "{{navigateTo('015 - Produtos e Serviços', {}, 'SAME_WINDOW');}}",
       "widgetId": "sbhzgx8xv4"
+    },
+    "menuItem7umjza8m0l": {
+      "id": "menuItem7umjza8m0l",
+      "index": 6,
+      "isDisabled": false,
+      "isVisible": true,
+      "label": "{{'019 - Veterinários'.substring(6)}}",
+      "onClick": "{{navigateTo('019 - Veterinários', {}, 'SAME_WINDOW');}}",
+      "widgetId": "cek6wzikbh"
     },
     "menuItemd941zjcovm": {
       "id": "menuItemd941zjcovm",
