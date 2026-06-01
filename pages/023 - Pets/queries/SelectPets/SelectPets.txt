@@ -1,0 +1,31 @@
+SELECT
+    a.*,
+    p.prop001_nome  AS tutor_nome,
+    p.prop001_id    AS tutor_id,
+    esp.ani001_animal AS especie_desc,
+    r.raca001_desc  AS raca_desc
+FROM "{{JSutils.currentSchema()}}".hotani002 a
+LEFT JOIN "{{JSutils.currentSchema()}}".hotprop001 p
+    ON p.prop001_id = a.ani002_tutor AND p.prop001_deleted <> true
+LEFT JOIN "{{JSutils.currentSchema()}}".hotani001 esp
+    ON esp.ani001_id = a.ani002_tipo
+LEFT JOIN "{{JSutils.currentSchema()}}".hotraca001 r
+    ON r.raca001_id = a.ani002_raca
+WHERE a.ani002_deleted <> true
+AND (
+    a.ani002_nome ILIKE '%{{TablePets.searchText}}%'
+    OR p.prop001_nome ILIKE '%{{TablePets.searchText}}%'
+    OR esp.ani001_animal ILIKE '%{{TablePets.searchText}}%'
+)
+ORDER BY
+{{
+  ({
+    ani002_nome:  'a.ani002_nome',
+    tutor_nome:   'p.prop001_nome',
+    especie_desc: 'esp.ani001_animal',
+    raca_desc:    'r.raca001_desc'
+  }[TablePets.sortOrder.column]) || 'a.ani002_nome'
+}}
+{{ TablePets.sortOrder.order === 'DESC' ? 'DESC' : 'ASC' }}
+LIMIT {{TablePets.pageSize}}
+OFFSET {{(TablePets.pageNo - 1) * TablePets.pageSize}};
