@@ -10,7 +10,14 @@
       "Bash(git commit *)",
       "Bash(git *)",
       "Bash(xxd -l 20 \"C:\\\\Users\\\\Claudio\\\\iCloudDrive\\\\My Docs\\\\CS Tecnologia\\\\#CS Projetos\\\\HotelPet\\\\appsmith\\\\jenius-hotelpet\\\\pages\\\\005 - Clinica\\\\jsobjects\\\\JSconfirmation\\\\JSconfirmation.js\")",
-      "Bash(xxd -l 20 \"C:\\\\Users\\\\Claudio\\\\iCloudDrive\\\\My Docs\\\\CS Tecnologia\\\\#CS Projetos\\\\HotelPet\\\\appsmith\\\\jenius-hotelpet\\\\pages\\\\019 - Veterinários\\\\jsobjects\\\\JSconfirmation\\\\JSconfirmation.js\")"
+      "Bash(xxd -l 20 \"C:\\\\Users\\\\Claudio\\\\iCloudDrive\\\\My Docs\\\\CS Tecnologia\\\\#CS Projetos\\\\HotelPet\\\\appsmith\\\\jenius-hotelpet\\\\pages\\\\019 - Veterinários\\\\jsobjects\\\\JSconfirmation\\\\JSconfirmation.js\")",
+      "PowerShell(git config *)",
+      "mcp__chrome-devtools__navigate_page",
+      "mcp__chrome-devtools__take_screenshot",
+      "mcp__chrome-devtools__take_snapshot",
+      "mcp__chrome-devtools__click",
+      "mcp__chrome-devtools__wait_for",
+      "mcp__chrome-devtools__type_text"
     ]
   }
 }
