@@ -73,7 +73,7 @@
   "customIsLoading": false,
   "customIsLoadingValue": "",
   "defaultPageSize": 0,
-  "defaultSelectedRowIndex": "{{SelectTutorCount.data[0].count}}",
+  "defaultSelectedRowIndex": 0,
   "defaultSelectedRowIndices": [
     0
   ],
@@ -875,7 +875,7 @@
       "allowSameOptionsInNewRow": true,
       "cellBackground": "",
       "columnType": "text",
-      "computedValue": "{{(() => { const tableData = TableTutor.processedTableData || []; return tableData.length > 0 ? tableData.map((currentRow, currentIndex) => (currentRow[\"prop001_nome\"])) : currentRow[\"prop001_nome\"] })()}}",
+      "computedValue": "{{(() => { const tableData = TableTutor.processedTableData || []; return tableData.length > 0 ? tableData.map((currentRow, currentIndex) => (currentRow[\"prop001_nome\"])) : prop001_nome })()}}",
       "currencyCode": "USD",
       "decimals": 0,
       "enableFilter": true,
