@@ -74,6 +74,7 @@
   "menuColor": "{{appsmith.theme.colors.primaryColor}}",
   "menuItems": {
     "menuItem1": {
+      "iconName": "people",
       "id": "menuItem1",
       "index": 0,
       "isDisabled": false,
@@ -83,17 +84,22 @@
       "widgetId": ""
     },
     "menuItem2": {
+      "backgroundColor": "",
+      "iconColor": "#1d4ed8",
+      "iconName": "calendar",
       "id": "menuItem2",
-      "index": 2,
+      "index": 6,
       "isDisabled": false,
       "isVisible": true,
       "label": "{{'022 - Reservas'.substring(6)}}",
       "onClick": "{{navigateTo('022 - Reservas', {}, 'SAME_WINDOW');}}",
+      "textColor": "#1d4ed8",
       "widgetId": ""
     },
     "menuItem4667zgh1av": {
+      "iconName": "shopping-cart",
       "id": "menuItem4667zgh1av",
-      "index": 3,
+      "index": 4,
       "isDisabled": false,
       "isVisible": true,
       "label": "{{'015 - Produtos e Serviços'.substring(6)}}",
@@ -101,8 +107,9 @@
       "widgetId": "sbhzgx8xv4"
     },
     "menuItem7umjza8m0l": {
+      "iconName": "diagnosis",
       "id": "menuItem7umjza8m0l",
-      "index": 6,
+      "index": 2,
       "isDisabled": false,
       "isVisible": true,
       "label": "{{'019 - Veterinários'.substring(6)}}",
@@ -110,6 +117,7 @@
       "widgetId": "cek6wzikbh"
     },
     "menuItemd941zjcovm": {
+      "iconName": "virus",
       "id": "menuItemd941zjcovm",
       "index": 5,
       "isDisabled": false,
@@ -119,8 +127,9 @@
       "widgetId": "x2f3lpvfj4"
     },
     "menuItemgq165rgw1q": {
+      "iconName": "briefcase",
       "id": "menuItemgq165rgw1q",
-      "index": 4,
+      "index": 3,
       "isDisabled": false,
       "isVisible": true,
       "label": "{{'017 - Acomodações'.substring(6)}}",
@@ -128,6 +137,7 @@
       "widgetId": "z4twdoqzuq"
     },
     "menuItemp80s4l92nr": {
+      "iconName": "office",
       "id": "menuItemp80s4l92nr",
       "index": 1,
       "isDisabled": false,
