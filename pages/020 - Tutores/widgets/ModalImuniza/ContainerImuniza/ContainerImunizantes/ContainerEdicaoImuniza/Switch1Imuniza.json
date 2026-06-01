@@ -4,7 +4,7 @@
   "animateLoading": true,
   "bottomRow": 27,
   "boxShadow": "none",
-  "defaultSwitchState": "{{  appsmith.store.modalContexto?.acaoTipo === \"ADICIONAR\" ? false : Table1Amigos.selectedRow.amigo001_permitido || false\n}}",
+  "defaultSwitchState": false,
   "dynamicBindingPathList": [
     {
       "key": "defaultSwitchState"
@@ -30,7 +30,7 @@
   "label": "RESTRINGIR CONVIVÊNCIA",
   "labelPosition": "Right",
   "labelStyle": "BOLD",
-  "labelTextColor": "{{ Switch1Atencao.isSwitchedOn ? \"#FF0000\" : \"#000000\" }}",
+  "labelTextColor": "#000000",
   "leftColumn": 0,
   "maxDynamicHeight": 9000,
   "minDynamicHeight": 4,
