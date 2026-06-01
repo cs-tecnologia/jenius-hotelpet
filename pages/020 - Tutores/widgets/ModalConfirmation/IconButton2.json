@@ -7,13 +7,13 @@
   "buttonVariant": "PRIMARY",
   "dynamicBindingPathList": [
     {
+      "key": "iconName"
+    },
+    {
       "key": "buttonColor"
     },
     {
       "key": "borderRadius"
-    },
-    {
-      "key": "iconName"
     }
   ],
   "dynamicPropertyPathList": [

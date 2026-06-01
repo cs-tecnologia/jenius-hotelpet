@@ -6,10 +6,10 @@
   "defaultImage": "https://assets.appsmith.com/widgets/default.png",
   "dynamicBindingPathList": [
     {
-      "key": "borderRadius"
+      "key": "image"
     },
     {
-      "key": "image"
+      "key": "borderRadius"
     }
   ],
   "dynamicTriggerPathList": [],

@@ -8,12 +8,6 @@
   "defaultText": "{{ \n appsmith.store.modalContexto?.entidade === 'TUTOR' && appsmith.store.modalContexto?.acaoTipo === \"ADICIONAR\" \n  ? \"\" \n  : (TableTutor.selectedRow.prop001_cpf || \"\").replace(/\\D/g, \"\").replace(/(\\d{3})(\\d{3})(\\d{3})(\\d{2})/, \"$1.$2.$3-$4\")\n}}",
   "dynamicBindingPathList": [
     {
-      "key": "accentColor"
-    },
-    {
-      "key": "borderRadius"
-    },
-    {
       "key": "defaultText"
     },
     {
@@ -21,6 +15,12 @@
     },
     {
       "key": "errorMessage"
+    },
+    {
+      "key": "accentColor"
+    },
+    {
+      "key": "borderRadius"
     }
   ],
   "dynamicHeight": "FIXED",

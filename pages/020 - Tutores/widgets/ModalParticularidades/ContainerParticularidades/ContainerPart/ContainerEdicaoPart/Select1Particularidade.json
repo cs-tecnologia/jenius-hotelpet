@@ -7,12 +7,6 @@
   "defaultOptionValue": "{{ ((options, serverSideFiltering) => (   appsmith.store.modalContexto?.acaoTipo === \"ADICIONAR\" ? \"\" : TableParticularidades.selectedRow.par002_par001_id || \"\"\n))(Select1Particularidade.options, Select1Particularidade.serverSideFiltering) }}",
   "dynamicBindingPathList": [
     {
-      "key": "accentColor"
-    },
-    {
-      "key": "borderRadius"
-    },
-    {
       "key": "sourceData"
     },
     {
@@ -20,6 +14,9 @@
     },
     {
       "key": "isDisabled"
+    },
+    {
+      "key": "borderRadius"
     }
   ],
   "dynamicHeight": "FIXED",

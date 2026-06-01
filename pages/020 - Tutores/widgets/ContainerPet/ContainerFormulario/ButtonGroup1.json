@@ -11,13 +11,13 @@
   },
   "dynamicBindingPathList": [
     {
-      "key": "groupButtons.groupButton2.isDisabled"
+      "key": "groupButtons.groupButton1.label"
     },
     {
       "key": "groupButtons.groupButton1.isDisabled"
     },
     {
-      "key": "groupButtons.groupButton1.label"
+      "key": "groupButtons.groupButton2.isDisabled"
     }
   ],
   "dynamicPropertyPathList": [

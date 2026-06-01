@@ -8,13 +8,13 @@
   "defaultText": "{{ \n  (() => {\n    if (!DatePicker1Nascimento.selectedDate) return \"\";\n    \n    const nasc = new Date(DatePicker1Nascimento.selectedDate);\n    const hoje = new Date();\n    \n    let anos = hoje.getFullYear() - nasc.getFullYear();\n    let meses = hoje.getMonth() - nasc.getMonth();\n\n    if (meses < 0 || (meses === 0 && hoje.getDate() < nasc.getDate())) {\n      anos--;\n      meses += 12;\n    }\n    \n    if (anos > 0) {\n      return anos + (anos === 1 ? \" ano\" : \" anos\");\n    } else {\n      return meses + (meses === 1 ? \" mês\" : \" meses\");\n    }\n  })() \n}}",
   "dynamicBindingPathList": [
     {
+      "key": "defaultText"
+    },
+    {
       "key": "accentColor"
     },
     {
       "key": "borderRadius"
-    },
-    {
-      "key": "defaultText"
     }
   ],
   "dynamicHeight": "FIXED",

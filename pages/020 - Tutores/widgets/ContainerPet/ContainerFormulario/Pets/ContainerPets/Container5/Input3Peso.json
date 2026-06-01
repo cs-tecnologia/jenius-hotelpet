@@ -8,13 +8,13 @@
   "defaultText": "{{ \n(appsmith.store.modalContexto?.entidade === 'PET' && appsmith.store.modalContexto?.acaoTipo === \"ADICIONAR\") \n  ? \"0.000\" \n  : appsmith.store.petSelecionado?.ani002_peso?.toFixed(3) || \"0.000\"\n}}",
   "dynamicBindingPathList": [
     {
+      "key": "defaultText"
+    },
+    {
       "key": "accentColor"
     },
     {
       "key": "borderRadius"
-    },
-    {
-      "key": "defaultText"
     }
   ],
   "dynamicHeight": "FIXED",

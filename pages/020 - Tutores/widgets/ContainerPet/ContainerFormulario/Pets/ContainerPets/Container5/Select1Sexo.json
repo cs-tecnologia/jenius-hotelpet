@@ -7,13 +7,10 @@
   "defaultOptionValue": "{{ ((options, serverSideFiltering) => (  \n(appsmith.store.modalContexto?.entidade === 'PET' && appsmith.store.modalContexto?.acaoTipo === \"ADICIONAR\") \n  ? \"\" \n  : appsmith.store.petSelecionado?.ani002_sexo || \"\"\n))(Select1Sexo.options, Select1Sexo.serverSideFiltering) }}",
   "dynamicBindingPathList": [
     {
-      "key": "accentColor"
+      "key": "defaultOptionValue"
     },
     {
       "key": "borderRadius"
-    },
-    {
-      "key": "defaultOptionValue"
     }
   ],
   "dynamicHeight": "FIXED",

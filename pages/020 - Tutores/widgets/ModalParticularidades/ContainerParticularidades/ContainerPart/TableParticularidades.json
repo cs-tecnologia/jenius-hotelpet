@@ -66,25 +66,25 @@
   "delimiter": ",",
   "dynamicBindingPathList": [
     {
-      "key": "accentColor"
-    },
-    {
-      "key": "borderRadius"
-    },
-    {
-      "key": "boxShadow"
-    },
-    {
       "key": "tableData"
-    },
-    {
-      "key": "totalRecordsCount"
     },
     {
       "key": "primaryColumns.par001_desc.computedValue"
     },
     {
+      "key": "primaryColumns.par001_desc.cellBackground"
+    },
+    {
       "key": "primaryColumns.par002_id.computedValue"
+    },
+    {
+      "key": "primaryColumns.par002_modified_by.computedValue"
+    },
+    {
+      "key": "primaryColumns.par002_deleted_date.computedValue"
+    },
+    {
+      "key": "primaryColumns.par002_deleted.computedValue"
     },
     {
       "key": "primaryColumns.par002_par001_id.computedValue"
@@ -96,34 +96,34 @@
       "key": "primaryColumns.par002_descricao.computedValue"
     },
     {
-      "key": "primaryColumns.par002_alerta.computedValue"
-    },
-    {
-      "key": "primaryColumns.par002_deleted.computedValue"
-    },
-    {
-      "key": "primaryColumns.par002_deleted_date.computedValue"
-    },
-    {
-      "key": "primaryColumns.par002_deleted_by.computedValue"
+      "key": "primaryColumns.par002_last_modification.computedValue"
     },
     {
       "key": "primaryColumns.par002_creation_date.computedValue"
     },
     {
+      "key": "primaryColumns.par002_alerta.computedValue"
+    },
+    {
       "key": "primaryColumns.par002_created_by.computedValue"
     },
     {
-      "key": "primaryColumns.par002_last_modification.computedValue"
+      "key": "primaryColumns.par002_deleted_by.computedValue"
     },
     {
-      "key": "primaryColumns.par002_modified_by.computedValue"
+      "key": "totalRecordsCount"
     },
     {
       "key": "defaultSelectedRowIndex"
     },
     {
-      "key": "primaryColumns.par001_desc.cellBackground"
+      "key": "accentColor"
+    },
+    {
+      "key": "borderRadius"
+    },
+    {
+      "key": "boxShadow"
     }
   ],
   "dynamicPropertyPathList": [

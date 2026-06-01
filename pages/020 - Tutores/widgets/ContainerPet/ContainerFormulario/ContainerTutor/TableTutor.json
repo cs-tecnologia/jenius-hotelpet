@@ -80,6 +80,93 @@
   "delimiter": ",",
   "dynamicBindingPathList": [
     {
+      "key": "tableData"
+    },
+    {
+      "key": "primaryColumns.prop001_bairro.computedValue"
+    },
+    {
+      "key": "primaryColumns.prop001_conheceu.computedValue"
+    },
+    {
+      "key": "primaryColumns.prop001_desconto.computedValue"
+    },
+    {
+      "key": "primaryColumns.prop001_telefone.computedValue"
+    },
+    {
+      "key": "primaryColumns.prop001_deleted.computedValue"
+    },
+    {
+      "key": "primaryColumns.prop001_nome.computedValue"
+    },
+    {
+      "key": "primaryColumns.prop001_id.computedValue"
+    },
+    {
+      "key": "primaryColumns.prop001_deleted_date.computedValue"
+    },
+    {
+      "key": "primaryColumns.prop001_modified_by.computedValue"
+    },
+    {
+      "key": "primaryColumns.prop001_cep.computedValue"
+    },
+    {
+      "key": "primaryColumns.prop001_situacaocad.computedValue"
+    },
+    {
+      "key": "primaryColumns.prop001_observacao.computedValue"
+    },
+    {
+      "key": "primaryColumns.prop001_deleted_by.computedValue"
+    },
+    {
+      "key": "primaryColumns.prop001_uf.computedValue"
+    },
+    {
+      "key": "primaryColumns.prop001_created_by.computedValue"
+    },
+    {
+      "key": "primaryColumns.prop001_celular.computedValue"
+    },
+    {
+      "key": "primaryColumns.prop001_cidade.computedValue"
+    },
+    {
+      "key": "primaryColumns.prop001_creation_date.computedValue"
+    },
+    {
+      "key": "primaryColumns.prop001_referencia.computedValue"
+    },
+    {
+      "key": "primaryColumns.prop001_cpf.computedValue"
+    },
+    {
+      "key": "primaryColumns.prop001_endereco.computedValue"
+    },
+    {
+      "key": "primaryColumns.prop001_complemento.computedValue"
+    },
+    {
+      "key": "primaryColumns.prop001_last_modification.computedValue"
+    },
+    {
+      "key": "primaryColumns.prop001_nascimento.computedValue"
+    },
+    {
+      "key": "primaryColumns.prop001_rg.computedValue"
+    },
+    {
+      "key": "primaryColumns.prop001_email.computedValue"
+    },
+    {
+      "key": "primaryColumns.prop001_numero.computedValue"
+    },
+    {
+      "key": "totalRecordsCount"
+    },
+    {
       "key": "accentColor"
     },
     {
@@ -87,96 +174,6 @@
     },
     {
       "key": "boxShadow"
-    },
-    {
-      "key": "tableData"
-    },
-    {
-      "key": "totalRecordsCount"
-    },
-    {
-      "key": "defaultSelectedRowIndex"
-    },
-    {
-      "key": "primaryColumns.prop001_id.computedValue"
-    },
-    {
-      "key": "primaryColumns.prop001_nome.computedValue"
-    },
-    {
-      "key": "primaryColumns.prop001_rg.computedValue"
-    },
-    {
-      "key": "primaryColumns.prop001_cpf.computedValue"
-    },
-    {
-      "key": "primaryColumns.prop001_situacaocad.computedValue"
-    },
-    {
-      "key": "primaryColumns.prop001_nascimento.computedValue"
-    },
-    {
-      "key": "primaryColumns.prop001_cep.computedValue"
-    },
-    {
-      "key": "primaryColumns.prop001_endereco.computedValue"
-    },
-    {
-      "key": "primaryColumns.prop001_numero.computedValue"
-    },
-    {
-      "key": "primaryColumns.prop001_complemento.computedValue"
-    },
-    {
-      "key": "primaryColumns.prop001_bairro.computedValue"
-    },
-    {
-      "key": "primaryColumns.prop001_cidade.computedValue"
-    },
-    {
-      "key": "primaryColumns.prop001_uf.computedValue"
-    },
-    {
-      "key": "primaryColumns.prop001_desconto.computedValue"
-    },
-    {
-      "key": "primaryColumns.prop001_observacao.computedValue"
-    },
-    {
-      "key": "primaryColumns.prop001_conheceu.computedValue"
-    },
-    {
-      "key": "primaryColumns.prop001_referencia.computedValue"
-    },
-    {
-      "key": "primaryColumns.prop001_email.computedValue"
-    },
-    {
-      "key": "primaryColumns.prop001_telefone.computedValue"
-    },
-    {
-      "key": "primaryColumns.prop001_celular.computedValue"
-    },
-    {
-      "key": "primaryColumns.prop001_deleted.computedValue"
-    },
-    {
-      "key": "primaryColumns.prop001_deleted_date.computedValue"
-    },
-    {
-      "key": "primaryColumns.prop001_deleted_by.computedValue"
-    },
-    {
-      "key": "primaryColumns.prop001_creation_date.computedValue"
-    },
-    {
-      "key": "primaryColumns.prop001_created_by.computedValue"
-    },
-    {
-      "key": "primaryColumns.prop001_last_modification.computedValue"
-    },
-    {
-      "key": "primaryColumns.prop001_modified_by.computedValue"
     }
   ],
   "dynamicPropertyPathList": [

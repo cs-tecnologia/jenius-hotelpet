@@ -55,13 +55,13 @@
   "dragDisabled": true,
   "dynamicBindingPathList": [
     {
+      "key": "backgroundColor"
+    },
+    {
       "key": "borderRadius"
     },
     {
       "key": "boxShadow"
-    },
-    {
-      "key": "backgroundColor"
     }
   ],
   "dynamicHeight": "FIXED",

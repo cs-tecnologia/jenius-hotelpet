@@ -11,6 +11,7 @@
       "canExtend": false,
       "containerStyle": "none",
       "detachFromLayout": true,
+      "dynamicBindingPathList": [],
       "isLoading": false,
       "isVisible": true,
       "leftColumn": 0,

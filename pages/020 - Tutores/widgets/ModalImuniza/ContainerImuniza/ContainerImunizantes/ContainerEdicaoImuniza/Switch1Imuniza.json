@@ -5,14 +5,7 @@
   "bottomRow": 27,
   "boxShadow": "none",
   "defaultSwitchState": false,
-  "dynamicBindingPathList": [
-    {
-      "key": "defaultSwitchState"
-    },
-    {
-      "key": "labelTextColor"
-    }
-  ],
+  "dynamicBindingPathList": [],
   "dynamicHeight": "AUTO_HEIGHT",
   "dynamicPropertyPathList": [
     {

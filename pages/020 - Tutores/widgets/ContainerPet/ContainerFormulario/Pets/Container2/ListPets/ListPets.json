@@ -61,31 +61,19 @@
   "currentItemsView": "{{[]}}",
   "dynamicBindingPathList": [
     {
-      "key": "currentItemsView"
-    },
-    {
-      "key": "selectedItemView"
-    },
-    {
-      "key": "triggeredItemView"
+      "key": "listData"
     },
     {
       "key": "primaryKeys"
     },
     {
-      "key": "accentColor"
+      "key": "totalRecordsCount"
     },
     {
       "key": "borderRadius"
     },
     {
       "key": "boxShadow"
-    },
-    {
-      "key": "listData"
-    },
-    {
-      "key": "totalRecordsCount"
     }
   ],
   "dynamicPropertyPathList": [

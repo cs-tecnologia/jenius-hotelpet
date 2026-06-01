@@ -8,12 +8,6 @@
   "defaultText": "{{  appsmith.store.modalContexto?.acaoTipo === \"ADICIONAR\" ? \"\" : TableParticularidades.selectedRow.par002_descricao || \"\"\n}}",
   "dynamicBindingPathList": [
     {
-      "key": "accentColor"
-    },
-    {
-      "key": "borderRadius"
-    },
-    {
       "key": "defaultText"
     },
     {
@@ -21,6 +15,12 @@
     },
     {
       "key": "tooltip"
+    },
+    {
+      "key": "accentColor"
+    },
+    {
+      "key": "borderRadius"
     }
   ],
   "dynamicHeight": "AUTO_HEIGHT",

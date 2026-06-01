@@ -7,13 +7,10 @@
   "defaultOptionValue": "{{ ((options, serverSideFiltering) => (  \n  appsmith.store.modalContexto?.acaoTipo === \"ADICIONAR\" \n  ? \"\" \n  : (appsmith.store.petSelecionado?.ani002_convivio \n      ? Number(appsmith.store.petSelecionado.ani002_convivio) \n      : \"\") \n))(Select1Convivio.options, Select1Convivio.serverSideFiltering) }}",
   "dynamicBindingPathList": [
     {
-      "key": "accentColor"
+      "key": "defaultOptionValue"
     },
     {
       "key": "borderRadius"
-    },
-    {
-      "key": "defaultOptionValue"
     }
   ],
   "dynamicHeight": "FIXED",

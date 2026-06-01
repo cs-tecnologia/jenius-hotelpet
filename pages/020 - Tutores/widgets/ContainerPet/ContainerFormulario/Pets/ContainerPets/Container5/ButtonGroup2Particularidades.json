@@ -12,7 +12,13 @@
   },
   "dynamicBindingPathList": [
     {
-      "key": "borderRadius"
+      "key": "groupButtons.groupButtonhrop5w8994.buttonColor"
+    },
+    {
+      "key": "groupButtons.groupButtonicjqm188q1.buttonColor"
+    },
+    {
+      "key": "groupButtons.groupButton3.buttonColor"
     },
     {
       "key": "groupButtons.groupButton1.buttonColor"
@@ -21,16 +27,10 @@
       "key": "groupButtons.groupButton2.buttonColor"
     },
     {
-      "key": "groupButtons.groupButton3.buttonColor"
-    },
-    {
-      "key": "groupButtons.groupButtonhrop5w8994.buttonColor"
-    },
-    {
       "key": "isVisible"
     },
     {
-      "key": "groupButtons.groupButtonicjqm188q1.buttonColor"
+      "key": "borderRadius"
     }
   ],
   "dynamicHeight": "FIXED",

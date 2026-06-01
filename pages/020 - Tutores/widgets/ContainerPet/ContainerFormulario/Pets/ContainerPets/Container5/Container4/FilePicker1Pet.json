@@ -9,13 +9,13 @@
   "buttonColor": "{{appsmith.theme.colors.primaryColor}}",
   "dynamicBindingPathList": [
     {
+      "key": "label"
+    },
+    {
       "key": "buttonColor"
     },
     {
       "key": "borderRadius"
-    },
-    {
-      "key": "label"
     }
   ],
   "dynamicTriggerPathList": [],

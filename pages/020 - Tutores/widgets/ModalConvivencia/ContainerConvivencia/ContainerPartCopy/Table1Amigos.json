@@ -67,49 +67,10 @@
   "delimiter": ",",
   "dynamicBindingPathList": [
     {
-      "key": "accentColor"
-    },
-    {
-      "key": "borderRadius"
-    },
-    {
-      "key": "boxShadow"
-    },
-    {
       "key": "tableData"
     },
     {
-      "key": "totalRecordsCount"
-    },
-    {
-      "key": "defaultSelectedRowIndex"
-    },
-    {
       "key": "primaryColumns.amigo001_id.computedValue"
-    },
-    {
-      "key": "primaryColumns.amigo001_ani002_id_amigo.computedValue"
-    },
-    {
-      "key": "primaryColumns.amigo001_ani002_id_animal.computedValue"
-    },
-    {
-      "key": "primaryColumns.amigo001_permitido.computedValue"
-    },
-    {
-      "key": "primaryColumns.amigo001_deleted.computedValue"
-    },
-    {
-      "key": "primaryColumns.amigo001_deleted_date.computedValue"
-    },
-    {
-      "key": "primaryColumns.amigo001_deleted_by.computedValue"
-    },
-    {
-      "key": "primaryColumns.amigo001_creation_date.computedValue"
-    },
-    {
-      "key": "primaryColumns.amigo001_created_by.computedValue"
     },
     {
       "key": "primaryColumns.amigo001_last_modification.computedValue"
@@ -118,16 +79,55 @@
       "key": "primaryColumns.amigo001_modified_by.computedValue"
     },
     {
+      "key": "primaryColumns.amigo001_observacao.computedValue"
+    },
+    {
+      "key": "primaryColumns.ani002_id.computedValue"
+    },
+    {
+      "key": "primaryColumns.amigo001_deleted.computedValue"
+    },
+    {
+      "key": "primaryColumns.amigo001_deleted_date.computedValue"
+    },
+    {
       "key": "primaryColumns.ani002_nome.computedValue"
     },
     {
-      "key": "primaryColumns.amigo001_observacao.computedValue"
+      "key": "primaryColumns.amigo001_ani002_id_amigo.computedValue"
     },
     {
       "key": "primaryColumns.amigo001_ani002_id_amigo.cellBackground"
     },
     {
-      "key": "primaryColumns.ani002_id.computedValue"
+      "key": "primaryColumns.amigo001_created_by.computedValue"
+    },
+    {
+      "key": "primaryColumns.amigo001_permitido.computedValue"
+    },
+    {
+      "key": "primaryColumns.amigo001_ani002_id_animal.computedValue"
+    },
+    {
+      "key": "primaryColumns.amigo001_deleted_by.computedValue"
+    },
+    {
+      "key": "primaryColumns.amigo001_creation_date.computedValue"
+    },
+    {
+      "key": "totalRecordsCount"
+    },
+    {
+      "key": "defaultSelectedRowIndex"
+    },
+    {
+      "key": "accentColor"
+    },
+    {
+      "key": "borderRadius"
+    },
+    {
+      "key": "boxShadow"
     }
   ],
   "dynamicPropertyPathList": [

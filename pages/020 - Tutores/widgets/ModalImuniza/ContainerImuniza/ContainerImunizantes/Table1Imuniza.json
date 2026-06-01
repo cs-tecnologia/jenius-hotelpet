@@ -70,16 +70,52 @@
   "delimiter": ",",
   "dynamicBindingPathList": [
     {
-      "key": "accentColor"
-    },
-    {
-      "key": "borderRadius"
-    },
-    {
-      "key": "boxShadow"
-    },
-    {
       "key": "tableData"
+    },
+    {
+      "key": "primaryColumns.imun003_modified_by.computedValue"
+    },
+    {
+      "key": "primaryColumns.imun003_observacao.computedValue"
+    },
+    {
+      "key": "primaryColumns.imun003_imun001.computedValue"
+    },
+    {
+      "key": "primaryColumns.imun003_creation_date.computedValue"
+    },
+    {
+      "key": "primaryColumns.imun003_ani002_id.computedValue"
+    },
+    {
+      "key": "primaryColumns.imun003_datavalidade.computedValue"
+    },
+    {
+      "key": "primaryColumns.imun003_deleted_date.computedValue"
+    },
+    {
+      "key": "primaryColumns.imun003_deleted.computedValue"
+    },
+    {
+      "key": "primaryColumns.imun001_id.computedValue"
+    },
+    {
+      "key": "primaryColumns.imun003_last_modification.computedValue"
+    },
+    {
+      "key": "primaryColumns.imun003_id.computedValue"
+    },
+    {
+      "key": "primaryColumns.imun001_desc.computedValue"
+    },
+    {
+      "key": "primaryColumns.imun003_dataimun.computedValue"
+    },
+    {
+      "key": "primaryColumns.imun003_created_by.computedValue"
+    },
+    {
+      "key": "primaryColumns.imun003_deleted_by.computedValue"
     },
     {
       "key": "totalRecordsCount"
@@ -88,49 +124,13 @@
       "key": "defaultSelectedRowIndex"
     },
     {
-      "key": "primaryColumns.imun003_id.computedValue"
+      "key": "accentColor"
     },
     {
-      "key": "primaryColumns.imun003_dataimun.computedValue"
+      "key": "borderRadius"
     },
     {
-      "key": "primaryColumns.imun003_datavalidade.computedValue"
-    },
-    {
-      "key": "primaryColumns.imun003_imun001.computedValue"
-    },
-    {
-      "key": "primaryColumns.imun003_ani002_id.computedValue"
-    },
-    {
-      "key": "primaryColumns.imun003_observacao.computedValue"
-    },
-    {
-      "key": "primaryColumns.imun003_deleted.computedValue"
-    },
-    {
-      "key": "primaryColumns.imun003_deleted_date.computedValue"
-    },
-    {
-      "key": "primaryColumns.imun003_deleted_by.computedValue"
-    },
-    {
-      "key": "primaryColumns.imun003_creation_date.computedValue"
-    },
-    {
-      "key": "primaryColumns.imun003_created_by.computedValue"
-    },
-    {
-      "key": "primaryColumns.imun003_last_modification.computedValue"
-    },
-    {
-      "key": "primaryColumns.imun003_modified_by.computedValue"
-    },
-    {
-      "key": "primaryColumns.imun001_id.computedValue"
-    },
-    {
-      "key": "primaryColumns.imun001_desc.computedValue"
+      "key": "boxShadow"
     }
   ],
   "dynamicPropertyPathList": [

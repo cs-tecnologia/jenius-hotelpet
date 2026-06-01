@@ -68,64 +68,7 @@
   "delimiter": ",",
   "dynamicBindingPathList": [
     {
-      "key": "accentColor"
-    },
-    {
-      "key": "borderRadius"
-    },
-    {
-      "key": "boxShadow"
-    },
-    {
       "key": "tableData"
-    },
-    {
-      "key": "primaryColumns.ali002_id.computedValue"
-    },
-    {
-      "key": "primaryColumns.ali002_opcao.computedValue"
-    },
-    {
-      "key": "primaryColumns.ali002_observacao.computedValue"
-    },
-    {
-      "key": "primaryColumns.ali002_alimentacao.computedValue"
-    },
-    {
-      "key": "primaryColumns.ali002_ani002_id.computedValue"
-    },
-    {
-      "key": "primaryColumns.ali002_permitido.computedValue"
-    },
-    {
-      "key": "primaryColumns.ali002_deleted.computedValue"
-    },
-    {
-      "key": "primaryColumns.ali002_deleted_date.computedValue"
-    },
-    {
-      "key": "primaryColumns.ali002_deleted_by.computedValue"
-    },
-    {
-      "key": "primaryColumns.ali002_creation_date.computedValue"
-    },
-    {
-      "key": "primaryColumns.ali002_created_by.computedValue"
-    },
-    {
-      "key": "primaryColumns.ali002_last_modification.computedValue"
-    },
-    {
-      "key": "primaryColumns.ali002_modified_by.computedValue"
-    },
-    {
-      "key": "primaryColumns.ali002_alimentacao.selectOptions"
-    },
-    {
-      "key": "primaryColumns.EditActions1.saveBorderRadius"
-    },
-    {
-      "key": "primaryColumns.EditActions1.discardBorderRadius"
     },
     {
       "key": "primaryColumns.EditActions1.isSaveDisabled"
@@ -134,28 +77,85 @@
       "key": "primaryColumns.EditActions1.isDiscardDisabled"
     },
     {
-      "key": "primaryColumns.nome_alimento.computedValue"
+      "key": "primaryColumns.EditActions1.cellBackground"
+    },
+    {
+      "key": "primaryColumns.EditActions1.saveButtonColor"
+    },
+    {
+      "key": "primaryColumns.EditActions1.saveBorderRadius"
+    },
+    {
+      "key": "primaryColumns.EditActions1.discardBorderRadius"
+    },
+    {
+      "key": "primaryColumns.ali002_deleted_date.computedValue"
+    },
+    {
+      "key": "primaryColumns.ali002_ani002_id.computedValue"
+    },
+    {
+      "key": "primaryColumns.ali002_deleted.computedValue"
+    },
+    {
+      "key": "primaryColumns.ali002_id.computedValue"
+    },
+    {
+      "key": "primaryColumns.ali002_last_modification.computedValue"
+    },
+    {
+      "key": "primaryColumns.ali002_creation_date.computedValue"
+    },
+    {
+      "key": "primaryColumns.ali002_permitido.computedValue"
     },
     {
       "key": "primaryColumns.ali002_permitido.selectOptions"
     },
     {
+      "key": "primaryColumns.ali002_permitido.cellBackground"
+    },
+    {
+      "key": "primaryColumns.ali002_alimentacao.computedValue"
+    },
+    {
+      "key": "primaryColumns.ali002_alimentacao.selectOptions"
+    },
+    {
       "key": "primaryColumns.ali002_alimentacao.cellBackground"
+    },
+    {
+      "key": "primaryColumns.ali002_modified_by.computedValue"
+    },
+    {
+      "key": "primaryColumns.nome_alimento.computedValue"
+    },
+    {
+      "key": "primaryColumns.ali002_created_by.computedValue"
+    },
+    {
+      "key": "primaryColumns.ali002_deleted_by.computedValue"
+    },
+    {
+      "key": "primaryColumns.ali002_opcao.computedValue"
     },
     {
       "key": "primaryColumns.ali002_opcao.cellBackground"
     },
     {
+      "key": "primaryColumns.ali002_observacao.computedValue"
+    },
+    {
       "key": "primaryColumns.ali002_observacao.cellBackground"
     },
     {
-      "key": "primaryColumns.ali002_permitido.cellBackground"
+      "key": "accentColor"
     },
     {
-      "key": "primaryColumns.EditActions1.cellBackground"
+      "key": "borderRadius"
     },
     {
-      "key": "primaryColumns.EditActions1.saveButtonColor"
+      "key": "boxShadow"
     }
   ],
   "dynamicPropertyPathList": [
