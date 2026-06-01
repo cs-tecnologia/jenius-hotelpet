@@ -128,7 +128,7 @@ temAlteracao: () => {
     const cepOriginal     = (row.vet001_cep || "").toString().trim().replace(/\D/g, "");
     const clinicaOriginal = (row.vet001_clinica || "").toString();
 
-    // Alinhado com podeSalvar: nome + crmv + uf + cep (8 dígitos)
+    // Campos mínimos para ADICIONAR (mesmo critério do podeSalvar)
     const camposObrigatoriosPreenchidos = nomeAtual.length > 0 &&
                                           crmvAtual.length > 0 &&
                                           ufAtual !== "" &&
@@ -171,9 +171,11 @@ temAlteracao: () => {
     camposParaChecar.forEach(campo => {
         console.log(`Campo: ${campo.nome} -> [${campo.atual}] vs [${campo.original}] | Mudou? ${campo.atual !== campo.original}`);
     });
-    console.log("Campos Obrigatorios:", camposObrigatoriosPreenchidos);
+    console.log("Campos Obrigatorios (ADICIONAR):", camposObrigatoriosPreenchidos);
     console.log("Houve mudança geral?", houveMudanca);
 
-    return camposObrigatoriosPreenchidos && houveMudanca;
+    // Em EDITAR: CANCELAR habilita com qualquer mudança (sem exigir campos obrigatórios)
+    // ATUALIZAR usa podeSalvar() que tem sua própria validação de campos obrigatórios
+    return houveMudanca;
 },
 }
