@@ -1,2 +1,0 @@
-﻿SELECT * FROM ""{{JSutils.currentSchema()}}"".hotpel001
-where pel001_deleted <> 'true' order by pel001_desc;
