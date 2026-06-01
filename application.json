@@ -120,6 +120,10 @@
     {
       "id": "019 - Veterinários",
       "isDefault": false
+    },
+    {
+      "id": "023 - Pets",
+      "isDefault": false
     }
   ],
   "unpublishedAppLayout": {
