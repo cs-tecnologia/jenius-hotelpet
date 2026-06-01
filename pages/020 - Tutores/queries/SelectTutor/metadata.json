@@ -29,7 +29,7 @@
     ],
     "name": "SelectTutor",
     "pageId": "020 - Tutores",
-    "runBehaviour": "AUTOMATIC",
+    "runBehaviour": "ON_PAGE_LOAD",
     "userSetOnLoad": true
   }
 }
