@@ -45,10 +45,10 @@ export default {
 	},
 
 	// 2. Verifica se algo mudou
-	temAlteracao: () => {
+	temAlteracao: function() {
 		const data = this.getFormData();
 		const campos = Object.keys(data.atual);
-		
+
 		const houveMudanca = campos.some(c => data.atual[c] !== data.original[c]);
 
 		if (houveMudanca) {
@@ -62,21 +62,21 @@ export default {
 	},
 
 	// 3. Regra de ativação do botão Salvar
-	podeSalvar: () => {
+	podeSalvar: function() {
 		const action = appsmith.store.modalContexto?.acaoTipo;
 		const data = this.getFormData().atual;
 
-		const obrigatoriosOk = data.prop001_nome.length > 0 && 
-													 data.prop001_uf.length > 0 && 
+		const obrigatoriosOk = data.prop001_nome.length > 0 &&
+													 data.prop001_uf.length > 0 &&
 													 data.prop001_cep.length === 8;
 
 		if (action === "ADICIONAR") return obrigatoriosOk;
-		
+
 		return obrigatoriosOk && this.temAlteracao();
 	},
 
 	// 4. Regra de ativação do botão Cancelar
-	podeCancelar: () => {
+	podeCancelar: function() {
 		const action = appsmith.store.modalContexto?.acaoTipo;
 		if (action === "ADICIONAR") return true;
 		return this.temAlteracao();
