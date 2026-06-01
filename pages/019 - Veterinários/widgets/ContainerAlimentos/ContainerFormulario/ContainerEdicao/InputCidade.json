@@ -3,13 +3,19 @@
   "animateLoading": true,
   "autoFocus": false,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 44,
+  "bottomRow": 32,
   "boxShadow": "none",
   "defaultText": "{{ \n  (ApiViaCep.data && InputCep.isDirty) \n    ? ApiViaCep.data.localidade.trim().toUpperCase() \n    : (appsmith.store.modalContexto?.acaoTipo === \"ADICIONAR\" ? \"\" : TableVeterinario.selectedRow.vet001_cidade || \"\")\n}}",
   "dynamicBindingPathList": [
-    {"key": "accentColor"},
-    {"key": "borderRadius"},
-    {"key": "defaultText"}
+    {
+      "key": "accentColor"
+    },
+    {
+      "key": "borderRadius"
+    },
+    {
+      "key": "defaultText"
+    }
   ],
   "dynamicHeight": "FIXED",
   "dynamicTriggerPathList": [],
@@ -46,7 +52,7 @@
   "rightColumn": 41,
   "showStepArrows": false,
   "tooltip": "",
-  "topRow": 37,
+  "topRow": 25,
   "type": "INPUT_WIDGET_V2",
   "version": 2,
   "widgetId": "vet19inpcid",

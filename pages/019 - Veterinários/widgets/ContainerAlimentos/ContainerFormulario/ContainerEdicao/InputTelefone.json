@@ -3,14 +3,22 @@
   "animateLoading": true,
   "autoFocus": false,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 52,
+  "bottomRow": 40,
   "boxShadow": "none",
   "defaultText": "{{ \n  (() => {\n    if (appsmith.store.modalContexto?.acaoTipo === \"ADICIONAR\") return \"\";\n    const telRaw = TableVeterinario.selectedRow.vet001_telefone || \"\";\n    const numeros = telRaw.toString().replace(/\\D/g, \"\");\n    if (numeros.length === 11) {\n      return numeros.replace(/^(\\d{2})(\\d{5})(\\d{4})$/, \"($1) $2-$3\");\n    } else if (numeros.length === 10) {\n      return numeros.replace(/^(\\d{2})(\\d{4})(\\d{4})$/, \"($1) $2-$3\");\n    }\n    return numeros;\n  })()\n}}",
   "dynamicBindingPathList": [
-    {"key": "accentColor"},
-    {"key": "borderRadius"},
-    {"key": "defaultText"},
-    {"key": "validation"}
+    {
+      "key": "accentColor"
+    },
+    {
+      "key": "borderRadius"
+    },
+    {
+      "key": "defaultText"
+    },
+    {
+      "key": "validation"
+    }
   ],
   "dynamicHeight": "FIXED",
   "dynamicTriggerPathList": [],
@@ -51,7 +59,7 @@
   "rightColumn": 31,
   "showStepArrows": false,
   "tooltip": "(DDD) 99999-9999",
-  "topRow": 45,
+  "topRow": 33,
   "type": "INPUT_WIDGET_V2",
   "validation": "{{InputTelefone.text.length > 10}}",
   "version": 2,

@@ -5,7 +5,7 @@ podeSalvar: () => {
     const row = TableVeterinario.selectedRow || {};
 
     const nomeAtual    = (InputNome.text || "").trim();
-    const crmvAtual    = (InputCRMV.text || "").trim();
+    const crmvAtual    = (InputCRMV.text || "").toString().trim();
     const endAtual     = (InputEndereco.text || "").trim();
     const bairroAtual  = (InputBairro.text || "").trim();
     const numeroAtual  = (InputNumero.text || "").trim();
@@ -13,6 +13,7 @@ podeSalvar: () => {
     const cidadeAtual  = (InputCidade.text || "").trim();
     const emailAtual   = (InputEmail.text || "").trim();
     const ufAtual      = SelectUF.selectedOptionValue || "";
+    const clinicaAtual = (SelectClinica.selectedOptionValue || "").toString();
 
     const telefoneAtual = (InputTelefone.text || "").replace(/\D/g, "");
     const celularAtual  = (InputCelular.text || "").replace(/\D/g, "");
@@ -27,6 +28,7 @@ podeSalvar: () => {
     const cidadeOriginal  = (row.vet001_cidade || "").trim();
     const emailOriginal   = (row.vet001_email || "").trim();
     const ufOriginal      = row.vet001_uf || "";
+    const clinicaOriginal = (row.vet001_clinica || "").toString();
 
     const telefoneOriginal = (row.vet001_telefone || "").toString().replace(/\D/g, "");
     const celularOriginal  = (row.vet001_celular || "").toString().replace(/\D/g, "");
@@ -49,7 +51,8 @@ podeSalvar: () => {
             telefoneAtual !== telefoneOriginal ||
             celularAtual !== celularOriginal ||
             ufAtual !== ufOriginal ||
-            cepAtual !== cepOriginal;
+            cepAtual !== cepOriginal ||
+            clinicaAtual !== clinicaOriginal;
 
         return camposPreenchidos && houveMudanca;
     }
@@ -92,11 +95,12 @@ podeCancelar: () => {
     return houveAlteracao;
 },
 
-	temAlteracao: () => {
+	// Checa se o que está nos inputs é diferente da tabela
+temAlteracao: () => {
     const contexto = appsmith.store.modalContexto?.acaoTipo;
 
     const nomeAtual    = (InputNome.text || "").trim().toUpperCase();
-    const crmvAtual    = (InputCRMV.text || "").trim();
+    const crmvAtual    = (InputCRMV.text || "").toString().trim();
     const endAtual     = (InputEndereco.text || "").trim().toUpperCase();
     const bairroAtual  = (InputBairro.text || "").trim().toUpperCase();
     const numeroAtual  = (InputNumero.text || "").trim().toUpperCase();
@@ -107,8 +111,9 @@ podeCancelar: () => {
     const celularAtual  = (InputCelular.text || "").trim().replace(/\D/g, "");
     const ufAtual      = (SelectUF.selectedOptionValue || "").trim().toUpperCase();
     const cepAtual     = (InputCep.text || "").trim().replace(/\D/g, "");
+    const clinicaAtual = (SelectClinica.selectedOptionValue || "").toString();
 
-    const row = TableVeterinario.selectedRow;
+    const row = TableVeterinario.selectedRow || {};
     const nomeOriginal    = (row.vet001_nome || "").trim().toUpperCase();
     const crmvOriginal    = (row.vet001_crmv || "").toString().trim();
     const endOriginal     = (row.vet001_endereco || "").trim().toUpperCase();
@@ -121,14 +126,13 @@ podeCancelar: () => {
     const celularOriginal  = (row.vet001_celular || "").toString().trim().replace(/\D/g, "");
     const ufOriginal      = (row.vet001_uf || "").trim().toUpperCase();
     const cepOriginal     = (row.vet001_cep || "").toString().trim().replace(/\D/g, "");
+    const clinicaOriginal = (row.vet001_clinica || "").toString();
 
-    const camposObrigatoriosPreenchidos = nomeAtual.trim().length > 0 &&
-                                          crmvAtual.trim().length > 0 &&
-                                          endAtual.trim().length > 0 &&
-                                          ufAtual.trim().length > 0 &&
-                                          bairroAtual.trim().length > 0 &&
-                                          cidadeAtual.trim().length > 0 &&
-                                          cepAtual.trim().length > 0;
+    // Campos mínimos para ADICIONAR (mesmo critério do podeSalvar)
+    const camposObrigatoriosPreenchidos = nomeAtual.length > 0 &&
+                                          crmvAtual.length > 0 &&
+                                          ufAtual !== "" &&
+                                          cepAtual.length === 8;
 
     if (contexto === "ADICIONAR") {
         return camposObrigatoriosPreenchidos;
@@ -146,8 +150,32 @@ podeCancelar: () => {
         telefoneAtual !== telefoneOriginal ||
         celularAtual  !== celularOriginal ||
         ufAtual      !== ufOriginal ||
-        cepAtual     !== cepOriginal;
+        cepAtual     !== cepOriginal ||
+        clinicaAtual !== clinicaOriginal;
 
-    return camposObrigatoriosPreenchidos && houveMudanca;
+    const camposParaChecar = [
+        { nome: "NOME", atual: nomeAtual, original: nomeOriginal },
+        { nome: "CRMV", atual: crmvAtual, original: crmvOriginal },
+        { nome: "UF", atual: ufAtual, original: ufOriginal },
+        { nome: "CEP", atual: cepAtual, original: cepOriginal },
+        { nome: "FONE", atual: telefoneAtual, original: telefoneOriginal },
+        { nome: "END", atual: endAtual, original: endOriginal },
+        { nome: "BAIRRO", atual: bairroAtual, original: bairroOriginal },
+        { nome: "NUMERO", atual: numeroAtual, original: numeroOriginal },
+        { nome: "COMP", atual: complementoAtual, original: complementoOriginal },
+        { nome: "CIDADE", atual: cidadeAtual, original: cidadeOriginal },
+        { nome: "EMAIL", atual: emailAtual, original: emailOriginal },
+        { nome: "CEL", atual: celularAtual, original: celularOriginal },
+        { nome: "CLINICA", atual: clinicaAtual, original: clinicaOriginal }
+    ];
+    camposParaChecar.forEach(campo => {
+        console.log(`Campo: ${campo.nome} -> [${campo.atual}] vs [${campo.original}] | Mudou? ${campo.atual !== campo.original}`);
+    });
+    console.log("Campos Obrigatorios (ADICIONAR):", camposObrigatoriosPreenchidos);
+    console.log("Houve mudança geral?", houveMudanca);
+
+    // Em EDITAR: CANCELAR habilita com qualquer mudança (sem exigir campos obrigatórios)
+    // ATUALIZAR usa podeSalvar() que tem sua própria validação de campos obrigatórios
+    return houveMudanca;
 },
 }

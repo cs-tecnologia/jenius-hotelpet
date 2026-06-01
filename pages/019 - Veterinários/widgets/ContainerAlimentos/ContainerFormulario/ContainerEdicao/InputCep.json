@@ -3,21 +3,33 @@
   "animateLoading": true,
   "autoFocus": false,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 28,
+  "bottomRow": 18,
   "boxShadow": "none",
   "defaultText": "{{ \n  (() => {\n    if (appsmith.store.modalContexto?.acaoTipo === \"ADICIONAR\") {\n      return \"\";\n    }\n    const cepRaw = TableVeterinario.selectedRow.vet001_cep || \"\";\n    const numeros = cepRaw.toString().replace(/\\D/g, \"\");\n    if (numeros.length === 8) {\n      return numeros.replace(/^(\\d{5})(\\d{3})$/, \"$1-$2\");\n    }\n    return numeros;\n  })()\n}}",
   "dynamicBindingPathList": [
-    {"key": "accentColor"},
-    {"key": "borderRadius"},
-    {"key": "defaultText"},
-    {"key": "validation"}
+    {
+      "key": "accentColor"
+    },
+    {
+      "key": "borderRadius"
+    },
+    {
+      "key": "defaultText"
+    },
+    {
+      "key": "validation"
+    }
   ],
   "dynamicHeight": "FIXED",
   "dynamicPropertyPathList": [
-    {"key": "onTextChanged"}
+    {
+      "key": "onTextChanged"
+    }
   ],
   "dynamicTriggerPathList": [
-    {"key": "onTextChanged"}
+    {
+      "key": "onTextChanged"
+    }
   ],
   "errorMessage": "CEP INVÁLIDO",
   "iconAlign": "left",
@@ -33,7 +45,7 @@
   "labelStyle": "",
   "labelTextSize": "0.875rem",
   "labelWidth": 5,
-  "leftColumn": 20,
+  "leftColumn": 0,
   "maxChars": "9",
   "maxDynamicHeight": 9000,
   "minDynamicHeight": 4,
@@ -54,10 +66,10 @@
   "renderMode": "CANVAS",
   "resetOnSubmit": true,
   "responsiveBehavior": "fill",
-  "rightColumn": 35,
+  "rightColumn": 15,
   "showStepArrows": false,
   "tooltip": "DIGITE O CEP NESTE FORMATO 99999-999",
-  "topRow": 21,
+  "topRow": 11,
   "type": "INPUT_WIDGET_V2",
   "validation": "{{InputCep.text.length > 7}}",
   "version": 2,

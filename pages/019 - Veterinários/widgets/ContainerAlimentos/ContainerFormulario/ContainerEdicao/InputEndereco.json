@@ -3,13 +3,19 @@
   "animateLoading": true,
   "autoFocus": false,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 28,
+  "bottomRow": 18,
   "boxShadow": "none",
   "defaultText": "{{ \n  (ApiViaCep.data?.logradouro && InputCep.text.replace(/\\D/g,\"\") === ApiViaCep.data.cep.replace(/\\D/g,\"\"))\n    ? ApiViaCep.data.logradouro.toUpperCase() \n    : (appsmith.store.modalContexto?.acaoTipo === \"ADICIONAR\" ? \"\" : TableVeterinario.selectedRow.vet001_endereco || \"\")\n}}",
   "dynamicBindingPathList": [
-    {"key": "accentColor"},
-    {"key": "borderRadius"},
-    {"key": "defaultText"}
+    {
+      "key": "accentColor"
+    },
+    {
+      "key": "borderRadius"
+    },
+    {
+      "key": "defaultText"
+    }
   ],
   "dynamicHeight": "FIXED",
   "dynamicTriggerPathList": [],
@@ -26,7 +32,7 @@
   "labelStyle": "",
   "labelTextSize": "0.875rem",
   "labelWidth": 5,
-  "leftColumn": 35,
+  "leftColumn": 15,
   "maxDynamicHeight": 9000,
   "minDynamicHeight": 4,
   "minWidth": 450,
@@ -46,7 +52,7 @@
   "rightColumn": 64,
   "showStepArrows": false,
   "tooltip": "",
-  "topRow": 21,
+  "topRow": 11,
   "type": "INPUT_WIDGET_V2",
   "version": 2,
   "widgetId": "vet19inpend",
