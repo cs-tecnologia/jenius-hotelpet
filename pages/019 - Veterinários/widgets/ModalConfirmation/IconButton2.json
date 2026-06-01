@@ -6,11 +6,17 @@
   "buttonColor": "{{JSconfirmation.modalconfig.color}}",
   "buttonVariant": "PRIMARY",
   "dynamicBindingPathList": [
-    {"key": "buttonColor"},
-    {"key": "borderRadius"}
+    {
+      "key": "buttonColor"
+    },
+    {
+      "key": "borderRadius"
+    }
   ],
   "dynamicPropertyPathList": [
-    {"key": "buttonColor"}
+    {
+      "key": "buttonColor"
+    }
   ],
   "dynamicTriggerPathList": [],
   "iconName": "{{JSconfirmation.modalconfig.icon}}",

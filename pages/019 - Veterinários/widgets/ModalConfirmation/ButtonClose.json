@@ -8,14 +8,22 @@
   "buttonVariant": "SECONDARY",
   "disabledWhenInvalid": false,
   "dynamicBindingPathList": [
-    {"key": "buttonColor"},
-    {"key": "borderRadius"}
+    {
+      "key": "buttonColor"
+    },
+    {
+      "key": "borderRadius"
+    }
   ],
   "dynamicPropertyPathList": [
-    {"key": "onClick"}
+    {
+      "key": "onClick"
+    }
   ],
   "dynamicTriggerPathList": [
-    {"key": "onClick"}
+    {
+      "key": "onClick"
+    }
   ],
   "isDefaultClickDisabled": true,
   "isDisabled": false,

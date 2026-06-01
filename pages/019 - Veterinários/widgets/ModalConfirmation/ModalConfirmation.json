@@ -13,8 +13,12 @@
       "canExtend": true,
       "detachFromLayout": true,
       "dynamicBindingPathList": [
-        {"key": "borderRadius"},
-        {"key": "boxShadow"}
+        {
+          "key": "borderRadius"
+        },
+        {
+          "key": "boxShadow"
+        }
       ],
       "dynamicHeight": "AUTO_HEIGHT",
       "flexLayers": [],
@@ -48,7 +52,9 @@
   ],
   "detachFromLayout": true,
   "dynamicBindingPathList": [
-    {"key": "borderRadius"}
+    {
+      "key": "borderRadius"
+    }
   ],
   "dynamicHeight": "AUTO_HEIGHT",
   "height": 240,

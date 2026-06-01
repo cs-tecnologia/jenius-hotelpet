@@ -6,11 +6,17 @@
   "buttonColor": "{{appsmith.theme.colors.primaryColor}}",
   "buttonVariant": "TERTIARY",
   "dynamicBindingPathList": [
-    {"key": "buttonColor"},
-    {"key": "borderRadius"}
+    {
+      "key": "buttonColor"
+    },
+    {
+      "key": "borderRadius"
+    }
   ],
   "dynamicTriggerPathList": [
-    {"key": "onClick"}
+    {
+      "key": "onClick"
+    }
   ],
   "iconName": "cross",
   "isDisabled": false,

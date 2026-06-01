@@ -6,10 +6,18 @@
   "borderWidth": "1",
   "bottomRow": 4,
   "dynamicBindingPathList": [
-    {"key": "truncateButtonColor"},
-    {"key": "fontFamily"},
-    {"key": "borderRadius"},
-    {"key": "text"}
+    {
+      "key": "truncateButtonColor"
+    },
+    {
+      "key": "fontFamily"
+    },
+    {
+      "key": "borderRadius"
+    },
+    {
+      "key": "text"
+    }
   ],
   "dynamicHeight": "AUTO_HEIGHT",
   "dynamicTriggerPathList": [],

@@ -8,15 +8,25 @@
   "buttonVariant": "PRIMARY",
   "disabledWhenInvalid": false,
   "dynamicBindingPathList": [
-    {"key": "buttonColor"},
-    {"key": "borderRadius"},
-    {"key": "animateLoading"}
+    {
+      "key": "buttonColor"
+    },
+    {
+      "key": "borderRadius"
+    },
+    {
+      "key": "animateLoading"
+    }
   ],
   "dynamicPropertyPathList": [
-    {"key": "animateLoading"}
+    {
+      "key": "animateLoading"
+    }
   ],
   "dynamicTriggerPathList": [
-    {"key": "onClick"}
+    {
+      "key": "onClick"
+    }
   ],
   "isDefaultClickDisabled": true,
   "isDisabled": false,

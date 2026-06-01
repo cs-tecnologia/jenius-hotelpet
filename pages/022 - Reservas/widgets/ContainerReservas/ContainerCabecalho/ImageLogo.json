@@ -4,7 +4,14 @@
   "bottomRow": 8,
   "boxShadow": "none",
   "defaultImage": "https://assets.appsmith.com/widgets/default.png",
-  "dynamicBindingPathList": [{"key": "borderRadius"}, {"key": "image"}],
+  "dynamicBindingPathList": [
+    {
+      "key": "borderRadius"
+    },
+    {
+      "key": "image"
+    }
+  ],
   "dynamicTriggerPathList": [],
   "enableDownload": false,
   "enableRotation": false,
