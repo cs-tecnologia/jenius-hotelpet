@@ -1,4 +1,5 @@
-{
+﻿{
+  "gitSyncId": "5cpbddrjaz",
   "accentColor": "{{appsmith.theme.colors.primaryColor}}",
   "animateLoading": true,
   "autoFocus": true,

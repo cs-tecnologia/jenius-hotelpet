@@ -1,4 +1,5 @@
-{
+﻿{
+  "gitSyncId": "ripky9i49l",
   "animateLoading": "{{ \n  appsmith.store.modalContexto?.entidade === \"PART\"\n  ? (InsertParticularidadesPet.isLoading || UpdateParticularidadesPet.isLoading || DeleteParticularidadesPet.isLoading)\n  : (InsertPet.isLoading || UpdatePet.isLoading || DeletePet.isLoading || InsertTutor.isLoading || UpdateTutor.isLoading)\n}}",
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
   "bottomRow": 19,

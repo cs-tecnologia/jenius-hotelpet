@@ -1,4 +1,5 @@
-{
+﻿{
+  "gitSyncId": "vet19pgopc1",
   "animateLoading": true,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
   "bottomRow": 6,

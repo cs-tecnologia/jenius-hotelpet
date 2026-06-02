@@ -1,4 +1,5 @@
-{
+﻿{
+  "gitSyncId": "vet19btcfm1",
   "animateLoading": "{{ InsertVeterinario.isLoading || UpdateVeterinario.isLoading || DeleteVeterinario.isLoading }}",
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
   "bottomRow": 19,

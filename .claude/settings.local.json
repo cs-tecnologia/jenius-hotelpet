@@ -18,7 +18,10 @@
       "mcp__chrome-devtools__click",
       "mcp__chrome-devtools__wait_for",
       "mcp__chrome-devtools__type_text",
-      "PowerShell(Get-ChildItem -Path \"C:\\\\Users\\\\Claudio\\\\iCloudDrive\\\\My Docs\\\\CS Tecnologia\\\\#CS Projetos\\\\HotelPet\\\\appsmith\\\\jenius-hotelpet\\\\pages\\\\020 - Tutores\" -Recurse -File | Where-Object {$_.Extension -in @\\('.js', '.json'\\)} | Select-Object -ExpandProperty FullName)"
+      "PowerShell(Get-ChildItem -Path \"C:\\\\Users\\\\Claudio\\\\iCloudDrive\\\\My Docs\\\\CS Tecnologia\\\\#CS Projetos\\\\HotelPet\\\\appsmith\\\\jenius-hotelpet\\\\pages\\\\020 - Tutores\" -Recurse -File | Where-Object {$_.Extension -in @\\('.js', '.json'\\)} | Select-Object -ExpandProperty FullName)",
+      "Bash(powershell *)",
+      "Bash(Get-ChildItem *)",
+      "Bash(xargs python -c ' *)"
     ]
   }
 }

@@ -1,4 +1,5 @@
-{
+﻿{
+  "gitSyncId": "rv022swtr",
   "accentColor": "{{appsmith.theme.colors.primaryColor}}",
   "alignWidget": "RIGHT",
   "animateLoading": true,

@@ -1,4 +1,5 @@
-{
+﻿{
+  "gitSyncId": "vet19inpbai",
   "accentColor": "{{appsmith.theme.colors.primaryColor}}",
   "animateLoading": true,
   "autoFocus": false,

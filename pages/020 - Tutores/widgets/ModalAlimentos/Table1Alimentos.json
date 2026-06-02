@@ -1,4 +1,5 @@
-{
+﻿{
+  "gitSyncId": "nyxr55ytiu",
   "accentColor": "{{appsmith.theme.colors.primaryColor}}",
   "allowAddNewRow": true,
   "animateLoading": true,

@@ -1,4 +1,5 @@
-{
+﻿{
+  "gitSyncId": "8g102ubwbx",
   "accentColor": "{{appsmith.theme.colors.primaryColor}}",
   "additionalStaticProps": [
     "level",
