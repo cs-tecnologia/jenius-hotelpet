@@ -1,4 +1,5 @@
-{
+﻿{
+  "gitSyncId": "ripky9i49l",
   "animateLoading": "{{ InsertPelagem.isLoading || UpdatePelagem.isLoading || DeletePelagem.isLoading }}",
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
   "bottomRow": 19,

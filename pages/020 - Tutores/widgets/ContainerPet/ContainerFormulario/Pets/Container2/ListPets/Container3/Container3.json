@@ -1,4 +1,5 @@
-{
+﻿{
+  "gitSyncId": "am06txrolm",
   "animateLoading": true,
   "backgroundColor": "{{ \n  currentItem.ani002_id === appsmith.store.petSelecionado?.ani002_id \n  ? \"#EBF3FF\" \n  : \"#FFFFFF\" \n}}",
   "borderColor": "#E0DEDE",

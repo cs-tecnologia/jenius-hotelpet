@@ -1,4 +1,5 @@
-{
+﻿{
+  "gitSyncId": "1vdfe5qn32",
   "accentColor": "{{appsmith.theme.colors.primaryColor}}",
   "allowDialCodeChange": false,
   "allowFormatting": true,

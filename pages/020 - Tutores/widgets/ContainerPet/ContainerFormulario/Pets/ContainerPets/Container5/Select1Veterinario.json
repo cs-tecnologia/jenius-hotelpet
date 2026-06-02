@@ -1,4 +1,5 @@
-{
+﻿{
+  "gitSyncId": "n4298kntmn",
   "accentColor": "{{appsmith.theme.colors.primaryColor}}",
   "animateLoading": true,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",

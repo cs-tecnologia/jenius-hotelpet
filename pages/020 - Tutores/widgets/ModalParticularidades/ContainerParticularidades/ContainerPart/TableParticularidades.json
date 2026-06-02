@@ -1,4 +1,5 @@
-{
+﻿{
+  "gitSyncId": "5dmhz9alsy",
   "accentColor": "{{appsmith.theme.colors.primaryColor}}",
   "animateLoading": true,
   "borderColor": "#E0DEDE",

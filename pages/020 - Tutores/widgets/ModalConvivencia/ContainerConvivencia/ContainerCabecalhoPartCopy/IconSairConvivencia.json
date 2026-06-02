@@ -1,4 +1,5 @@
-{
+﻿{
+  "gitSyncId": "x3ses9co0s",
   "animateLoading": true,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
   "bottomRow": 6,
